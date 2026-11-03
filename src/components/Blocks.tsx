@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BookingButton } from "./BookingButton";
 import type { ReactNode } from "react";
 
 // Hero photo. Replace with a massage or spa photo when you have one.
@@ -40,9 +41,7 @@ export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosi
         </h1>
         {children && <p>{children}</p>}
         <div className="hero-actions">
-          <Link href="/contact" className="btn btn-primary">
-            Book a session
-          </Link>
+          <BookingButton className="btn btn-primary">Book a session</BookingButton>
           <Link href="/our-services" className="btn btn-outline-light">
             Our services
           </Link>
@@ -64,9 +63,7 @@ export function CtaBanner({ title, text }: CtaBannerProps) {
         <div className="cta">
           <h2>{title}</h2>
           <p>{text}</p>
-          <Link href="/contact" className="btn btn-primary">
-            Book a session
-          </Link>
+          <BookingButton className="btn btn-primary">Book a session</BookingButton>
         </div>
       </div>
     </section>

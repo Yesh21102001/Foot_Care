@@ -31,9 +31,9 @@ const faqs = [
 export default function Reflexology() {
   return (
     <Layout title="Foot Reflexology" description="Foot reflexology at Foot Care: what it is, how a session works, what research says, and answers to common questions.">
-      <PageHero eyebrow="The Art of Foot Reflexology" title="Every Step Has a Story." accent="Discover the Art of Reflexology." image="/images/reflexology.jpg" imagePosition="right center" imageFit="contain">
+      <PageHero eyebrow="The Art of Foot Reflexology" title="Every Step Has a Story." image="/images/reflexology.jpg" imagePosition="right center" imageFit="contain">
         Foot reflexology is a complementary wellness practice in which a practitioner applies pressure to specific areas of
-        the feet. Rooted in traditional practices, it offers a focused and relaxing treatment experience.
+        the feet.
       </PageHero>
 
       {/* 01 — What it is */}

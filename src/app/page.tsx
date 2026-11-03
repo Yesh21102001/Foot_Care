@@ -6,6 +6,7 @@ import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { HomeHero } from "../components/HomeHero";
 import { WhoWeAre } from "../components/WhoWeAre";
+import { BookingModal } from "../components/BookingModal";
 
 // Converted from template.txt. Markup is kept as-is; styles live in ./template.css.
 // Interactive WordPress/Elementor JavaScript (sliders, mobile menu, animations) is not included.
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <HidePreloader />
       <RevealOnScroll />
+      <div className={"fc-site"}><BookingModal /></div>
       <SwiperCarousels />
 
 <div id={"wrapper"}>
