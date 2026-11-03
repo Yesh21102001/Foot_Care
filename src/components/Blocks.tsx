@@ -1,19 +1,39 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
+// Hero photo. Replace with a massage or spa photo when you have one.
+const HERO_IMAGE = "/images/hero-massage.jpg";
+
 type PageHeroProps = {
   eyebrow: string;
   title: string;
+  accent?: string;
   children?: ReactNode;
 };
 
-export function PageHero({ eyebrow, title, children }: PageHeroProps) {
+export function PageHero({ eyebrow, title, accent, children }: PageHeroProps) {
   return (
-    <section className="hero">
+    <section className="hero hero-photo" style={{ backgroundImage: `url("${HERO_IMAGE}")` }}>
       <div className="container">
-        <span className="eyebrow">{eyebrow}</span>
-        <h1>{title}</h1>
+        <span className="eyebrow-pill">{eyebrow}</span>
+        <h1>
+          {title}
+          {accent && (
+            <>
+              <br />
+              <em>{accent}</em>
+            </>
+          )}
+        </h1>
         {children && <p>{children}</p>}
+        <div className="hero-actions">
+          <Link href="/contact" className="btn btn-primary">
+            Book a session
+          </Link>
+          <Link href="/our-services" className="btn btn-outline-light">
+            Our services
+          </Link>
+        </div>
       </div>
     </section>
   );

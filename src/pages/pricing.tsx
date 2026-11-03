@@ -29,7 +29,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <Layout title="Pricing" description="Simple monthly wellness plans from Wellxess. Choose the plan that fits your routine.">
+    <Layout title="Pricing" description="Simple monthly wellness plans from Foot Care. Choose the plan that fits your routine.">
       <PageHero eyebrow="Pricing" title="Simple plans for every routine">
         Choose a monthly plan that fits how often you want to rest and recover.
       </PageHero>

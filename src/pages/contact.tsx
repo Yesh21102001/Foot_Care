@@ -3,7 +3,7 @@ import { Layout } from "../components/Layout";
 
 export default function Contact() {
   return (
-    <Layout title="Contact" description="Contact Wellxess to book a session or ask a question.">
+    <Layout title="Contact" description="Contact Foot Care to book a session or ask a question.">
       <PageHero eyebrow="Contact" title="Let's plan your visit">
         Send us a message or call the team. We reply within one working day.
       </PageHero>

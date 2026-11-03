@@ -11,7 +11,7 @@ const services = [
 
 export default function OurServices() {
   return (
-    <Layout title="Our Services" description="Explore all Wellxess services: reflexology, therapeutic massage, hydrogen therapy and Healthpod sessions.">
+    <Layout title="Our Services" description="Explore all Foot Care services: reflexology, therapeutic massage, hydrogen therapy and Healthpod sessions.">
       <PageHero eyebrow="Our Services" title="Find the right treatment for you">
         From everyday relaxation to targeted recovery, choose a service and our team will help you plan the next step.
       </PageHero>

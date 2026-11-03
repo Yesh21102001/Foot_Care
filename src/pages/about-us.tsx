@@ -9,7 +9,7 @@ const values = [
 
 export default function AboutUs() {
   return (
-    <Layout title="About Us" description="Learn about Wellxess, our story, mission and the team behind our foot care and wellness therapies.">
+    <Layout title="About Us" description="Learn about Foot Care, our story, mission and the team behind our foot care and wellness therapies.">
       <PageHero eyebrow="About Us" title="Caring for your feet, and your whole well-being">
         We bring reflexology, massage and wellness therapies together in one place, so you can look after your body with
         professional support.
@@ -20,7 +20,7 @@ export default function AboutUs() {
           <div>
             <h2>Our story</h2>
             <p className="lead">
-              Wellxess started with a simple idea: everyone deserves a place to rest, recover and feel looked after. Our
+              Foot Care started with a simple idea: everyone deserves a place to rest, recover and feel looked after. Our
               team combines hands-on therapy with practical advice for everyday life.
             </p>
           </div>

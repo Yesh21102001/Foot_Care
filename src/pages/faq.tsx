@@ -26,7 +26,7 @@ const questions = [
 
 export default function Faq() {
   return (
-    <Layout title="FAQ" description="Answers to common questions about booking, treatments and what to expect at Wellxess.">
+    <Layout title="FAQ" description="Answers to common questions about booking, treatments and what to expect at Foot Care.">
       <PageHero eyebrow="FAQ" title="Frequently asked questions">
         Quick answers to help you prepare for your visit.
       </PageHero>

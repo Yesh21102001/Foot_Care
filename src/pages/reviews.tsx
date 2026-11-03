@@ -19,9 +19,9 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <Layout title="Reviews" description="Read what our clients say about Wellxess therapies and services.">
+    <Layout title="Reviews" description="Read what our clients say about Foot Care therapies and services.">
       <PageHero eyebrow="Reviews" title="What our clients say">
-        Honest feedback from people who have visited Wellxess for reflexology, massage and wellness sessions.
+        Honest feedback from people who have visited Foot Care for reflexology, massage and wellness sessions.
       </PageHero>
 
       <section className="section">

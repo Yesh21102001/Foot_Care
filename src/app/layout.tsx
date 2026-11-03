@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./template.css";
+import "../styles/site.css";
 import { bodyClassName, stylesheets } from "./template-stylesheets";
 
 const assets = "https://dev265.kodesolution.com/wellxess/wp-content/themes/wellxess/assets/images/logo";
 
 export const metadata: Metadata = {
-  title: "Wellxess – My WordPress Blog",
+  title: "Foot Care – My WordPress Blog",
   icons: {
     icon: `${assets}/favicon.png`,
     apple: [

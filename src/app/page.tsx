@@ -2,6 +2,9 @@ import type { CSSProperties } from "react";
 import { HidePreloader } from "./hide-preloader";
 import { RevealOnScroll } from "./reveal-on-scroll";
 import { SwiperCarousels } from "./swiper-carousels";
+import { SiteHeader } from "../components/SiteHeader";
+import { SiteFooter } from "../components/SiteFooter";
+import { HomeHero } from "../components/HomeHero";
 
 // Converted from template.txt. Markup is kept as-is; styles live in ./template.css.
 // Interactive WordPress/Elementor JavaScript (sliders, mobile menu, animations) is not included.
@@ -45,562 +48,7 @@ export default function Home() {
 						<div className={"layer"}><span className={"overlay"}></span></div>
 	</div>
 					
-		<header id={"header"} className={"header header-layout-type-header-default"}>
-				<div id={"elementor-header-top"} className={"elementor-header-top-transparent"}>
-			<div data-elementor-type={"wp-post"} data-elementor-id={"22"} className={"elementor elementor-22"}>
-				<div className={"elementor-element elementor-element-2b51891 e-con-full elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"2b51891"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-		<div className={"elementor-element elementor-element-86296c6 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"86296c6"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-		<div className={"elementor-element elementor-element-f3c4aad e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"f3c4aad"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-f35b350 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"f35b350"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-e016784 elementor-widget elementor-widget-tm-ele-site-logo"} data-id={"e016784"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-site-logo.default"}>
-				<div className={"elementor-widget-container"}>
-							<a className={"menuzord-brand site-brand"} href={"https://dev265.kodesolution.com/wellxess/"}>
-											<img decoding={"async"} className={"logo-default"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/logo-wide.png"} width={"400"} height={"83"} alt={"Wellxess"} />
-									</a>
-						</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-6f34d6f e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"6f34d6f"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-42691d5 elementor-widget elementor-widget-tm-ele-header-primary-nav"} data-id={"42691d5"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-header-primary-nav.default"}>
-				<div className={"elementor-widget-container"}>
-					<nav id={"top-primary-nav-elementor-id-holder-518148"} className={"menuzord-primary-nav menuzord menuzord-responsive"}>
-<ul id={"main-nav-id-holder-518148"} className={"menuzord-menu"}><li id={"menu-item-3499"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-3499 active"}><a title={"Home"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/"}><span>Home</span> </a>
- <div className={"megamenu megamenu-fullwidth megamenu-position-left"}>
-  <div className={"megamenu-row"}>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li id={"menu-item-20"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-20 active"}><a title={"Home Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/"}><span>Home Layout</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li id={"menu-item-21"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item menu-item-21 active"}><a title={"Home Layout1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/"}><span>Home Layout1</span></a>		</li>
-		<li id={"menu-item-975"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-975"}><a title={"Home Layout2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-layout2/"}><span>Home Layout2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li id={"menu-item-3500"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3500"}><a title={"Single Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/home-single1/"}><span>Single Layout</span><span className={"tm-menu-badge"}>NEW</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li id={"menu-item-3506"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3506"}><a title={"Home Single1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-single1/"}><span>Home Single1</span></a>		</li>
-		<li id={"menu-item-3501"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3501"}><a title={"Home Single2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-single2/"}><span>Home Single2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li id={"menu-item-3502"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3502"}><a title={"Slider Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/home-slider1/"}><span>Slider Layout</span><span className={"tm-menu-badge"}>NEW</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li id={"menu-item-3507"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3507"}><a title={"Home Slider1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-slider1/"}><span>Home Slider1</span></a>		</li>
-		<li id={"menu-item-3503"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3503"}><a title={"Home Slider2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-slider2/"}><span>Home Slider2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li id={"menu-item-3504"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3504"}><a title={"Video Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/home-video1/"}><span>Video Layout</span><span className={"tm-menu-badge"}>NEW</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li id={"menu-item-3508"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3508"}><a title={"Home Video1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-video1/"}><span>Home Video1</span></a>		</li>
-		<li id={"menu-item-3505"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3505"}><a title={"Home Video2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-video2/"}><span>Home Video2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-  </div>
- </div>
-</li>
-<li id={"menu-item-2096"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2096"}><a title={"Pages"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/about/"}><span>Pages</span> </a>
-<ul className={"dropdown"}>
-	<li id={"menu-item-89"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-89"}><a title={"About"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/about/"}><span>About</span></a>	</li>
-	<li id={"menu-item-2220"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2220"}><a title={"Team"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/team/"}><span>Team</span></a>
-	<ul className={"dropdown"}>
-		<li id={"menu-item-2219"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2219"}><a title={"Team Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/team/"}><span>Team Grid</span></a>		</li>
-		<li id={"menu-item-2218"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2218"}><a title={"Team Details"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/team-details/"}><span>Team Details</span></a>		</li>
-	</ul>
-	</li>
-	<li id={"menu-item-2242"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2242"}><a title={"Pricing Plan"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/pricing-plan/"}><span>Pricing Plan</span></a>	</li>
-	<li id={"menu-item-2241"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"}><a title={"Testimonial"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/testimonial/"}><span>Testimonial</span></a>	</li>
-	<li id={"menu-item-2256"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2256"}><a title={"FAQS"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/faqs/"}><span>FAQS</span></a>	</li>
-	<li id={"menu-item-2268"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2268"}><a title={"Contact Us"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/contact-us/"}><span>Contact Us</span></a>	</li>
-	<li id={"menu-item-3229"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3229"}><a title={"Shop"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/shop/"}><span>Shop</span></a>
-	<ul className={"dropdown"}>
-		<li id={"menu-item-3228"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3228"}><a title={"All Products"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/shop/"}><span>All Products</span></a>		</li>
-		<li id={"menu-item-3226"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3226"}><a title={"Cart"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/cart/"}><span>Cart</span></a>		</li>
-		<li id={"menu-item-3227"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3227"}><a title={"Checkout"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/checkout/"}><span>Checkout</span></a>		</li>
-	</ul>
-	</li>
-	<li id={"menu-item-2269"} className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-2269"}><a title={"404"} className={"menu-item-link"} href={"/wellxess/404"}><span>404</span></a>	</li>
-</ul>
-</li>
-<li id={"menu-item-88"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-88"}><a title={"Service"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/service/"}><span>Service</span> </a>
-<ul className={"dropdown"}>
-	<li id={"menu-item-2100"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2100"}><a title={"Services Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/service/"}><span>Services Grid</span></a>	</li>
-	<li id={"menu-item-2217"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2217"}><a title={"Wellness Programs"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/wellness-programs/"}><span>Wellness Programs</span></a>	</li>
-	<li id={"menu-item-2216"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2216"}><a title={"Nutrition Counseling"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/nutrition-counseling/"}><span>Nutrition Counseling</span></a>	</li>
-	<li id={"menu-item-2214"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2214"}><a title={"Mental Health Support"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/mental-health-support/"}><span>Mental Health Support</span></a>	</li>
-	<li id={"menu-item-2213"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2213"}><a title={"Yoga & Meditation"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/yoga-meditation/"}><span>Yoga &#038; Meditation</span></a>	</li>
-	<li id={"menu-item-2212"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2212"}><a title={"Weight Management"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/weight-management/"}><span>Weight Management</span></a>	</li>
-	<li id={"menu-item-2211"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2211"}><a title={"Stress Management"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/stress-management/"}><span>Stress Management</span></a>	</li>
-</ul>
-</li>
-<li id={"menu-item-2315"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2315"}><a title={"Projects"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/projects/"}><span>Projects</span> </a>
-<ul className={"dropdown"}>
-	<li id={"menu-item-2316"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2316"}><a title={"Projects Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/projects/"}><span>Projects Grid</span></a>	</li>
-	<li id={"menu-item-2317"} className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-2317"}><a title={"Project Details"} className={"menu-item-link"} href={"/wellxess/projects/empowering-motivational/"}><span>Project Details</span></a>	</li>
-</ul>
-</li>
-<li id={"menu-item-86"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-86"}><a title={"Blog"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/blog/"}><span>Blog</span> </a>
-<ul className={"dropdown"}>
-	<li id={"menu-item-2357"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2357"}><a title={"Blog Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/blog/"}><span>Blog Grid</span></a>	</li>
-	<li id={"menu-item-2356"} className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-2356"}><a title={"Blog Details"} className={"menu-item-link"} href={"/wellxess/blog/the-importance-of-wellness-in-everyday-life/"}><span>Blog Details</span></a>	</li>
-</ul>
-</li>
-</ul></nav>				</div>
-				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-b5d5672 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"b5d5672"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-80f49f7 elementor-hidden-tablet_extra elementor-hidden-mobile_extra elementor-hidden-tablet elementor-hidden-mobile elementor-hidden-laptop elementor-widget elementor-widget-tm-ele-button"} data-id={"80f49f7"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-button.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-button btn-view-details"}>
-	<a href={"/wellxess/contact/"} className={"btn btn-theme-colored2 btn-round"}>
-
-
-		
-		<span>
-		Get Appointment		</span>
-
-			</a>
-</div>				</div>
-				</div>
-				<div className={"elementor-element elementor-element-c4c28a5 elementor-widget elementor-widget-tm-ele-animated-layers"} data-id={"c4c28a5"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-animated-layers.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-sc-animated-layer-advanced"}>
-			<div className={"animated-layer-advanced-inner clearfix"}>
-	<div className={"layer-image-wrapper layer-blank elementor-repeater-item-19a635b"} style={{} as CSSProperties}>
-	<div className={"layer-inner"}>
-	</div>
-</div>
-			</div>
-			<div className={"clearfix"}></div>
-		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-3b1e858 elementor-widget elementor-widget-tm-ele-header-search"} data-id={"3b1e858"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-header-search.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-widget-search-form"}>
-    <a aria-label={"Search"} href={"#"} className={"icon-search-popup"}><i className={"lnr lnr-icon-search"}></i></a>
-</div>				</div>
-				</div>
-				<div className={"elementor-element elementor-element-a4adf3b elementor-widget__width-initial elementor-widget elementor-widget-tm-ele-header-nav-side-icons"} data-id={"a4adf3b"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-header-nav-side-icons.skin-side-push-panel"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"side-panel-trigger"} data-target={"skin-side-push-panel-holder-269328"}>
-	<a href={"#"}>
-		<div className={"hamburger-box"}>
-			<div className={"hamburger-inner"}></div>
-		</div>
-	</a>
-</div>
-
-
-<div className={"side-panel-body-overlay"} data-target={"skin-side-push-panel-holder-269328"}></div>
-<div id={"skin-side-push-panel-holder-269328"} className={"side-panel-container tm-sc-header-primary-nav"}>
-	<div className={"side-panel-wrap"}>
-		<div className={"side-panel-trigger side-panel-trigger-close"} data-target={"skin-side-push-panel-holder-269328"}><a href={"#"}><i className={"fa fa-times side-panel-trigger-icon"}></i></a></div>
-
-								<div className={"header-top-cpt"}>
-					<div data-elementor-type={"wp-post"} data-elementor-id={"948"} className={"elementor elementor-948"}>
-				<div className={"elementor-element elementor-element-1621e87 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"1621e87"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-		<div className={"elementor-element elementor-element-1263b19 tm-col-stretched-none e-flex e-con-boxed tm-bg-color-over-image e-con e-child"} data-id={"1263b19"} data-element_type={"container"} data-e-type={"container"}>
-					<div className={"e-con-inner"}>
-		<div className={"elementor-element elementor-element-a19b42a e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"a19b42a"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-b29cf93 elementor-widget elementor-widget-tm-ele-site-logo"} data-id={"b29cf93"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-site-logo.default"}>
-				<div className={"elementor-widget-container"}>
-							<a className={"menuzord-brand site-brand"} href={"https://dev265.kodesolution.com/wellxess/"}>
-											<img decoding={"async"} className={"logo-default"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/logo-wide.png"} width={"400"} height={"83"} alt={"Wellxess"} />
-									</a>
-						</div>
-				</div>
-				<div className={"elementor-element elementor-element-919a610 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"919a610"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<h4>About Us </h4>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-ebf78c2 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"ebf78c2"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt magna aliqua aptent facilisi.		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-47f88df elementor-widget elementor-widget-tm-ele-theme-button"} data-id={"47f88df"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-theme-button.skin-style2"}>
-				<div className={"elementor-widget-container"}>
-					<a href={"/wellxess/contact/"} className={"btn-style2"}>
-
-  <span className={"theme-btn-arrow-left"}>
-				  <i className={"fas fa-arrow-right"}></i>		  </span>
-  <span className={"theme-btn"}>
-		Get a Quote  </span>
-  <span className={"theme-btn-arrow-right"}>
-				  <i className={"fas fa-arrow-right"}></i>		  </span>
-</a>				</div>
-				</div>
-				<div className={"elementor-element elementor-element-9da4927 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"9da4927"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<h4>Contact Us </h4>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-ed55a73 elementor-widget elementor-widget-tm-ele-list"} data-id={"ed55a73"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-list.default"}>
-				<div className={"elementor-widget-container"}>
-					<ul className={"tm-sc-list tm-animate-hover animate-icon-rotate"}>
-	<li className={""}>
-				<i aria-hidden={"true"} className={"far fa-bell"}></i>				<span>
-	+88 01750050088</span></li>	<li className={""}>
-				<i aria-hidden={"true"} className={"far fa-paper-plane"}></i>				<span>
-	<a href={"/cdn-cgi/l/email-protection"} className={"__cf_email__"} data-cfemail={"600e05050408050c10200518010d100c054e030f0d"}>[email&#160;protected]</a></span></li>	<li className={""}>
-				<i aria-hidden={"true"} className={"fas fa-globe"}></i>				<span>
-	www.example.com</span></li>	<li className={""}>
-				<i aria-hidden={"true"} className={"fas fa-map-marker-alt"}></i>				<span>
-	57 Street, 2nd Block, USA</span></li></ul>				</div>
-				</div>
-				<div className={"elementor-element elementor-element-e45e9b2 elementor-widget elementor-widget-tm-ele-social-links"} data-id={"e45e9b2"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-social-links.default"}>
-				<div className={"elementor-widget-container"}>
-					<ul className={"tm-sc-social-links links-outlined"}>
-
-		<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-twitter"}></i></a></li>
-			<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-facebook"}></i></a></li>
-		
-		<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-linkedin"}></i></a></li>
-			<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-instagram"}></i></a></li>
-		
-			</ul>				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-				</div>
-				</div>
-					</div>
-</div>				</div>
-				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-52cb4ca e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"52cb4ca"} data-element_type={"container"} data-e-type={"container"}>
-				</div>
-				</div>
-				</div>
-		</div>
-<div id={"elementor-header-top-sticky"}>
-			<div data-elementor-type={"wp-post"} data-elementor-id={"941"} className={"elementor elementor-941"}>
-				<div className={"elementor-element elementor-element-b4279fb elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"b4279fb"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-					<div className={"e-con-inner"}>
-		<div className={"elementor-element elementor-element-b1f4469 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"b1f4469"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-140cf44 e-con-full e-flex tm-col-stretched-none e-con e-child"} data-id={"140cf44"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-6696442 elementor-widget__width-auto elementor-widget elementor-widget-tm-ele-site-logo"} data-id={"6696442"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-site-logo.default"}>
-				<div className={"elementor-widget-container"}>
-							<a className={"menuzord-brand site-brand"} href={"https://dev265.kodesolution.com/wellxess/"}>
-											<img decoding={"async"} className={"logo-default"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/logo-wide.png"} width={"400"} height={"83"} alt={"Wellxess"} />
-									</a>
-						</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-83d5fc6 e-con-full e-flex tm-col-stretched-none e-con e-child"} data-id={"83d5fc6"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-b6f2b4b elementor-widget__width-auto elementor-widget elementor-widget-tm-ele-header-primary-nav"} data-id={"b6f2b4b"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-header-primary-nav.default"}>
-				<div className={"elementor-widget-container"}>
-					<nav id={"top-primary-nav-elementor-id-holder-430825"} className={"menuzord-primary-nav menuzord menuzord-responsive"}>
-<ul id={"main-nav-id-holder-430825"} className={"menuzord-menu"}><li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-3499 active"}><a title={"Home"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/"}><span>Home</span> </a>
- <div className={"megamenu megamenu-fullwidth megamenu-position-left"}>
-  <div className={"megamenu-row"}>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-20 active"}><a title={"Home Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/"}><span>Home Layout</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item menu-item-21 active"}><a title={"Home Layout1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/"}><span>Home Layout1</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-975"}><a title={"Home Layout2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-layout2/"}><span>Home Layout2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3500"}><a title={"Single Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/home-single1/"}><span>Single Layout</span><span className={"tm-menu-badge"}>NEW</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3506"}><a title={"Home Single1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-single1/"}><span>Home Single1</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3501"}><a title={"Home Single2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-single2/"}><span>Home Single2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3502"}><a title={"Slider Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/home-slider1/"}><span>Slider Layout</span><span className={"tm-menu-badge"}>NEW</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3507"}><a title={"Home Slider1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-slider1/"}><span>Home Slider1</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3503"}><a title={"Home Slider2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-slider2/"}><span>Home Slider2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3504"}><a title={"Video Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/home-video1/"}><span>Video Layout</span><span className={"tm-menu-badge"}>NEW</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3508"}><a title={"Home Video1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-video1/"}><span>Home Video1</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3505"}><a title={"Home Video2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-video2/"}><span>Home Video2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-  </div>
- </div>
-</li>
-<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2096"}><a title={"Pages"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/about/"}><span>Pages</span> </a>
-<ul className={"dropdown"}>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-89"}><a title={"About"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/about/"}><span>About</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2220"}><a title={"Team"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/team/"}><span>Team</span></a>
-	<ul className={"dropdown"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2219"}><a title={"Team Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/team/"}><span>Team Grid</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2218"}><a title={"Team Details"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/team-details/"}><span>Team Details</span></a>		</li>
-	</ul>
-	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2242"}><a title={"Pricing Plan"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/pricing-plan/"}><span>Pricing Plan</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"}><a title={"Testimonial"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/testimonial/"}><span>Testimonial</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2256"}><a title={"FAQS"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/faqs/"}><span>FAQS</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2268"}><a title={"Contact Us"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/contact-us/"}><span>Contact Us</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3229"}><a title={"Shop"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/shop/"}><span>Shop</span></a>
-	<ul className={"dropdown"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3228"}><a title={"All Products"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/shop/"}><span>All Products</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3226"}><a title={"Cart"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/cart/"}><span>Cart</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3227"}><a title={"Checkout"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/checkout/"}><span>Checkout</span></a>		</li>
-	</ul>
-	</li>
-	<li className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-2269"}><a title={"404"} className={"menu-item-link"} href={"/wellxess/404"}><span>404</span></a>	</li>
-</ul>
-</li>
-<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-88"}><a title={"Service"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/service/"}><span>Service</span> </a>
-<ul className={"dropdown"}>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2100"}><a title={"Services Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/service/"}><span>Services Grid</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2217"}><a title={"Wellness Programs"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/wellness-programs/"}><span>Wellness Programs</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2216"}><a title={"Nutrition Counseling"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/nutrition-counseling/"}><span>Nutrition Counseling</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2214"}><a title={"Mental Health Support"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/mental-health-support/"}><span>Mental Health Support</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2213"}><a title={"Yoga & Meditation"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/yoga-meditation/"}><span>Yoga &#038; Meditation</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2212"}><a title={"Weight Management"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/weight-management/"}><span>Weight Management</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2211"}><a title={"Stress Management"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/stress-management/"}><span>Stress Management</span></a>	</li>
-</ul>
-</li>
-<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2315"}><a title={"Projects"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/projects/"}><span>Projects</span> </a>
-<ul className={"dropdown"}>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2316"}><a title={"Projects Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/projects/"}><span>Projects Grid</span></a>	</li>
-	<li className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-2317"}><a title={"Project Details"} className={"menu-item-link"} href={"/wellxess/projects/empowering-motivational/"}><span>Project Details</span></a>	</li>
-</ul>
-</li>
-<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-86"}><a title={"Blog"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/blog/"}><span>Blog</span> </a>
-<ul className={"dropdown"}>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2357"}><a title={"Blog Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/blog/"}><span>Blog Grid</span></a>	</li>
-	<li className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-2356"}><a title={"Blog Details"} className={"menu-item-link"} href={"/wellxess/blog/the-importance-of-wellness-in-everyday-life/"}><span>Blog Details</span></a>	</li>
-</ul>
-</li>
-</ul></nav>				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-6624ce7 e-con-full e-flex tm-col-stretched-none e-con e-child"} data-id={"6624ce7"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-0f5d073 elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit mascot-icon-align-left elementor-widget elementor-widget-tm-ele-iconbox"} data-id={"0f5d073"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-iconbox.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-icon-box icon-box icon-left font-icon responsive-mobile icon-left animate-hover icon-rotate"}>
-	
-  	<div className={"icon-box-wrapper"}>
-		
-		<div className={"icon-wrapper"}>
-		<div className={"icon icon-round icon-type-font-icon icon-size-default"}>
-			<i aria-hidden={"true"} className={"fas fa-phone"}></i>		</div>
-
-					<div className={"icon-bg-img"}>
-				  							</div>
-			</div>
-			<div className={"icon-text"}>
-						
-				<h6 className={"icon-box-title"}>
-							Call Anytime					</h6>
-					<div className={"content"}><p><a href={"tel:+8801750050088"}>017-50050088</a></p></div>
-			
-			
-	
-					</div>
-		<div className={"clearfix"}></div>
-	</div>
-</div>				</div>
-				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-		</div>
-<div id={"elementor-header-top-mobile"}>
-	<div id={"tm-header-mobile"}>
-		<div id={"tm-header-main"} className={"tm-header-main"}>
-			<div className={"container-fluid"}>
-				<div className={"row"}>
-					<div className={"tm-header-branding"}>
-						
-			<a className={"menuzord-brand site-brand"} href={"https://dev265.kodesolution.com/wellxess/"}>
-														<img className={"logo-default"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/logo-wide.png"} alt={"Wellxess Logo"} />
-					<img className={"logo-mobile-version"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/logo-wide.png"} alt={"Wellxess Logo"} />
-												</a>					</div>
-					<div className={"tm-header-menu"}>
-						<div className={"tm-header-menu-scroll"}>
-							<div className={"tm-menu-close tm-close"}></div>
-									<div data-elementor-type={"wp-post"} data-elementor-id={"945"} className={"elementor elementor-945"}>
-				<div className={"elementor-element elementor-element-1725390 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"1725390"} data-element_type={"container"} data-e-type={"container"}>
-					<div className={"e-con-inner"}>
-		<div className={"elementor-element elementor-element-7c19f8a e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"7c19f8a"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-545c082 elementor-widget elementor-widget-tm-ele-site-logo"} data-id={"545c082"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-site-logo.default"}>
-				<div className={"elementor-widget-container"}>
-							<a className={"menuzord-brand site-brand"} href={"https://dev265.kodesolution.com/wellxess/"}>
-											<img decoding={"async"} className={"logo-default"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/logo-wide.png"} width={"400"} height={"83"} alt={"Wellxess"} />
-									</a>
-						</div>
-				</div>
-				<div className={"elementor-element elementor-element-27f569d search-submit-icon elementor-widget elementor-widget-tm-ele-header-search"} data-id={"27f569d"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-header-search.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-widget-search-form"}>
-    <form role={"search"} method={"get"} className={"search-form-default"} action={"https://dev265.kodesolution.com/wellxess/"}>
-        <input type={"search"} className={"form-control search-field"} placeholder={"Search Product..."} defaultValue={""} name={"s"} />
-        <button type={"submit"} className={"search-submit"}><i className={"lnr lnr-icon-search"}></i></button>
-            </form>
-</div>				</div>
-				</div>
-				<div className={"elementor-element elementor-element-ec8408a elementor-widget elementor-widget-tm-ele-header-primary-nav"} data-id={"ec8408a"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-header-primary-nav.default"}>
-				<div className={"elementor-widget-container"}>
-					<nav id={"top-primary-nav-elementor-id-holder-592170"} className={"menuzord-primary-nav menuzord menuzord-responsive"}>
-<ul id={"main-nav-id-holder-592170"} className={"menuzord-menu"}><li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-3499 active"}><a title={"Home"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/"}><span>Home</span> </a>
- <div className={"megamenu megamenu-fullwidth megamenu-position-left"}>
-  <div className={"megamenu-row"}>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-20 active"}><a title={"Home Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/"}><span>Home Layout</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item menu-item-21 active"}><a title={"Home Layout1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/"}><span>Home Layout1</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-975"}><a title={"Home Layout2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-layout2/"}><span>Home Layout2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3500"}><a title={"Single Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/home-single1/"}><span>Single Layout</span><span className={"tm-menu-badge"}>NEW</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3506"}><a title={"Home Single1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-single1/"}><span>Home Single1</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3501"}><a title={"Home Single2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-single2/"}><span>Home Single2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3502"}><a title={"Slider Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/home-slider1/"}><span>Slider Layout</span><span className={"tm-menu-badge"}>NEW</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3507"}><a title={"Home Slider1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-slider1/"}><span>Home Slider1</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3503"}><a title={"Home Slider2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-slider2/"}><span>Home Slider2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-
-	<div className={"col"}>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3504"}><a title={"Video Layout"} className={"menu-item-link tm-submenu-title"} href={"https://dev265.kodesolution.com/wellxess/home-video1/"}><span>Video Layout</span><span className={"tm-menu-badge"}>NEW</span></a>
-	<ul className={"list-unstyled list-dashed"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3508"}><a title={"Home Video1"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-video1/"}><span>Home Video1</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3505"}><a title={"Home Video2"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/home-video2/"}><span>Home Video2</span></a>		</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-  </div>
- </div>
-</li>
-<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2096"}><a title={"Pages"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/about/"}><span>Pages</span> </a>
-<ul className={"dropdown"}>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-89"}><a title={"About"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/about/"}><span>About</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2220"}><a title={"Team"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/team/"}><span>Team</span></a>
-	<ul className={"dropdown"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2219"}><a title={"Team Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/team/"}><span>Team Grid</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2218"}><a title={"Team Details"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/team-details/"}><span>Team Details</span></a>		</li>
-	</ul>
-	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2242"}><a title={"Pricing Plan"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/pricing-plan/"}><span>Pricing Plan</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"}><a title={"Testimonial"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/testimonial/"}><span>Testimonial</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2256"}><a title={"FAQS"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/faqs/"}><span>FAQS</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2268"}><a title={"Contact Us"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/contact-us/"}><span>Contact Us</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3229"}><a title={"Shop"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/shop/"}><span>Shop</span></a>
-	<ul className={"dropdown"}>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3228"}><a title={"All Products"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/shop/"}><span>All Products</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3226"}><a title={"Cart"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/cart/"}><span>Cart</span></a>		</li>
-		<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3227"}><a title={"Checkout"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/checkout/"}><span>Checkout</span></a>		</li>
-	</ul>
-	</li>
-	<li className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-2269"}><a title={"404"} className={"menu-item-link"} href={"/wellxess/404"}><span>404</span></a>	</li>
-</ul>
-</li>
-<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-88"}><a title={"Service"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/service/"}><span>Service</span> </a>
-<ul className={"dropdown"}>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2100"}><a title={"Services Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/service/"}><span>Services Grid</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2217"}><a title={"Wellness Programs"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/wellness-programs/"}><span>Wellness Programs</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2216"}><a title={"Nutrition Counseling"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/nutrition-counseling/"}><span>Nutrition Counseling</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2214"}><a title={"Mental Health Support"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/mental-health-support/"}><span>Mental Health Support</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2213"}><a title={"Yoga & Meditation"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/yoga-meditation/"}><span>Yoga &#038; Meditation</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2212"}><a title={"Weight Management"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/weight-management/"}><span>Weight Management</span></a>	</li>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2211"}><a title={"Stress Management"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/stress-management/"}><span>Stress Management</span></a>	</li>
-</ul>
-</li>
-<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2315"}><a title={"Projects"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/projects/"}><span>Projects</span> </a>
-<ul className={"dropdown"}>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2316"}><a title={"Projects Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/projects/"}><span>Projects Grid</span></a>	</li>
-	<li className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-2317"}><a title={"Project Details"} className={"menu-item-link"} href={"/wellxess/projects/empowering-motivational/"}><span>Project Details</span></a>	</li>
-</ul>
-</li>
-<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-86"}><a title={"Blog"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/blog/"}><span>Blog</span> </a>
-<ul className={"dropdown"}>
-	<li className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-2357"}><a title={"Blog Grid"} className={"menu-item-link"} href={"https://dev265.kodesolution.com/wellxess/blog/"}><span>Blog Grid</span></a>	</li>
-	<li className={"menu-item menu-item-type-custom menu-item-object-custom menu-item-2356"}><a title={"Blog Details"} className={"menu-item-link"} href={"/wellxess/blog/the-importance-of-wellness-in-everyday-life/"}><span>Blog Details</span></a>	</li>
-</ul>
-</li>
-</ul></nav>				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-								</div>
-					</div>
-					<div className={"tm-header-menu-backdrop"}></div>
-				</div>
-			</div>
-			<div id={"tm-nav-mobile"}>
-				<div className={"tm-nav-mobile-button"}><span></span></div>
-			</div>
-		</div>
-	</div>
-</div>
-		
-
-	
-			</header>
+		<div className={"fc-site"}><SiteHeader /></div>
 			
 		<div className={"top-sliders-container"}>
 		
@@ -618,103 +66,8 @@ export default function Home() {
 	<div className={"entry-content"}>
 		<div className={"page-content"}>
 											<div data-elementor-type={"wp-page"} data-elementor-id={"17"} className={"elementor elementor-17"}>
-				<div className={"elementor-element elementor-element-ff7b357 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"ff7b357"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-6623f23 e-con-full overflow-hidden e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"6623f23"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-		<div className={"elementor-element elementor-element-60884c8 e-con-full blur-effect tm-col-stretched-none elementor-hidden-tablet_extra elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile e-flex tm-bg-color-over-image e-con e-child"} data-id={"60884c8"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-d9ed356 e-transform elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"d9ed356"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_transform_rotateZ_effect\":{\"unit\":\"px\",\"size\":-90,\"sizes\":[]},\"_transform_rotateZ_effect_laptop\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_tablet_extra\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_mobile_extra\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]}}"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>facebook</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-4ecee89 e-transform elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"4ecee89"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_transform_rotateZ_effect\":{\"unit\":\"px\",\"size\":-90,\"sizes\":[]},\"_transform_rotateZ_effect_laptop\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_tablet_extra\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_mobile_extra\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]}}"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>LinkedIn</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-bf11120 e-transform elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"bf11120"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_transform_rotateZ_effect\":{\"unit\":\"px\",\"size\":-90,\"sizes\":[]},\"_transform_rotateZ_effect_laptop\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_tablet_extra\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_tablet\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_mobile_extra\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]},\"_transform_rotateZ_effect_mobile\":{\"unit\":\"deg\",\"size\":\"\",\"sizes\":[]}}"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Instagram</p>		</div>
-					</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-5dbae19 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"5dbae19"} data-element_type={"container"} data-e-type={"container"}>
-					<div className={"e-con-inner"}>
-		<div className={"elementor-element elementor-element-9881e92 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"9881e92"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-c0def3c e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"c0def3c"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-0a514bf elementor-widget elementor-widget-image"} data-id={"0a514bf"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"image.default"}>
-															<img decoding={"async"} width={"148"} height={"50"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/thumb.avif"} className={"attachment-large size-large wp-image-111"} alt={""} />															</div>
-		<div className={"elementor-element elementor-element-6e5c108 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"6e5c108"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-d6989d3 elementor-widget elementor-widget-rating"} data-id={"d6989d3"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"rating.default"}>
-							<div className={"e-rating"} itemType={"https://schema.org/Rating"} itemScope itemProp={"reviewRating"}>
-			<meta itemProp={"worstRating"} content={"0"} />
-			<meta itemProp={"bestRating"} content={"5"} />
-			<div className={"e-rating-wrapper"} itemProp={"ratingValue"} content={"5"} role={"img"} aria-label={"Rated 5 out of 5"}>
-							<div className={"e-icon"}>
-				<div className={"e-icon-wrapper e-icon-marked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-				<div className={"e-icon-wrapper e-icon-unmarked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-			</div>
-						<div className={"e-icon"}>
-				<div className={"e-icon-wrapper e-icon-marked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-				<div className={"e-icon-wrapper e-icon-unmarked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-			</div>
-						<div className={"e-icon"}>
-				<div className={"e-icon-wrapper e-icon-marked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-				<div className={"e-icon-wrapper e-icon-unmarked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-			</div>
-						<div className={"e-icon"}>
-				<div className={"e-icon-wrapper e-icon-marked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-				<div className={"e-icon-wrapper e-icon-unmarked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-			</div>
-						<div className={"e-icon"}>
-				<div className={"e-icon-wrapper e-icon-marked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-				<div className={"e-icon-wrapper e-icon-unmarked"}>
-					<i aria-hidden={"true"} className={"eicon-star"}></i>				</div>
-			</div>
-						</div>
-		</div>
-						</div>
-				<div className={"elementor-element elementor-element-d0daa21 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"d0daa21"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Based on 2100+ reviews</p>		</div>
-					</div>
-				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-e5ab25b e-con-full tm-col-stretched-none elementor-hidden-mobile e-flex tm-bg-color-over-image e-con e-child"} data-id={"e5ab25b"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-f75c65c elementor-widget elementor-widget-tm-ele-floating-objects"} data-id={"f75c65c"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-floating-objects.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-ele-floating-objects"}>
-	<span className={"each-object elementor-repeater-item-940fc29 tm-animation-floating"} style={{"backgroundImage":"url(https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/shape14.avif)"} as CSSProperties}></span>		</div>
-					</div>
-				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-463f6f6 e-con-full tm-col-stretched-none animated-slow e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"463f6f6"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\"}"}>
-				<div className={"elementor-element elementor-element-2c574f8 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"2c574f8"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<h2>Health &amp; Wellness</h2>		</div>
-					</div>
-				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-461f745 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"461f745"} data-element_type={"container"} data-e-type={"container"}>
+				<HomeHero />
+<div className={"elementor-element elementor-element-461f745 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"461f745"} data-element_type={"container"} data-e-type={"container"}>
 					<div className={"e-con-inner"}>
 		<div className={"elementor-element elementor-element-21be819 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"21be819"} data-element_type={"container"} data-e-type={"container"}>
 		<div className={"elementor-element elementor-element-7db0054 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"7db0054"} data-element_type={"container"} data-e-type={"container"}>
@@ -864,7 +217,7 @@ export default function Home() {
 				</div>
 				<div className={"elementor-element elementor-element-c813e8f elementor-invisible elementor-widget elementor-widget-tm-ele-theme-button"} data-id={"c813e8f"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":900}"} data-widget_type={"tm-ele-theme-button.skin-style2"}>
 				<div className={"elementor-widget-container"}>
-					<a href={"/wellxess/about/"} className={"btn-style2"}>
+					<a href={"/about-us"} className={"btn-style2"}>
 
   <span className={"theme-btn-arrow-left"}>
 				  <i className={"fas fa-arrow-right"}></i>		  </span>
@@ -959,11 +312,11 @@ export default function Home() {
 	<i aria-hidden={"true"} className={"flaticon-set-retreat"}></i></div>          </div>
           
 		<h4 className={"service-title"}>
-				<a href={"/wellxess/wellness-programs/"}>
+				<a href={"/our-services"}>
 			 Nutrition & Meal Planning		</a>
 			</h4>
 						<div className={"service-details"}>Expert guidance on balanced diets, customized meal plan</div>
-          <a className={"link-btn-style"} href={"/wellxess/wellness-programs/"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
+          <a className={"link-btn-style"} href={"/our-services"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
         </div>
       </div>
       <div className={"image"}>
@@ -985,11 +338,11 @@ export default function Home() {
 	<i aria-hidden={"true"} className={"flaticon-set-theraphy-1"}></i></div>          </div>
           
 		<h4 className={"service-title"}>
-				<a href={"/wellxess/nutrition-counseling/"}>
+				<a href={"/our-services"}>
 			Holistic Health Coaching		</a>
 			</h4>
 						<div className={"service-details"}>Expert guidance on balanced diets, customized meal plan</div>
-          <a className={"link-btn-style"} href={"/wellxess/nutrition-counseling/"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
+          <a className={"link-btn-style"} href={"/our-services"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
         </div>
       </div>
       <div className={"image"}>
@@ -1011,11 +364,11 @@ export default function Home() {
 	<i aria-hidden={"true"} className={"flaticon-set-spa-towel"}></i></div>          </div>
           
 		<h4 className={"service-title"}>
-				<a href={"/wellxess/mental-health-support/"}>
+				<a href={"/our-services"}>
 			Fitness & Movement Therapy		</a>
 			</h4>
 						<div className={"service-details"}>Expert guidance on balanced diets, customized meal plan</div>
-          <a className={"link-btn-style"} href={"/wellxess/mental-health-support/"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
+          <a className={"link-btn-style"} href={"/our-services"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
         </div>
       </div>
       <div className={"image"}>
@@ -1037,11 +390,11 @@ export default function Home() {
 	<i aria-hidden={"true"} className={"flaticon-set-spa-and-relax"}></i></div>          </div>
           
 		<h4 className={"service-title"}>
-				<a href={"/wellxess/yoga-meditation/"}>
+				<a href={"/our-services"}>
 			 Nutrition & Meal Planning		</a>
 			</h4>
 						<div className={"service-details"}>Expert guidance on balanced diets, customized meal plan</div>
-          <a className={"link-btn-style"} href={"/wellxess/yoga-meditation/"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
+          <a className={"link-btn-style"} href={"/our-services"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
         </div>
       </div>
       <div className={"image"}>
@@ -1079,7 +432,7 @@ export default function Home() {
 				<div className={"elementor-element elementor-element-ebea0e4 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"ebea0e4"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<a href={"/wellxess/service/"}>To get your service</a>		</div>
+		<a href={"/our-services"}>To get your service</a>		</div>
 					</div>
 				</div>
 				</div>
@@ -1272,7 +625,7 @@ export default function Home() {
 				<div className={"elementor-element elementor-element-3df1299 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"3df1299"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<a href={"/wellxess/service/"}><strong>To get your service</strong></a>		</div>
+		<a href={"/our-services"}><strong>To get your service</strong></a>		</div>
 					</div>
 				</div>
 				</div>
@@ -1486,7 +839,7 @@ export default function Home() {
 		<div className={"elementor-element elementor-element-280a488 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"280a488"} data-element_type={"container"} data-e-type={"container"}>
 				<div className={"elementor-element elementor-element-90c91e9 elementor-invisible elementor-widget elementor-widget-tm-ele-theme-button"} data-id={"90c91e9"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":400}"} data-widget_type={"tm-ele-theme-button.skin-style2"}>
 				<div className={"elementor-widget-container"}>
-					<a href={"/wellxess/contact-us/"} className={"btn-style2"}>
+					<a href={"/contact"} className={"btn-style2"}>
 
   <span className={"theme-btn-arrow-left"}>
 				  <i className={"fas fa-arrow-right"}></i>		  </span>
@@ -1518,14 +871,14 @@ export default function Home() {
                     
 <div className={"project-item projects-current-theme1"}>
 	<img loading={"lazy"} decoding={"async"} width={"600"} height={"800"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project2-600x800.jpg"} className={"attachment-wellxess_thumbnail_height size-wellxess_thumbnail_height wp-post-image"} alt={"Wellness You Can Believe In"} srcSet={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project2-600x800.jpg 600w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project2-400x532.jpg 400w"} sizes={"(max-width: 600px) 100vw, 600px"} />	<img loading={"lazy"} decoding={"async"} width={"600"} height={"800"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project2-600x800.jpg"} className={"attachment-wellxess_thumbnail_height size-wellxess_thumbnail_height wp-post-image"} alt={"Wellness You Can Believe In"} srcSet={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project2-600x800.jpg 600w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project2-400x532.jpg 400w"} sizes={"(max-width: 600px) 100vw, 600px"} />	<div className={"content"}>
-					<h4 className={"title"}><a href={"https://dev265.kodesolution.com/wellxess/projects/wellness-you-can-believe-in/"}>Wellness You Can Believe In</a></h4>
+					<h4 className={"title"}><a href={"/"}>Wellness You Can Believe In</a></h4>
 							<ul>
 										<li>
-							<a href={"https://dev265.kodesolution.com/wellxess/projects-category/journey/"}>Journey</a>
+							<a href={"/"}>Journey</a>
 						</li>
 													<li className={"dot"}></li>
 													<li>
-							<a href={"https://dev265.kodesolution.com/wellxess/projects-category/wellness/"}>Wellness</a>
+							<a href={"/"}>Wellness</a>
 						</li>
 										<li>
 					<span className={"pxl-icon-item"}>
@@ -1561,14 +914,14 @@ export default function Home() {
                     
 <div className={"project-item projects-current-theme1"}>
 	<img loading={"lazy"} decoding={"async"} width={"672"} height={"448"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-672x448.jpg"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Your Wellness, Our Priority"} srcSet={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-672x448.jpg 672w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-300x200.jpg 300w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-1024x683.jpg 1024w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-768x512.jpg 768w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-1536x1024.jpg 1536w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-600x400.jpg 600w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3.jpg 1920w"} sizes={"(max-width: 672px) 100vw, 672px"} />	<img loading={"lazy"} decoding={"async"} width={"672"} height={"448"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-672x448.jpg"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Your Wellness, Our Priority"} srcSet={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-672x448.jpg 672w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-300x200.jpg 300w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-1024x683.jpg 1024w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-768x512.jpg 768w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-1536x1024.jpg 1536w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3-600x400.jpg 600w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project3.jpg 1920w"} sizes={"(max-width: 672px) 100vw, 672px"} />	<div className={"content"}>
-					<h4 className={"title"}><a href={"https://dev265.kodesolution.com/wellxess/projects/your-wellness-our-priority/"}>Your Wellness, Our Priority</a></h4>
+					<h4 className={"title"}><a href={"/"}>Your Wellness, Our Priority</a></h4>
 							<ul>
 										<li>
-							<a href={"https://dev265.kodesolution.com/wellxess/projects-category/health/"}>Health</a>
+							<a href={"/"}>Health</a>
 						</li>
 													<li className={"dot"}></li>
 													<li>
-							<a href={"https://dev265.kodesolution.com/wellxess/projects-category/wellness/"}>Wellness</a>
+							<a href={"/"}>Wellness</a>
 						</li>
 										<li>
 					<span className={"pxl-icon-item"}>
@@ -1602,14 +955,14 @@ export default function Home() {
                     
 <div className={"project-item projects-current-theme1"}>
 	<img loading={"lazy"} decoding={"async"} width={"672"} height={"448"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-672x448.jpg"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Empowering & Motivational"} srcSet={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-672x448.jpg 672w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-300x200.jpg 300w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-1024x683.jpg 1024w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-768x512.jpg 768w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-1536x1024.jpg 1536w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-600x400.jpg 600w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4.jpg 1920w"} sizes={"(max-width: 672px) 100vw, 672px"} />	<img loading={"lazy"} decoding={"async"} width={"672"} height={"448"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-672x448.jpg"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Empowering & Motivational"} srcSet={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-672x448.jpg 672w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-300x200.jpg 300w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-1024x683.jpg 1024w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-768x512.jpg 768w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-1536x1024.jpg 1536w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4-600x400.jpg 600w, https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/well-project4.jpg 1920w"} sizes={"(max-width: 672px) 100vw, 672px"} />	<div className={"content"}>
-					<h4 className={"title"}><a href={"https://dev265.kodesolution.com/wellxess/projects/empowering-motivational/"}>Empowering &#038; Motivational</a></h4>
+					<h4 className={"title"}><a href={"/"}>Empowering &#038; Motivational</a></h4>
 							<ul>
 										<li>
-							<a href={"https://dev265.kodesolution.com/wellxess/projects-category/wellness/"}>Wellness</a>
+							<a href={"/"}>Wellness</a>
 						</li>
 													<li className={"dot"}></li>
 													<li>
-							<a href={"https://dev265.kodesolution.com/wellxess/projects-category/yoga/"}>Yoga</a>
+							<a href={"/"}>Yoga</a>
 						</li>
 										<li>
 					<span className={"pxl-icon-item"}>
@@ -1644,14 +997,14 @@ export default function Home() {
                     
 <div className={"project-item projects-current-theme1"}>
 	<img loading={"lazy"} decoding={"async"} width={"1100"} height={"550"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project1-1100x550.jpg"} className={"attachment-wellxess_landscape size-wellxess_landscape wp-post-image"} alt={"Trusted Partner in Health and Wellness"} />	<img loading={"lazy"} decoding={"async"} width={"1100"} height={"550"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/06/well-project1-1100x550.jpg"} className={"attachment-wellxess_landscape size-wellxess_landscape wp-post-image"} alt={"Trusted Partner in Health and Wellness"} />	<div className={"content"}>
-					<h4 className={"title"}><a href={"https://dev265.kodesolution.com/wellxess/projects/trusted-partner-in-health-and-wellness/"}>Trusted Partner in Health and Wellness</a></h4>
+					<h4 className={"title"}><a href={"/"}>Trusted Partner in Health and Wellness</a></h4>
 							<ul>
 										<li>
-							<a href={"https://dev265.kodesolution.com/wellxess/projects-category/wellness/"}>Wellness</a>
+							<a href={"/"}>Wellness</a>
 						</li>
 													<li className={"dot"}></li>
 													<li>
-							<a href={"https://dev265.kodesolution.com/wellxess/projects-category/yoga/"}>Yoga</a>
+							<a href={"/"}>Yoga</a>
 						</li>
 										<li>
 					<span className={"pxl-icon-item"}>
@@ -1740,7 +1093,7 @@ export default function Home() {
 						<i aria-hidden={"true"} className={"flaticon-common-check-symbol"}></i>						<p>Wellness</p>					</li>
 								</ul>
 			</div>
-			<a className={"theme-btn-main"} href={"/wellxess/pricing-plan/"} target={"_self"}>
+			<a className={"theme-btn-main"} href={"/pricing"} target={"_self"}>
 			<span className={"theme-btn-arrow-left"}> <i className={"fas fa-arrow-right"}></i> </span>
 			<span className={"theme-btn"}>Select Plan</span>
 			<span className={"theme-btn-arrow-right"}> <i className={"fas fa-arrow-right"}></i> </span>
@@ -1786,7 +1139,7 @@ export default function Home() {
 						<i aria-hidden={"true"} className={"flaticon-common-check-symbol"}></i>						Wellness					</li>
 								</ul>
 			</div>
-			<a className={"theme-btn-main"} href={"/wellxess/pricing-plan/"} target={"_self"}>
+			<a className={"theme-btn-main"} href={"/pricing"} target={"_self"}>
 			<span className={"theme-btn-arrow-left"}> <i className={"fas fa-arrow-right"}></i> </span>
 			<span className={"theme-btn"}>Select Plan</span>
 			<span className={"theme-btn-arrow-right"}> <i className={"fas fa-arrow-right"}></i> </span>
@@ -2039,7 +1392,7 @@ export default function Home() {
 			25		</span>
 	</div>
 	<div className={"content"}>
-					<h4 className={"entry-title"}><a href={"https://dev265.kodesolution.com/wellxess/blog/the-importance-of-wellness-in-everyday-life/"} rel={"bookmark"}>The Importance of Wellness in Everyday Life</a></h4>													<div className={"mascot-post-excerpt"}>Your Wellness Absolute: Nurtured Daily This approach is designed for individuals seeking to actively</div>											<a href={"https://dev265.kodesolution.com/wellxess/blog/the-importance-of-wellness-in-everyday-life/"} className={"link-btn"}>
+					<h4 className={"entry-title"}><a href={"/"} rel={"bookmark"}>The Importance of Wellness in Everyday Life</a></h4>													<div className={"mascot-post-excerpt"}>Your Wellness Absolute: Nurtured Daily This approach is designed for individuals seeking to actively</div>											<a href={"/"} className={"link-btn"}>
 				Read More <i className={"fa fa-arrow-right"}></i>
 			</a>
 			</div>
@@ -2055,7 +1408,7 @@ export default function Home() {
 			25		</span>
 	</div>
 	<div className={"content"}>
-					<h4 className={"entry-title"}><a href={"https://dev265.kodesolution.com/wellxess/blog/helping-you-live-healthier-happier-and-stronge/"} rel={"bookmark"}>Helping You Live Healthier, Happier, and Stronge</a></h4>													<div className={"mascot-post-excerpt"}>Your Wellness Absolute: Nurtured Daily This approach is designed for individuals seeking to actively</div>											<a href={"https://dev265.kodesolution.com/wellxess/blog/helping-you-live-healthier-happier-and-stronge/"} className={"link-btn"}>
+					<h4 className={"entry-title"}><a href={"/"} rel={"bookmark"}>Helping You Live Healthier, Happier, and Stronge</a></h4>													<div className={"mascot-post-excerpt"}>Your Wellness Absolute: Nurtured Daily This approach is designed for individuals seeking to actively</div>											<a href={"/"} className={"link-btn"}>
 				Read More <i className={"fa fa-arrow-right"}></i>
 			</a>
 			</div>
@@ -2071,7 +1424,7 @@ export default function Home() {
 			25		</span>
 	</div>
 	<div className={"content"}>
-					<h4 className={"entry-title"}><a href={"https://dev265.kodesolution.com/wellxess/blog/committed-to-helping-you-live-healthier-every-day/"} rel={"bookmark"}>Committed to Helping You Live Healthier Every Day</a></h4>													<div className={"mascot-post-excerpt"}>Your Wellness Absolute: Nurtured Daily This approach is designed for individuals seeking to actively</div>											<a href={"https://dev265.kodesolution.com/wellxess/blog/committed-to-helping-you-live-healthier-every-day/"} className={"link-btn"}>
+					<h4 className={"entry-title"}><a href={"/"} rel={"bookmark"}>Committed to Helping You Live Healthier Every Day</a></h4>													<div className={"mascot-post-excerpt"}>Your Wellness Absolute: Nurtured Daily This approach is designed for individuals seeking to actively</div>											<a href={"/"} className={"link-btn"}>
 				Read More <i className={"fa fa-arrow-right"}></i>
 			</a>
 			</div>
@@ -2110,229 +1463,7 @@ export default function Home() {
 	
 
 			
-		<footer id={"footer"} className={"footer"}>
-			<div className={"footer-widget-area"}>
-												
-													<div data-elementor-type={"wp-post"} data-elementor-id={"930"} className={"elementor elementor-930"}>
-				<div className={"elementor-element elementor-element-a0b9c53 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"a0b9c53"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-625c57d e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"625c57d"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-		<div className={"elementor-element elementor-element-5f2c155 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"5f2c155"} data-element_type={"container"} data-e-type={"container"}>
-					<div className={"e-con-inner"}>
-		<div className={"elementor-element elementor-element-73708c1 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"73708c1"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-52016dc elementor-widget__width-initial elementor-widget-mobile_extra__width-inherit mascot-section-align-left mascot-section-align-center horizontal-line-align-left vertical-line-align-bottom elementor-widget elementor-widget-tm-ele-section-title"} data-id={"52016dc"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-section-title.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-section-title section-title"}>
-	<div className={"title-wrapper"}>
-		
-					<h2 className={"title"}>
-
-		
-				<span className={"title-part1"}>Book a free 15-minute session today to explore how we can help you thrive</span>
-		
-							
-	</h2>
-	<div className={"title-seperator-line"}></div>						</div>
-</div>				</div>
-				</div>
-				<div className={"elementor-element elementor-element-a558399 elementor-widget elementor-widget-tm-ele-theme-button"} data-id={"a558399"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-theme-button.skin-style2"}>
-				<div className={"elementor-widget-container"}>
-					<a href={"/wellxess/about/"} className={"btn-style2"}>
-
-  <span className={"theme-btn-arrow-left"}>
-				  <i className={"fas fa-arrow-right"}></i>		  </span>
-  <span className={"theme-btn"}>
-		Book Now  </span>
-  <span className={"theme-btn-arrow-right"}>
-				  <i className={"fas fa-arrow-right"}></i>		  </span>
-</a>				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-515ae12 overflow-hidden e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"515ae12"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-2e1ca26 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"2e1ca26"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-ee86a89 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"ee86a89"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-632b7ec e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"632b7ec"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":300}"}>
-				<div className={"elementor-element elementor-element-a9bacf9 elementor-widget elementor-widget-tm-ele-site-logo"} data-id={"a9bacf9"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-site-logo.default"}>
-				<div className={"elementor-widget-container"}>
-							<a className={"menuzord-brand site-brand"} href={"https://dev265.kodesolution.com/wellxess/"}>
-											<img loading={"lazy"} decoding={"async"} className={"logo-default"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/logo-wide-white.png"} width={"400"} height={"83"} alt={"Wellxess"} />
-									</a>
-						</div>
-				</div>
-				<div className={"elementor-element elementor-element-3c399df elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"3c399df"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>There are many variations of Lorem Ipsum available,There are many variations</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-cf5dfca elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit mascot-icon-align-left mascot-icon-align-left elementor-widget elementor-widget-tm-ele-iconbox"} data-id={"cf5dfca"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-iconbox.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-icon-box icon-box icon-left font-icon responsive-mobile icon-left animate-hover icon-rotate"}>
-	
-  	<div className={"icon-box-wrapper"}>
-		
-		<div className={"icon-wrapper"}>
-		<div className={"icon icon-round icon-type-font-icon icon-size-default"}>
-			<i aria-hidden={"true"} className={"fas fa-phone"}></i>		</div>
-
-					<div className={"icon-bg-img"}>
-				  							</div>
-			</div>
-			<div className={"icon-text"}>
-						
-				<h5 className={"icon-box-title"}>
-							Get more information					</h5>
-					<div className={"content"}><a href={"tel:+92 3800 8060"}>+92 3800 8060</a></div>
-			
-			
-	
-					</div>
-		<div className={"clearfix"}></div>
-	</div>
-</div>				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-6b9e71d e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"6b9e71d"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":500}"}>
-				<div className={"elementor-element elementor-element-2a14229 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"2a14229"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Company</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-2a60c5d elementor-widget elementor-widget-tm-ele-navigation-menu"} data-id={"2a60c5d"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-navigation-menu.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links1"} className={""}><li id={"menu-item-3420"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3420"}><a href={"https://dev265.kodesolution.com/wellxess/about/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>About</a></li>
-<li id={"menu-item-3424"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3424"}><a href={"https://dev265.kodesolution.com/wellxess/service/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Our Mission</a></li>
-<li id={"menu-item-3421"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3421"}><a href={"https://dev265.kodesolution.com/wellxess/blog/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Our Blogs</a></li>
-<li id={"menu-item-3423"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3423"}><a href={"https://dev265.kodesolution.com/wellxess/faqs/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Help Center</a></li>
-<li id={"menu-item-3433"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3433"}><a href={"https://dev265.kodesolution.com/wellxess/contact-us/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Contact Us</a></li>
-</ul></div>				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-3a9725b e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"3a9725b"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":700}"}>
-				<div className={"elementor-element elementor-element-7fd03c5 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"7fd03c5"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p> Services</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-7fd5638 elementor-widget elementor-widget-tm-ele-navigation-menu"} data-id={"7fd5638"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-navigation-menu.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links2"} className={""}><li id={"menu-item-3425"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3425"}><a href={"https://dev265.kodesolution.com/wellxess/stress-management/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Stress Management</a></li>
-<li id={"menu-item-3426"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3426"}><a href={"https://dev265.kodesolution.com/wellxess/weight-management/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Weight Management</a></li>
-<li id={"menu-item-3427"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3427"}><a href={"https://dev265.kodesolution.com/wellxess/yoga-meditation/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Yoga &#038; Meditation</a></li>
-<li id={"menu-item-3428"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3428"}><a href={"https://dev265.kodesolution.com/wellxess/mental-health-support/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Mental Health Support</a></li>
-<li id={"menu-item-3429"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3429"}><a href={"https://dev265.kodesolution.com/wellxess/nutrition-counseling/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Nutrition Counseling</a></li>
-</ul></div>				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-70e1971 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"70e1971"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":900}"}>
-		<div className={"elementor-element elementor-element-a0d492d e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"a0d492d"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-3750c1e elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"3750c1e"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Address</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-f79bcfb elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"f79bcfb"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>1901 Thornridge Cir. Shiloh<br />Hawaii 81063</p>		</div>
-					</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-bf3cfff e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"bf3cfff"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-70cca8a elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"70cca8a"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Phone</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-1e07312 elementor-widget elementor-widget-tm-ele-text-editor-advanced"} data-id={"1e07312"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor-advanced.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor-advanced"}>
-					<div className={"each-item elementor-repeater-item-24c3d2c"}>
-				<p>+629 555-0129</p>				</div>
-								<div className={"each-item elementor-repeater-item-524027c"}>
-				<p><a href={"/cdn-cgi/l/email-protection"} className={"__cf_email__"} data-cfemail={"1276777f7d52776a737f627e773c717d7f"}>[email&#160;protected]</a></p>				</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-aefa860 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"aefa860"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-8a68e63 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"8a68e63"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":1000}"}>
-				<div className={"elementor-element elementor-element-1677858 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"1677858"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Mon - Fri:</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-6cf8af8 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"6cf8af8"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>9.00 am - 8.00pm</p>		</div>
-					</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-2fbba21 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"2fbba21"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-5c852fc e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"5c852fc"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":1200}"}>
-				<div className={"elementor-element elementor-element-e0b150a elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"e0b150a"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Saturday:</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-b81a619 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"b81a619"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>10.00 am - 8.00pm</p>		</div>
-					</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-3faedf5 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"3faedf5"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":1300}"}>
-				<div className={"elementor-element elementor-element-57d8ba6 elementor-widget elementor-widget-tm-ele-social-links"} data-id={"57d8ba6"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-social-links.default"}>
-				<div className={"elementor-widget-container"}>
-					<ul className={"tm-sc-social-links icon-circled icon-sm links-outlined"}>
-
-		<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-twitter"}></i></a></li>
-			<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-facebook"}></i></a></li>
-			<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-youtube"}></i></a></li>
-	
-		<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-linkedin"}></i></a></li>
-			
-			</ul>				</div>
-				</div>
-				</div>
-				</div>
-				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-4b4f4b9 overflow-hidden e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"4b4f4b9"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-		<div className={"elementor-element elementor-element-5b5043d e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"5b5043d"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-251af9b elementor-widget-mobile_extra__width-initial elementor-invisible elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"251af9b"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":1400}"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>© Copyright 2026 by Company.com</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-43cf70b elementor-invisible elementor-widget elementor-widget-tm-ele-navigation-menu"} data-id={"43cf70b"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":1500}"} data-widget_type={"tm-ele-navigation-menu.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links3"} className={""}><li id={"menu-item-3432"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3432"}><a href={"https://dev265.kodesolution.com/wellxess/team/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Terms &#038; Condition</a></li>
-<li id={"menu-item-3431"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3431"}><a href={"https://dev265.kodesolution.com/wellxess/faqs/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Privacy Policy</a></li>
-<li id={"menu-item-3430"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3430"}><a href={"https://dev265.kodesolution.com/wellxess/contact-us/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Contact Us</a></li>
-</ul></div>				</div>
-				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-				</div>
-				</div>
-												
-														</div>
-		</footer>
+		<SiteFooter />
 		
 	</div>
 

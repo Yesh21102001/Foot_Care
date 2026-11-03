@@ -5,7 +5,7 @@ export default function Healthpod() {
     <ServicePage
       eyebrow="Our Treatments"
       title="Healthpod"
-      description="The Wellxess Healthpod: a private, calming space for focused wellness sessions."
+      description="The Foot Care Healthpod: a private, calming space for focused wellness sessions."
       intro="A private pod designed for rest and recovery. Step in, settle down and let the session take care of the rest."
       benefits={[
         { title: "Private space", text: "A quiet, enclosed pod that helps you switch off." },
