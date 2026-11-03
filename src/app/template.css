@@ -144,6 +144,18 @@ img.wp-smiley, img.emoji {
   color: #0b2622 !important;
   fill: #0b2622 !important;
 }
+/* Why Choose Us: all four feature icons in dark green (#0B2622). */
+.elementor-17 .elementor-element.elementor-element-e5944b7 .icon i,
+.elementor-17 .elementor-element.elementor-element-368149d .icon i,
+.elementor-17 .elementor-element.elementor-element-7f3ff6b .icon i,
+.elementor-17 .elementor-element.elementor-element-c5e588a .icon i,
+.elementor-17 .elementor-element.elementor-element-e5944b7 .icon svg,
+.elementor-17 .elementor-element.elementor-element-368149d .icon svg,
+.elementor-17 .elementor-element.elementor-element-7f3ff6b .icon svg,
+.elementor-17 .elementor-element.elementor-element-c5e588a .icon svg {
+  color: #0b2622 !important;
+  fill: #0b2622 !important;
+}
 /* Who We Are: on phones, the two features sit side by side. */
 @media (max-width: 767px) {
   .elementor-17 .elementor-element.elementor-element-dd494bd {
