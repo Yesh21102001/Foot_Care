@@ -14,8 +14,7 @@ export function HomeHero() {
           <div className="hero-actions">
             <Link
               href="/pricing"
-              className="btn btn-primary"
-              style={{ backgroundColor: "#0B2622" }}
+              className="btn btn-hero-dark"
             >
               Pricing
             </Link>

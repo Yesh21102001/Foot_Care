@@ -614,7 +614,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(11, 38, 34, 0.9) 0%, rgba(11, 38, 34, 0.6) 45%, rgba(11, 38, 34, 0.15) 100%);
+  background: linear-gradient(180deg, rgba(11, 38, 34, 0) 55%, rgba(11, 38, 34, 0.7) 100%), linear-gradient(90deg, rgba(11, 38, 34, 0.9) 0%, rgba(11, 38, 34, 0.6) 45%, rgba(11, 38, 34, 0.15) 100%);
 }
 
 .fc-site .hero-photo .container {
@@ -693,4 +693,160 @@
 .fc-site .hero-actions .btn {
   min-width: 200px;
   justify-content: center;
+}
+
+/* No blue border or outline on button hover and focus. */
+.fc-site .btn:hover,
+.fc-site .btn:focus,
+.fc-site .btn:focus-visible {
+  border-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Homepage Pricing button: #0B2622, turns #AECC9F on hover. */
+.fc-site .btn-hero-dark {
+  background: #0b2622;
+  color: var(--color-white);
+}
+
+.fc-site .btn-hero-dark:hover {
+  background: #aecc9f;
+  color: #0b2622;
+}
+
+/* Homepage "Who We Are" section (massage version). */
+.fc-site .who-section {
+  padding: 110px 0;
+}
+
+.fc-site .who-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.fc-site .who-photo {
+  position: relative;
+  min-height: 520px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: url("/images/hero-massage.jpg") 72% center / cover no-repeat;
+  background-color: var(--color-evergreen);
+}
+
+.fc-site .who-stat {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.fc-site .who-stat strong {
+  font-size: 48px;
+  line-height: 1;
+  color: var(--color-evergreen);
+}
+
+.fc-site .who-stat span {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.fc-site .who-eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--color-white);
+  border: 1px solid var(--color-alabaster);
+  color: var(--color-evergreen);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fc-site .who-section h2 {
+  font-size: clamp(30px, 3.6vw, 46px);
+  line-height: 1.15;
+  color: var(--color-evergreen);
+  margin: 0 0 20px;
+}
+
+.fc-site .who-text {
+  color: var(--color-text-muted);
+  font-size: 17px;
+  margin: 0;
+}
+
+.fc-site .who-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 36px 0;
+}
+
+.fc-site .who-features h3 {
+  margin: 14px 0 8px;
+  font-size: 20px;
+  color: var(--color-evergreen);
+}
+
+.fc-site .who-features p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+.fc-site .who-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 12px 12px 24px;
+  border-radius: 999px;
+  background: var(--color-celadon);
+  color: var(--color-evergreen);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.fc-site .who-btn-arrow {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+}
+
+.fc-site .who-btn:hover {
+  background: var(--color-evergreen);
+  color: var(--color-white);
+}
+
+@media (max-width: 880px) {
+  .fc-site .who-section {
+    padding: 64px 0;
+  }
+
+  .fc-site .who-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .fc-site .who-photo {
+    min-height: 380px;
+  }
+
+  .fc-site .who-features {
+    grid-template-columns: 1fr;
+  }
 }

@@ -5,6 +5,7 @@ import { SwiperCarousels } from "./swiper-carousels";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { HomeHero } from "../components/HomeHero";
+import { WhoWeAre } from "../components/WhoWeAre";
 
 // Converted from template.txt. Markup is kept as-is; styles live in ./template.css.
 // Interactive WordPress/Elementor JavaScript (sliders, mobile menu, animations) is not included.
@@ -23,24 +24,7 @@ export default function Home() {
 			
 <div className={"preloader-dot-loading"}>
   <div className={"cssload-loading"}><i></i><i></i><i></i><i></i></div>
-</div>			<div className={"txt-loading"}>
-    <span data-text-preloader={"w"} className={"letters-loading"}>
-        w    </span>
-    <span data-text-preloader={"e"} className={"letters-loading"}>
-        e    </span>
-    <span data-text-preloader={"l"} className={"letters-loading"}>
-        l    </span>
-    <span data-text-preloader={"l"} className={"letters-loading"}>
-        l    </span>
-    <span data-text-preloader={"x"} className={"letters-loading"}>
-        x    </span>
-    <span data-text-preloader={"e"} className={"letters-loading"}>
-        e    </span>
-    <span data-text-preloader={"s"} className={"letters-loading"}>
-        s    </span>
-    <span data-text-preloader={"s"} className={"letters-loading"}>
-        s    </span>
-</div>
+</div>			<div className={"txt-loading"}><span className={"letters-loading"}>Foot Care</span></div>
 		</div>
 
 
@@ -79,7 +63,7 @@ export default function Home() {
 <div className={"layer-image-wrapper layer-image layer-image-fullwidth elementor-repeater-item-2bf0134"} style={{} as CSSProperties}>
 	<div className={"layer-inner layer-image"}>
 		<div className={"layer-image-inner-wrapper image-hover-effect-shine"}>
-					<img fetchPriority={"high"} decoding={"async"} className={""} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/about1.avif"} width={"536"} height={"594"} alt={""} />
+					<img fetchPriority={"high"} decoding={"async"} className={""} src={"/images/who-massage.jpg"} width={"536"} height={"594"} alt={""} />
 		</div>
 	</div>
 </div>
@@ -135,7 +119,7 @@ export default function Home() {
 	</div>			<h2 className={"title tm-split-text split-in-right"}>
 
 		
-				<span className={"title-part1"}>Guiding you toward a life of balance and vitality</span>
+				<span className={"title-part1"}>Massage that melts tension and restores balance</span>
 		
 							
 	</h2>
@@ -145,7 +129,7 @@ export default function Home() {
 				<div className={"elementor-element elementor-element-9d39ad2 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"9d39ad2"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":300}"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<p>Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas magna mi ut arcu. Phasellus nec odio orci. Nunc id massa ante. Suspendisse sit amet neque euismod, convallis quam eget,</p>		</div>
+		<p>Our licensed therapists combine therapeutic massage and reflexology with a calm, personal approach. Every session is shaped around your body, your goals and how you feel that day.</p>		</div>
 					</div>
 				</div>
 		<div className={"elementor-element elementor-element-dd494bd e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"dd494bd"} data-element_type={"container"} data-e-type={"container"}>
@@ -166,7 +150,7 @@ export default function Home() {
 			<div className={"icon-text"}>
 						
 				<h5 className={"icon-box-title"}>
-							Awaken Your Inner <br />Balance					</h5>
+							Deep muscle relief					</h5>
 								
 			
 	
@@ -205,7 +189,7 @@ export default function Home() {
 			<div className={"icon-text"}>
 						
 				<h5 className={"icon-box-title"}>
-							Your Journey to <br />Harmony					</h5>
+							Calm, restored mind					</h5>
 								
 			
 	

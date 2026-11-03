@@ -88,3 +88,32 @@ img.wp-smiley, img.emoji {
 .elementor-17 .elementor-element.elementor-element-ff7b357 {
   --padding-top: 0px;
 }
+/* Who We Are: keep the "25+ Years" card fully inside the photo at every width. */
+.elementor-17 .elementor-element.elementor-element-ada6da7 {
+  left: auto !important;
+  right: 24px !important;
+  bottom: 24px !important;
+}
+/* On desktop the photo is 84% of its column, so offset the card by the remaining 16%. */
+@media (min-width: 1201px) {
+  .elementor-17 .elementor-element.elementor-element-ada6da7 {
+    right: calc(16% + 24px) !important;
+  }
+}
+/* Who We Are: green tint on the photo, under the 25+ card. */
+.elementor-17 .elementor-element.elementor-element-7830d3c .elementor-repeater-item-2bf0134 .layer-inner {
+  position: relative;
+}
+.elementor-17 .elementor-element.elementor-element-7830d3c .elementor-repeater-item-2bf0134 .layer-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 38, 34, 0.15) 0%, rgba(11, 38, 34, 0.3) 50%, rgba(11, 38, 34, 0.75) 100%);
+  pointer-events: none;
+}
+/* Who We Are: remove the decorative leaves and the thin vertical line. */
+.elementor-17 .elementor-element.elementor-element-7830d3c .elementor-repeater-item-121a688,
+.elementor-17 .elementor-element.elementor-element-cb6bffc,
+.elementor-17 .elementor-element.elementor-element-a1c7255 {
+  display: none !important;
+}
