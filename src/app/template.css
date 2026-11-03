@@ -100,6 +100,64 @@ img.wp-smiley, img.emoji {
     right: calc(16% + 24px) !important;
   }
 }
+/* Who We Are: "Learn more" button in dark green (#0B2622). */
+.elementor-17 .elementor-element.elementor-element-c813e8f .btn-style2 {
+  background-color: #0b2622 !important;
+  color: #ffffff !important;
+}
+.elementor-17 .elementor-element.elementor-element-c813e8f .btn-style2 .theme-btn {
+  color: #ffffff !important;
+}
+.elementor-17 .elementor-element.elementor-element-c813e8f .btn-style2 .theme-btn-arrow-right {
+  background-color: #ffffff !important;
+  color: #0b2622 !important;
+}
+.elementor-17 .elementor-element.elementor-element-c813e8f .btn-style2 .theme-btn-arrow-right i {
+  color: #0b2622 !important;
+}
+/* Who We Are: feature icons in dark green (#0B2622). */
+.elementor-17 .elementor-element.elementor-element-d3b3291 .icon i,
+.elementor-17 .elementor-element.elementor-element-93253a7 .icon i,
+.elementor-17 .elementor-element.elementor-element-d3b3291 .icon svg,
+.elementor-17 .elementor-element.elementor-element-93253a7 .icon svg,
+.elementor-17 .elementor-element.elementor-element-d3b3291:hover .icon i,
+.elementor-17 .elementor-element.elementor-element-93253a7:hover .icon i {
+  color: #0b2622 !important;
+  fill: #0b2622 !important;
+}
+/* Who We Are: on phones, the two features sit side by side. */
+@media (max-width: 767px) {
+  .elementor-17 .elementor-element.elementor-element-dd494bd {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+  }
+  .elementor-17 .elementor-element.elementor-element-d3b3291,
+  .elementor-17 .elementor-element.elementor-element-93253a7 {
+    width: 48% !important;
+    max-width: 48% !important;
+  }
+  .elementor-17 .elementor-element.elementor-element-d3b3291 .icon-box-title,
+  .elementor-17 .elementor-element.elementor-element-93253a7 .icon-box-title {
+    font-size: 16px !important;
+  }
+}
+/* Who We Are: the 25+ card is shown on phones too, with smaller text. */
+@media (max-width: 767px) {
+  .elementor-17 .elementor-element.elementor-element-ada6da7 {
+    display: block !important;
+    right: 14px !important;
+    bottom: 14px !important;
+  }
+  .elementor-17 .elementor-element.elementor-element-ada6da7 .counter {
+    font-size: 40px !important;
+    line-height: 1.1 !important;
+  }
+  .elementor-17 .elementor-element.elementor-element-ada6da7 .title {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}
 /* Who We Are: green tint on the photo, under the 25+ card. */
 .elementor-17 .elementor-element.elementor-element-7830d3c .elementor-repeater-item-2bf0134 .layer-inner {
   position: relative;

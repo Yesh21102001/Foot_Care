@@ -206,7 +206,7 @@ export default function Home() {
   <span className={"theme-btn-arrow-left"}>
 				  <i className={"fas fa-arrow-right"}></i>		  </span>
   <span className={"theme-btn"}>
-		Learn more  </span>
+		About Us  </span>
   <span className={"theme-btn-arrow-right"}>
 				  <i className={"fas fa-arrow-right"}></i>		  </span>
 </a>				</div>
