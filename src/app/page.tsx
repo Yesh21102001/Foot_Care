@@ -303,9 +303,9 @@ export default function Home() {
       <div className={"image"}>
         
 
-<img loading={"lazy"} decoding={"async"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/service1.avif"} width={"403"} height={"294"} alt={""} />        
+<img loading={"lazy"} decoding={"async"} src={"/images/reflexology.jpg"} width={"403"} height={"294"} alt={""} />        
 
-<img loading={"lazy"} decoding={"async"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/service1.avif"} width={"403"} height={"294"} alt={""} />      </div>
+<img loading={"lazy"} decoding={"async"} src={"/images/reflexology.jpg"} width={"403"} height={"294"} alt={""} />      </div>
     </div>
   </div>					</div>
 																			<div className={"swiper-slide elementor-repeater-item-6c38a8a wow fadeInUp"} data-wow-delay={"500ms"}>

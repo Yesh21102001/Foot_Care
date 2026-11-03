@@ -8,12 +8,25 @@ type PageHeroProps = {
   eyebrow: string;
   title: string;
   accent?: string;
+  image?: string;
+  imagePosition?: string;
+  imageFit?: "cover" | "contain";
   children?: ReactNode;
 };
 
-export function PageHero({ eyebrow, title, accent, children }: PageHeroProps) {
+export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosition = "center center", imageFit = "cover", children }: PageHeroProps) {
   return (
-    <section className="hero hero-photo" style={{ backgroundImage: `url("${HERO_IMAGE}")` }}>
+    <section
+      className="hero hero-photo"
+      style={{
+        backgroundImage: imageFit === "contain"
+          ? `linear-gradient(90deg, #0b2622 0%, #0b2622 34%, rgba(11, 38, 34, 0) 52%), url("${image}")`
+          : `url("${image}")`,
+        backgroundPosition: imagePosition,
+        backgroundSize: imageFit,
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="container">
         <span className="eyebrow-pill">{eyebrow}</span>
         <h1>

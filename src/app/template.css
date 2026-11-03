@@ -115,6 +115,17 @@ img.wp-smiley, img.emoji {
 .elementor-17 .elementor-element.elementor-element-c813e8f .btn-style2 .theme-btn-arrow-right i {
   color: #0b2622 !important;
 }
+/* Service cards: green tint on the photos. */
+.tm-sc-service .image {
+  position: relative;
+}
+.tm-sc-service .image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 38, 34, 0.3) 0%, rgba(11, 38, 34, 0.7) 100%);
+  pointer-events: none;
+}
 /* Service cards: icons in dark green (#0B2622). */
 .tm-sc-service .service-icon i,
 .tm-sc-service .service-icon svg,

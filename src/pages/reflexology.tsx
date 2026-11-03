@@ -31,7 +31,7 @@ const faqs = [
 export default function Reflexology() {
   return (
     <Layout title="Foot Reflexology" description="Foot reflexology at Foot Care: what it is, how a session works, what research says, and answers to common questions.">
-      <PageHero eyebrow="The Art of Foot Reflexology" title="Every Step Has a Story." accent="Discover the Art of Reflexology.">
+      <PageHero eyebrow="The Art of Foot Reflexology" title="Every Step Has a Story." accent="Discover the Art of Reflexology." image="/images/reflexology.jpg" imagePosition="right center" imageFit="contain">
         Foot reflexology is a complementary wellness practice in which a practitioner applies pressure to specific areas of
         the feet. Rooted in traditional practices, it offers a focused and relaxing treatment experience.
       </PageHero>
@@ -55,8 +55,11 @@ export default function Reflexology() {
 
       {/* 02 — Map (dark section) */}
       <section className="rx-section rx-dark">
-        <div className="container">
-          <div className="rx-center">
+        <div className="container rx-map-split">
+          <figure className="rx-map-card">
+            <img src="/images/reflexology-map.jpg" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
+          </figure>
+          <div className="rx-map-text">
             <span className="rx-kicker rx-kicker-light">02 — The Map</span>
             <h2 className="rx-h2">Traditional reflexology <em>map</em></h2>
             <p className="rx-lead rx-lead-light">
@@ -64,9 +67,6 @@ export default function Reflexology() {
               traditional associations, not proven anatomical connections.
             </p>
           </div>
-          <figure className="rx-map-card">
-            <img src="/images/reflexology-map.jpg" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
-          </figure>
         </div>
       </section>
 

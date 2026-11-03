@@ -635,7 +635,7 @@
 }
 
 .fc-site .hero-photo h1 {
-  font-size: clamp(44px, 6vw, 80px);
+  font-size: clamp(34px, 4.2vw, 58px);
   line-height: 1.02;
   max-width: 14ch;
 }
@@ -1243,4 +1243,44 @@
 .fc-site .btn-primary:hover {
   background: var(--color-celadon);
   color: var(--color-evergreen);
+}
+
+/* Photo heroes: primary button in Celadon so it shows on dark backgrounds. */
+.fc-site .hero-photo .btn-primary {
+  background: var(--color-celadon);
+  color: var(--color-evergreen);
+}
+.fc-site .hero-photo .btn-primary:hover {
+  background: var(--color-white);
+  color: var(--color-evergreen);
+}
+
+/* Photo heroes: smaller intro text so the hero is less crowded. */
+.fc-site .hero-photo p {
+  font-size: 17px;
+  max-width: 52ch;
+}
+
+/* Reflexology map: image left, text right. */
+.fc-site .rx-map-split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.fc-site .rx-map-split .rx-map-card {
+  margin: 0;
+  max-width: none;
+}
+.fc-site .rx-map-text .rx-lead-light {
+  margin: 24px 0 0;
+}
+.fc-site .rx-map-text .rx-kicker {
+  margin-bottom: 22px;
+}
+@media (max-width: 880px) {
+  .fc-site .rx-map-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
