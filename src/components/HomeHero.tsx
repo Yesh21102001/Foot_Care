@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 // Same hero as the inner pages, used at the top of the homepage.
-const HERO_IMAGE = "/images/hero-massage.jpg";
+const HERO_IMAGE = "/images/home-hero.jpg";
 
 export function HomeHero() {
   return (

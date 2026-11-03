@@ -1,23 +1,144 @@
-import { ServicePage } from "../components/ServicePage";
+import { PageHero } from "../components/Blocks";
+import { Layout } from "../components/Layout";
+
+const faqs = [
+  {
+    q: "How is reflexology different from foot massage?",
+    a: "Foot massage works on the whole foot to ease muscles. Reflexology focuses on specific points and areas of the feet, using pressure techniques that are based on traditional practice.",
+  },
+  {
+    q: "Will it be uncomfortable?",
+    a: "Some areas can feel tender, especially if you are stressed or tired. Tell your reflexologist at any time and the pressure will be adjusted.",
+  },
+  {
+    q: "How long does a session last?",
+    a: "The length is confirmed when you book, based on the treatment you choose.",
+  },
+  {
+    q: "How often should I come?",
+    a: "Many guests book regular sessions to support relaxation. We will suggest a frequency after your first visit.",
+  },
+  {
+    q: "Is reflexology suitable for me?",
+    a: "Please tell us about any medical conditions, injuries, circulation problems, pregnancy or medication before your session, so we can advise you.",
+  },
+  {
+    q: "Does reflexology replace medical care?",
+    a: "No. Reflexology is a complementary practice. It does not diagnose, treat or cure any disease. Keep seeing your doctor for any health concern.",
+  },
+];
 
 export default function Reflexology() {
   return (
-    <ServicePage
-      eyebrow="Our Treatments"
-      title="Reflexology"
-      description="Reflexology sessions that ease tension and support whole-body balance."
-      intro="Targeted pressure on points of the feet that relate to every part of the body, helping you relax and feel restored."
-      benefits={[
-        { title: "Deep relaxation", text: "Reduces stress and helps you unwind after a long day." },
-        { title: "Better circulation", text: "Gentle pressure encourages blood flow to the lower body." },
-        { title: "Foot comfort", text: "Eases tired, achy feet and improves overall foot health." },
-        { title: "Better sleep", text: "Many clients find it easier to fall asleep after a session." },
-      ]}
-      steps={[
-        { title: "Consultation", text: "We learn about your health and what you want from the session." },
-        { title: "Treatment", text: "A certified reflexologist works through each area of your feet." },
-        { title: "Aftercare", text: "We suggest simple tips to keep the benefits going." },
-      ]}
-    />
+    <Layout title="Foot Reflexology" description="Foot reflexology at Foot Care: what it is, how a session works, what research says, and answers to common questions.">
+      <PageHero eyebrow="The Art of Foot Reflexology" title="Every Step Has a Story." accent="Discover the Art of Reflexology.">
+        Foot reflexology is a complementary wellness practice in which a practitioner applies pressure to specific areas of
+        the feet. Rooted in traditional practices, it offers a focused and relaxing treatment experience.
+      </PageHero>
+
+      {/* 01 — What it is */}
+      <section className="rx-section">
+        <div className="container rx-split">
+          <div>
+            <span className="rx-kicker">01 — Origins</span>
+            <h2 className="rx-h2">What is <em>foot reflexology?</em></h2>
+          </div>
+          <div>
+            <p className="rx-lead">
+              Reflexology has roots in traditional practices from several cultures. In a session, the reflexologist uses
+              their thumbs and fingers to press on points and areas of the feet. Many guests describe the experience as
+              calming and deeply relaxing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 02 — Map (dark section) */}
+      <section className="rx-section rx-dark">
+        <div className="container">
+          <div className="rx-center">
+            <span className="rx-kicker rx-kicker-light">02 — The Map</span>
+            <h2 className="rx-h2">Traditional reflexology <em>map</em></h2>
+            <p className="rx-lead rx-lead-light">
+              The map shows the zones of the sole of the foot as they are described in traditional reflexology. These are
+              traditional associations, not proven anatomical connections.
+            </p>
+          </div>
+          <figure className="rx-map-card">
+            <img src="/images/reflexology-map.jpg" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
+          </figure>
+        </div>
+      </section>
+
+      {/* 03 — Session */}
+      <section className="rx-section">
+        <div className="container rx-split">
+          <div>
+            <span className="rx-kicker">03 — The Session</span>
+            <h2 className="rx-h2">How a session <em>works</em></h2>
+          </div>
+          <div>
+            <p className="rx-lead">
+              Your reflexologist uses steady, gentle pressure with the thumbs, fingers and hands. Pressure is adjusted to
+              your comfort at every stage, and you can ask for lighter or firmer work at any time.
+            </p>
+            <div className="rx-note">
+              <span className="rx-note-label">Session flow</span>
+              <p>The exact steps of a FOOT CARE session will be added once the process is confirmed.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 04 — Research */}
+      <section className="rx-section rx-tint">
+        <div className="container">
+          <div className="rx-center">
+            <span className="rx-kicker">04 — Evidence</span>
+            <h2 className="rx-h2">What research <em>says</em></h2>
+          </div>
+          <div className="rx-research">
+            <p className="rx-lead">
+              Research on reflexology is mixed. Some studies report relaxation, reduced anxiety and better sleep after
+              sessions. Studies have not proven that pressure on a foot point treats a specific organ. A summary of
+              published studies, with study names, dates and links, will be added after review.
+            </p>
+            <div className="rx-quote">
+              <span className="rx-quote-label">What guests may appreciate</span>
+              <p>Relaxation, time to unwind and a soothing, foot-focused experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 05 — FAQ */}
+      <section className="rx-section">
+        <div className="container rx-faq">
+          <div className="rx-center">
+            <span className="rx-kicker">05 — Questions</span>
+            <h2 className="rx-h2">Frequently asked <em>questions</em></h2>
+          </div>
+          <div className="rx-faq-list">
+            {faqs.map((item) => (
+              <details key={item.q}>
+                <summary>{item.q}</summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Evidence notice */}
+      <section className="rx-section rx-section-tight">
+        <div className="container">
+          <div className="rx-evidence">
+            Do not state that reflexology diagnoses, treats or cures disease, or that pressure on a foot point has been
+            scientifically proven to treat the corresponding organ. Clearly distinguish traditional theory from
+            established medical evidence.
+          </div>
+        </div>
+      </section>
+    </Layout>
   );
 }

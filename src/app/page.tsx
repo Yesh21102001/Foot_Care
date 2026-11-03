@@ -295,12 +295,9 @@ export default function Home() {
             <div className={"service-icon"}>
 	<i aria-hidden={"true"} className={"flaticon-set-retreat"}></i></div>          </div>
           
-		<h4 className={"service-title"}>
-				<a href={"/our-services"}>
-			 Nutrition & Meal Planning		</a>
-			</h4>
-						<div className={"service-details"}>Expert guidance on balanced diets, customized meal plan</div>
-          <a className={"link-btn-style"} href={"/our-services"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
+		<h4 className={"service-title"}><a href={"/reflexology"}>Reflexology Massage</a></h4>
+						<div className={"service-details"}>Pressure-point therapy for deep relaxation and foot comfort.</div>
+          <a className={"link-btn-style"} href={"/reflexology"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
         </div>
       </div>
       <div className={"image"}>
@@ -321,12 +318,9 @@ export default function Home() {
             <div className={"service-icon"}>
 	<i aria-hidden={"true"} className={"flaticon-set-theraphy-1"}></i></div>          </div>
           
-		<h4 className={"service-title"}>
-				<a href={"/our-services"}>
-			Holistic Health Coaching		</a>
-			</h4>
-						<div className={"service-details"}>Expert guidance on balanced diets, customized meal plan</div>
-          <a className={"link-btn-style"} href={"/our-services"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
+		<h4 className={"service-title"}><a href={"/therapeutic-massage"}>Therapeutic Massage</a></h4>
+						<div className={"service-details"}>Targeted massage to release tension and aid recovery.</div>
+          <a className={"link-btn-style"} href={"/therapeutic-massage"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
         </div>
       </div>
       <div className={"image"}>
@@ -347,12 +341,9 @@ export default function Home() {
             <div className={"service-icon"}>
 	<i aria-hidden={"true"} className={"flaticon-set-spa-towel"}></i></div>          </div>
           
-		<h4 className={"service-title"}>
-				<a href={"/our-services"}>
-			Fitness & Movement Therapy		</a>
-			</h4>
-						<div className={"service-details"}>Expert guidance on balanced diets, customized meal plan</div>
-          <a className={"link-btn-style"} href={"/our-services"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
+		<h4 className={"service-title"}><a href={"/hydrogen-therapy"}>Hydrogen Therapy</a></h4>
+						<div className={"service-details"}>A calming wellness session to support recovery.</div>
+          <a className={"link-btn-style"} href={"/hydrogen-therapy"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
         </div>
       </div>
       <div className={"image"}>
@@ -373,12 +364,9 @@ export default function Home() {
             <div className={"service-icon"}>
 	<i aria-hidden={"true"} className={"flaticon-set-spa-and-relax"}></i></div>          </div>
           
-		<h4 className={"service-title"}>
-				<a href={"/our-services"}>
-			 Nutrition & Meal Planning		</a>
-			</h4>
-						<div className={"service-details"}>Expert guidance on balanced diets, customized meal plan</div>
-          <a className={"link-btn-style"} href={"/our-services"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
+		<h4 className={"service-title"}><a href={"/healthpod"}>Health Pod</a></h4>
+						<div className={"service-details"}>A private pod for restful, focused wellness time.</div>
+          <a className={"link-btn-style"} href={"/healthpod"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
         </div>
       </div>
       <div className={"image"}>
