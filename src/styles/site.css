@@ -1508,3 +1508,187 @@ footer#footer {
   font-weight: 600;
   color: var(--color-evergreen);
 }
+
+/* Homepage testimonials: soft cards with a quote mark and a name tab cut into the bottom-left corner. */
+.fc-site .home-testimonials {
+  --ht-bg: #e7ebe5;
+  padding: 96px 0;
+  background: var(--ht-bg);
+}
+.fc-site .home-testimonials h2 {
+  margin: 0 auto 48px;
+  max-width: 640px;
+  text-align: center;
+  color: #0b2622;
+}
+.fc-site .home-testimonials-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.fc-site .ht-card {
+  position: relative;
+  margin: 0;
+  padding: 28px 28px 104px;
+  border-radius: 24px;
+  background: #f5f7f3;
+  min-height: 280px;
+}
+.fc-site .ht-quote {
+  display: block;
+  height: 44px;
+  font-size: 64px;
+  line-height: 1;
+  color: #aecc9f;
+}
+.fc-site .ht-card blockquote {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #0b2622;
+}
+.fc-site .ht-person {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px 0 0;
+  border-top-right-radius: 24px;
+  background: var(--ht-bg);
+}
+.fc-site .ht-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0b2622;
+  color: #ffffff;
+  font-weight: 600;
+}
+.fc-site .ht-person strong {
+  display: block;
+  font-size: 15px;
+  color: #0b2622;
+}
+.fc-site .ht-person small {
+  display: block;
+  font-size: 12px;
+  color: #0b2622;
+  opacity: 0.6;
+}
+/* Homepage testimonials: cancel the theme's blockquote box and quote icon so the card has a single background. */
+.fc-site .ht-card blockquote {
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.fc-site .ht-card blockquote::before,
+.fc-site .ht-card blockquote::after {
+  content: none;
+  display: none;
+}
+
+/* Reflexology: price and package tables. */
+.fc-site .rx-price-wrap {
+  max-width: 960px;
+  margin: 40px auto 0;
+  overflow-x: auto;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(11, 38, 34, 0.08);
+}
+.fc-site .rx-price-narrow {
+  max-width: 720px;
+  margin-top: 20px;
+}
+.fc-site .rx-price-table {
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+  color: #0b2622;
+}
+.fc-site .rx-price-table th {
+  padding: 18px 24px;
+  background: #0b2622;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
+}
+.fc-site .rx-price-table th:not(:first-child),
+.fc-site .rx-price-table td:not(:first-child) {
+  text-align: center;
+  white-space: nowrap;
+}
+.fc-site .rx-price-table td {
+  padding: 16px 24px;
+  border-top: 1px solid rgba(11, 38, 34, 0.1);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.fc-site .rx-price-table tbody tr:nth-child(even) td {
+  background: #f5f7f3;
+}
+.fc-site .rx-price-table td:not(:first-child) {
+  font-weight: 600;
+}
+.fc-site .rx-price-sub {
+  max-width: 720px;
+  margin: 56px auto 0;
+  font-size: 20px;
+  color: #0b2622;
+}
+.fc-site .rx-price-cta {
+  margin: 40px 0 0;
+  text-align: center;
+}
+
+/* Plain page heading with breadcrumb (no photo hero). */
+.fc-site .page-heading {
+  padding: 168px 0 8px;
+  text-align: center;
+}
+.fc-site .breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: #0b2622;
+}
+.fc-site .breadcrumb li + li::before {
+  content: "/";
+  margin-right: 8px;
+  opacity: 0.4;
+}
+.fc-site .breadcrumb a {
+  color: #0b2622;
+  opacity: 0.65;
+  text-decoration: none;
+}
+.fc-site .breadcrumb a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.fc-site .breadcrumb li[aria-current="page"] {
+  font-weight: 600;
+}
+.fc-site .page-heading h1 {
+  margin: 0;
+  color: #0b2622;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+}

@@ -20,7 +20,6 @@ const nav: NavEntry[] = [
   { href: "/about-us", label: "About Us" },
   { label: "Services", items: [{ href: "/our-services", label: "All services" }, ...treatments] },
   { href: "/pricing", label: "Pricing" },
-  { href: "/reviews", label: "Reviews" },
   { href: "/faq", label: "FAQ" },
 ];
 
