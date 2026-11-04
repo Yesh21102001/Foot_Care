@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ArrowButton } from "./ArrowButton";
 import { usePathname } from "next/navigation";
-import { useEffect, useState, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 
 type Item = { href: string; label: string };
 type Group = { label: string; items: Item[] };
@@ -18,7 +18,7 @@ const treatments: Item[] = [
 
 const nav: NavEntry[] = [
   { href: "/about-us", label: "About Us" },
-  { label: "Services", items: [{ href: "/our-services", label: "All services" }, ...treatments] },
+  { label: "Services", items: treatments },
   { href: "/pricing", label: "Pricing" },
   { href: "/locations", label: "Locations" },
   { href: "/faq", label: "FAQ" },
@@ -30,6 +30,21 @@ const isGroup = (entry: NavEntry): entry is Group => "items" in entry;
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const closeTimer = useRef<number | undefined>(undefined);
+
+  // On desktop with a mouse, the Services dropdown opens on hover and closes when the pointer leaves.
+  const canHover = () => window.matchMedia("(min-width: 961px) and (hover: hover)").matches;
+  const openDropdown = () => {
+    if (!canHover()) return;
+    window.clearTimeout(closeTimer.current);
+    setDropdownOpen(true);
+  };
+  const closeDropdown = () => {
+    if (!canHover()) return;
+    window.clearTimeout(closeTimer.current);
+    closeTimer.current = window.setTimeout(() => setDropdownOpen(false), 150);
+  };
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -75,7 +90,10 @@ export function SiteHeader() {
 
   // Close the side menu after a link or the Book a session button is chosen, but not when a dropdown is toggled.
   const handleNavClick = (event: MouseEvent<HTMLElement>) => {
-    if ((event.target as HTMLElement).closest("a, .drawer-cta button")) setOpen(false);
+    if ((event.target as HTMLElement).closest("a, .drawer-cta button")) {
+      setOpen(false);
+      setDropdownOpen(false);
+    }
   };
 
   return (
@@ -106,7 +124,13 @@ export function SiteHeader() {
               const active = entry.items.some((item) => pathname === item.href);
               return (
                 <li key={entry.label}>
-                  <details className={`nav-dropdown${active ? " is-active" : ""}`}>
+                  <details
+                    className={`nav-dropdown${active ? " is-active" : ""}`}
+                    open={dropdownOpen}
+                    onToggle={(event) => setDropdownOpen(event.currentTarget.open)}
+                    onMouseEnter={openDropdown}
+                    onMouseLeave={closeDropdown}
+                  >
                     <summary className="nav-link">{entry.label}</summary>
                     <ul className="dropdown-menu">
                       {entry.items.map((item) => (
