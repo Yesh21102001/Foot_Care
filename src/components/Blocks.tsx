@@ -112,7 +112,17 @@ export function ItemGrid({ items, icon }: { items: Item[]; icon?: string }) {
 type Crumb = { label: string; href?: string };
 
 // Plain page heading with a breadcrumb trail, for pages that do not use the photo hero.
-export function PageHeading({ title, crumbs, maxWidth }: { title: string; crumbs: Crumb[]; maxWidth?: number }) {
+export function PageHeading({
+  title,
+  crumbs,
+  maxWidth,
+  intro,
+}: {
+  title: string;
+  crumbs: Crumb[];
+  maxWidth?: number;
+  intro?: string;
+}) {
   return (
     <section className="page-heading">
       <div className="container" style={maxWidth ? { maxWidth } : undefined}>
@@ -129,6 +139,7 @@ export function PageHeading({ title, crumbs, maxWidth }: { title: string; crumbs
           </ol>
         </nav>
         <h1>{title}</h1>
+        {intro && <p className="page-heading-intro">{intro}</p>}
       </div>
     </section>
   );

@@ -2143,3 +2143,113 @@ footer#footer {
   margin-top: 48px;
   text-align: center;
 }
+
+/* Page heading intro line (used under the breadcrumb heading). */
+.fc-site .page-heading .page-heading-intro {
+  max-width: 640px;
+  margin: 16px auto 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #0b2622;
+  opacity: 0.75;
+}
+
+/* Reflexology page photos. */
+.fc-site .rx-banner {
+  padding: 32px 0 0;
+}
+.fc-site .rx-banner img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border-radius: 28px;
+}
+.fc-site .rx-photo-pair {
+  display: grid;
+  gap: 24px;
+  margin-top: 56px;
+  grid-template-columns: 1fr 1fr;
+}
+.fc-site .rx-photo-pair img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 24px;
+}
+@media (max-width: 760px) {
+  .fc-site .rx-banner img {
+    aspect-ratio: 16 / 10;
+  }
+  .fc-site .rx-photo-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Homepage services: photo-top cards. */
+.fc-site .home-services {
+  display: grid;
+  gap: 24px;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+}
+.fc-site .svc-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #ffffff;
+  color: #0b2622;
+  box-shadow: 0 0 0 1px rgba(11, 38, 34, 0.06);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.fc-site .svc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 2px #aecc9f, 0 24px 48px rgba(11, 38, 34, 0.16);
+}
+.fc-site .svc-photo {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.fc-site .svc-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+.fc-site .svc-card:hover .svc-photo img {
+  transform: scale(1.06);
+}
+.fc-site .svc-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 24px 28px;
+}
+.fc-site .svc-body h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #0b2622;
+}
+.fc-site .svc-body p {
+  flex: 1;
+  margin: 0 0 22px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0b2622;
+  opacity: 0.72;
+}
+@media (max-width: 1100px) {
+  .fc-site .home-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .home-services {
+    grid-template-columns: 1fr;
+  }
+}

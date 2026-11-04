@@ -10,6 +10,7 @@ import { BookingModal } from "../components/BookingModal";
 import { HomeTestimonials } from "../components/HomeTestimonials";
 import { HomeHydrogen } from "../components/HomeHydrogen";
 import { HomePackages } from "../components/HomePackages";
+import { HomeServices } from "../components/HomeServices";
 
 // Converted from template.txt. Markup is kept as-is; styles live in ./template.css.
 // Interactive WordPress/Elementor JavaScript (sliders, mobile menu, animations) is not included.
@@ -283,97 +284,7 @@ export default function Home() {
 				</div>
 					</div>
 				</div>
-		<div className={"elementor-element elementor-element-e7ba969 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"e7ba969"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-6aa0f5f elementor-widget elementor-widget-tm-ele-service-block"} data-id={"6aa0f5f"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-service-block.skin-style3"}>
-				<div className={"elementor-widget-container"}>
-						<div id={"service-block-holder-771129"} className={"tm-sc-service tm-service-carousel tm-swiper-container"} data-items={"3"} data-space={"30"} data-autoplay={"true"} data-loop={"true"} data-centered={"false"} data-arrow={"false"} data-bullets={"false"} data-xxl-items={"3"} data-lg-items={"2"} data-md-items={"2"} data-sm-items={"1"} data-xs-items={"1"} data-delay={"3000"} data-speed={"300"} data-freemod={"false"} data-reversedir={"false"} data-effect={"slide"} data-disableoninteraction={"false"} data-pauseonmouseenter={"true"} data-allowtouchmove={"true"}>
-		<div className={"swiper-container-inner"}>
-			<div className={"swiper-wrapper"}>
-				
-																			<div className={"swiper-slide elementor-repeater-item-f0c01ec wow fadeInUp"} data-wow-delay={"300ms"}>
-						
-  <div className={"service-block service-block-style3"}>
-    <div className={"inner-block"}>
-      <div className={"content-box"}>
-        <div className={"inner-box"}>
-          <div className={"icon"}>
-            <div className={"service-icon"}>
-	<i aria-hidden={"true"} className={"flaticon-set-retreat"}></i></div>          </div>
-          
-		<h4 className={"service-title"}><a href={"/reflexology"}>Reflexology Massage</a></h4>
-						<div className={"service-details"}>Pressure-point therapy for deep relaxation and foot comfort.</div>
-          <a className={"link-btn-style"} href={"/reflexology"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
-        </div>
-      </div>
-      <div className={"image"}>
-        
-
-<img loading={"lazy"} decoding={"async"} src={"/images/reflexology.jpg"} width={"403"} height={"294"} alt={""} />        
-
-<img loading={"lazy"} decoding={"async"} src={"/images/reflexology.jpg"} width={"403"} height={"294"} alt={""} />      </div>
-    </div>
-  </div>					</div>
-																			<div className={"swiper-slide elementor-repeater-item-6c38a8a wow fadeInUp"} data-wow-delay={"500ms"}>
-						
-  <div className={"service-block service-block-style3"}>
-    <div className={"inner-block"}>
-      <div className={"content-box"}>
-        <div className={"inner-box"}>
-          <div className={"icon"}>
-            <div className={"service-icon"}>
-	<i aria-hidden={"true"} className={"flaticon-set-theraphy-1"}></i></div>          </div>
-          
-		<h4 className={"service-title"}><a href={"/therapeutic-massage"}>Therapeutic Massage</a></h4>
-						<div className={"service-details"}>Targeted massage to release tension and aid recovery.</div>
-          <a className={"link-btn-style"} href={"/therapeutic-massage"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
-        </div>
-      </div>
-      <div className={"image"}>
-        
-
-<img loading={"lazy"} decoding={"async"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/service2.avif"} width={"404"} height={"294"} alt={""} />        
-
-<img loading={"lazy"} decoding={"async"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/service2.avif"} width={"404"} height={"294"} alt={""} />      </div>
-    </div>
-  </div>					</div>
-																			<div className={"swiper-slide elementor-repeater-item-477bf61 wow fadeInUp"} data-wow-delay={"700ms"}>
-						
-  <div className={"service-block service-block-style3"}>
-    <div className={"inner-block"}>
-      <div className={"content-box"}>
-        <div className={"inner-box"}>
-          <div className={"icon"}>
-            <div className={"service-icon"}>
-	<i aria-hidden={"true"} className={"flaticon-set-spa-towel"}></i></div>          </div>
-          
-		<h4 className={"service-title"}><a href={"/hydrogen-therapy"}>Hydrogen Therapy</a></h4>
-						<div className={"service-details"}>A calming wellness session to support recovery.</div>
-          <a className={"link-btn-style"} href={"/hydrogen-therapy"}>View Details<i className={"flaticon-common-arrow-right1"}></i></a>
-        </div>
-      </div>
-      <div className={"image"}>
-        
-
-<img loading={"lazy"} decoding={"async"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/service3.avif"} width={"404"} height={"294"} alt={""} />        
-
-<img loading={"lazy"} decoding={"async"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/service3.avif"} width={"404"} height={"294"} alt={""} />      </div>
-    </div>
-  </div>					</div>
-								
-			</div>
-		</div>
-
-		<div className={"swiper-pagination d-none"}></div>
-
-		<div className={"tm-swiper-arrow tm-swiper-button-wrap d-none"}>
-			<div className={"tm-swiper-arrow tm-swiper-button-prev"}><i className={"lnr-icon-arrow-left"}></i></div>
-			<div className={"tm-swiper-arrow tm-swiper-button-next"}><i className={"lnr-icon-arrow-right"}></i></div>
-		</div>
-	</div>
-
-				</div>
-				</div>
-				</div>
+		<div className={"fc-site"} style={{ width: "min(1200px, calc(100% - 40px))", margin: "40px auto 0" }}><HomeServices /></div>
 				</div>
 				</div>
 				</div>
