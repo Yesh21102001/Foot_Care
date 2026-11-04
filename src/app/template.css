@@ -115,6 +115,37 @@ img.wp-smiley, img.emoji {
 .elementor-17 .elementor-element.elementor-element-c813e8f .btn-style2 .theme-btn-arrow-right i {
   color: #0b2622 !important;
 }
+/* How It Works: step pills and the "Get In Touch" button in dark green (#0B2622). */
+.step-badge {
+  background-color: #0b2622 !important;
+  color: #ffffff !important;
+}
+.elementor-17 .elementor-element.elementor-element-90c91e9 .btn-style2 {
+  background-color: #0b2622 !important;
+  color: #ffffff !important;
+}
+.elementor-17 .elementor-element.elementor-element-90c91e9 .btn-style2 .theme-btn {
+  color: #ffffff !important;
+}
+.elementor-17 .elementor-element.elementor-element-90c91e9 .btn-style2 .theme-btn-arrow-right {
+  background-color: #ffffff !important;
+  color: #0b2622 !important;
+}
+.elementor-17 .elementor-element.elementor-element-90c91e9 .btn-style2 .theme-btn-arrow-right i {
+  color: #0b2622 !important;
+}
+/* Footer CTA ("Book a free 15-minute session"): foot soak photo instead of the stock image. */
+.elementor-930 .elementor-element.elementor-element-625c57d:not(.elementor-motion-effects-element-type-background), .elementor-930 .elementor-element.elementor-element-625c57d > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+  background-image: url("/images/footer-foot-soak-2.jpg") !important;
+}
+/* Footer bottom bar (hours, social icons, copyright): one solid dark green (#0B2622), no lighter box. */
+.elementor-930 .elementor-element.elementor-element-4b4f4b9,
+.elementor-930 .elementor-element.elementor-element-5b5043d,
+.elementor-930 .elementor-element.elementor-element-5b5043d > .e-con-inner {
+  background: #0b2622 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
 /* Service cards: green tint on the photos. */
 .tm-sc-service .image {
   position: relative;
@@ -155,6 +186,24 @@ img.wp-smiley, img.emoji {
 .elementor-17 .elementor-element.elementor-element-c5e588a .icon svg {
   color: #0b2622 !important;
   fill: #0b2622 !important;
+}
+/* Why Choose Us: on hover, the circle turns dark green and the icon turns white. */
+.elementor-17 .elementor-element.elementor-element-e5944b7:hover .icon,
+.elementor-17 .elementor-element.elementor-element-368149d:hover .icon,
+.elementor-17 .elementor-element.elementor-element-7f3ff6b:hover .icon,
+.elementor-17 .elementor-element.elementor-element-c5e588a:hover .icon {
+  background-color: #0b2622 !important;
+}
+.elementor-17 .elementor-element.elementor-element-e5944b7:hover .icon i,
+.elementor-17 .elementor-element.elementor-element-368149d:hover .icon i,
+.elementor-17 .elementor-element.elementor-element-7f3ff6b:hover .icon i,
+.elementor-17 .elementor-element.elementor-element-c5e588a:hover .icon i,
+.elementor-17 .elementor-element.elementor-element-e5944b7:hover .icon svg,
+.elementor-17 .elementor-element.elementor-element-368149d:hover .icon svg,
+.elementor-17 .elementor-element.elementor-element-7f3ff6b:hover .icon svg,
+.elementor-17 .elementor-element.elementor-element-c5e588a:hover .icon svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
 }
 /* Who We Are: on phones, the two features sit side by side. */
 @media (max-width: 767px) {

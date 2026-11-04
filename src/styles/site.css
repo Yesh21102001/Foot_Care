@@ -491,7 +491,7 @@
   border-color: var(--color-jungle);
 }
 .fc-site .site-footer {
-  background: var(--color-evergreen);
+  background: #0c2f25;
   color: var(--color-alabaster);
   padding: 64px 0 32px;
 }

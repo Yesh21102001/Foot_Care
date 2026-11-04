@@ -394,22 +394,6 @@ export default function Home() {
 				</div>
 				</div>
 				</div>
-		<div className={"elementor-element elementor-element-842f778 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"842f778"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":1000}"}>
-				<div className={"elementor-element elementor-element-9e02ff1 elementor-widget elementor-widget-image"} data-id={"9e02ff1"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"image.default"}>
-															<img loading={"lazy"} decoding={"async"} width={"75"} height={"50"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/thumb1.avif"} className={"attachment-large size-large wp-image-484"} alt={""} />															</div>
-				<div className={"elementor-element elementor-element-f66c286 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"f66c286"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Your Trusted Partner in Health and Wellness</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-ebea0e4 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"ebea0e4"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<a href={"/our-services"}>To get your service</a>		</div>
-					</div>
-				</div>
-				</div>
 				</div>
 				</div>
 				</div>
@@ -509,7 +493,7 @@ export default function Home() {
 <div className={"layer-image-wrapper layer-image layer-image-fullwidth elementor-repeater-item-cc89de8"} style={{} as CSSProperties}>
 	<div className={"layer-inner layer-image"}>
 		<div className={"layer-image-inner-wrapper"}>
-					<img loading={"lazy"} decoding={"async"} className={""} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/08/choos-us1.png"} width={"400"} height={"520"} alt={""} />
+					<img loading={"lazy"} decoding={"async"} className={""} src={"/images/foot-reflexology-center-cutout.png"} width={"1089"} height={"1445"} alt={""} />
 		</div>
 	</div>
 </div>
@@ -583,115 +567,8 @@ export default function Home() {
 				</div>
 				</div>
 				</div>
-		<div className={"elementor-element elementor-element-66f8443 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"66f8443"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":1000,\"background_background\":\"classic\"}"}>
-				<div className={"elementor-element elementor-element-cfed6a8 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon"} data-id={"cfed6a8"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"icon.default"}>
-							<div className={"elementor-icon-wrapper"}>
-			<div className={"elementor-icon"}>
-			<svg xmlns={"http://www.w3.org/2000/svg"} width={"33"} height={"28"} viewBox={"0 0 33 28"} fill={"none"}><g clipPath={"url(#clip0_432_55)"}><path fillRule={"evenodd"} clipRule={"evenodd"} d={"M24.5611 25.8538C24.5611 25.8538 26.5212 24.0237 25.9618 18.0345C25.4024 12.0453 23.0636 8.37101 25.6062 4.74717C28.1489 1.12334 33.0816 4.21868 32.9545 5.90483C32.9545 5.90483 33.412 3.63985 31.4288 1.375C29.4455 -0.889701 24.284 -0.53737 23.75 3.79099C23.75 3.79099 26.0892 1.87833 28.4029 2.432C28.4029 2.432 22.3513 2.281 21.6904 10.686C21.6904 10.686 12.6637 4.36995 3.96808 12.4227C3.96808 12.4227 6.58684 8.69817 11.1128 7.91815C11.1128 7.91815 8.62104 5.55264 4.9089 6.6348C1.19663 7.71696 -1.04057 12.6494 0.484936 18.3871C0.484936 18.3871 4.40063 12.3978 9.94341 10.6866C15.4863 8.97542 19.8091 12.0961 19.9614 14.4614C20.0976 16.5769 16.4741 16.4825 14.9695 20.1105C14.7617 20.5644 14.6135 21.0506 14.5347 21.5593L14.5346 21.5602C14.4914 21.8384 14.4691 22.1233 14.4691 22.4133C14.4691 25.4988 16.9962 28 20.1137 28C21.9199 28 23.5279 27.1604 24.5611 25.8539V25.8538Z"} fill={"#0B2622"}></path><path fillRule={"evenodd"} clipRule={"evenodd"} d={"M19.0743 2.99878C20.4786 2.99878 21.617 4.12543 21.617 5.51529C21.617 6.90514 20.4786 8.0318 19.0743 8.0318C17.6701 8.0318 16.5317 6.90514 16.5317 5.51529C16.5317 4.12557 17.6701 2.99878 19.0743 2.99878Z"} fill={"#0B2622"}></path></g><defs><clipPath id={"clip0_432_55"}><rect width={"33"} height={"28"} fill={"white"}></rect></clipPath></defs></svg>			</div>
-		</div>
-						</div>
-				<div className={"elementor-element elementor-element-ca36761 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"ca36761"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Experience Expert Wellness Service –</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-3df1299 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"3df1299"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<a href={"/our-services"}><strong>To get your service</strong></a>		</div>
-					</div>
-				</div>
-				</div>
 				</div>
 					</div>
-				</div>
-		<div className={"elementor-element elementor-element-47314a1 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"47314a1"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-f5fa890 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"f5fa890"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-		<div className={"elementor-element elementor-element-b2011ff e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"b2011ff"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-					<div className={"e-con-inner"}>
-		<div className={"elementor-element elementor-element-2ee4ce4 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"2ee4ce4"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-ccc1a7a horizontal-line-align-left vertical-line-align-bottom elementor-widget elementor-widget-tm-ele-section-title"} data-id={"ccc1a7a"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-section-title.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-section-title section-title"}>
-	<div className={"title-wrapper"}>
-		
-		
-
-<div className={"sub-title-outer"}>
-		<div className={"subtitle"}>
-	
-		
-		Share. Understand. Heal.	</div>
-	</div>			<h2 className={"title tm-split-text split-in-right"}>
-
-		
-				<span className={"title-part1"}>Our wellness approach combines experience, care, and dedication to help you feel your best every day</span>
-		
-							
-	</h2>
-	<div className={"title-seperator-line"}></div>						</div>
-</div>				</div>
-				</div>
-				<div className={"elementor-element elementor-element-154bcb0 elementor-widget elementor-widget-spacer"} data-id={"154bcb0"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"spacer.default"}>
-							<div className={"elementor-spacer"}>
-			<div className={"elementor-spacer-inner"}></div>
-		</div>
-						</div>
-				</div>
-		<div className={"elementor-element elementor-element-6bf4d9f e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"6bf4d9f"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-bfdf338 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"bfdf338"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":500,\"background_background\":\"classic\"}"}>
-				<div className={"elementor-element elementor-element-59dba5f elementor-widget elementor-widget-tm-ele-counter-block"} data-id={"59dba5f"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-counter-block.skin-style2"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"counter-block-Style2 mascot-counter"} data-wow-delay={""}>
-	<div className={"inner"}>
-	    <div className={"count-box"}>
-									<div className={"title-wrapper"}>
-
-<p className={"title"}>Verified Users</p>
-</div>													<h2 className={"counter"}>
-	<span className={"animate-number"} data-value={"8.2"} data-animation-duration={"1500"}>8.2</span><span className={"counter-postfix"}>M+</span></h2>
-					    </div>
-	</div>
-</div>				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-3697dd5 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"3697dd5"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":700,\"background_background\":\"classic\"}"}>
-				<div className={"elementor-element elementor-element-5428db3 elementor-widget elementor-widget-tm-ele-counter-block"} data-id={"5428db3"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-counter-block.skin-style2"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"counter-block-Style2 mascot-counter"} data-wow-delay={""}>
-	<div className={"inner"}>
-	    <div className={"count-box"}>
-									<div className={"title-wrapper"}>
-
-<p className={"title"}>Countries Supported</p>
-</div>													<h2 className={"counter"}>
-	<span className={"animate-number"} data-value={"150"} data-animation-duration={"1500"}>150</span><span className={"counter-postfix"}>+</span></h2>
-					    </div>
-	</div>
-</div>				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-005432e e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"005432e"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":900,\"background_background\":\"classic\"}"}>
-				<div className={"elementor-element elementor-element-75c8826 elementor-widget elementor-widget-tm-ele-counter-block"} data-id={"75c8826"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-counter-block.skin-style2"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"counter-block-Style2 mascot-counter"} data-wow-delay={""}>
-	<div className={"inner"}>
-	    <div className={"count-box"}>
-									<div className={"title-wrapper"}>
-
-<p className={"title"}>Customer Rating</p>
-</div>													<h2 className={"counter"}>
-	<span className={"animate-number"} data-value={"4.9/5"} data-animation-duration={"1500"}>4.9/5</span></h2>
-					    </div>
-	</div>
-</div>				</div>
-				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-				</div>
 				</div>
 		<div className={"elementor-element elementor-element-055ff76 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"055ff76"} data-element_type={"container"} data-e-type={"container"}>
 					<div className={"e-con-inner"}>
