@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookingButton } from "./BookingButton";
+import { ArrowButton } from "./ArrowButton";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type MouseEvent } from "react";
 
@@ -106,7 +106,7 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <BookingButton className="btn btn-primary header-cta">Book a session</BookingButton>
+        <ArrowButton label="Book a session" className="header-cta-arrow" />
 
         <button
           type="button"

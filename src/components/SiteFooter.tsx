@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { BookingButton } from "./BookingButton";
 
 // Shared footer, converted from the theme. Used on every page.
 export function SiteFooter() {
@@ -21,7 +22,7 @@ export function SiteFooter() {
 					<h2 className={"title"}>
 
 		
-				<span className={"title-part1"}>Book a free 15-minute session today to explore how we can help you thrive</span>
+				<span className={"title-part1"}>Book a massage session today to explore how we can help you thrive</span>
 		
 							
 	</h2>
@@ -30,7 +31,7 @@ export function SiteFooter() {
 				</div>
 				<div className={"elementor-element elementor-element-a558399 elementor-widget elementor-widget-tm-ele-theme-button"} data-id={"a558399"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-theme-button.skin-style2"}>
 				<div className={"elementor-widget-container"}>
-					<a href={"/about-us"} className={"btn-style2"}>
+					<BookingButton className={"btn-style2 fc-footer-book-btn"}>
 
   <span className={"theme-btn-arrow-left"}>
 				  <i className={"fas fa-arrow-right"}></i>		  </span>
@@ -38,7 +39,7 @@ export function SiteFooter() {
 		Book Now  </span>
   <span className={"theme-btn-arrow-right"}>
 				  <i className={"fas fa-arrow-right"}></i>		  </span>
-</a>				</div>
+</BookingButton>				</div>
 				</div>
 				</div>
 		<div className={"elementor-element elementor-element-515ae12 overflow-hidden e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"515ae12"} data-element_type={"container"} data-e-type={"container"}>
@@ -55,7 +56,7 @@ export function SiteFooter() {
 				<div className={"elementor-element elementor-element-3c399df elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"3c399df"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<p>There are many variations of Lorem Ipsum available,There are many variations</p>		</div>
+		<p>FOOT CARE brings together the art of massage therapy, traditional reflexology and carefully selected wellness experiences in a calm, professional setting.</p>		</div>
 					</div>
 				</div>
 				<div className={"elementor-element elementor-element-cf5dfca elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit mascot-icon-align-left mascot-icon-align-left elementor-widget elementor-widget-tm-ele-iconbox"} data-id={"cf5dfca"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-iconbox.default"}>
@@ -94,12 +95,8 @@ export function SiteFooter() {
 				</div>
 				<div className={"elementor-element elementor-element-2a60c5d elementor-widget elementor-widget-tm-ele-navigation-menu"} data-id={"2a60c5d"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-navigation-menu.default"}>
 				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links1"} className={""}><li id={"menu-item-3420"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3420"}><a href={"/about-us"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>About</a></li>
-<li id={"menu-item-3424"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3424"}><a href={"/our-services"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Our Mission</a></li>
-<li id={"menu-item-3421"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3421"}><a href={"/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Our Blogs</a></li>
-<li id={"menu-item-3423"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3423"}><a href={"/faq"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Help Center</a></li>
-<li id={"menu-item-3433"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3433"}><a href={"/contact"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Contact Us</a></li>
-</ul></div>				</div>
+					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links1"} className={""}><li id={"menu-item-3420"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3420"}><a href={"/about-us"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>About</a></li><li id={"menu-item-3421"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3421"}><a href={"/our-services"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Our Services</a></li><li id={"menu-item-3422"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3422"}><a href={"/pricing"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Pricing</a></li><li id={"menu-item-3423"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3423"}><a href={"/faq"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>FAQ</a></li></ul></div>
+				</div>
 				</div>
 				</div>
 		<div className={"elementor-element elementor-element-3a9725b e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"3a9725b"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":700}"}>
@@ -111,12 +108,8 @@ export function SiteFooter() {
 				</div>
 				<div className={"elementor-element elementor-element-7fd5638 elementor-widget elementor-widget-tm-ele-navigation-menu"} data-id={"7fd5638"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-navigation-menu.default"}>
 				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links2"} className={""}><li id={"menu-item-3425"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3425"}><a href={"/our-services"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Stress Management</a></li>
-<li id={"menu-item-3426"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3426"}><a href={"/our-services"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Weight Management</a></li>
-<li id={"menu-item-3427"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3427"}><a href={"/our-services"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Yoga &#038; Meditation</a></li>
-<li id={"menu-item-3428"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3428"}><a href={"/our-services"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Mental Health Support</a></li>
-<li id={"menu-item-3429"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3429"}><a href={"/our-services"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Nutrition Counseling</a></li>
-</ul></div>				</div>
+					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links2"} className={""}><li id={"menu-item-3425"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3425"}><a href={"/reflexology"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Reflexology</a></li><li id={"menu-item-3426"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3426"}><a href={"/therapeutic-massage"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Therapeutic Massage</a></li><li id={"menu-item-3427"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3427"}><a href={"/hydrogen-therapy"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Hydrogen Therapy</a></li><li id={"menu-item-3428"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3428"}><a href={"/healthpod"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Healthpod</a></li></ul></div>
+				</div>
 				</div>
 				</div>
 		<div className={"elementor-element elementor-element-70e1971 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"70e1971"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":900}"}>
@@ -124,13 +117,13 @@ export function SiteFooter() {
 				<div className={"elementor-element elementor-element-3750c1e elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"3750c1e"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<p>Address</p>		</div>
+		<p><a href={"/locations"}>Our Stores</a></p>		</div>
 					</div>
 				</div>
 				<div className={"elementor-element elementor-element-f79bcfb elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"f79bcfb"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<p>1901 Thornridge Cir. Shiloh<br />Hawaii 81063</p>		</div>
+		<p><a href={"/locations"}>Find the branch nearest you</a></p>		</div>
 					</div>
 				</div>
 				</div>
@@ -138,64 +131,16 @@ export function SiteFooter() {
 				<div className={"elementor-element elementor-element-70cca8a elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"70cca8a"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<p>Phone</p>		</div>
+		<p>Contact</p>		</div>
 					</div>
 				</div>
 				<div className={"elementor-element elementor-element-1e07312 elementor-widget elementor-widget-tm-ele-text-editor-advanced"} data-id={"1e07312"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor-advanced.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor-advanced"}>
 					<div className={"each-item elementor-repeater-item-24c3d2c"}>
-				<p>+629 555-0129</p>				</div>
-								<div className={"each-item elementor-repeater-item-524027c"}>
-				<p><a href={"/cdn-cgi/l/email-protection"} className={"__cf_email__"} data-cfemail={"1276777f7d52776a737f627e773c717d7f"}>[email&#160;protected]</a></p>				</div>
+				<p><a href={"/contact"}>Contact our team</a></p>				</div>
 						</div>
 					</div>
-				</div>
-				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-aefa860 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"aefa860"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-8a68e63 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"8a68e63"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":1000}"}>
-				<div className={"elementor-element elementor-element-1677858 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"1677858"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Mon - Fri:</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-6cf8af8 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"6cf8af8"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>9.00 am - 8.00pm</p>		</div>
-					</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-2fbba21 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"2fbba21"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-5c852fc e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"5c852fc"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":1200}"}>
-				<div className={"elementor-element elementor-element-e0b150a elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"e0b150a"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>Saturday:</p>		</div>
-					</div>
-				</div>
-				<div className={"elementor-element elementor-element-b81a619 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"b81a619"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<p>10.00 am - 8.00pm</p>		</div>
-					</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-3faedf5 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"3faedf5"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":1300}"}>
-				<div className={"elementor-element elementor-element-57d8ba6 elementor-widget elementor-widget-tm-ele-social-links"} data-id={"57d8ba6"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-social-links.default"}>
-				<div className={"elementor-widget-container"}>
-					<ul className={"tm-sc-social-links icon-circled icon-sm links-outlined"}>
-
-		<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-twitter"}></i></a></li>
-			<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-facebook"}></i></a></li>
-			<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-youtube"}></i></a></li>
-	
-		<li><a className={"social-link"} aria-label={"Social Link"} href={"#"} target={"_self"}><i className={"fa fa-linkedin"}></i></a></li>
-			
-			</ul>				</div>
 				</div>
 				</div>
 				</div>
@@ -207,7 +152,7 @@ export function SiteFooter() {
 				<div className={"elementor-element elementor-element-251af9b elementor-widget-mobile_extra__width-initial elementor-invisible elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"251af9b"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":1400}"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<p>© Copyright 2026 by Company.com</p>		</div>
+		<p>© Copyright 2026 by Foot Care</p>		</div>
 					</div>
 				</div>
 				<div className={"elementor-element elementor-element-43cf70b elementor-invisible elementor-widget elementor-widget-tm-ele-navigation-menu"} data-id={"43cf70b"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":1500}"} data-widget_type={"tm-ele-navigation-menu.default"}>

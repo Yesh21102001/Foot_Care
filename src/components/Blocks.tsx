@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowButton } from "./ArrowButton";
 import { BookingButton } from "./BookingButton";
 import type { ReactNode } from "react";
 
@@ -12,10 +13,11 @@ type PageHeroProps = {
   image?: string;
   imagePosition?: string;
   imageFit?: "cover" | "contain";
+  arrowButtons?: boolean;
   children?: ReactNode;
 };
 
-export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosition = "center center", imageFit = "cover", children }: PageHeroProps) {
+export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosition = "center center", imageFit = "cover", arrowButtons = false, children }: PageHeroProps) {
   return (
     <section
       className="hero hero-photo"
@@ -41,10 +43,16 @@ export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosi
         </h1>
         {children && <p>{children}</p>}
         <div className="hero-actions">
-          <BookingButton className="btn btn-primary">Book a session</BookingButton>
-          <Link href="/our-services" className="btn btn-outline-light">
-            Our services
-          </Link>
+          {arrowButtons ? (
+            <ArrowButton label="Our services" href="/our-services" />
+          ) : (
+            <>
+              <BookingButton className="btn btn-primary">Book a session</BookingButton>
+              <Link href="/our-services" className="btn btn-outline-light">
+                Our services
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </section>
@@ -54,16 +62,21 @@ export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosi
 type CtaBannerProps = {
   title: string;
   text: string;
+  arrowButtons?: boolean;
 };
 
-export function CtaBanner({ title, text }: CtaBannerProps) {
+export function CtaBanner({ title, text, arrowButtons = false }: CtaBannerProps) {
   return (
     <section className="section">
       <div className="container">
         <div className="cta">
           <h2>{title}</h2>
           <p>{text}</p>
-          <BookingButton className="btn btn-primary">Book a session</BookingButton>
+          {arrowButtons ? (
+            <ArrowButton label="Book a session" />
+          ) : (
+            <BookingButton className="btn btn-primary">Book a session</BookingButton>
+          )}
         </div>
       </div>
     </section>
