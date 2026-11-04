@@ -304,3 +304,17 @@ img.wp-smiley, img.emoji {
 .elementor-17 .elementor-element.elementor-element-a1c7255 {
   display: none !important;
 }
+/* Benefits section: keep the foot photo vertically centred between the two taller columns. */
+.elementor-17 .elementor-element.elementor-element-1300099 {
+  align-self: center !important;
+}
+/* Benefits section: tighter spacing between the points on each side. */
+.elementor-17 .elementor-element.elementor-element-5a2a156,
+.elementor-17 .elementor-element.elementor-element-595e881 {
+  --spacer-size: 16px !important;
+}
+.elementor-17 .elementor-element.elementor-element-368149d > .elementor-widget-container,
+.elementor-17 .elementor-element.elementor-element-c5e588a > .elementor-widget-container {
+  margin-top: 0 !important;
+  padding-top: 32px !important;
+}

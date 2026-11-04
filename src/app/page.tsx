@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import { HidePreloader } from "./hide-preloader";
 import { RevealOnScroll } from "./reveal-on-scroll";
+import { ScrollAnimations } from "../components/ScrollAnimations";
 import { SwiperCarousels } from "./swiper-carousels";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -19,6 +20,7 @@ export default function Home() {
     <>
       <HidePreloader />
       <RevealOnScroll />
+      <ScrollAnimations />
       <div className={"fc-site"}><BookingModal /></div>
       <SwiperCarousels />
 
@@ -304,11 +306,11 @@ export default function Home() {
 		<div className={"subtitle"}>
 	
 		
-		Why Choose Us	</div>
+		Foot Massage	</div>
 	</div>			<h2 className={"title tm-split-text split-in-right"}>
 
 		
-				<span className={"title-part1"}>Expert care for a stronger, healthier you</span>
+				<span className={"title-part1"}>Benefits of Foot Massage</span>
 		
 					
 
@@ -336,8 +338,8 @@ export default function Home() {
 			<div className={"icon-text"}>
 						
 				<h4 className={"icon-box-title"}>
-							Safe Environment					</h4>
-					<div className={"content"}>team of dedicated professionals works tirelessly to deliver exceptional</div>
+							Deep Relaxation					</h4>
+					<div className={"content"}>A calm, unhurried session that helps you unwind and feel at ease.</div>
 			
 			
 	
@@ -365,8 +367,37 @@ export default function Home() {
 			<div className={"icon-text"}>
 						
 				<h4 className={"icon-box-title"}>
-							Heartfelt Support					</h4>
-					<div className={"content"}>team of dedicated professionals works tirelessly to deliver exceptional</div>
+							Stress Relief					</h4>
+					<div className={"content"}>Time away from a busy day can help you feel calmer and less tense.</div>
+			
+			
+	
+					</div>
+		<div className={"clearfix"}></div>
+	</div>
+</div>				</div>
+				</div>
+				<div className={"elementor-element elementor-element-5a2a156 elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-spacer"} data-id={"5a2a156"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"spacer.default"}>
+							<div className={"elementor-spacer"}>
+			<div className={"elementor-spacer-inner"}></div>
+		</div>
+						</div>
+				<div className={"elementor-element elementor-element-368149d mascot-icon-align-right elementor-invisible elementor-widget elementor-widget-tm-ele-iconbox"} data-id={"368149d-b"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":500}"} data-widget_type={"tm-ele-iconbox.default"}>
+				<div className={"elementor-widget-container"}>
+					<div className={"tm-sc-icon-box icon-box icon-right font-icon icon-right animate-hover icon-rotate-y"}>
+	
+  	<div className={"icon-box-wrapper"}>
+		
+		<div className={"icon-wrapper"}>
+		<div className={"icon icon-round icon-type-font-icon icon-md"}>
+			<i aria-hidden={"true"} className={"flaticon-set-spa-and-relax"}></i>		</div>
+
+			</div>
+			<div className={"icon-text"}>
+						
+				<h4 className={"icon-box-title"}>
+							A Moment for You					</h4>
+					<div className={"content"}>A quiet pause in your day, just for you, away from screens and deadlines.</div>
 			
 			
 	
@@ -418,8 +449,8 @@ export default function Home() {
 			<div className={"icon-text"}>
 						
 				<h4 className={"icon-box-title"}>
-							Dedicated Staff					</h4>
-					<div className={"content"}>team of dedicated professionals works tirelessly to deliver exceptional</div>
+							Comfort for Tired Feet					</h4>
+					<div className={"content"}>Soothing pressure can ease the heavy feeling of tired feet.</div>
 			
 			
 	
@@ -447,8 +478,37 @@ export default function Home() {
 			<div className={"icon-text"}>
 						
 				<h4 className={"icon-box-title"}>
-							24/7 Availability					</h4>
-					<div className={"content"}>team of dedicated professionals works tirelessly to deliver exceptional</div>
+							Better Rest					</h4>
+					<div className={"content"}>Many guests feel more settled and ready for a good night's rest.</div>
+			
+			
+	
+					</div>
+		<div className={"clearfix"}></div>
+	</div>
+</div>				</div>
+				</div>
+				<div className={"elementor-element elementor-element-595e881 elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-spacer"} data-id={"595e881"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"spacer.default"}>
+							<div className={"elementor-spacer"}>
+			<div className={"elementor-spacer-inner"}></div>
+		</div>
+						</div>
+				<div className={"elementor-element elementor-element-c5e588a mascot-icon-align-left elementor-invisible elementor-widget elementor-widget-tm-ele-iconbox"} data-id={"c5e588a-b"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":900}"} data-widget_type={"tm-ele-iconbox.default"}>
+				<div className={"elementor-widget-container"}>
+					<div className={"tm-sc-icon-box icon-box icon-left font-icon icon-left animate-hover icon-rotate-y"}>
+	
+  	<div className={"icon-box-wrapper"}>
+		
+		<div className={"icon-wrapper"}>
+		<div className={"icon icon-round icon-type-font-icon icon-md"}>
+			<i aria-hidden={"true"} className={"flaticon-set-theraphy"}></i>		</div>
+
+			</div>
+			<div className={"icon-text"}>
+						
+				<h4 className={"icon-box-title"}>
+							Feeling Refreshed					</h4>
+					<div className={"content"}>A gentle, foot-focused experience that leaves many guests feeling refreshed.</div>
 			
 			
 	
