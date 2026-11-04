@@ -1,63 +1,59 @@
-import Link from "next/link";
-import { CtaBanner, PageHero } from "../components/Blocks";
+import { PageHeading } from "../components/Blocks";
 import { Layout } from "../components/Layout";
+import { PackageCards } from "../components/PackageCards";
 
-// Placeholder prices: replace with your real plans.
-const plans = [
+// Reference prices: confirm with the client before launch.
+const treatments = [
+  { name: "Foot Reflexology", duration: "45 minutes", price: "₹1,000" },
+  { name: "Foot Reflexology", duration: "60 minutes", price: "₹1,300" },
+  { name: "Foot Reflexology (45 min) + Back & Shoulder (15 min)", duration: "60 minutes", price: "₹1,300" },
+  { name: "Foot Reflexology (45 min) + Back, Arm & Shoulder (30 min)", duration: "75 minutes", price: "₹1,600" },
   {
-    name: "Basic Relaxation",
-    price: "$49",
-    period: "per month",
-    featured: false,
-    features: ["Reflexology session", "Foot health check", "Dietary guidance"],
-  },
-  {
-    name: "Premium Spa",
-    price: "$89",
-    period: "per month",
-    featured: true,
-    features: ["Reflexology session", "Therapeutic massage", "Hydrogen therapy", "Wellness plan"],
-  },
-  {
-    name: "Total Wellness",
-    price: "$129",
-    period: "per month",
-    featured: false,
-    features: ["All treatments", "Healthpod access", "Priority booking", "Personal coaching"],
+    name: "Foot Reflexology (45 min) + Back, Arm, Shoulder, Hand, Head & Neck (45 min)",
+    duration: "90 minutes",
+    price: "₹1,900",
   },
 ];
 
 export default function Pricing() {
   return (
-    <Layout title="Pricing" description="Simple monthly wellness plans from Foot Care. Choose the plan that fits your routine.">
-      <PageHero eyebrow="Pricing" title="Simple plans for every routine">
-        Choose a monthly plan that fits how often you want to rest and recover.
-      </PageHero>
+    <Layout title="Pricing" description="Foot Care treatments, durations and prices, plus prepaid packages with extra value.">
+      <PageHeading title="Treatments & pricing" crumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]} />
 
-      <section className="section">
-        <div className="container grid">
-          {plans.map((plan) => (
-            <div className={`card${plan.featured ? " featured" : ""}`} key={plan.name}>
-              <h3>{plan.name}</h3>
-              <div className="price">
-                {plan.price} <small>{plan.period}</small>
-              </div>
-              <ul className="check-list">
-                {plan.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
-              </ul>
-              <p style={{ marginTop: 24 }}>
-                <Link href="/contact" className="btn btn-primary">
-                  Select plan
-                </Link>
-              </p>
-            </div>
-          ))}
+      <section className="section section-alt">
+        <div className="container">
+          <h2>Prepaid packages</h2>
+          <p className="lead">Pay in advance and receive additional value on your balance.</p>
+          <PackageCards />
         </div>
       </section>
 
-      <CtaBanner title="Need a custom plan?" text="Tell us your goals and we will put together a tailored option." />
+      <section className="section">
+        <div className="container">
+          <h2>Treatments</h2>
+          <p className="lead">Foot reflexology on its own, or combined with back, arm, shoulder, hand, head and neck work.</p>
+          <div className="rx-price-wrap" style={{ marginLeft: 0, marginRight: 0, maxWidth: "none" }}>
+            <table className="rx-price-table">
+              <thead>
+                <tr>
+                  <th>Treatment</th>
+                  <th>Duration</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {treatments.map((row) => (
+                  <tr key={row.name + row.duration}>
+                    <td>{row.name}</td>
+                    <td>{row.duration}</td>
+                    <td>{row.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }

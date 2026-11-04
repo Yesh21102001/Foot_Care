@@ -3,7 +3,17 @@ import { BookingButton } from "./BookingButton";
 
 // The homepage button (theme "btn-style2": label with a white arrow circle) in Foot Care dark green.
 // With `href` it is a link; without it, it opens the booking pop-up.
-export function ArrowButton({ label, href, className = "" }: { label: string; href?: string; className?: string }) {
+export function ArrowButton({
+  label,
+  href,
+  className = "",
+  newTab = false,
+}: {
+  label: string;
+  href?: string;
+  className?: string;
+  newTab?: boolean;
+}) {
   const classes = `btn-style2 fc-btn2 ${className}`.trim();
   const content = (
     <>
@@ -17,6 +27,13 @@ export function ArrowButton({ label, href, className = "" }: { label: string; hr
     </>
   );
 
+  if (href && newTab) {
+    return (
+      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+        {content}
+      </a>
+    );
+  }
   if (href) {
     return (
       <Link href={href} className={classes}>

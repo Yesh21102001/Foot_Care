@@ -20,7 +20,9 @@ const nav: NavEntry[] = [
   { href: "/about-us", label: "About Us" },
   { label: "Services", items: [{ href: "/our-services", label: "All services" }, ...treatments] },
   { href: "/pricing", label: "Pricing" },
+  { href: "/locations", label: "Locations" },
   { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const isGroup = (entry: NavEntry): entry is Group => "items" in entry;
@@ -56,9 +58,24 @@ export function SiteHeader() {
     };
   }, []);
 
-  // Close the mobile menu after a link is chosen, but not when a dropdown is toggled.
+  // While the side menu is open: stop the page behind it from scrolling, and close it with Escape.
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previous;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  // Close the side menu after a link or the Book a session button is chosen, but not when a dropdown is toggled.
   const handleNavClick = (event: MouseEvent<HTMLElement>) => {
-    if ((event.target as HTMLElement).closest("a")) setOpen(false);
+    if ((event.target as HTMLElement).closest("a, .drawer-cta button")) setOpen(false);
   };
 
   return (
@@ -69,6 +86,8 @@ export function SiteHeader() {
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
           <span className="brand-wordmark">Foot Care</span>
         </Link>
+
+        <div className={`nav-backdrop${open ? " is-open" : ""}`} onClick={() => setOpen(false)} aria-hidden="true" />
 
         <nav id="site-nav" className={`site-nav${open ? " is-open" : ""}`} aria-label="Main" onClick={handleNavClick}>
           <ul className="nav-list">
@@ -103,6 +122,9 @@ export function SiteHeader() {
               );
             })}
           </ul>
+          <div className="drawer-cta">
+            <ArrowButton label="Book a session" />
+          </div>
         </nav>
 
         <ArrowButton label="Book a session" className="header-cta-arrow" />
