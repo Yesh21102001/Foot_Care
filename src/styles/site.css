@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
   --color-black: #000000;
@@ -3356,4 +3356,82 @@ footer#footer .fc-acc-chevron {
   .fc-site .sv-flip .sv-photo {
     order: 2;
   }
+}
+
+/* Brand look and feel (from the Brand Strategy & Marketing Blueprint):
+   serif headlines, calm Inter text, warm ivory, jade labels and thin hairlines. */
+:root {
+  --brand-serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --brand-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+body {
+  font-family: var(--brand-sans) !important;
+  -webkit-font-smoothing: antialiased;
+}
+/* Text everywhere: Inter. Zero-specificity :where() so headlines and the wordmark below can override it. */
+body :where(p, a, li, span, div, summary, label, button, input, select, textarea, dd, dt, td, th, small, strong, em, blockquote, figcaption, legend) {
+  font-family: var(--brand-sans) !important;
+}
+/* The Foot Care wordmark keeps its own typeface. */
+body .brand-wordmark {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif !important;
+}
+
+/* Headlines: refined serif (EB Garamond has a small x-height, so it is nudged up to match). */
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body .title,
+body .counter,
+body .tm-marquee-repeater .text {
+  font-family: var(--brand-serif) !important;
+  font-weight: 400 !important;
+  font-size-adjust: 0.47;
+  letter-spacing: -0.01em !important;
+}
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-weight: 500 !important;
+}
+body h1 *,
+body h2 *,
+body h3 *,
+body h4 *,
+body h5 *,
+body h6 * {
+  font-family: inherit !important;
+}
+/* Small uppercase labels: plain jade text, widely spaced (no pill). */
+body .sv-kicker,
+body .svc-label,
+body .home-hydrogen-label,
+body .tm-sc-section-title .subtitle {
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-family: var(--brand-sans) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: #0b2622 !important;
+  opacity: 0.65 !important;
+}
+body .tm-sc-section-title .subtitle::before {
+  display: none !important;
+}
+/* A thin hairline under page titles, like the deck's slide headers. */
+.fc-site .page-heading .container::after {
+  content: "";
+  display: block;
+  width: min(1200px, 100%);
+  height: 1px;
+  margin: 40px auto 0;
+  background: rgba(11, 38, 34, 0.14);
 }
