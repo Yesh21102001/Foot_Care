@@ -1,5 +1,5 @@
 import { ArrowButton } from "../components/ArrowButton";
-import { CtaBanner, ItemGrid, PageHero } from "../components/Blocks";
+import { ItemGrid, PageHero } from "../components/Blocks";
 import { Layout } from "../components/Layout";
 
 const blocks = [
@@ -112,8 +112,6 @@ export default function AboutUs() {
           </p>
         </div>
       </section>
-
-      <CtaBanner title="Ready to relax?" text="Book a session at the Foot Care store nearest you." arrowButtons />
     </Layout>
   );
 }

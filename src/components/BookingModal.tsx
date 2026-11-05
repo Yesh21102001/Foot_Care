@@ -7,7 +7,7 @@ const BRANCHES = ["Main branch", "Second branch"];
 const TREATMENTS = [
   "Reflexology Massage — 60 min — $49",
   "Therapeutic Therapy — 60 min — $59",
-  "Hydrogen Therapy — 45 min — $69",
+  "Molecular Hydrogen Therapy — 45 min — $69",
   "Healthpod Session — 30 min — $39",
 ];
 const TIME_SLOTS = ["09:00", "10:00", "11:00", "12:00", "14:00", "15:00", "16:00", "17:00", "18:00"];

@@ -3,7 +3,6 @@ import { ServicePage } from "../components/ServicePage";
 export default function Healthpod() {
   return (
     <ServicePage
-      eyebrow="Our Treatments"
       title="Healthpod"
       description="The Foot Care Healthpod: a private, calming space for focused wellness sessions."
       intro="A private pod designed for rest and recovery. Step in, settle down and let the session take care of the rest."

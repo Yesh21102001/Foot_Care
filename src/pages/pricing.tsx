@@ -18,17 +18,19 @@ const treatments = [
 export default function Pricing() {
   return (
     <Layout title="Pricing" description="Foot Care treatments, durations and prices, plus prepaid packages with extra value.">
-      <PageHeading title="Treatments & pricing" crumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]} hideTitle />
+      <PageHeading
+        title="Prepaid packages"
+        crumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]}
+        intro="Pay in advance and receive additional value on your balance."
+      />
 
       <section className="section section-alt pkg-section">
         <div className="container">
-          <h2>Prepaid packages</h2>
-          <p className="lead">Pay in advance and receive additional value on your balance.</p>
           <PackageCards />
         </div>
       </section>
 
-      <section className="section">
+      <section className="section treat-section">
         <div className="container">
           <h2>Treatments</h2>
           <p className="lead">Foot reflexology on its own, or combined with back, arm, shoulder, hand, head and neck work.</p>

@@ -1,37 +1,26 @@
 import { PageHeading } from "../components/Blocks";
+import { ServiceOverview } from "../components/ServicePage";
 import { Layout } from "../components/Layout";
 
 export default function Reflexology() {
   return (
     <Layout title="Foot Reflexology" description="Foot reflexology at Foot Care: what it is, how a session works, what research says, and answers to common questions.">
       <PageHeading
-        title="Every Step Has a Story."
-        crumbs={[{ label: "Home", href: "/" }, { label: "Reflexology" }]}
-        intro="Foot reflexology is a complementary wellness practice in which a practitioner applies pressure to specific areas of the feet."
+        title="Foot Reflexology"
+        crumbs={[{ label: "Home", href: "/" }, { label: "Our Services", href: "/our-services" }, { label: "Reflexology" }]}
       />
 
-      <section className="rx-banner">
-        <div className="container">
-          <img src="/images/reflexology.jpg" alt="Reflexologist giving a foot massage beside fresh flowers" />
-        </div>
-      </section>
-
-      {/* 01 — What it is */}
-      <section className="rx-section">
-        <div className="container rx-split">
-          <div>
-            <span className="rx-kicker">01 — Origins</span>
-            <h2 className="rx-h2">What is <em>foot reflexology?</em></h2>
-          </div>
-          <div>
-            <p className="rx-lead">
-              Reflexology has roots in traditional practices from several cultures. In a session, the reflexologist uses
-              their thumbs and fingers to press on points and areas of the feet. Many guests describe the experience as
-              calming and deeply relaxing.
-            </p>
-          </div>
-        </div>
-      </section>
+      <ServiceOverview title="Foot Reflexology" image="/images/services/reflexology.jpg" heading="What is foot reflexology?">
+        <p>
+          Foot reflexology is a complementary wellness practice in which a practitioner applies pressure to specific
+          areas of the feet.
+        </p>
+        <p>
+          Reflexology has roots in traditional practices from several cultures. In a session, the reflexologist uses
+          their thumbs and fingers to press on points and areas of the feet. Many guests describe the experience as
+          calming and deeply relaxing.
+        </p>
+      </ServiceOverview>
 
       {/* 02 — Map (dark section) */}
       <section className="rx-section rx-dark">
@@ -40,7 +29,7 @@ export default function Reflexology() {
             <img src="/images/reflexology-map.jpg" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
           </figure>
           <div className="rx-map-text">
-            <span className="rx-kicker rx-kicker-light">02 — The Map</span>
+            <span className="rx-kicker rx-kicker-light">01 — The Map</span>
             <h2 className="rx-h2">Traditional reflexology <em>map</em></h2>
             <p className="rx-lead rx-lead-light">
               The map shows the zones of the sole of the foot as they are described in traditional reflexology. These are
@@ -54,7 +43,7 @@ export default function Reflexology() {
       <section className="rx-section">
         <div className="container rx-split">
           <div>
-            <span className="rx-kicker">03 — The Session</span>
+            <span className="rx-kicker">02 — The Session</span>
             <h2 className="rx-h2">How a session <em>works</em></h2>
           </div>
           <div>
@@ -68,17 +57,13 @@ export default function Reflexology() {
             </div>
           </div>
         </div>
-        <div className="container rx-photo-pair">
-          <img src="/images/about/reflexology-hands-square.jpg" alt="Reflexologist pressing the sole of the foot" />
-          <img src="/images/about/about-intro.jpg" alt="Foot massage in a warm, calm setting" />
-        </div>
       </section>
 
       {/* 04 — Research */}
       <section className="rx-section rx-tint">
         <div className="container">
           <div className="rx-center">
-            <span className="rx-kicker">04 — Evidence</span>
+            <span className="rx-kicker">03 — Evidence</span>
             <h2 className="rx-h2">What research <em>says</em></h2>
           </div>
           <div className="rx-research">

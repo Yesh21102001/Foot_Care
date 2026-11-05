@@ -30,7 +30,7 @@ const PLACEHOLDER_SOCIAL: Branch["social"] = {
 };
 
 // PLACEHOLDER DATA: replace with your real branches (name, address, phone, email, optional mapUrl and social).
-const BRANCHES: Branch[] = [
+export const BRANCHES: Branch[] = [
   {
     name: "Main branch",
     address: "1901 Thornridge Cir. Shiloh, Hawaii 81063",

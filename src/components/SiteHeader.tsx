@@ -12,7 +12,7 @@ type NavEntry = Item | Group;
 const treatments: Item[] = [
   { href: "/reflexology", label: "Reflexology" },
   { href: "/therapeutic-massage", label: "Therapeutic Therapy" },
-  { href: "/hydrogen-therapy", label: "Hydrogen Therapy" },
+  { href: "/hydrogen-therapy", label: "Molecular Hydrogen Therapy" },
   { href: "/intelligent-wellness", label: "Intelligent Wellness" },
 ];
 

@@ -4,7 +4,7 @@ import { Layout } from "../components/Layout";
 
 export default function OurServices() {
   return (
-    <Layout title="Our Services" description="Explore all Foot Care services: reflexology, therapeutic therapy, hydrogen therapy and Healthpod sessions.">
+    <Layout title="Our Services" description="Explore all Foot Care services: reflexology, therapeutic therapy, molecular hydrogen therapy and Healthpod sessions.">
       <PageHeading title="Our Services" crumbs={[{ label: "Home", href: "/" }, { label: "Our Services" }]} hideTitle />
 
       <HomeServices showLabel={false} />
