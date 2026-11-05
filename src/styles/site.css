@@ -276,6 +276,7 @@
   .fc-site .nav-backdrop.is-open {
     opacity: 1;
     pointer-events: auto;
+    touch-action: none;
   }
 
   .fc-site .site-nav {
@@ -294,6 +295,9 @@
     background: var(--color-white);
     border-radius: 0;
     box-shadow: 18px 0 40px rgba(11, 38, 34, 0.18);
+    overscroll-behavior: contain;
+    /* Keep the panel's shadow on its right edge only, so it does not fade onto the header bar above. */
+    clip-path: inset(0 -60px 0 0);
     transform: translateX(-105%);
     visibility: hidden;
     transition: transform 300ms ease, visibility 0s linear 300ms;
@@ -2430,11 +2434,20 @@ footer#footer {
   }
 }
 
-/* Package cards: plain dark green button, sentence case. */
+/* Package cards: outlined button (transparent, #0B2622 border and text); fills #0B2622 on hover. */
 .fc-site .pkg-action .btn {
   text-transform: none;
   letter-spacing: normal;
-  padding: 14px 32px;
+  padding: 12px 32px;
+  background: transparent;
+  border: 2px solid #0b2622;
+  color: #0b2622;
+}
+.fc-site .pkg-action .btn:hover,
+.fc-site .pkg-action .btn:focus-visible {
+  background: #0b2622;
+  border-color: #0b2622;
+  color: #ffffff;
 }
 
 /* Mobile bottom tab bar (phones and tablets, same breakpoint as the header menu). */
@@ -3434,4 +3447,115 @@ body .tm-sc-section-title .subtitle::before {
   height: 1px;
   margin: 40px auto 0;
   background: rgba(11, 38, 34, 0.14);
+}
+
+/* Motion in the style of the reference site: fade / slide-up / zoom entrances, float and grow on hover,
+   a drawn highlight on the hero headline and a scroll shift on the hero photo. */
+@keyframes fc-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fc-slide {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 70px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fc-zoom {
+  from {
+    opacity: 0;
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+.fc-site .fc-anim.fc-anim-fade.is-visible {
+  animation-name: fc-fade;
+  animation-duration: 1000ms;
+}
+.fc-site .fc-anim.fc-anim-slide.is-visible {
+  animation-name: fc-slide;
+  animation-duration: 1100ms;
+}
+.fc-site .fc-anim.fc-anim-zoom.is-visible {
+  animation-name: fc-zoom;
+  animation-duration: 1200ms;
+}
+
+/* Hover: buttons float up, small round icons grow. */
+.fc-site .btn,
+.fc-site .btn-style2 {
+  transition: background 400ms var(--fc-ease), color 400ms var(--fc-ease), transform 300ms ease-out, padding 400ms ease, gap 400ms ease;
+}
+.fc-site .btn:hover,
+.fc-site .btn-style2:hover {
+  transform: translateY(-6px);
+}
+.fc-site .contact-icon,
+.fc-site .sv-check,
+.fc-site .loc-social a {
+  transition: transform 300ms ease-out, background 300ms ease, color 300ms ease;
+}
+.fc-site .contact-card:hover .contact-icon,
+.fc-site .sv-card:hover .sv-check {
+  transform: scale(1.12);
+}
+.fc-site .loc-social a:hover {
+  transform: scale(1.12);
+}
+
+/* The hero photo drifts as the page scrolls (browsers with scroll-driven animations). */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .fc-site .hero-photo {
+      animation: fc-hero-shift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+    @keyframes fc-hero-shift {
+      from {
+        background-position-y: 40%;
+      }
+      to {
+        background-position-y: 100%;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .btn:hover,
+  .fc-site .btn-style2:hover,
+  .fc-site .contact-card:hover .contact-icon,
+  .fc-site .sv-card:hover .sv-check,
+  .fc-site .loc-social a:hover {
+    transform: none;
+  }
+}
+
+/* While the side menu is open on phones and tablets, the header becomes a flat full-width bar
+   (no pill, no shadow, no side margins) and the menu panel sits directly under it. */
+@media (max-width: 960px) {
+  .fc-site .site-header.is-menu-open {
+    padding: 0;
+  }
+  .fc-site .site-header.is-menu-open .header-inner {
+    width: 100%;
+    max-width: none;
+    min-height: 64px;
+    padding: 10px 16px;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(11, 38, 34, 0.1);
+  }
 }

@@ -76,14 +76,19 @@ export function SiteHeader() {
   // While the side menu is open: stop the page behind it from scrolling, and close it with Escape.
   useEffect(() => {
     if (!open) return;
-    const previous = document.body.style.overflow;
+    // The page scrolls on <html> here, so both <html> and <body> must be locked.
+    const root = document.documentElement;
+    const previousRoot = root.style.overflow;
+    const previousBody = document.body.style.overflow;
+    root.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpen(false);
     };
     window.addEventListener("keydown", onKey);
     return () => {
-      document.body.style.overflow = previous;
+      root.style.overflow = previousRoot;
+      document.body.style.overflow = previousBody;
       window.removeEventListener("keydown", onKey);
     };
   }, [open]);
@@ -98,7 +103,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`site-header${scrolled ? " is-scrolled" : ""}${hidden && !open ? " is-hidden" : ""}`}
+      className={`site-header${scrolled ? " is-scrolled" : ""}${hidden && !open ? " is-hidden" : ""}${open ? " is-menu-open" : ""}`}
     >
       <div className="container header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>

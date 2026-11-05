@@ -1,7 +1,7 @@
 import { ArrowButton } from "./ArrowButton";
 
 // Same hero as the inner pages, used at the top of the homepage.
-const HERO_IMAGE = "/images/home-hero.jpg";
+const HERO_IMAGE = "/images/home-hero.png";
 
 export function HomeHero() {
   return (
