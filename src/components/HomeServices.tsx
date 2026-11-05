@@ -5,7 +5,7 @@ const SERVICES = [
     image: "/images/services/reflexology.jpg",
   },
   {
-    title: "Therapeutic Massage",
+    title: "Therapeutic Therapy",
     href: "/therapeutic-massage",
     image: "/images/services/therapeutic-massage.jpg",
   },

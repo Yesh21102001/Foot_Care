@@ -4,8 +4,8 @@ export default function TherapeuticMassage() {
   return (
     <ServicePage
       eyebrow="Our Treatments"
-      title="Therapeutic Massage"
-      description="Therapeutic massage tailored to ease muscle tension and speed recovery."
+      title="Therapeutic Therapy"
+      description="Therapeutic therapy tailored to ease muscle tension and speed recovery."
       intro="Hands-on techniques that work on tight muscles, posture and everyday strain, adapted to what your body needs."
       benefits={[
         { title: "Muscle release", text: "Loosens tight muscles in the back, neck and legs." },

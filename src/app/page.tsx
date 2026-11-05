@@ -138,7 +138,7 @@ export default function Home() {
 				<div className={"elementor-element elementor-element-9d39ad2 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"9d39ad2"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":300}"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<p>Our licensed therapists combine therapeutic massage and reflexology with a calm, personal approach. Every session is shaped around your body, your goals and how you feel that day.</p>		</div>
+		<p>Our licensed therapists combine therapeutic therapy and reflexology with a calm, personal approach. Every session is shaped around your body, your goals and how you feel that day.</p>		</div>
 					</div>
 				</div>
 		<div className={"elementor-element elementor-element-dd494bd e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"dd494bd"} data-element_type={"container"} data-e-type={"container"}>

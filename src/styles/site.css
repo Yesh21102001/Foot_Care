@@ -2668,3 +2668,8 @@ footer#footer .fc-acc-chevron {
     padding-bottom: 16px;
   }
 }
+
+/* Pricing page: the prepaid packages section on a light green background. */
+.fc-site .pkg-section {
+  background: #f1f3ee;
+}
