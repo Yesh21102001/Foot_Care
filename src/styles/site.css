@@ -1941,7 +1941,7 @@ footer#footer {
 .fc-site .loc-grid {
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
 }
 .fc-site .loc-card {
   display: flex;
@@ -2672,4 +2672,144 @@ footer#footer .fc-acc-chevron {
 /* Pricing page: the prepaid packages section on a light green background. */
 .fc-site .pkg-section {
   background: #f1f3ee;
+}
+
+/* Locations page on phones: two cards per row. Card contents are scaled down so address, phone, email,
+   social icons and the directions button all fit in the narrower columns. */
+@media (max-width: 640px) {
+  .fc-site .loc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-inline: -8px;
+  }
+  .fc-site .loc-card {
+    padding: 16px 13px 16px;
+    border-radius: 18px;
+  }
+  .fc-site .loc-card h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .fc-site .loc-card dl > div {
+    margin-bottom: 8px;
+  }
+  .fc-site .loc-card dt {
+    font-size: 10px;
+    letter-spacing: 0.06em;
+  }
+  .fc-site .loc-card dd {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .fc-site .loc-card dd a {
+    display: inline-block;
+    padding: 2px 0;
+  }
+  .fc-site .loc-social {
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .fc-site .loc-social a {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+  .fc-site .loc-action {
+    margin-top: 12px;
+  }
+  /* The directions button becomes a compact full-width pill (no arrow circle) so its label fits. */
+  .fc-site .loc-action .btn-style2 {
+    display: flex;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    justify-content: center;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+  /* No sliding label or extra padding on tap or hover. */
+  .fc-site .loc-action .btn-style2:hover {
+    padding: 0 8px !important;
+    gap: 0;
+  }
+  .fc-site .loc-action .btn-style2:hover .theme-btn {
+    transform: none;
+  }
+  .fc-site .loc-action .btn-style2 .theme-btn-arrow-left,
+  .fc-site .loc-action .btn-style2 .theme-btn-arrow-right {
+    display: none;
+  }
+  .fc-site .loc-action .btn-style2 .theme-btn {
+    font-size: 13px;
+  }
+  .fc-site .page-heading h1 {
+    text-wrap: balance;
+  }
+}
+
+/* Very narrow phones (360px and below): slightly smaller labels so every tab fits its pill. */
+@media (max-width: 360px) {
+  .fc-site .mobile-nav {
+    left: 8px;
+    right: 8px;
+    padding: 6px;
+    gap: 2px;
+  }
+  .fc-site .mobile-nav-item {
+    padding: 8px 0 7px;
+    font-size: 10px;
+  }
+}
+
+/* Pricing page treatments: a table on larger screens, stacked cards on phones (no sideways scrolling). */
+.fc-site .treat-list {
+  display: none;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 700px) {
+  .fc-site .treat-table {
+    display: none;
+  }
+  .fc-site .treat-list {
+    display: grid;
+    gap: 12px;
+  }
+  .fc-site .treat-list li {
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px rgba(11, 38, 34, 0.06);
+  }
+  .fc-site .treat-name {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #0b2622;
+  }
+  .fc-site .treat-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(11, 38, 34, 0.1);
+  }
+  .fc-site .treat-time {
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: #aecc9f;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0b2622;
+  }
+  .fc-site .treat-price {
+    font-size: 20px;
+    color: #0b2622;
+  }
 }

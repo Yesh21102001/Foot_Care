@@ -69,7 +69,8 @@ export function LocationsList() {
             <div>
               <dt>Email</dt>
               <dd>
-                <a href={`mailto:${branch.email}`}>{branch.email}</a>
+                {/* The zero-width space after "@" lets a long email wrap there instead of mid-word. */}
+                <a href={`mailto:${branch.email}`}>{branch.email.split("@").join("@​")}</a>
               </dd>
             </div>
           </dl>

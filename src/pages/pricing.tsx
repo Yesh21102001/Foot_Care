@@ -18,7 +18,7 @@ const treatments = [
 export default function Pricing() {
   return (
     <Layout title="Pricing" description="Foot Care treatments, durations and prices, plus prepaid packages with extra value.">
-      <PageHeading title="Treatments & pricing" crumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]} />
+      <PageHeading title="Treatments & pricing" crumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]} hideTitle />
 
       <section className="section section-alt pkg-section">
         <div className="container">
@@ -32,7 +32,8 @@ export default function Pricing() {
         <div className="container">
           <h2>Treatments</h2>
           <p className="lead">Foot reflexology on its own, or combined with back, arm, shoulder, hand, head and neck work.</p>
-          <div className="rx-price-wrap" style={{ marginLeft: 0, marginRight: 0, maxWidth: "none" }}>
+          {/* Table on larger screens; stacked cards on phones (see .treat-table and .treat-list in site.css). */}
+          <div className="rx-price-wrap treat-table" style={{ marginLeft: 0, marginRight: 0, maxWidth: "none" }}>
             <table className="rx-price-table">
               <thead>
                 <tr>
@@ -52,6 +53,18 @@ export default function Pricing() {
               </tbody>
             </table>
           </div>
+
+          <ul className="treat-list">
+            {treatments.map((row) => (
+              <li key={row.name + row.duration}>
+                <span className="treat-name">{row.name}</span>
+                <span className="treat-meta">
+                  <span className="treat-time">{row.duration}</span>
+                  <strong className="treat-price">{row.price}</strong>
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </Layout>
