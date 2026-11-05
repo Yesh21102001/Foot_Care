@@ -4,6 +4,7 @@ import { RevealOnScroll } from "../app/reveal-on-scroll";
 import { ScrollAnimations } from "./ScrollAnimations";
 import { BookingModal } from "./BookingModal";
 import { SiteFooter } from "./SiteFooter";
+import { MobileBottomNav } from "./MobileBottomNav";
 import { SiteHeader } from "./SiteHeader";
 
 type LayoutProps = {
@@ -23,6 +24,7 @@ export function Layout({ title, description, children }: LayoutProps) {
       <div className="fc-site">
         <SiteHeader />
         <main>{children}</main>
+        <MobileBottomNav />
       </div>
 
       <SiteFooter />

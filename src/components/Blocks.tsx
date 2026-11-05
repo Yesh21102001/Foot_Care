@@ -117,11 +117,13 @@ export function PageHeading({
   crumbs,
   maxWidth,
   intro,
+  hideTitle = false,
 }: {
   title: string;
   crumbs: Crumb[];
   maxWidth?: number;
   intro?: string;
+  hideTitle?: boolean;
 }) {
   return (
     <section className="page-heading">
@@ -138,7 +140,7 @@ export function PageHeading({
             })}
           </ol>
         </nav>
-        <h1>{title}</h1>
+        <h1 className={hideTitle ? "sr-only" : undefined}>{title}</h1>
         {intro && <p className="page-heading-intro">{intro}</p>}
       </div>
     </section>

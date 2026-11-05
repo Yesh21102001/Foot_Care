@@ -16,7 +16,6 @@ const TARGETS = [
   ".about-photo",
   ".pkg-card",
   ".loc-card",
-  ".svc-card",
   ".home-hydrogen-text > *",
   ".home-hydrogen-photo",
   ".home-packages h2",
@@ -38,13 +37,13 @@ export function ScrollAnimations() {
     const nodes = Array.from(document.querySelectorAll<HTMLElement>(TARGETS));
     if (!nodes.length) return;
 
-    // Stagger siblings a little (up to five steps) so grids and lists cascade in.
+    // Stagger siblings a little (up to five steps of 130ms) so grids and lists cascade in.
     const seen = new Map<Element, number>();
     for (const node of nodes) {
       const parent = node.parentElement as Element;
       const index = seen.get(parent) ?? 0;
       seen.set(parent, index + 1);
-      node.style.setProperty("--fc-delay", `${Math.min(index, 5) * 90}ms`);
+      node.style.setProperty("--fc-delay", `${Math.min(index, 5) * 130}ms`);
       node.classList.add("fc-anim");
     }
 
@@ -56,7 +55,7 @@ export function ScrollAnimations() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" },
     );
     nodes.forEach((node) => observer.observe(node));
 

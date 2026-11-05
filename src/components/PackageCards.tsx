@@ -1,4 +1,4 @@
-import { ArrowButton } from "./ArrowButton";
+import Link from "next/link";
 
 const PACKAGE_INCLUDES = [
   "Foot Reflexology",
@@ -31,7 +31,9 @@ export function PackageCards() {
             ))}
           </ul>
           <div className="pkg-action">
-            <ArrowButton label="Choose plan" href="/contact" />
+            <Link href="/contact" className="btn btn-primary">
+              Choose plan
+            </Link>
           </div>
         </div>
       ))}

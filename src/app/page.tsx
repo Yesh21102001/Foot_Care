@@ -4,6 +4,7 @@ import { RevealOnScroll } from "./reveal-on-scroll";
 import { ScrollAnimations } from "../components/ScrollAnimations";
 import { SwiperCarousels } from "./swiper-carousels";
 import { SiteHeader } from "../components/SiteHeader";
+import { MobileBottomNav } from "../components/MobileBottomNav";
 import { SiteFooter } from "../components/SiteFooter";
 import { HomeHero } from "../components/HomeHero";
 import { WhoWeAre } from "../components/WhoWeAre";
@@ -40,7 +41,7 @@ export default function Home() {
 						<div className={"layer"}><span className={"overlay"}></span></div>
 	</div>
 					
-		<div className={"fc-site"}><SiteHeader /></div>
+		<div className={"fc-site"}><SiteHeader /><MobileBottomNav /></div>
 			
 		<div className={"top-sliders-container"}>
 		
@@ -231,65 +232,7 @@ export default function Home() {
 				</div>
 					</div>
 				</div>
-		<div className={"elementor-element elementor-element-270b0ab e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"270b0ab"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-		<div className={"elementor-element elementor-element-0b07b2c e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"0b07b2c"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"background_background\":\"classic\"}"}>
-		<div className={"elementor-element elementor-element-6ca1bc0 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"6ca1bc0"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-280d748 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"280d748"} data-element_type={"container"} data-e-type={"container"}>
-					<div className={"e-con-inner"}>
-		<div className={"elementor-element elementor-element-faf2d98 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"faf2d98"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-d1eecbf e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"d1eecbf"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-12fe05c horizontal-line-align-left vertical-line-align-bottom elementor-widget elementor-widget-tm-ele-section-title"} data-id={"12fe05c"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-section-title.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-section-title section-title"}>
-	<div className={"title-wrapper"}>
-		
-		
-
-<div className={"sub-title-outer"}>
-		<div className={"subtitle"}>
-	
-		
-		Services	</div>
-	</div>			<h2 className={"title tm-split-text split-in-right"}>
-
-		
-		
-							
-	</h2>
-	<div className={"title-seperator-line"}></div>						</div>
-</div>				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-4e3f3be e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"4e3f3be"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-550fb5f horizontal-line-align-left vertical-line-align-bottom elementor-widget elementor-widget-tm-ele-section-title"} data-id={"550fb5f"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-section-title.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-section-title section-title"}>
-	<div className={"title-wrapper"}>
-		
-					<h2 className={"title tm-split-text split-in-right"}>
-
-		
-				<span className={"title-part1"}>Your journey to total relaxation starts</span>
-		
-							
-	</h2>
-	<div className={"title-seperator-line"}></div>						</div>
-</div>				</div>
-				</div>
-				<div className={"elementor-element elementor-element-1e88ad5 elementor-widget__width-inherit elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-tm-ele-floating-objects"} data-id={"1e88ad5"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-floating-objects.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-ele-floating-objects"}>
-	<span className={"each-object elementor-repeater-item-6728617"} data-parallax={"{\"x\":100,\"y\":\"\",\"scale\":\"\",\"rotate\":\"\",\"opacity\":\"\"}"} style={{"backgroundImage":"url(https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/shape4.avif)"} as CSSProperties}></span>		</div>
-					</div>
-				</div>
-				</div>
-				</div>
-					</div>
-				</div>
-		<div className={"fc-site"} style={{ width: "min(1200px, calc(100% - 40px))", margin: "40px auto 0" }}><HomeServices /></div>
-				</div>
-				</div>
-				</div>
+		<div className={"fc-site"}><HomeServices /></div>
 		<div className={"fc-site"}><HomeHydrogen /></div>
 		<div className={"elementor-element elementor-element-0721ce4 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"0721ce4"} data-element_type={"container"} data-e-type={"container"}>
 					<div className={"e-con-inner"}>
@@ -635,12 +578,8 @@ export default function Home() {
 					</div>
 				</div>
 				</div>
-		<div className={"elementor-element elementor-element-914afa7 e-con-full tm-col-stretched-none elementor-hidden-mobile_extra elementor-hidden-mobile e-flex tm-bg-color-over-image e-con e-child"} data-id={"914afa7"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-fcdf452 elementor-invisible elementor-widget elementor-widget-image"} data-id={"fcdf452"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":300}"} data-widget_type={"image.default"}>
-															<img loading={"lazy"} decoding={"async"} width={"203"} height={"73"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/shape10.avif"} className={"attachment-large size-large wp-image-771"} alt={""} />															</div>
-				</div>
 		<div className={"elementor-element elementor-element-280a488 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"280a488"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-90c91e9 elementor-invisible elementor-widget elementor-widget-tm-ele-theme-button"} data-id={"90c91e9"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":400}"} data-widget_type={"tm-ele-theme-button.skin-style2"}>
+				<div className={"elementor-element elementor-element-90c91e9 elementor-widget elementor-widget-tm-ele-theme-button"} data-id={"90c91e9"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-theme-button.skin-style2"}>
 				<div className={"elementor-widget-container"}>
 					<a href={"/contact"} className={"btn-style2"}>
 

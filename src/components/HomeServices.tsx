@@ -1,48 +1,58 @@
-import { ArrowButton } from "./ArrowButton";
-
 const SERVICES = [
   {
     title: "Reflexology Massage",
-    text: "Pressure-point therapy for deep relaxation and foot comfort.",
     href: "/reflexology",
     image: "/images/services/reflexology.jpg",
   },
   {
     title: "Therapeutic Massage",
-    text: "Targeted massage to release tension and aid recovery.",
     href: "/therapeutic-massage",
     image: "/images/services/therapeutic-massage.jpg",
   },
   {
     title: "Hydrogen Therapy",
-    text: "A calming wellness session to support recovery.",
     href: "/hydrogen-therapy",
     image: "/images/services/hydrogen-therapy.jpg",
   },
   {
     title: "Intelligent Wellness",
-    text: "An optional technology-assisted wellness assessment.",
     href: "/intelligent-wellness",
     image: "/images/services/intelligent-wellness.jpg",
   },
 ];
 
-// Home page services: photo on top, then title, text and a button.
-export function HomeServices() {
+// Same entrance as the "Benefits of Foot Massage" points: a short fade-up, one card after another.
+// RevealOnScroll reads data-settings (animation name and delay) and plays it when the element scrolls into view.
+const entrance = (delay: number) => JSON.stringify({ _animation: "fadeInUp", _animation_delay: delay });
+
+// Home page services: heading plus four tall photo cards. Each card is one link.
+export function HomeServices({ showLabel = true }: { showLabel?: boolean }) {
   return (
-    <div className="home-services">
-      {SERVICES.map((service) => (
-        <article className="svc-card" key={service.title}>
-          <a className="svc-photo" href={service.href} tabIndex={-1} aria-hidden="true">
-            <img src={service.image} alt="" loading="lazy" />
-          </a>
-          <div className="svc-body">
-            <h3>{service.title}</h3>
-            <p>{service.text}</p>
-            <ArrowButton label="View details" href={service.href} />
-          </div>
-        </article>
-      ))}
-    </div>
+    <section className="svc-section">
+      <div className="svc-inner">
+        {showLabel && (
+          <span className="svc-label elementor-invisible" data-settings={entrance(0)}>
+            Our Services
+          </span>
+        )}
+        <h2 className="elementor-invisible" data-settings={entrance(200)}>
+          Your journey to total relaxation starts
+        </h2>
+
+        <div className="svc-grid">
+          {SERVICES.map((service, index) => (
+            <div className="svc-item elementor-invisible" data-settings={entrance(300 + index * 200)} key={service.title}>
+              <a className="svc-card" href={service.href}>
+                <img src={service.image} alt="" loading="lazy" />
+                <div className="svc-info">
+                  <h3>{service.title}</h3>
+                </div>
+                <span className="sr-only">View details</span>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
