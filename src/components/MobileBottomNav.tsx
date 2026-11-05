@@ -23,7 +23,7 @@ const TABS = [
 
 // Bottom tab bar, shown on phones and tablets only (see the .mobile-nav styles).
 export function MobileBottomNav() {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
 
   return (
     <nav className="mobile-nav" aria-label="Quick navigation">
