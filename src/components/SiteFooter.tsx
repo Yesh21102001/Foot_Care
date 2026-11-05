@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { BookingButton } from "./BookingButton";
+import { FooterAccordion } from "./FooterAccordion";
 
 // Shared footer, converted from the theme. Used on every page.
 export function SiteFooter() {
@@ -87,30 +88,40 @@ export function SiteFooter() {
 				</div>
 				</div>
 		<div className={"elementor-element elementor-element-6b9e71d e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"6b9e71d"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":500}"}>
+<FooterAccordion
+title={
 				<div className={"elementor-element elementor-element-2a14229 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"2a14229"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
 		<p>Company</p>		</div>
 					</div>
 				</div>
+}
+>
 				<div className={"elementor-element elementor-element-2a60c5d elementor-widget elementor-widget-tm-ele-navigation-menu"} data-id={"2a60c5d"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-navigation-menu.default"}>
 				<div className={"elementor-widget-container"}>
 					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links1"} className={""}><li id={"menu-item-3420"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3420"}><a href={"/about-us"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>About</a></li><li id={"menu-item-3421"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3421"}><a href={"/our-services"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Our Services</a></li><li id={"menu-item-3422"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3422"}><a href={"/pricing"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Pricing</a></li><li id={"menu-item-3423"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3423"}><a href={"/faq"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>FAQ</a></li></ul></div>
 				</div>
 				</div>
+</FooterAccordion>
 				</div>
 		<div className={"elementor-element elementor-element-3a9725b e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"3a9725b"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":700}"}>
+<FooterAccordion
+title={
 				<div className={"elementor-element elementor-element-7fd03c5 elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"7fd03c5"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
 		<p> Services</p>		</div>
 					</div>
 				</div>
+}
+>
 				<div className={"elementor-element elementor-element-7fd5638 elementor-widget elementor-widget-tm-ele-navigation-menu"} data-id={"7fd5638"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-navigation-menu.default"}>
 				<div className={"elementor-widget-container"}>
 					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links2"} className={""}><li id={"menu-item-3425"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3425"}><a href={"/reflexology"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Reflexology</a></li><li id={"menu-item-3426"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3426"}><a href={"/therapeutic-massage"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Therapeutic Massage</a></li><li id={"menu-item-3427"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3427"}><a href={"/hydrogen-therapy"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Hydrogen Therapy</a></li><li id={"menu-item-3428"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3428"}><a href={"/healthpod"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Healthpod</a></li></ul></div>
 				</div>
 				</div>
+</FooterAccordion>
 				</div>
 		<div className={"elementor-element elementor-element-70e1971 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image elementor-invisible e-con e-child"} data-id={"70e1971"} data-element_type={"container"} data-e-type={"container"} data-settings={"{\"animation\":\"fadeInUp\",\"animation_delay\":900}"}>
 		<div className={"elementor-element elementor-element-a0d492d e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"a0d492d"} data-element_type={"container"} data-e-type={"container"}>

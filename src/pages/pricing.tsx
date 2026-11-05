@@ -20,7 +20,7 @@ export default function Pricing() {
     <Layout title="Pricing" description="Foot Care treatments, durations and prices, plus prepaid packages with extra value.">
       <PageHeading title="Treatments & pricing" crumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]} />
 
-      <section className="section section-alt">
+      <section className="section section-alt pkg-section">
         <div className="container">
           <h2>Prepaid packages</h2>
           <p className="lead">Pay in advance and receive additional value on your balance.</p>

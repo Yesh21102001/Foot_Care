@@ -318,3 +318,41 @@ img.wp-smiley, img.emoji {
   margin-top: 0 !important;
   padding-top: 32px !important;
 }
+
+/* Scrolling banner ("Clear Mind. Healthy Life. Strong Body.") on phones and tablets: much smaller text, icon and gaps. */
+@media (max-width: 880px) {
+  .elementor-17 .elementor-element.elementor-element-9c1752e .tm-marquee-repeater .text {
+    font-size: clamp(28px, 7vw, 52px) !important;
+    line-height: 1.5 !important;
+    letter-spacing: -1px !important;
+  }
+  .elementor-17 .elementor-element.elementor-element-9c1752e .tm-marquee-repeater .divider {
+    padding-left: clamp(12px, 4vw, 26px) !important;
+    padding-right: clamp(12px, 4vw, 26px) !important;
+  }
+  .elementor-17 .elementor-element.elementor-element-9c1752e .tm-marquee-repeater .divider svg {
+    width: clamp(18px, 5vw, 30px) !important;
+    height: clamp(18px, 5vw, 30px) !important;
+  }
+  /* Less empty space around the strip. */
+  .elementor-17 .elementor-element.elementor-element-5cf0d95 {
+    --padding-bottom: 36px !important;
+  }
+}
+
+/* Footer call to action ("Book a massage session today..." and its Book Now button): hidden on phones and tablets. */
+@media (max-width: 880px) {
+  .elementor-930 .elementor-element.elementor-element-73708c1 {
+    display: none !important;
+  }
+  .elementor-930 .elementor-element.elementor-element-5f2c155 {
+    --padding-top: 56px !important;
+  }
+}
+
+/* Phones and tablets: leave room under the footer's last row (copyright and policy links) for the fixed bottom tab bar. */
+@media (max-width: 960px) {
+  .elementor-930 .elementor-element.elementor-element-4b4f4b9 {
+    --padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
