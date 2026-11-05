@@ -3631,3 +3631,33 @@ body .tm-sc-section-title .subtitle::before {
     font-size: 17px;
   }
 }
+
+/* FAQ arrow: the same small solid triangle as the browser's own, drawn in CSS so it turns smoothly the moment
+   an item is clicked (opening or closing). */
+.fc-site .faq summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+.fc-site .faq summary::-webkit-details-marker {
+  display: none;
+}
+.fc-site .faq summary::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid #0b2622;
+  transition: transform 450ms var(--fc-ease);
+}
+.fc-site .faq details[open]:not([data-closing="1"]) summary::before {
+  transform: rotate(90deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .faq summary::before {
+    transition: none;
+  }
+}

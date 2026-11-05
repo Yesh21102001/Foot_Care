@@ -1,4 +1,4 @@
-import { CtaBanner, PageHeading } from "../components/Blocks";
+import { PageHeading } from "../components/Blocks";
 import { Layout } from "../components/Layout";
 
 const questions = [
@@ -83,13 +83,6 @@ export default function Faq() {
           ))}
         </div>
       </section>
-
-      <CtaBanner
-        title="Still have a question?"
-        text="Our team is happy to help before you book."
-        link={{ label: "Contact us", href: "/contact" }}
-        arrowButtons
-      />
     </Layout>
   );
 }

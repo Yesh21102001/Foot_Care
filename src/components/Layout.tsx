@@ -2,6 +2,7 @@ import Head from "next/head";
 import type { ReactNode } from "react";
 import { RevealOnScroll } from "../app/reveal-on-scroll";
 import { ScrollAnimations } from "./ScrollAnimations";
+import { SmoothDetails } from "./SmoothDetails";
 import { BookingModal } from "./BookingModal";
 import { SiteFooter } from "./SiteFooter";
 import { MobileBottomNav } from "./MobileBottomNav";
@@ -30,6 +31,7 @@ export function Layout({ title, description, children }: LayoutProps) {
       <SiteFooter />
       <RevealOnScroll />
       <ScrollAnimations />
+      <SmoothDetails />
       <div className="fc-site">
         <BookingModal />
       </div>
