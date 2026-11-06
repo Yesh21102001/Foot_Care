@@ -109,24 +109,44 @@ export function LocationsList() {
     <div className="loc-grid">
       {visible.map((branch) => (
         <article className="loc-card" key={branch.name}>
-          <h3>{branch.name}</h3>
+          <header className="loc-card-head">
+            <span className="loc-pin" aria-hidden="true">
+              <i className="fas fa-map-marker-alt"></i>
+            </span>
+            <div>
+              <h3>{branch.name}</h3>
+              <span className="loc-region">
+                {branch.state}, {branch.country}
+              </span>
+            </div>
+          </header>
+          <div className="loc-card-body">
           <dl>
             <div>
+              <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>
               <dt>Address</dt>
               <dd>{branch.address}</dd>
+              </span>
             </div>
             <div>
+              <i className="fas fa-phone-alt" aria-hidden="true"></i>
+              <span>
               <dt>Phone</dt>
               <dd>
                 <a href={`tel:${branch.phone.replace(/[^+\d]/g, "")}`}>{branch.phone}</a>
               </dd>
+              </span>
             </div>
             <div>
+              <i className="fas fa-envelope" aria-hidden="true"></i>
+              <span>
               <dt>Email</dt>
               <dd>
                 {/* The zero-width space after "@" lets a long email wrap there instead of mid-word. */}
                 <a href={`mailto:${branch.email}`}>{branch.email.split("@").join("@​")}</a>
               </dd>
+              </span>
             </div>
           </dl>
           {branch.social && (
@@ -146,6 +166,7 @@ export function LocationsList() {
           )}
           <div className="loc-action">
             <ArrowButton label="Get directions" href={directionsUrl(branch)} newTab />
+          </div>
           </div>
         </article>
       ))}

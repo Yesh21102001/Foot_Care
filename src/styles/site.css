@@ -3753,3 +3753,259 @@ body .tm-sc-section-title .subtitle::before {
     pointer-events: none;
   }
 }
+
+/* Locations redesign: dark filter panel; cards with a dark header (pin, name, region) and icon rows. */
+.fc-site .loc-filter {
+  padding: 22px 24px;
+  border-radius: 24px;
+  background: #0b2622;
+  margin-bottom: 36px;
+}
+.fc-site .loc-filter-field label {
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.fc-site .loc-filter-field select {
+  border-color: transparent;
+}
+.fc-site .loc-filter-field select:hover:not(:disabled) {
+  border-color: #aecc9f;
+}
+.fc-site .loc-filter-field select:focus {
+  border-color: #aecc9f;
+  outline-color: #aecc9f;
+}
+.fc-site .loc-filter-field select:disabled {
+  background: rgba(255, 255, 255, 0.85);
+}
+.fc-site .loc-count {
+  color: #ffffff;
+  opacity: 1;
+}
+.fc-site .loc-card {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 24px;
+}
+.fc-site .loc-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 26px;
+  background: #0b2622;
+}
+.fc-site .loc-pin {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #aecc9f;
+  color: #0b2622;
+  font-size: 18px;
+  transition: transform 500ms var(--fc-ease);
+}
+.fc-site .loc-card:hover .loc-pin {
+  transform: scale(1.1) rotate(-8deg);
+}
+.fc-site .loc-card-head h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+.fc-site .loc-region {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #aecc9f;
+}
+.fc-site .loc-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px 26px 26px;
+}
+.fc-site .loc-card dl > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.fc-site .loc-card dl > div > i {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #e7ebe5;
+  color: #0b2622;
+  font-size: 14px;
+}
+.fc-site .loc-card dl > div > span {
+  min-width: 0;
+}
+.fc-site .loc-action {
+  margin-top: 16px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(11, 38, 34, 0.1);
+}
+.fc-site .loc-social {
+  margin-top: 2px;
+}
+@media (max-width: 640px) {
+  .fc-site .loc-filter {
+    padding: 14px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+  }
+  .fc-site .loc-filter-field label {
+    font-size: 11px;
+  }
+  .fc-site .loc-card {
+    border-radius: 18px;
+  }
+  .fc-site .loc-card-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 14px 13px;
+  }
+  .fc-site .loc-pin {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+  .fc-site .loc-card-head h3 {
+    font-size: 16px;
+  }
+  .fc-site .loc-region {
+    font-size: 11px;
+    margin-top: 2px;
+  }
+  .fc-site .loc-card-body {
+    padding: 14px 13px 16px;
+  }
+  .fc-site .loc-card dl > div > i {
+    display: none;
+  }
+  .fc-site .loc-card dl > div {
+    margin-bottom: 8px;
+  }
+  .fc-site .loc-action {
+    margin-top: 10px;
+    padding-top: 12px;
+  }
+}
+.fc-site .loc-filter-field select:disabled {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Locations: lighter look. White filter bar and white cards; the dark green is kept for small accents only. */
+.fc-site .loc-filter {
+  padding: 14px 18px 16px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(11, 38, 34, 0.08);
+  margin-bottom: 28px;
+}
+.fc-site .loc-filter-field label {
+  color: #0b2622;
+  font-size: 12px;
+  opacity: 0.65;
+}
+.fc-site .loc-filter-field select {
+  border-color: #d5dcd7;
+  background: #f1f3ee;
+  color: #0b2622;
+}
+.fc-site .loc-filter-field select:hover:not(:disabled) {
+  border-color: #0b2622;
+}
+.fc-site .loc-filter-field select:focus {
+  border-color: #0b2622;
+  outline-color: #aecc9f;
+}
+.fc-site .loc-filter-field select:disabled {
+  background: #f1f3ee;
+  color: rgba(11, 38, 34, 0.45);
+  border-color: #e3e8e4;
+}
+.fc-site .loc-count {
+  color: #0b2622;
+  opacity: 0.7;
+  font-weight: 500;
+}
+.fc-site .loc-card-head {
+  padding: 22px 26px 0;
+  background: transparent;
+}
+.fc-site .loc-card-head h3 {
+  color: #0b2622;
+}
+.fc-site .loc-region {
+  color: #0b2622;
+  opacity: 0.6;
+}
+.fc-site .loc-card-body {
+  padding: 18px 26px 24px;
+}
+.fc-site .loc-card dl > div > i {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  background: #f1f3ee;
+}
+.fc-site .loc-card dt {
+  font-size: 11px;
+}
+.fc-site .loc-card dd {
+  font-size: 15px;
+}
+.fc-site .loc-social a {
+  width: 34px;
+  height: 34px;
+  font-size: 14px;
+  background: #f1f3ee;
+  color: #0b2622;
+}
+.fc-site .loc-social a:hover {
+  background: #0b2622;
+  color: #ffffff;
+}
+@media (max-width: 640px) {
+  .fc-site .loc-filter {
+    padding: 10px 12px 12px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+  .fc-site .loc-card-head {
+    padding: 14px 13px 0;
+  }
+  .fc-site .loc-card-body {
+    padding: 10px 13px 14px;
+  }
+  .fc-site .loc-social a {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .loc-card dt {
+    font-size: 10px;
+  }
+  .fc-site .loc-card dd {
+    font-size: 13px;
+  }
+}
