@@ -4168,3 +4168,8 @@ body .tm-sc-section-title .subtitle::before {
     animation: none;
   }
 }
+
+/* The "25+ Years of Work Experience" tag on the home page photo is removed. */
+.elementor-element-ada6da7 {
+  display: none !important;
+}
