@@ -59,7 +59,8 @@ export function ScrollAnimations() {
     for (const group of GROUPS) {
       const query = group.selectors.map((selector) => `.fc-site ${selector}`).join(", ");
       document.querySelectorAll<HTMLElement>(query).forEach((node) => {
-        if (taken.has(node)) return;
+        // The visually hidden page title is for screen readers only, so it is never animated.
+        if (taken.has(node) || node.classList.contains("sr-only")) return;
         taken.add(node);
         node.classList.add("fc-anim", `fc-anim-${group.variant}`);
         nodes.push(node);

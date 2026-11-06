@@ -1,51 +1,51 @@
+import type { ReactNode } from "react";
 import { ArrowButton } from "../components/ArrowButton";
-import { ItemGrid, PageHero } from "../components/Blocks";
+import { PageHeading } from "../components/Blocks";
 import { Layout } from "../components/Layout";
 
-const blocks = [
-  {
-    title: "Our philosophy",
-    text: "We believe that taking time to relax should feel considered, comfortable and personal. Every visit is shaped around you.",
-  },
-  {
-    title: "Professional, respectful service",
-    text: "Attentive service and a commitment to guest comfort, from the moment you arrive to the moment you leave.",
-  },
-  {
-    title: "Our treatment approach",
-    text: "Massage therapy and traditional reflexology, delivered with almond massage cream in a calm, unhurried setting.",
-  },
-  {
-    title: "Our therapists",
-    text: "Experienced therapists who take the time to understand how you feel before every session begins.",
-  },
-];
+// A content block with a photo on one side and the text on the other. `textFirst` puts the text on the left on large screens.
+function PhotoBlock({
+  image,
+  alt,
+  kicker,
+  heading,
+  textFirst = false,
+  tinted = false,
+  children,
+}: {
+  image: string;
+  alt: string;
+  kicker: string;
+  heading: string;
+  textFirst?: boolean;
+  tinted?: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <section className={`hy-block${tinted ? " hy-block-alt" : ""}`}>
+      <div className={`sv-overview-inner${textFirst ? " sv-flip" : ""}`}>
+        <img className="sv-photo" src={image} alt={alt} loading="lazy" />
+        <div className="sv-overview-text">
+          <span className="sv-kicker">{kicker}</span>
+          <h2>{heading}</h2>
+          <div className="sv-overview-body">{children}</div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-const setting = [
-  {
-    title: "Massage therapy",
-    text: "Hands-on massage shaped around how your body feels that day, with attentive and respectful service.",
-  },
-  {
-    title: "Traditional reflexology",
-    text: "A traditional approach to the feet, using focused pressure for deep relaxation and comfort.",
-  },
-  {
-    title: "Wellness rituals",
-    text: "Carefully selected experiences, such as a warm foot soak, that make every visit feel considered.",
-  },
-  {
-    title: "A calm space",
-    text: "A quiet, comfortable setting where guest comfort comes first, from arrival to departure.",
-  },
-];
-
-const approach = [
-  "Massage therapy tailored to how you feel that day",
-  "Traditional reflexology for feet and whole-body balance",
-  "Carefully selected wellness experiences",
-  "Almond massage cream used in our treatments",
-];
+// A plain text block, with no photo.
+function TextBlock({ heading, tinted = false, children }: { heading: string; tinted?: boolean; children: ReactNode }) {
+  return (
+    <section className={`hy-block${tinted ? " hy-block-alt" : ""}`}>
+      <div className="hy-plain">
+        <h2>{heading}</h2>
+        {children}
+      </div>
+    </section>
+  );
+}
 
 export default function AboutUs() {
   return (
@@ -53,65 +53,68 @@ export default function AboutUs() {
       title="About Us"
       description="FOOT CARE brings together massage therapy, traditional reflexology and carefully selected wellness experiences in a calm, professional setting."
     >
-      <PageHero
-        eyebrow="About Us"
-        title="Wellness, Thoughtfully Experienced."
-        image="/images/home-hero.jpg"
-        arrowButtons
+      <PageHeading title="About Us" crumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]} hideTitle />
+
+      {/* 1. Photo left, text right */}
+      <PhotoBlock
+        image="/images/about/block-philosophy.jpg"
+        alt="Two guests relaxing during a massage"
+        kicker="Our philosophy"
+        heading="Our Philosophy and Approach to Relaxation"
       >
-        FOOT CARE brings together the art of massage therapy, traditional reflexology and carefully selected wellness
-        experiences in a calm, professional setting.
-      </PageHero>
+        <p>
+          <strong>Wellness, Thoughtfully Experienced.</strong> FOOT CARE brings together the art of massage therapy, traditional reflexology and carefully selected wellness
+          experiences in a calm, professional setting.
+        </p>
+        <p>
+          We believe that taking time to relax should feel considered, comfortable and personal. Every visit is shaped
+          around you, so you can slow down and unwind at your own pace.
+        </p>
+      </PhotoBlock>
 
-      <section className="section">
-        <div className="container split split-center">
-          <div>
-            <h2>About FOOT CARE</h2>
-            <p className="lead">
-              We believe that taking time to relax should feel considered, comfortable and personal. Every visit is
-              shaped by attentive service, experienced therapists and a commitment to guest comfort.
-            </p>
-          </div>
-          <img className="about-photo" src="/images/about/about-intro.jpg" alt="Foot massage in a warm, calm setting" />
-        </div>
-      </section>
+      {/* 2. Plain text */}
+      <TextBlock heading="Our Commitment to Professional, Respectful Service" tinted>
+        <p>Attentive service and a commitment to guest comfort, from the moment you arrive to the moment you leave.</p>
+        <p>
+          We explain what to expect, respect your preferences, and adjust to how you feel, so every session is
+          comfortable from start to finish.
+        </p>
+      </TextBlock>
 
-      <section className="section section-alt">
-        <div className="container">
-          <h2>A calm, professional setting</h2>
-          <p className="lead">Massage, reflexology and wellness, side by side.</p>
-          <ItemGrid items={setting} />
-        </div>
-      </section>
+      {/* 3. Text left, photo right */}
+      <PhotoBlock
+        image="/images/about/block-treatment.jpg"
+        alt="Massage oil and a candle beside a foot massage"
+        kicker="Our treatments"
+        heading="Our Treatment Approach and Use of Almond Massage Cream"
+        textFirst
+      >
+        <p>
+          Massage therapy and traditional reflexology, delivered with almond massage cream in a calm, unhurried
+          setting.
+        </p>
+        <p>
+          If you have a nut allergy or skin sensitivity, please tell us before you book so we can look after you
+          properly.
+        </p>
+      </PhotoBlock>
 
-      <section className="section">
-        <div className="container split split-center split-reverse">
-          <div>
-            <h2>Our treatment approach</h2>
-            <p className="lead">
-              Every session combines the art of massage therapy with traditional reflexology, in a setting designed for
-              real relaxation.
-            </p>
-            <ul className="check-list">
-              {approach.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-          </div>
-          <img className="about-photo" src="/images/about/reflexology-hands-square.jpg" alt="Reflexology massage on the sole of the foot" />
-        </div>
-      </section>
+      {/* 4. Plain text */}
+      <TextBlock heading="Our Therapists" tinted>
+        <p>Our therapists take the time to understand how you feel before every session begins.</p>
+        <p>Pressure is adjusted to your comfort throughout, and you can ask for lighter or firmer work at any time.</p>
+      </TextBlock>
 
-      <section className="section section-alt">
-        <div className="container">
-          <h2>What you can expect</h2>
-          <p className="lead">The principles behind every visit to Foot Care.</p>
-          <ItemGrid items={blocks} />
-          <p style={{ marginTop: 32, textAlign: "center" }}>
-            <ArrowButton label="Find a store" href="/locations" />
-          </p>
+      {/* 5. Plain text with a button */}
+      <TextBlock heading="Our Locations and Franchise">
+        <p>
+          Foot Care is a franchise with stores in several locations, so a calm, professional visit is never far away.
+        </p>
+        <p>Find the store nearest you and book your session.</p>
+        <div className="hy-action" style={{ textAlign: "center" }}>
+          <ArrowButton label="Find a store" href="/locations" />
         </div>
-      </section>
+      </TextBlock>
     </Layout>
   );
 }

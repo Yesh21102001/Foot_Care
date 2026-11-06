@@ -23,7 +23,7 @@ export function SiteFooter() {
 					<h2 className={"title"}>
 
 		
-				<span className={"title-part1"}>Book a massage session today to explore how we can help you thrive</span>
+				<span className={"title-part1"}>Make Time for Yourself. Schedule Your Session</span>
 		
 							
 	</h2>

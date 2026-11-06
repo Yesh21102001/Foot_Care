@@ -3676,3 +3676,83 @@ body .tm-sc-section-title .subtitle::before {
   max-width: 50ch;
   text-wrap: balance;
 }
+/* Footer call to action: balance the heading's line breaks. */
+.elementor-930 .elementor-element-73708c1 .title {
+  text-wrap: balance;
+}
+
+/* Locations: country and state filter */
+/* Same columns and gap as .loc-grid, so Country sits over the first card and State over the second. */
+.fc-site .loc-filter {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.fc-site .loc-filter-field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.fc-site .loc-filter-field select {
+  width: 100%;
+  height: 48px;
+}
+.fc-site .loc-filter-field label {
+  font-weight: 600;
+  color: #0b2622;
+}
+.fc-site .loc-filter-field select {
+  font: inherit;
+  padding: 12px 14px;
+  border: 1px solid #c9d4d1;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #0b2622;
+  cursor: pointer;
+  transition: border-color 300ms var(--fc-ease), box-shadow 300ms var(--fc-ease);
+}
+.fc-site .loc-filter-field select:hover:not(:disabled) {
+  border-color: #0b2622;
+}
+.fc-site .loc-filter-field select:focus {
+  outline: 3px solid #aecc9f;
+  border-color: #0b2622;
+}
+.fc-site .loc-filter-field select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.fc-site .loc-count {
+  margin: 0;
+  grid-column: -2 / -1;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  color: #0b2622;
+  opacity: 0.7;
+}
+.fc-site .loc-empty {
+  padding: 24px 0;
+}
+@media (max-width: 640px) {
+  .fc-site .loc-filter {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-inline: -8px;
+  }
+  .fc-site .loc-filter-field select {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .fc-site .loc-count {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0;
+  }
+}

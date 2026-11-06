@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { ArrowButton } from "./ArrowButton";
 
 const SOCIAL_ICONS = {
@@ -13,6 +16,8 @@ type SocialKey = keyof typeof SOCIAL_ICONS;
 
 type Branch = {
   name: string;
+  country: string;
+  state: string;
   address: string;
   phone: string;
   email: string;
@@ -29,30 +34,80 @@ const PLACEHOLDER_SOCIAL: Branch["social"] = {
   youtube: "https://www.youtube.com/",
 };
 
-// PLACEHOLDER DATA: replace with your real branches (name, address, phone, email, optional mapUrl and social).
+// PLACEHOLDER DATA: replace with your real branches (name, country, state, address, phone, email, optional mapUrl and social).
+// The Country and State dropdowns on the Locations page are built from the country and state of each branch below.
 export const BRANCHES: Branch[] = [
   {
     name: "Main branch",
+    country: "United States",
+    state: "Hawaii",
     address: "1901 Thornridge Cir. Shiloh, Hawaii 81063",
     phone: "+629 555-0129",
     email: "main@example.com",
     social: PLACEHOLDER_SOCIAL,
   },
-  { name: "Branch 2", address: "Add address here", phone: "Add phone here", email: "branch2@example.com", social: PLACEHOLDER_SOCIAL },
-  { name: "Branch 3", address: "Add address here", phone: "Add phone here", email: "branch3@example.com", social: PLACEHOLDER_SOCIAL },
-  { name: "Branch 4", address: "Add address here", phone: "Add phone here", email: "branch4@example.com", social: PLACEHOLDER_SOCIAL },
-  { name: "Branch 5", address: "Add address here", phone: "Add phone here", email: "branch5@example.com", social: PLACEHOLDER_SOCIAL },
-  { name: "Branch 6", address: "Add address here", phone: "Add phone here", email: "branch6@example.com", social: PLACEHOLDER_SOCIAL },
+  { name: "Branch 2", country: "India", state: "Telangana", address: "Add address here", phone: "Add phone here", email: "branch2@example.com", social: PLACEHOLDER_SOCIAL },
+  { name: "Branch 3", country: "India", state: "Telangana", address: "Add address here", phone: "Add phone here", email: "branch3@example.com", social: PLACEHOLDER_SOCIAL },
+  { name: "Branch 4", country: "India", state: "Karnataka", address: "Add address here", phone: "Add phone here", email: "branch4@example.com", social: PLACEHOLDER_SOCIAL },
+  { name: "Branch 5", country: "United Arab Emirates", state: "Dubai", address: "Add address here", phone: "Add phone here", email: "branch5@example.com", social: PLACEHOLDER_SOCIAL },
+  { name: "Branch 6", country: "United States", state: "Hawaii", address: "Add address here", phone: "Add phone here", email: "branch6@example.com", social: PLACEHOLDER_SOCIAL },
 ];
 
 const directionsUrl = (branch: Branch) =>
   branch.mapUrl ||
   `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${branch.name} ${branch.address}`)}`;
 
+const unique = (values: string[]) => [...new Set(values)].sort((a, b) => a.localeCompare(b));
+const COUNTRIES = unique(BRANCHES.map((branch) => branch.country));
+
 export function LocationsList() {
+  const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
+
+  // States are only those that have a branch in the chosen country.
+  const states = country ? unique(BRANCHES.filter((branch) => branch.country === country).map((branch) => branch.state)) : [];
+  const visible = BRANCHES.filter((branch) => (!country || branch.country === country) && (!state || branch.state === state));
+
   return (
+    <>
+    <div className="loc-filter">
+      <div className="loc-filter-field">
+        <label htmlFor="loc-country">Country</label>
+        <select
+          id="loc-country"
+          value={country}
+          onChange={(event) => {
+            setCountry(event.target.value);
+            setState("");
+          }}
+        >
+          <option value="">All countries</option>
+          {COUNTRIES.map((name) => (
+            <option key={name} value={name}>
+              {name}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="loc-filter-field">
+        <label htmlFor="loc-state">State</label>
+        <select id="loc-state" value={state} onChange={(event) => setState(event.target.value)} disabled={!country}>
+          <option value="">{country ? "All states" : "Select country"}</option>
+          {states.map((name) => (
+            <option key={name} value={name}>
+              {name}
+            </option>
+          ))}
+        </select>
+      </div>
+      <p className="loc-count" aria-live="polite">
+        {visible.length} {visible.length === 1 ? "branch" : "branches"}
+        {country ? ` in ${state ? `${state}, ` : ""}${country}` : ""}
+      </p>
+    </div>
+    {visible.length === 0 && <p className="loc-empty">No branches found for this selection.</p>}
     <div className="loc-grid">
-      {BRANCHES.map((branch) => (
+      {visible.map((branch) => (
         <article className="loc-card" key={branch.name}>
           <h3>{branch.name}</h3>
           <dl>
@@ -95,5 +150,6 @@ export function LocationsList() {
         </article>
       ))}
     </div>
+    </>
   );
 }
