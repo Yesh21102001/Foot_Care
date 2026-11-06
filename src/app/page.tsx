@@ -359,7 +359,7 @@ export default function Home() {
 <div className={"layer-image-wrapper layer-image layer-image-fullwidth elementor-repeater-item-cc89de8"} style={{} as CSSProperties}>
 	<div className={"layer-inner layer-image"}>
 		<div className={"layer-image-inner-wrapper"}>
-					<img loading={"lazy"} decoding={"async"} className={""} src={"/images/foot-reflexology-center-cutout.png"} width={"1089"} height={"1445"} alt={""} />
+					<img loading={"lazy"} decoding={"async"} className={"benefits-photo"} src={"/images/foot-reflexology-center-cutout.png"} width={"1089"} height={"1445"} alt={""} />
 		</div>
 	</div>
 </div>

@@ -4009,3 +4009,162 @@ body .tm-sc-section-title .subtitle::before {
     font-size: 13px;
   }
 }
+
+/* Home page graphics: soft blurred brand-green shapes that drift slowly behind sections, and a gentle curve at the bottom of the hero. */
+.fc-site .home-hydrogen,
+.fc-site .home-packages,
+.fc-site .home-testimonials {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.fc-site .home-hydrogen::before,
+.fc-site .home-hydrogen::after,
+.fc-site .home-packages::before,
+.fc-site .home-packages::after,
+.fc-site .home-testimonials::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  background: #aecc9f;
+  filter: blur(70px);
+  opacity: 0.38;
+  pointer-events: none;
+}
+.fc-site .home-hydrogen::before {
+  width: 420px;
+  height: 420px;
+  top: -140px;
+  left: -140px;
+  animation: fc-drift-a 18s ease-in-out infinite alternate;
+}
+.fc-site .home-hydrogen::after {
+  width: 340px;
+  height: 340px;
+  bottom: -120px;
+  right: -100px;
+  animation: fc-drift-b 22s ease-in-out infinite alternate;
+}
+.fc-site .home-packages::before {
+  width: 380px;
+  height: 380px;
+  top: 40px;
+  right: -140px;
+  animation: fc-drift-b 20s ease-in-out infinite alternate;
+}
+.fc-site .home-packages::after {
+  width: 320px;
+  height: 320px;
+  bottom: 80px;
+  left: -120px;
+  animation: fc-drift-a 24s ease-in-out infinite alternate;
+}
+.fc-site .home-testimonials::before {
+  width: 360px;
+  height: 360px;
+  top: -120px;
+  left: 50%;
+  margin-left: -180px;
+  animation: fc-drift-a 20s ease-in-out infinite alternate;
+}
+@keyframes fc-drift-a {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(60px, 40px) scale(1.12); }
+}
+@keyframes fc-drift-b {
+  from { transform: translate(0, 0) scale(1.08); }
+  to { transform: translate(-60px, -36px) scale(0.95); }
+}
+.fc-site .hero-photo {
+  position: relative;
+}
+.fc-site .hero-photo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: clamp(36px, 6vw, 90px);
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'><path d='M0 90V52C240 8 480 0 720 26s480 44 720 4V90Z' fill='%23F1F3EE'/></svg>") center bottom / 100% 100% no-repeat;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .fc-site .home-hydrogen::before,
+  .fc-site .home-hydrogen::after,
+  .fc-site .home-packages::before,
+  .fc-site .home-packages::after,
+  .fc-site .home-testimonials::before {
+    transform: scale(0.65);
+    filter: blur(50px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .home-hydrogen::before,
+  .fc-site .home-hydrogen::after,
+  .fc-site .home-packages::before,
+  .fc-site .home-packages::after,
+  .fc-site .home-testimonials::before {
+    animation: none;
+  }
+}
+
+/* Home hydrogen section: a staged, slow entrance. The text builds up piece by piece, the checklist glides in with ticks
+   that pop, and the photo is revealed upward and then floats gently. Only active once scripts mark the section (.hy-ready). */
+@media (prefers-reduced-motion: no-preference) {
+  .fc-site .home-hydrogen.hy-ready .hy-step {
+    opacity: 0;
+    transform: translate3d(0, 34px, 0);
+    transition: opacity 1100ms var(--fc-ease), transform 1300ms var(--fc-ease), filter 1100ms var(--fc-ease);
+    transition-delay: calc(var(--i, 0) * 110ms + 150ms);
+  }
+  .fc-site .home-hydrogen.hy-ready .hy-title {
+    filter: blur(8px);
+  }
+  .fc-site .home-hydrogen.hy-ready .hy-item {
+    transform: translate3d(-34px, 0, 0);
+  }
+  .fc-site .home-hydrogen.hy-ready.hy-in .hy-step {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+  .fc-site .home-hydrogen.hy-ready .hy-item::before {
+    transform: scale(0) rotate(-40deg);
+    transition: transform 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-delay: calc(var(--i, 0) * 110ms + 650ms);
+  }
+  .fc-site .home-hydrogen.hy-ready.hy-in .hy-item::before {
+    transform: none;
+  }
+  /* Photo: the same zoom-in as the photo on the Hydrogen Therapy page (fc-zoom). */
+  .fc-site .home-hydrogen.hy-ready .home-hydrogen-photo {
+    opacity: 0;
+  }
+  .fc-site .home-hydrogen.hy-ready.hy-in .home-hydrogen-photo {
+    opacity: 1;
+    animation: fc-zoom 1200ms var(--fc-ease) backwards;
+  }
+}
+
+/* No glow behind the testimonials section. */
+.fc-site .home-testimonials::before {
+  display: none;
+}
+
+/* The big photo in "Benefits of Foot Massage" sits outside .fc-site, so it gets the same zoom-in entrance here. */
+.benefits-photo.fc-anim {
+  opacity: 0;
+}
+.benefits-photo.fc-anim.is-visible {
+  opacity: 1;
+  animation: fc-zoom 1200ms var(--fc-ease) backwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .benefits-photo.fc-anim {
+    opacity: 1;
+  }
+  .benefits-photo.fc-anim.is-visible {
+    animation: none;
+  }
+}

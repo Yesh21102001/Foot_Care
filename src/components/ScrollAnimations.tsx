@@ -7,7 +7,7 @@ import { useEffect } from "react";
 const GROUPS: { variant: "zoom" | "fade" | "slide" | "rise"; selectors: string[] }[] = [
   {
     variant: "zoom",
-    selectors: [".about-photo", ".sv-photo", ".home-hydrogen-photo", ".rx-banner img", ".rx-photo-pair img"],
+    selectors: [".about-photo", ".sv-photo", ".rx-banner img", ".rx-photo-pair img"],
   },
   {
     variant: "fade",
@@ -42,7 +42,6 @@ const GROUPS: { variant: "zoom" | "fade" | "slide" | "rise"; selectors: string[]
       ".hy-mech li",
       ".contact-card",
       ".contact-form",
-      ".home-hydrogen-text > *",
       ".home-packages-action",
       ".ht-card",
     ],
@@ -57,7 +56,7 @@ export function ScrollAnimations() {
     const nodes: HTMLElement[] = [];
     const taken = new Set<Element>();
     for (const group of GROUPS) {
-      const query = group.selectors.map((selector) => `.fc-site ${selector}`).join(", ");
+      const query = group.selectors.map((selector) => `.fc-site ${selector}`).join(", ") + (group.variant === "zoom" ? ", .benefits-photo" : "");
       document.querySelectorAll<HTMLElement>(query).forEach((node) => {
         // The visually hidden page title is for screen readers only, so it is never animated.
         if (taken.has(node) || node.classList.contains("sr-only")) return;
