@@ -1,6 +1,7 @@
 import { PageHeading } from "../components/Blocks";
 import { Layout } from "../components/Layout";
 import { PackageCards } from "../components/PackageCards";
+import { TreatmentPicker } from "../components/TreatmentPicker";
 
 // Reference prices: confirm with the client before launch.
 const treatments = [
@@ -30,43 +31,14 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="section treat-section">
+      <section className="tp-section">
         <div className="container">
-          <h2>Treatments</h2>
-          <p className="lead">Foot reflexology on its own, or combined with back, arm, shoulder, hand, head and neck work.</p>
-          {/* Table on larger screens; stacked cards on phones (see .treat-table and .treat-list in site.css). */}
-          <div className="rx-price-wrap treat-table" style={{ marginLeft: 0, marginRight: 0, maxWidth: "none" }}>
-            <table className="rx-price-table">
-              <thead>
-                <tr>
-                  <th>Treatment</th>
-                  <th>Duration</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                {treatments.map((row) => (
-                  <tr key={row.name + row.duration}>
-                    <td>{row.name}</td>
-                    <td>{row.duration}</td>
-                    <td>{row.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="tp-intro">
+            <span className="tp-eyebrow">Treatment menu</span>
+            <h2>Treatments</h2>
+            <p className="tp-lead">Foot reflexology on its own, or combined with back, arm, shoulder, hand, head and neck work.</p>
           </div>
-
-          <ul className="treat-list">
-            {treatments.map((row) => (
-              <li key={row.name + row.duration}>
-                <span className="treat-name">{row.name}</span>
-                <span className="treat-meta">
-                  <span className="treat-time">{row.duration}</span>
-                  <strong className="treat-price">{row.price}</strong>
-                </span>
-              </li>
-            ))}
-          </ul>
+          <TreatmentPicker treatments={treatments} />
         </div>
       </section>
     </Layout>

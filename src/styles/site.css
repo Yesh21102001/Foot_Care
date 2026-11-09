@@ -5176,3 +5176,540 @@ html body .elementor-element.elementor-element-ada6da7.elementor-hidden-mobile {
     transform: none;
   }
 }
+
+/* Pricing: treatments picker (dark section, treatment list on the left, detail card on the right). Brand colours only. */
+.fc-site .tp-section {
+  padding: 96px 0;
+  background: #0b2622;
+  color: #f1f3ee;
+}
+.fc-site .tp-intro .tp-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aecc9f;
+}
+.fc-site .tp-section h2 {
+  margin: 0 0 16px;
+  color: #f1f3ee;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.1;
+}
+.fc-site .tp-lead {
+  max-width: 46ch;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(241, 243, 238, 0.75);
+}
+.fc-site .tp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+.fc-site .tp-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 36px;
+}
+.fc-site .tp-tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 18px 22px;
+  border: 1px solid rgba(241, 243, 238, 0.18);
+  border-radius: 18px;
+  background: transparent;
+  color: #f1f3ee;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 600ms cubic-bezier(0.22, 1, 0.36, 1), color 600ms cubic-bezier(0.22, 1, 0.36, 1), border-color 600ms ease, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .tp-tile:hover {
+  border-color: #aecc9f;
+  transform: translateX(4px);
+}
+.fc-site .tp-tile.is-selected {
+  background: #f1f3ee;
+  border-color: #f1f3ee;
+  color: #0b2622;
+}
+.fc-site .tp-tile-name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.fc-site .tp-tile-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  gap: 4px;
+  text-align: right;
+}
+.fc-site .tp-tile-time {
+  font-size: 13px;
+  opacity: 0.7;
+}
+.fc-site .tp-tile-price {
+  font-size: 17px;
+  color: #aecc9f;
+}
+.fc-site .tp-tile.is-selected .tp-tile-price {
+  color: #0b2622;
+}
+.fc-site .tp-card {
+  padding: 40px;
+  border-radius: 28px;
+  border: 1px solid rgba(174, 204, 159, 0.25);
+  background: rgba(241, 243, 238, 0.04);
+  animation: tp-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes tp-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fc-site .tp-kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aecc9f;
+}
+.fc-site .tp-title {
+  margin: 12px 0 0;
+  font-size: clamp(26px, 2.6vw, 34px);
+  line-height: 1.2;
+  color: #f1f3ee;
+}
+.fc-site .tp-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 28px 0;
+}
+.fc-site .tp-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(241, 243, 238, 0.6);
+}
+.fc-site .tp-value {
+  font-size: 20px;
+  color: #f1f3ee;
+}
+.fc-site .tp-price {
+  display: block;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #aecc9f;
+}
+.fc-site .tp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 0;
+}
+.fc-site .tp-chip {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(241, 243, 238, 0.1);
+  font-size: 14px;
+  color: #f1f3ee;
+}
+.fc-site .tp-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 58px;
+  margin-top: 30px;
+  border: 0;
+  border-radius: 999px;
+  background: #aecc9f;
+  color: #0b2622;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1), background 500ms ease, box-shadow 500ms ease;
+}
+.fc-site .tp-cta:hover {
+  background: #f1f3ee;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 900px) {
+  .fc-site .tp-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .tp-section {
+    padding: 64px 0;
+  }
+  .fc-site .tp-card {
+    padding: 26px 22px;
+    border-radius: 22px;
+  }
+  .fc-site .tp-price {
+    font-size: 32px;
+  }
+  .fc-site .tp-tile {
+    padding: 15px 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .tp-card,
+  .fc-site .tp-tile,
+  .fc-site .tp-cta {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Treatments: exact layout of the reference (monospace labels, serif titles, ring, note, arrow button), in brand colours. */
+.fc-site .tp-section {
+  position: relative;
+  overflow: hidden;
+}
+.fc-site .tp-intro .tp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #aecc9f;
+}
+.fc-site .tp-intro .tp-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: #aecc9f;
+}
+.fc-site .tp-section h2 {
+  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-size: clamp(40px, 4.6vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.04;
+}
+.fc-site .tp-lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(241, 243, 238, 0.78);
+}
+.fc-site .tp-tile {
+  padding: 22px 26px;
+  border-radius: 14px;
+  border-color: rgba(241, 243, 238, 0.14);
+}
+.fc-site .tp-tile-name {
+  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.fc-site .tp-tile-time {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+.fc-site .tp-tile-price {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 18px;
+  font-weight: 500;
+  color: #aecc9f;
+}
+.fc-site .tp-tile.is-selected .tp-tile-price {
+  color: #0b2622;
+}
+.fc-site .tp-note {
+  margin: 22px 0 0;
+  padding-left: 16px;
+  border-left: 1px solid rgba(241, 243, 238, 0.25);
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(241, 243, 238, 0.65);
+}
+.fc-site .tp-card {
+  position: relative;
+  padding: 44px;
+  border-radius: 28px;
+  border: 1px solid rgba(241, 243, 238, 0.12);
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(174, 204, 159, 0.14), rgba(174, 204, 159, 0) 55%),
+    rgba(241, 243, 238, 0.035);
+  overflow: hidden;
+}
+.fc-site .tp-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+.fc-site .tp-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: #aecc9f;
+}
+.fc-site .tp-kicker::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: #aecc9f;
+}
+.fc-site .tp-title {
+  margin: 14px 0 0;
+  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-style: italic;
+  font-size: clamp(34px, 3.4vw, 46px);
+  font-weight: 400;
+  line-height: 1.12;
+}
+.fc-site .tp-ring {
+  position: relative;
+  flex-shrink: 0;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: conic-gradient(#aecc9f calc(var(--p, 0) * 1turn), rgba(241, 243, 238, 0.14) 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 9px), #000 calc(100% - 8px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 9px), #000 calc(100% - 8px));
+  transition: background 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .tp-ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.fc-site .tp-ring-value,
+.fc-site .tp-ring-unit {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-mask: none;
+  mask: none;
+  text-align: center;
+  white-space: nowrap;
+}
+.fc-site .tp-ring-value {
+  top: 34px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 26px;
+  font-weight: 500;
+  color: #f1f3ee;
+}
+.fc-site .tp-ring-unit {
+  top: 66px;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: rgba(241, 243, 238, 0.6);
+}
+.fc-site .tp-row {
+  margin: 34px 0;
+}
+.fc-site .tp-label {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: rgba(241, 243, 238, 0.6);
+}
+.fc-site .tp-value {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 26px;
+  color: #f1f3ee;
+}
+.fc-site .tp-price {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 46px;
+  font-weight: 500;
+  color: #aecc9f;
+}
+.fc-site .tp-chip {
+  padding: 9px 16px;
+  background: rgba(241, 243, 238, 0.08);
+  font-size: 14px;
+}
+.fc-site .tp-cta {
+  justify-content: space-between;
+  height: 62px;
+  padding: 0 14px 0 30px;
+  font-size: 17px;
+}
+.fc-site .tp-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0b2622;
+  color: #aecc9f;
+  font-size: 18px;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .tp-cta:hover .tp-cta-arrow {
+  transform: translateX(4px);
+}
+@media (max-width: 640px) {
+  .fc-site .tp-card {
+    padding: 28px 22px;
+  }
+  .fc-site .tp-ring {
+    width: 88px;
+    height: 88px;
+  }
+  .fc-site .tp-ring-value {
+    top: 26px;
+    font-size: 20px;
+  }
+  .fc-site .tp-ring-unit {
+    top: 52px;
+    font-size: 10px;
+  }
+  .fc-site .tp-price {
+    font-size: 36px;
+  }
+  .fc-site .tp-value {
+    font-size: 22px;
+  }
+  .fc-site .tp-row {
+    margin: 26px 0;
+  }
+}
+/* Ring: the coloured arc is drawn on its own layer, so the mask does not hide the number inside it. */
+.fc-site .tp-ring {
+  background: none;
+  -webkit-mask: none;
+  mask: none;
+}
+.fc-site .tp-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(#aecc9f calc(var(--p, 0) * 1turn), rgba(241, 243, 238, 0.14) 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 9px), #000 calc(100% - 8px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 9px), #000 calc(100% - 8px));
+  transition: background 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .tp-ring::after {
+  content: none;
+}
+/* Treatments: the site forces one font on most text, so these exact fonts are set with enough weight to win. */
+body .fc-site .tp-intro .tp-eyebrow,
+body .fc-site .tp-kicker,
+body .fc-site .tp-label,
+body .fc-site .tp-value,
+body .fc-site .tp-price,
+body .fc-site .tp-tile-time,
+body .fc-site .tp-tile-price,
+body .fc-site .tp-ring-value,
+body .fc-site .tp-ring-unit {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace !important;
+}
+body .fc-site .tp-tile-name,
+body .fc-site .tp-title {
+  font-family: var(--brand-serif, "EB Garamond", Georgia, serif) !important;
+}
+.fc-site .tp-title {
+  font-size: clamp(28px, 2.7vw, 40px);
+}
+
+/* Treatments on phones: the treatment tiles sit two per row (the last one full width), and the detail card follows below. */
+@media (max-width: 640px) {
+  .fc-site .tp-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 26px;
+  }
+  .fc-site .tp-tile {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 124px;
+    padding: 14px 14px 13px;
+    border-radius: 14px;
+  }
+  .fc-site .tp-tile:hover {
+    transform: none;
+  }
+  .fc-site .tp-tile:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    min-height: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+  .fc-site .tp-tile-name {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .fc-site .tp-tile-meta {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+    margin-top: auto;
+    text-align: left;
+  }
+  .fc-site .tp-tile-time {
+    font-size: 11px;
+  }
+  .fc-site .tp-tile-price {
+    font-size: 15px;
+  }
+  .fc-site .tp-note {
+    margin-top: 16px;
+    font-size: 13px;
+  }
+  .fc-site .tp-grid {
+    gap: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .tp-tile:last-child:nth-child(odd) .tp-tile-name {
+    flex: 1;
+    min-width: 0;
+  }
+  .fc-site .tp-tile:last-child:nth-child(odd) .tp-tile-meta {
+    width: auto;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 0;
+    text-align: right;
+    flex-shrink: 0;
+  }
+}
