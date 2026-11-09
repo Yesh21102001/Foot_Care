@@ -6253,3 +6253,32 @@ body .fc-site .tp-ring-unit {
     transform: none;
   }
 }
+
+/* Phone audit: no text smaller than 11px. */
+@media (max-width: 960px) {
+  .fc-site .mobile-nav-item span,
+  .fc-site .mobile-nav-item {
+    font-size: 11px;
+  }
+}
+.fc-site .tp-ring-unit {
+  font-size: 10px;
+}
+.fc-site .tp-tile-time {
+  font-size: 12px;
+}
+.fc-site .gg-crumbs,
+.fc-site .gg-index-num {
+  font-size: 12px;
+}
+@media (max-width: 640px) {
+  .fc-site .loc-region {
+    font-size: 12px;
+  }
+  .fc-site .loc-card dt {
+    font-size: 11px;
+  }
+  .fc-site .loc-card dd {
+    font-size: 14px;
+  }
+}
