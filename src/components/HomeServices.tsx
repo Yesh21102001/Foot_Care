@@ -5,11 +5,6 @@ const SERVICES = [
     image: "/images/services/reflexology.jpg",
   },
   {
-    title: "Therapeutic Therapy",
-    href: "/therapeutic-massage",
-    image: "/images/services/therapeutic-massage.jpg",
-  },
-  {
     title: "Molecular Hydrogen Therapy",
     href: "/hydrogen-therapy",
     image: "/images/services/hydrogen-therapy.jpg",

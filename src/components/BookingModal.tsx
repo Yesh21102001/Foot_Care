@@ -6,7 +6,6 @@ import { useEffect, useState, type FormEvent } from "react";
 const BRANCHES = ["Main branch", "Second branch"];
 const TREATMENTS = [
   "Reflexology Massage — 60 min — $49",
-  "Therapeutic Therapy — 60 min — $59",
   "Molecular Hydrogen Therapy — 45 min — $69",
   "Healthpod Session — 30 min — $39",
 ];

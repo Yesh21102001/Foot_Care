@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 const SERVICE_PAGES = [
   "/our-services",
   "/reflexology",
-  "/therapeutic-massage",
   "/hydrogen-therapy",
   "/healthpod",
   "/intelligent-wellness",

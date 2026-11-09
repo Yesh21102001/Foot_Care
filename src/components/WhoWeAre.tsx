@@ -21,7 +21,7 @@ export function WhoWeAre() {
               <span className="who-eyebrow">Who We Are</span>
               <h2>Massage that melts tension and restores balance</h2>
               <p className="who-text">
-                Our licensed therapists combine therapeutic therapy and reflexology with a calm, personal approach.
+                Our licensed therapists combine massage therapy and reflexology with a calm, personal approach.
                 Every session is shaped around your body, your goals and how you feel that day.
               </p>
 

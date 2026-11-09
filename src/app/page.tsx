@@ -10,6 +10,7 @@ import { HomeHero } from "../components/HomeHero";
 import { WhoWeAre } from "../components/WhoWeAre";
 import { BookingModal } from "../components/BookingModal";
 import { HomeTestimonials } from "../components/HomeTestimonials";
+import { HomeHowItWorks } from "../components/HomeHowItWorks";
 import { HomeHydrogen } from "../components/HomeHydrogen";
 import { HomePackages } from "../components/HomePackages";
 import { HomeServices } from "../components/HomeServices";
@@ -138,7 +139,7 @@ export default function Home() {
 				<div className={"elementor-element elementor-element-9d39ad2 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"9d39ad2"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":300}"} data-widget_type={"tm-ele-text-editor.default"}>
 				<div className={"elementor-widget-container"}>
 							<div className={"tm-text-editor"}>
-		<p>Our licensed therapists combine therapeutic therapy and reflexology with a calm, personal approach. Every session is shaped around your body, your goals and how you feel that day.</p>		</div>
+		<p>Our licensed therapists combine massage therapy and reflexology with a calm, personal approach. Every session is shaped around your body, your goals and how you feel that day.</p>		</div>
 					</div>
 				</div>
 		<div className={"elementor-element elementor-element-dd494bd e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"dd494bd"} data-element_type={"container"} data-e-type={"container"}>
@@ -465,171 +466,8 @@ export default function Home() {
 				</div>
 					</div>
 				</div>
-		<div className={"elementor-element elementor-element-055ff76 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"055ff76"} data-element_type={"container"} data-e-type={"container"}>
-					<div className={"e-con-inner"}>
-		<div className={"elementor-element elementor-element-df5f7f3 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"df5f7f3"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-03a9a83 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"03a9a83"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-dea8847 mascot-section-align-center horizontal-line-align-left vertical-line-align-bottom elementor-widget elementor-widget-tm-ele-section-title"} data-id={"dea8847"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-section-title.default"}>
-				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-section-title section-title"}>
-	<div className={"title-wrapper"}>
-		
-		
-
-<div className={"sub-title-outer"}>
-		<div className={"subtitle"}>
-	
-		
-		How It Works	</div>
-	</div>			<h2 className={"title tm-split-text split-in-right"}>
-
-		
-				<span className={"title-part1"}>Your path to resilience begins with one mindful choice.</span>
-		
-							
-	</h2>
-	<div className={"title-seperator-line"}></div>						</div>
-</div>				</div>
-				</div>
-				<div className={"elementor-element elementor-element-b5b11e1 elementor-widget__width-inherit elementor-widget elementor-widget-tm-ele-floating-objects"} data-id={"b5b11e1"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-floating-objects.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-ele-floating-objects"}>
-	<span className={"each-object elementor-repeater-item-6728617"} data-parallax={"{\"x\":100,\"y\":\"\",\"scale\":\"\",\"rotate\":\"\",\"opacity\":\"\"}"} style={{"backgroundImage":"url(https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/shape9.avif)"} as CSSProperties}></span>		</div>
-					</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-687ba4e e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"687ba4e"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-eef706b elementor-widget elementor-widget-tm-ele-working-block"} data-id={"eef706b"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-working-block.skin-style1"}>
-				<div className={"elementor-widget-container"}>
-						<div className={"tm-sc-working tm-working-grid"}>
-		
-		<div id={"working-block-holder-641428"} className={"isotope-layout grid-3 gutter-10 clearfix"}>
-			<div className={"isotope-layout-inner"}>
-				
-																<div className={"isotope-item working-block elementor-repeater-item-c7154bf wow fadeInUp"} data-wow-delay={"300ms"}>
-					
-<div className={"working-block-style1"}>
-	<div className={"number-top"}>
-		<span className={"step-badge"}>01 _Step</span>
-				<div className={"icon"}>
-			<span className={"working-block-icon-mask working-block-icon-mask-default"} style={{"--wb-icon-url":"url(\"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/Icon4.avif\")","width":"58px","height":"53px"} as CSSProperties} role={"img"} aria-label={""}></span>
-		</div>
-	</div>
-	<div className={"content"}>
-		
-		<h4 className={"working-title"}>
-					Discover Our Services			</h4>
-			<div className={"working-details"}>It is a long established fact that a reader will be distracted</div>
-	</div>
-</div>
-				</div>
-																<div className={"isotope-item working-block elementor-repeater-item-8469aeb wow fadeInUp"} data-wow-delay={"500ms"}>
-					
-<div className={"working-block-style1"}>
-	<div className={"number-top"}>
-		<span className={"step-badge"}>02 _Step</span>
-				<div className={"icon"}>
-			<span className={"working-block-icon-mask working-block-icon-mask-default"} style={{"--wb-icon-url":"url(\"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/Icon4.avif\")","width":"58px","height":"53px"} as CSSProperties} role={"img"} aria-label={""}></span>
-		</div>
-	</div>
-	<div className={"content"}>
-		
-		<h4 className={"working-title"}>
-					Schedule Your Appointment			</h4>
-			<div className={"working-details"}>It is a long established fact that a reader will be distracted</div>
-	</div>
-</div>
-				</div>
-																<div className={"isotope-item working-block elementor-repeater-item-113a814 wow fadeInUp"} data-wow-delay={"700ms"}>
-					
-<div className={"working-block-style1"}>
-	<div className={"number-top"}>
-		<span className={"step-badge"}>03 _Step</span>
-				<div className={"icon"}>
-			<span className={"working-block-icon-mask working-block-icon-mask-default"} style={{"--wb-icon-url":"url(\"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/Icon4.avif\")","width":"58px","height":"53px"} as CSSProperties} role={"img"} aria-label={""}></span>
-		</div>
-	</div>
-	<div className={"content"}>
-		
-		<h4 className={"working-title"}>
-					Begin Your Journey 			</h4>
-			<div className={"working-details"}>It is a long established fact that a reader will be distracted</div>
-	</div>
-</div>
-				</div>
-								
-			</div>
-		</div>
-			</div>
-
-				</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-99fe0b6 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"99fe0b6"} data-element_type={"container"} data-e-type={"container"}>
-		<div className={"elementor-element elementor-element-4c3c673 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-child"} data-id={"4c3c673"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-10ea5e9 elementor-invisible elementor-widget elementor-widget-image"} data-id={"10ea5e9"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":100}"} data-widget_type={"image.default"}>
-															<img loading={"lazy"} decoding={"async"} width={"182"} height={"54"} src={"https://dev265.kodesolution.com/wellxess/wp-content/uploads/2026/05/Man.png"} className={"attachment-large size-large wp-image-709"} alt={""} />															</div>
-				</div>
-		<div className={"elementor-element elementor-element-28bdb0b e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"28bdb0b"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-f5f45fc elementor-invisible elementor-widget elementor-widget-tm-ele-text-editor"} data-id={"f5f45fc"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":200}"} data-widget_type={"tm-ele-text-editor.default"}>
-				<div className={"elementor-widget-container"}>
-							<div className={"tm-text-editor"}>
-		<h5>Bringing Balance, Energy, and Wellness Into Your Life</h5>		</div>
-					</div>
-				</div>
-				</div>
-		<div className={"elementor-element elementor-element-280a488 e-con-full tm-col-stretched-none e-flex tm-bg-color-over-image e-con e-child"} data-id={"280a488"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-90c91e9 elementor-widget elementor-widget-tm-ele-theme-button"} data-id={"90c91e9"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-theme-button.skin-style2"}>
-				<div className={"elementor-widget-container"}>
-					<a href={"/contact"} className={"btn-style2"}>
-
-  <span className={"theme-btn-arrow-left"}>
-				  <i className={"fas fa-arrow-right"}></i>		  </span>
-  <span className={"theme-btn"}>
-		Get In Touch  </span>
-  <span className={"theme-btn-arrow-right"}>
-				  <i className={"fas fa-arrow-right"}></i>		  </span>
-</a>				</div>
-				</div>
-				</div>
-				</div>
-				</div>
-					</div>
-				</div>
+		<div className={"fc-site"}><HomeHowItWorks /></div>
 		<div className={"fc-site"}><HomePackages /></div>
-		<div className={"elementor-element elementor-element-5cf0d95 e-con-full e-flex tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"5cf0d95"} data-element_type={"container"} data-e-type={"container"}>
-				<div className={"elementor-element elementor-element-9c1752e elementor-widget elementor-widget-tm-ele-moving-text-repeater"} data-id={"9c1752e"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-moving-text-repeater.default"}>
-				<div className={"elementor-widget-container"}>
-					        <div className={"tm-marquee-parent"}>
-			<div className={"tm-marquee-repeater"}>
-				<div className={"tm-marquee-group"}>
-										<div className={"text"} data-text={"Clear Mind."}>Clear Mind.</div>
-					<span className={"text divider"}>
-												<svg xmlns={"http://www.w3.org/2000/svg"} width={"46"} height={"46"} viewBox={"0 0 46 46"} fill={"none"}><g clipPath={"url(#clip0_75_199)"}><path d={"M23.0032 0C19.9694 0 17.0327 1.86074 17.0327 8.22221C17.0327 14.5837 23.0032 23 23.0032 23C23.0032 23 28.9736 14.5837 28.9736 8.22221C28.9736 1.86074 26.0369 0 23.0032 0Z"} fill={"#0B2622"}></path><path d={"M23.0032 46C19.9694 46 17.0327 44.1393 17.0327 37.7778C17.0327 31.4163 23.0032 23 23.0032 23C23.0032 23 28.9736 31.4163 28.9736 37.7778C28.9736 44.1393 26.0369 46 23.0032 46Z"} fill={"#0B2622"}></path><path d={"M46 23.0032C46 19.9694 44.1393 17.0327 37.7778 17.0327C31.4163 17.0327 23 23.0032 23 23.0032C23 23.0032 31.4163 28.9736 37.7778 28.9736C44.1393 28.9736 46 26.0369 46 23.0032Z"} fill={"#0B2622"}></path><path d={"M0 23.0032C0 19.9694 1.86074 17.0327 8.22221 17.0327C14.5837 17.0327 23 23.0032 23 23.0032C23 23.0032 14.5837 28.9736 8.22221 28.9736C1.86074 28.9736 0 26.0369 0 23.0032Z"} fill={"#0B2622"}></path></g><defs><clipPath id={"clip0_75_199"}><rect width={"46"} height={"46"} fill={"white"}></rect></clipPath></defs></svg>					</span>
-										<div className={"text"} data-text={"Healthy Life."}>Healthy Life.</div>
-					<span className={"text divider"}>
-												<svg xmlns={"http://www.w3.org/2000/svg"} width={"46"} height={"46"} viewBox={"0 0 46 46"} fill={"none"}><g clipPath={"url(#clip0_75_199)"}><path d={"M23.0032 0C19.9694 0 17.0327 1.86074 17.0327 8.22221C17.0327 14.5837 23.0032 23 23.0032 23C23.0032 23 28.9736 14.5837 28.9736 8.22221C28.9736 1.86074 26.0369 0 23.0032 0Z"} fill={"#0B2622"}></path><path d={"M23.0032 46C19.9694 46 17.0327 44.1393 17.0327 37.7778C17.0327 31.4163 23.0032 23 23.0032 23C23.0032 23 28.9736 31.4163 28.9736 37.7778C28.9736 44.1393 26.0369 46 23.0032 46Z"} fill={"#0B2622"}></path><path d={"M46 23.0032C46 19.9694 44.1393 17.0327 37.7778 17.0327C31.4163 17.0327 23 23.0032 23 23.0032C23 23.0032 31.4163 28.9736 37.7778 28.9736C44.1393 28.9736 46 26.0369 46 23.0032Z"} fill={"#0B2622"}></path><path d={"M0 23.0032C0 19.9694 1.86074 17.0327 8.22221 17.0327C14.5837 17.0327 23 23.0032 23 23.0032C23 23.0032 14.5837 28.9736 8.22221 28.9736C1.86074 28.9736 0 26.0369 0 23.0032Z"} fill={"#0B2622"}></path></g><defs><clipPath id={"clip0_75_199"}><rect width={"46"} height={"46"} fill={"white"}></rect></clipPath></defs></svg>					</span>
-										<div className={"text"} data-text={"Strong Body."}>Strong Body.</div>
-					<span className={"text divider"}>
-												<svg xmlns={"http://www.w3.org/2000/svg"} width={"46"} height={"46"} viewBox={"0 0 46 46"} fill={"none"}><g clipPath={"url(#clip0_75_199)"}><path d={"M23.0032 0C19.9694 0 17.0327 1.86074 17.0327 8.22221C17.0327 14.5837 23.0032 23 23.0032 23C23.0032 23 28.9736 14.5837 28.9736 8.22221C28.9736 1.86074 26.0369 0 23.0032 0Z"} fill={"#0B2622"}></path><path d={"M23.0032 46C19.9694 46 17.0327 44.1393 17.0327 37.7778C17.0327 31.4163 23.0032 23 23.0032 23C23.0032 23 28.9736 31.4163 28.9736 37.7778C28.9736 44.1393 26.0369 46 23.0032 46Z"} fill={"#0B2622"}></path><path d={"M46 23.0032C46 19.9694 44.1393 17.0327 37.7778 17.0327C31.4163 17.0327 23 23.0032 23 23.0032C23 23.0032 31.4163 28.9736 37.7778 28.9736C44.1393 28.9736 46 26.0369 46 23.0032Z"} fill={"#0B2622"}></path><path d={"M0 23.0032C0 19.9694 1.86074 17.0327 8.22221 17.0327C14.5837 17.0327 23 23.0032 23 23.0032C23 23.0032 14.5837 28.9736 8.22221 28.9736C1.86074 28.9736 0 26.0369 0 23.0032Z"} fill={"#0B2622"}></path></g><defs><clipPath id={"clip0_75_199"}><rect width={"46"} height={"46"} fill={"white"}></rect></clipPath></defs></svg>					</span>
-									</div>
-
-				<div aria-hidden={"true"} className={"tm-marquee-group"}>
-										<div className={"text"} data-text={"Clear Mind."}>Clear Mind.</div>
-					<span className={"text divider"}>
-												<svg xmlns={"http://www.w3.org/2000/svg"} width={"46"} height={"46"} viewBox={"0 0 46 46"} fill={"none"}><g clipPath={"url(#clip0_75_199)"}><path d={"M23.0032 0C19.9694 0 17.0327 1.86074 17.0327 8.22221C17.0327 14.5837 23.0032 23 23.0032 23C23.0032 23 28.9736 14.5837 28.9736 8.22221C28.9736 1.86074 26.0369 0 23.0032 0Z"} fill={"#0B2622"}></path><path d={"M23.0032 46C19.9694 46 17.0327 44.1393 17.0327 37.7778C17.0327 31.4163 23.0032 23 23.0032 23C23.0032 23 28.9736 31.4163 28.9736 37.7778C28.9736 44.1393 26.0369 46 23.0032 46Z"} fill={"#0B2622"}></path><path d={"M46 23.0032C46 19.9694 44.1393 17.0327 37.7778 17.0327C31.4163 17.0327 23 23.0032 23 23.0032C23 23.0032 31.4163 28.9736 37.7778 28.9736C44.1393 28.9736 46 26.0369 46 23.0032Z"} fill={"#0B2622"}></path><path d={"M0 23.0032C0 19.9694 1.86074 17.0327 8.22221 17.0327C14.5837 17.0327 23 23.0032 23 23.0032C23 23.0032 14.5837 28.9736 8.22221 28.9736C1.86074 28.9736 0 26.0369 0 23.0032Z"} fill={"#0B2622"}></path></g><defs><clipPath id={"clip0_75_199"}><rect width={"46"} height={"46"} fill={"white"}></rect></clipPath></defs></svg>					</span>
-										<div className={"text"} data-text={"Healthy Life."}>Healthy Life.</div>
-					<span className={"text divider"}>
-												<svg xmlns={"http://www.w3.org/2000/svg"} width={"46"} height={"46"} viewBox={"0 0 46 46"} fill={"none"}><g clipPath={"url(#clip0_75_199)"}><path d={"M23.0032 0C19.9694 0 17.0327 1.86074 17.0327 8.22221C17.0327 14.5837 23.0032 23 23.0032 23C23.0032 23 28.9736 14.5837 28.9736 8.22221C28.9736 1.86074 26.0369 0 23.0032 0Z"} fill={"#0B2622"}></path><path d={"M23.0032 46C19.9694 46 17.0327 44.1393 17.0327 37.7778C17.0327 31.4163 23.0032 23 23.0032 23C23.0032 23 28.9736 31.4163 28.9736 37.7778C28.9736 44.1393 26.0369 46 23.0032 46Z"} fill={"#0B2622"}></path><path d={"M46 23.0032C46 19.9694 44.1393 17.0327 37.7778 17.0327C31.4163 17.0327 23 23.0032 23 23.0032C23 23.0032 31.4163 28.9736 37.7778 28.9736C44.1393 28.9736 46 26.0369 46 23.0032Z"} fill={"#0B2622"}></path><path d={"M0 23.0032C0 19.9694 1.86074 17.0327 8.22221 17.0327C14.5837 17.0327 23 23.0032 23 23.0032C23 23.0032 14.5837 28.9736 8.22221 28.9736C1.86074 28.9736 0 26.0369 0 23.0032Z"} fill={"#0B2622"}></path></g><defs><clipPath id={"clip0_75_199"}><rect width={"46"} height={"46"} fill={"white"}></rect></clipPath></defs></svg>					</span>
-										<div className={"text"} data-text={"Strong Body."}>Strong Body.</div>
-					<span className={"text divider"}>
-												<svg xmlns={"http://www.w3.org/2000/svg"} width={"46"} height={"46"} viewBox={"0 0 46 46"} fill={"none"}><g clipPath={"url(#clip0_75_199)"}><path d={"M23.0032 0C19.9694 0 17.0327 1.86074 17.0327 8.22221C17.0327 14.5837 23.0032 23 23.0032 23C23.0032 23 28.9736 14.5837 28.9736 8.22221C28.9736 1.86074 26.0369 0 23.0032 0Z"} fill={"#0B2622"}></path><path d={"M23.0032 46C19.9694 46 17.0327 44.1393 17.0327 37.7778C17.0327 31.4163 23.0032 23 23.0032 23C23.0032 23 28.9736 31.4163 28.9736 37.7778C28.9736 44.1393 26.0369 46 23.0032 46Z"} fill={"#0B2622"}></path><path d={"M46 23.0032C46 19.9694 44.1393 17.0327 37.7778 17.0327C31.4163 17.0327 23 23.0032 23 23.0032C23 23.0032 31.4163 28.9736 37.7778 28.9736C44.1393 28.9736 46 26.0369 46 23.0032Z"} fill={"#0B2622"}></path><path d={"M0 23.0032C0 19.9694 1.86074 17.0327 8.22221 17.0327C14.5837 17.0327 23 23.0032 23 23.0032C23 23.0032 14.5837 28.9736 8.22221 28.9736C1.86074 28.9736 0 26.0369 0 23.0032Z"} fill={"#0B2622"}></path></g><defs><clipPath id={"clip0_75_199"}><rect width={"46"} height={"46"} fill={"white"}></rect></clipPath></defs></svg>					</span>
-									</div>
-			</div>
-        </div>
-						</div>
-				</div>
-				</div>
 		<div className={"fc-site"}><HomeTestimonials /></div>
 				</div>
 					

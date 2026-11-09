@@ -44,7 +44,7 @@ export type ServicePageProps = {
   note?: string;
 };
 
-// Shared layout for the service pages (therapeutic therapy, hydrogen therapy, intelligent wellness).
+// Shared layout for the service pages (hydrogen therapy, intelligent wellness).
 export function ServicePage({ title, description, intro, image, benefitsTitle = "Benefits", benefits, steps, note }: ServicePageProps) {
   return (
     <Layout title={title} description={description}>

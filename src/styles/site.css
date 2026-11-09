@@ -2968,7 +2968,7 @@ footer#footer .fc-acc-chevron {
   text-wrap: balance;
 }
 
-/* Service pages (therapeutic therapy, hydrogen therapy, intelligent wellness): overview, benefit cards, steps. */
+/* Service pages (hydrogen therapy, intelligent wellness): overview, benefit cards, steps. */
 .fc-site .sv-overview {
   padding: 24px 0 72px;
 }
@@ -4172,4 +4172,489 @@ body .tm-sc-section-title .subtitle::before {
 /* The "25+ Years of Work Experience" tag on the home page photo is removed. */
 .elementor-element-ada6da7 {
   display: none !important;
+}
+
+/* Home "How it works": heading on the left, three photo cards on the right. */
+.fc-site .hiw {
+  padding: 96px 0;
+  background: #f1f3ee;
+}
+.fc-site .hiw-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+  gap: 56px;
+  align-items: center;
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.fc-site .hiw-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #0b2622;
+  opacity: 0.6;
+}
+.fc-site .hiw-text h2 {
+  margin: 0 0 18px;
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.12;
+  color: #0b2622;
+  text-wrap: balance;
+}
+.fc-site .hiw-text p {
+  max-width: 38ch;
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #0b2622;
+  opacity: 0.8;
+}
+.fc-site .hiw-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fc-site .hiw-card {
+  position: relative;
+  min-height: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: #0b2622;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  transition: transform 600ms var(--fc-ease), box-shadow 600ms var(--fc-ease);
+}
+.fc-site .hiw-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 38, 34, 0.35) 0%, rgba(11, 38, 34, 0.82) 55%, rgba(11, 38, 34, 0.96) 100%);
+}
+.fc-site .hiw-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 44px rgba(11, 38, 34, 0.22);
+}
+.fc-site .hiw-card-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  min-height: 400px;
+  padding: 26px 22px;
+}
+.fc-site .hiw-number {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #aecc9f;
+}
+.fc-site .hiw-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: #aecc9f;
+  color: #0b2622;
+  font-size: 18px;
+  transition: transform 500ms var(--fc-ease);
+}
+.fc-site .hiw-card:hover .hiw-icon {
+  transform: scale(1.1) rotate(-8deg);
+}
+.fc-site .hiw-card h3 {
+  margin: 0 0 8px;
+  font-size: 21px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+.fc-site .hiw-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #ffffff;
+  opacity: 0.82;
+}
+@media (max-width: 960px) {
+  .fc-site .hiw {
+    padding: 64px 0;
+  }
+  .fc-site .hiw-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .fc-site .hiw-text p {
+    max-width: none;
+  }
+}
+/* Phones: the cards become a swipe slider. */
+@media (max-width: 640px) {
+  .fc-site .hiw-cards {
+    display: flex;
+    gap: 12px;
+    margin-inline: -20px;
+    padding: 4px 20px 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fc-site .hiw-cards::-webkit-scrollbar {
+    display: none;
+  }
+  .fc-site .hiw-card {
+    flex: 0 0 76%;
+    min-height: 340px;
+    scroll-snap-align: center;
+  }
+  .fc-site .hiw-card-inner {
+    min-height: 340px;
+  }
+}
+.fc-site .hiw-cards {
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+.fc-site .hiw-card,
+.fc-site .hiw-card-inner {
+  box-sizing: border-box;
+}
+.fc-site .hiw-card {
+  margin: 0;
+}
+
+/* "How it works": a soft tint of the brand light green (#AECC9F) so it stands apart from the sections around it. */
+.fc-site .hiw {
+  background: #dfe9d7;
+}
+
+/* Home page: tighter space above and below each section (they were too tall). */
+.elementor-17 .elementor-element.elementor-element-461f745 {
+  --padding-top: 56px !important;
+  --padding-bottom: 40px !important;
+}
+.elementor-17 .elementor-element.elementor-element-0721ce4 {
+  --padding-top: 56px !important;
+  --padding-bottom: 56px !important;
+}
+.fc-site .svc-section {
+  padding-top: 56px !important;
+  padding-bottom: 56px !important;
+}
+.fc-site .home-hydrogen,
+.fc-site .hiw,
+.fc-site .home-packages,
+.fc-site .home-testimonials {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media (max-width: 880px) {
+  .elementor-17 .elementor-element.elementor-element-461f745 {
+    --padding-top: 36px !important;
+    --padding-bottom: 28px !important;
+  }
+  .elementor-17 .elementor-element.elementor-element-0721ce4 {
+    --padding-top: 40px !important;
+    --padding-bottom: 40px !important;
+  }
+  .fc-site .svc-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+  .fc-site .home-hydrogen,
+  .fc-site .hiw,
+  .fc-site .home-packages,
+  .fc-site .home-testimonials {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Home page rhythm: sections alternate between the plain page background (#F1F3EE) and a soft tint of the brand green,
+   so neighbouring sections never look the same. */
+.fc-site .home-hydrogen,
+.fc-site .home-testimonials {
+  background: #e6ede0;
+}
+
+/* Services: three cards. Three across on desktop and tablet; on phones two on top and the third full width. */
+.fc-site .svc-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 760px) {
+  .fc-site .svc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fc-site .svc-item:last-child {
+    grid-column: 1 / -1;
+  }
+  .fc-site .svc-item:last-child .svc-card {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Graphics: soft rounded bands, drifting botanical line art on the green sections, and quiet rings behind page titles. */
+.fc-site .home-hydrogen,
+.fc-site .hiw,
+.fc-site .home-testimonials {
+  border-radius: 44px;
+}
+.fc-site .hiw,
+.fc-site .home-testimonials {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.fc-site .hiw::before,
+.fc-site .hiw::after,
+.fc-site .home-testimonials::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 130px;
+  height: 238px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 220' fill='none' stroke='%23AECC9F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M60 215C58 150 62 80 60 10'/><path d='M60 180C30 172 16 150 14 128C42 134 58 154 60 180Z'/><path d='M60 150C90 142 104 120 106 98C78 104 62 124 60 150Z'/><path d='M60 112C32 104 20 84 18 62C44 68 58 88 60 112Z'/><path d='M60 80C86 72 98 54 100 34C76 40 62 58 60 80Z'/><path d='M60 46C44 40 36 26 34 12C50 16 58 30 60 46Z'/></svg>") center / contain no-repeat;
+  pointer-events: none;
+  transform-origin: 50% 100%;
+  animation: fc-sway 7s ease-in-out infinite alternate;
+}
+.fc-site .hiw::before {
+  --r: 24deg;
+  top: 24px;
+  right: 3%;
+}
+.fc-site .hiw::after {
+  --r: -28deg;
+  bottom: -30px;
+  left: 2%;
+  animation-delay: -3s;
+}
+.fc-site .home-testimonials::after {
+  --r: 20deg;
+  top: 30px;
+  right: 4%;
+  animation-delay: -2s;
+}
+@keyframes fc-sway {
+  from {
+    transform: rotate(calc(var(--r, 0deg) - 3deg));
+  }
+  to {
+    transform: rotate(calc(var(--r, 0deg) + 3deg));
+  }
+}
+.fc-site .page-heading {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.fc-site .page-heading::before,
+.fc-site .page-heading::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300' fill='none' stroke='%23AECC9F' stroke-width='1.5'><circle cx='150' cy='150' r='96'/><circle cx='150' cy='150' r='124' opacity='.7'/><circle cx='150' cy='150' r='148' opacity='.45'/></svg>") center / contain no-repeat;
+  pointer-events: none;
+  animation: fc-ring 14s ease-in-out infinite alternate;
+}
+.fc-site .page-heading::before {
+  top: 40px;
+  left: -90px;
+}
+.fc-site .page-heading::after {
+  top: 90px;
+  right: -80px;
+  animation-delay: -6s;
+}
+@keyframes fc-ring {
+  from {
+    transform: scale(0.94) rotate(0deg);
+  }
+  to {
+    transform: scale(1.06) rotate(14deg);
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .home-hydrogen,
+  .fc-site .hiw,
+  .fc-site .home-testimonials {
+    border-radius: 28px;
+  }
+  .fc-site .hiw::before,
+  .fc-site .hiw::after,
+  .fc-site .home-testimonials::after {
+    width: 80px;
+    height: 146px;
+  }
+  .fc-site .page-heading::before,
+  .fc-site .page-heading::after {
+    width: 190px;
+    height: 190px;
+  }
+  .fc-site .page-heading::before {
+    left: -70px;
+  }
+  .fc-site .page-heading::after {
+    right: -60px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .hiw::before,
+  .fc-site .hiw::after,
+  .fc-site .home-testimonials::after,
+  .fc-site .page-heading::before,
+  .fc-site .page-heading::after {
+    animation: none;
+  }
+  .fc-site .hiw::before,
+  .fc-site .hiw::after,
+  .fc-site .home-testimonials::after {
+    transform: rotate(var(--r, 0deg));
+  }
+}
+.fc-site .page-heading::before,
+.fc-site .page-heading::after {
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 45%, transparent 92%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 45%, transparent 92%);
+}
+@media (max-width: 640px) {
+  .fc-site .page-heading::before,
+  .fc-site .page-heading::after {
+    opacity: 0.55;
+    width: 150px;
+    height: 150px;
+  }
+  .fc-site .page-heading::before {
+    top: 70px;
+    left: -75px;
+  }
+  .fc-site .page-heading::after {
+    top: 56px;
+    right: -75px;
+  }
+}
+
+/* Motion graphics: sliding waves on the hero, bubbles rising in the hydrogen section, and soft pulses on round icons. */
+.fc-site .hero-waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(70px, 9vw, 130px);
+  overflow: hidden;
+  pointer-events: none;
+}
+.fc-site .hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+.fc-site .hero-wave-a {
+  fill: rgba(174, 204, 159, 0.4);
+  animation: fc-wave-slide 16s linear infinite;
+}
+.fc-site .hero-wave-b {
+  fill: rgba(255, 255, 255, 0.18);
+  animation: fc-wave-slide 26s linear infinite reverse;
+}
+@keyframes fc-wave-slide {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.fc-site .hy-bubbles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.fc-site .hy-bubbles span {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(174, 204, 159, 0.9);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(174, 204, 159, 0.18) 70%);
+  opacity: 0;
+  animation: fc-bubble-rise linear infinite;
+}
+@keyframes fc-bubble-rise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  12% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate3d(18px, -420px, 0);
+  }
+  88% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-12px, -860px, 0);
+  }
+}
+.fc-site .hiw-icon,
+.fc-site .loc-pin {
+  position: relative;
+}
+.fc-site .hiw-icon::after,
+.fc-site .loc-pin::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #aecc9f;
+  opacity: 0;
+  animation: fc-pulse 2.8s ease-out infinite;
+}
+@keyframes fc-pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .hero-wave,
+  .fc-site .hy-bubbles span,
+  .fc-site .hiw-icon::after,
+  .fc-site .loc-pin::after {
+    animation: none;
+  }
+  .fc-site .hy-bubbles {
+    display: none;
+  }
+}
+.fc-site .loc-pin::after {
+  animation: none;
+}
+.fc-site .loc-card:hover .loc-pin::after {
+  animation: fc-pulse 1.8s ease-out infinite;
 }

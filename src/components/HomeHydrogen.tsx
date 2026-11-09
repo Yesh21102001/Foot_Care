@@ -13,6 +13,20 @@ const RESEARCH_AREAS = [
 ];
 
 // Each piece of the section gets a step number; its entrance is delayed by step x 110ms so the section builds up in order.
+// Bubbles that rise slowly through the section (fixed values, so the server and browser render the same thing).
+const BUBBLES = [
+  { left: 4, size: 14, duration: 13, delay: 0 },
+  { left: 11, size: 24, duration: 17, delay: -6 },
+  { left: 19, size: 10, duration: 11, delay: -3 },
+  { left: 33, size: 18, duration: 15, delay: -9 },
+  { left: 47, size: 12, duration: 12, delay: -1 },
+  { left: 58, size: 26, duration: 18, delay: -11 },
+  { left: 66, size: 10, duration: 10, delay: -5 },
+  { left: 74, size: 20, duration: 16, delay: -8 },
+  { left: 83, size: 14, duration: 13, delay: -2 },
+  { left: 92, size: 22, duration: 19, delay: -12 },
+];
+
 const step = (n: number) => ({ "--i": n }) as CSSProperties;
 
 export function HomeHydrogen() {
@@ -40,6 +54,14 @@ export function HomeHydrogen() {
 
   return (
     <section className="home-hydrogen" ref={section}>
+      <div className="hy-bubbles" aria-hidden="true">
+        {BUBBLES.map((bubble) => (
+          <span
+            key={bubble.left}
+            style={{ left: `${bubble.left}%`, width: bubble.size, height: bubble.size, animationDuration: `${bubble.duration}s`, animationDelay: `${bubble.delay}s` }}
+          />
+        ))}
+      </div>
       <div className="home-hydrogen-grid">
         <div className="home-hydrogen-text">
           <span className="home-hydrogen-label hy-step" style={step(0)}>
