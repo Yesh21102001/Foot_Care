@@ -76,7 +76,7 @@ export function ScrollAnimations() {
       const parent = node.parentElement as Element;
       const index = seen.get(parent) ?? 0;
       seen.set(parent, index + 1);
-      node.style.setProperty("--fc-delay", `${Math.min(index, 5) * 120}ms`);
+      if (!node.classList.contains("svc2-item")) node.style.setProperty("--fc-delay", `${Math.min(index, 5) * 120}ms`);
     }
 
     const observer = new IntersectionObserver(

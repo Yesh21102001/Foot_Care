@@ -4740,7 +4740,8 @@ html body .elementor-element.elementor-element-ada6da7.elementor-hidden-mobile {
 .fc-site .svc2-item {
   flex: 1 1 0;
   min-width: 0;
-  transition: flex-grow 900ms var(--fc-ease);
+  transition: flex-grow 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: flex-grow;
 }
 .fc-site .svc2-item.is-active {
   flex-grow: 2.6;
@@ -4778,7 +4779,7 @@ html body .elementor-element.elementor-element-ada6da7.elementor-hidden-mobile {
   mix-blend-mode: normal;
   opacity: 0.35;
   pointer-events: none;
-  transition: opacity 700ms var(--fc-ease);
+  transition: opacity 1000ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .fc-site .svc2-card::after {
   content: "";
@@ -4855,7 +4856,7 @@ html body .elementor-element.elementor-element-ada6da7.elementor-hidden-mobile {
   color: #0b2622;
   font-size: 15px;
   transform: translateX(-50%);
-  transition: transform 500ms var(--fc-ease), background 500ms var(--fc-ease), right 900ms var(--fc-ease), left 900ms var(--fc-ease);
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1), background 600ms ease, right 1100ms cubic-bezier(0.22, 1, 0.36, 1), left 1100ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .fc-site .svc2-arrow i {
   transform: rotate(-45deg);
@@ -4987,5 +4988,157 @@ html body .elementor-element.elementor-element-ada6da7.elementor-hidden-mobile {
   .fc-site .home-testimonials {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+}
+
+/* Smooth hover: the active card's green overlay lightens so the photo shows; every movement uses one long, soft curve. */
+.fc-site .svc2-item.is-active .svc2-card::before {
+  opacity: 0.2;
+}
+.fc-site .svc2-card img {
+  transition: transform 1600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .svc2-copy {
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .svc2-vertical {
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Phones: a thin (closed) card shows only its name; its description is hidden so nothing overflows the bar. */
+@media (max-width: 640px) {
+  .fc-site .svc2-item:not(.is-active) .svc2-copy {
+    display: none;
+  }
+  .fc-site .svc2-vertical {
+    white-space: normal;
+    width: calc(100% - 84px);
+    line-height: 1.25;
+  }
+}
+
+/* Phones: every card keeps its arrow. Open card: large, with its description and the arrow at the bottom right.
+   Closed card: a slim bar with its name and a small arrow on the right. */
+@media (max-width: 900px) {
+  .fc-site .svc2-item:not(.is-active) .svc2-arrow {
+    opacity: 1;
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+    transform: translateY(-50%);
+  }
+  .fc-site .svc2-item:not(.is-active) .svc2-arrow i {
+    transform: rotate(-45deg);
+  }
+  .fc-site .svc2-item.is-active .svc2-arrow {
+    width: 46px;
+    height: 46px;
+    font-size: 14px;
+  }
+  .fc-site .svc2-item:not(.is-active) .svc2-card img {
+    transform: scale(1.08);
+  }
+  .fc-site .svc2-card img {
+    transition: transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .svc2-vertical {
+    width: calc(100% - 80px);
+  }
+}
+
+/* Phones (640px and below): row 1 is the open card, full width; row 2 holds the two closed cards side by side. */
+@media (max-width: 640px) {
+  .fc-site .svc2-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    height: auto;
+  }
+  .fc-site .svc2-item {
+    height: 180px;
+    min-width: 0;
+  }
+  .fc-site .svc2-item.is-active {
+    grid-column: 1 / -1;
+    order: -1;
+    height: 340px;
+  }
+  .fc-site .svc2-item:not(.is-active) .svc2-vertical {
+    top: auto;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    width: auto;
+    transform: none;
+    writing-mode: horizontal-tb;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+  .fc-site .svc2-item:not(.is-active) .svc2-arrow {
+    top: 12px;
+    right: 12px;
+    bottom: auto;
+    width: 34px;
+    height: 34px;
+    transform: none;
+  }
+}
+
+/* Scroll-linked section transition (this section only). --in and --out are set by HomeServices from scroll position.
+   Entry: slightly smaller, narrowed sides and rounded corners, growing to full width. Exit: shrinks, lifts 40px, dims. */
+.fc-site .sp-section {
+  --in: 1;
+  --out: 0;
+  position: relative;
+  transform-origin: 50% 0;
+  transform: translate3d(0, calc(-40px * var(--out)), 0) scale(calc((0.93 + 0.07 * var(--in)) * (1 - 0.05 * var(--out))));
+  filter: brightness(calc(1 - 0.55 * var(--out)));
+  background: #0b2622 !important;
+  will-change: transform;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1), filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* Dark section: light heading and label. */
+.fc-site .sp-section h2,
+.fc-site .sp-section .svc-label {
+  color: #ffffff !important;
+}
+.fc-site .sp-section .svc-label {
+  opacity: 0.75;
+}
+/* Heading words slide up inside their own clipped boxes. */
+.fc-site .sp-word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.fc-site .sp-word {
+  display: inline-block;
+}
+.fc-site .sp-heading.sp-pending .sp-word {
+  transform: translateY(110%);
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .sp-heading.sp-pending.sp-in .sp-word {
+  transform: translateY(0);
+}
+/* Cards enter 90ms apart. */
+.fc-site .svc2-item:nth-child(1) { --fc-delay: 0ms; }
+.fc-site .svc2-item:nth-child(2) { --fc-delay: 90ms; }
+.fc-site .svc2-item:nth-child(3) { --fc-delay: 180ms; }
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .sp-section,
+  .fc-site .sp-heading .sp-word {
+    transform: none;
+    clip-path: none;
+    filter: none;
+    transition: none;
   }
 }
