@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 // Home page services: an accordion. The first card is large by default; hovering (or focusing) a card makes it large.
 // On touch screens (no hover) the cards open by themselves in turn, and a tap opens a card. A second tap follows its link.
@@ -54,26 +54,55 @@ export function HomeServices({ showLabel = true }: { showLabel?: boolean }) {
 
   useEffect(() => () => window.clearTimeout(resumeTimer.current), []);
 
-  // Scroll-linked section transition. --in rises from 0 to 1 as the section comes up (100% when its top has moved 55% of the viewport).
-  // --out rises from 0 to 1 as its bottom passes 45% of the viewport. The CSS turns these into scale, clip-path and brightness.
+  // Scroll-linked section transition. The scroll position sets a target for --in and --out; each frame the values glide
+  // toward that target, so the zoom stays smooth even when the scroll jumps. --in rises as the section comes up (100% when its top
+  // has moved 55% of the viewport). --out rises as its bottom passes 45% of the viewport. The CSS turns them into scale and brightness.
   useEffect(() => {
     const el = sectionRef.current;
     if (!el || reducedMotion()) return;
-    let frame = 0;
     const clamp = (value: number) => Math.min(1, Math.max(0, value));
-    const update = () => {
-      frame = 0;
+    // Smoothstep: the progress starts and ends gently.
+    const ease = (t: number) => t * t * (3 - 2 * t);
+    const target = { in: 0, out: 0 };
+    const current = { in: 0, out: 0 };
+    let frame = 0;
+
+    const measure = () => {
       const vh = window.innerHeight;
       const rect = el.getBoundingClientRect();
-      // Smoothstep: the zoom starts and ends softly instead of at a constant rate.
-      const ease = (t: number) => t * t * (3 - 2 * t);
-      el.style.setProperty("--in", ease(clamp((vh - rect.top) / (vh * 0.55))).toFixed(4));
-      el.style.setProperty("--out", ease(clamp((vh * 0.45 - rect.bottom) / (vh * 0.45))).toFixed(4));
+      target.in = ease(clamp((vh - rect.top) / (vh * 0.55)));
+      target.out = ease(clamp((vh * 0.45 - rect.bottom) / (vh * 0.45)));
+    };
+    const apply = () => {
+      el.style.setProperty("--in", current.in.toFixed(4));
+      el.style.setProperty("--out", current.out.toFixed(4));
+    };
+    const tick = () => {
+      // Move 12% of the remaining distance each frame: a soft, frame-rate-independent glide.
+      current.in += (target.in - current.in) * 0.12;
+      current.out += (target.out - current.out) * 0.12;
+      apply();
+      const settled = Math.abs(target.in - current.in) < 0.0005 && Math.abs(target.out - current.out) < 0.0005;
+      if (settled) {
+        current.in = target.in;
+        current.out = target.out;
+        apply();
+        frame = 0;
+        return;
+      }
+      frame = window.requestAnimationFrame(tick);
     };
     const onScroll = () => {
-      if (!frame) frame = window.requestAnimationFrame(update);
+      measure();
+      if (!frame) frame = window.requestAnimationFrame(tick);
     };
-    update();
+
+    // First paint: set the values straight away, without gliding.
+    measure();
+    current.in = target.in;
+    current.out = target.out;
+    apply();
+
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     return () => {
@@ -117,12 +146,14 @@ export function HomeServices({ showLabel = true }: { showLabel?: boolean }) {
         )}
         <h2 className="sp-heading" ref={headingRef}>
           {WORDS.map((word, index) => (
-            <span className="sp-word-wrap" key={index}>
-              <span className="sp-word" style={{ transitionDelay: `${index * 55}ms` }}>
-                {word}
+            <Fragment key={index}>
+              <span className="sp-word-wrap">
+                <span className="sp-word" style={{ transitionDelay: `${index * 55}ms` }}>
+                  {word}
+                </span>
               </span>
               {index < WORDS.length - 1 ? " " : null}
-            </span>
+            </Fragment>
           ))}
         </h2>
 
