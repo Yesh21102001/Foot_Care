@@ -5713,3 +5713,115 @@ body .fc-site .tp-title {
     flex-shrink: 0;
   }
 }
+
+/* Treatments: smaller type on desktop and phones. */
+.fc-site .tp-section h2 {
+  font-size: clamp(30px, 3.2vw, 44px);
+}
+.fc-site .tp-lead {
+  font-size: 16px;
+}
+.fc-site .tp-eyebrow,
+.fc-site .tp-intro .tp-eyebrow {
+  font-size: 12px;
+}
+.fc-site .tp-tile {
+  padding: 16px 20px;
+}
+.fc-site .tp-tile-name {
+  font-size: 17px;
+}
+.fc-site .tp-tile-price {
+  font-size: 15px;
+}
+.fc-site .tp-tile-time {
+  font-size: 11px;
+}
+.fc-site .tp-note {
+  font-size: 13px;
+}
+.fc-site .tp-card {
+  padding: 32px;
+}
+.fc-site .tp-title {
+  font-size: clamp(24px, 2.3vw, 32px);
+}
+.fc-site .tp-ring {
+  width: 96px;
+  height: 96px;
+}
+.fc-site .tp-ring-value {
+  top: 29px;
+  font-size: 22px;
+}
+.fc-site .tp-ring-unit {
+  top: 56px;
+  font-size: 10px;
+}
+.fc-site .tp-row {
+  margin: 26px 0;
+}
+.fc-site .tp-value {
+  font-size: 20px;
+}
+.fc-site .tp-price {
+  font-size: 36px;
+}
+.fc-site .tp-chip {
+  font-size: 13px;
+  padding: 7px 13px;
+}
+.fc-site .tp-cta {
+  height: 54px;
+  font-size: 15px;
+}
+.fc-site .tp-cta-arrow {
+  width: 36px;
+  height: 36px;
+  font-size: 15px;
+}
+@media (max-width: 640px) {
+  .fc-site .tp-section h2 {
+    font-size: 32px;
+  }
+  .fc-site .tp-lead {
+    font-size: 15px;
+  }
+  .fc-site .tp-tile-name {
+    font-size: 14px;
+  }
+  .fc-site .tp-tile-price {
+    font-size: 14px;
+  }
+  .fc-site .tp-card {
+    padding: 22px 18px;
+  }
+  .fc-site .tp-title {
+    font-size: 24px;
+  }
+  .fc-site .tp-price {
+    font-size: 30px;
+  }
+  .fc-site .tp-value {
+    font-size: 18px;
+  }
+  .fc-site .tp-ring {
+    width: 78px;
+    height: 78px;
+  }
+  .fc-site .tp-ring-value {
+    top: 22px;
+    font-size: 18px;
+  }
+  .fc-site .tp-ring-unit {
+    top: 44px;
+    font-size: 9px;
+  }
+  .fc-site .tp-chip {
+    font-size: 12px;
+  }
+  .fc-site .tp-cta {
+    height: 50px;
+    font-size: 14px;
+  }
+}
