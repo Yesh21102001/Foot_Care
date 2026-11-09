@@ -4,18 +4,11 @@ import "./template.css";
 import "../styles/site.css";
 import { bodyClassName, stylesheets } from "./template-stylesheets";
 
-const assets = "https://dev265.kodesolution.com/wellxess/wp-content/themes/wellxess/assets/images/logo";
-
 export const metadata: Metadata = {
   title: "Foot Care – My WordPress Blog",
   icons: {
-    icon: `${assets}/favicon.png`,
-    apple: [
-      { url: `${assets}/apple-touch-icon.png` },
-      { url: `${assets}/apple-touch-icon-72x72.png`, sizes: "72x72" },
-      { url: `${assets}/apple-touch-icon-114x114.png`, sizes: "114x114" },
-      { url: `${assets}/apple-touch-icon-144x144.png`, sizes: "144x144" },
-    ],
+    icon: "/images/foot-care-logo.png",
+    apple: "/images/foot-care-logo.png",
   },
 };
 

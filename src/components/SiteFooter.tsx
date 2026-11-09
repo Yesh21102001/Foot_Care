@@ -50,6 +50,7 @@ export function SiteFooter() {
 				<div className={"elementor-element elementor-element-a9bacf9 elementor-widget elementor-widget-tm-ele-site-logo"} data-id={"a9bacf9"} data-element_type={"widget"} data-e-type={"widget"} data-widget_type={"tm-ele-site-logo.default"}>
 				<div className={"elementor-widget-container"}>
 							<a className={"menuzord-brand site-brand"} href={"/"}>
+											<img className={"brand-logo"} src="/images/foot-care-logo.png" alt="" width={44} height={44} />
 											<span className={"brand-wordmark brand-wordmark-light"}>Foot Care</span>
 									</a>
 						</div>

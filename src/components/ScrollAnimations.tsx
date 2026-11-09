@@ -45,6 +45,7 @@ const GROUPS: { variant: "zoom" | "fade" | "slide" | "rise"; selectors: string[]
       ".contact-form",
       ".home-packages-action",
       ".ht-card",
+      ".svc2-item",
       ".hiw-card",
     ],
   },

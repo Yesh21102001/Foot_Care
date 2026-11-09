@@ -20,6 +20,7 @@ export function Layout({ title, description, children }: LayoutProps) {
       <Head>
         <title>{`${title} | Foot Care`}</title>
         <meta name="description" content={description} />
+        <link rel="icon" href="/images/foot-care-logo.png" type="image/png" />
       </Head>
 
       <div className="fc-site">

@@ -4021,8 +4021,7 @@ body .tm-sc-section-title .subtitle::before {
 .fc-site .home-hydrogen::before,
 .fc-site .home-hydrogen::after,
 .fc-site .home-packages::before,
-.fc-site .home-packages::after,
-.fc-site .home-testimonials::before {
+.fc-site .home-packages::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -4060,14 +4059,6 @@ body .tm-sc-section-title .subtitle::before {
   left: -120px;
   animation: fc-drift-a 24s ease-in-out infinite alternate;
 }
-.fc-site .home-testimonials::before {
-  width: 360px;
-  height: 360px;
-  top: -120px;
-  left: 50%;
-  margin-left: -180px;
-  animation: fc-drift-a 20s ease-in-out infinite alternate;
-}
 @keyframes fc-drift-a {
   from { transform: translate(0, 0) scale(1); }
   to { transform: translate(60px, 40px) scale(1.12); }
@@ -4089,22 +4080,18 @@ body .tm-sc-section-title .subtitle::before {
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'><path d='M0 90V52C240 8 480 0 720 26s480 44 720 4V90Z' fill='%23F1F3EE'/></svg>") center bottom / 100% 100% no-repeat;
   pointer-events: none;
 }
-@media (max-width: 640px) {
-  .fc-site .home-hydrogen::before,
-  .fc-site .home-hydrogen::after,
-  .fc-site .home-packages::before,
-  .fc-site .home-packages::after,
-  .fc-site .home-testimonials::before {
+@media (max-width: 640px) {.fc-site .home-hydrogen::before,
+.fc-site .home-hydrogen::after,
+.fc-site .home-packages::before,
+.fc-site .home-packages::after {
     transform: scale(0.65);
     filter: blur(50px);
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .fc-site .home-hydrogen::before,
-  .fc-site .home-hydrogen::after,
-  .fc-site .home-packages::before,
-  .fc-site .home-packages::after,
-  .fc-site .home-testimonials::before {
+@media (prefers-reduced-motion: reduce) {.fc-site .home-hydrogen::before,
+.fc-site .home-hydrogen::after,
+.fc-site .home-packages::before,
+.fc-site .home-packages::after {
     animation: none;
   }
 }
@@ -4148,9 +4135,6 @@ body .tm-sc-section-title .subtitle::before {
 }
 
 /* No glow behind the testimonials section. */
-.fc-site .home-testimonials::before {
-  display: none;
-}
 
 /* The big photo in "Benefits of Foot Massage" sits outside .fc-site, so it gets the same zoom-in entrance here. */
 .benefits-photo.fc-anim {
@@ -4418,44 +4402,6 @@ body .tm-sc-section-title .subtitle::before {
   isolation: isolate;
   overflow: hidden;
 }
-.fc-site .hiw::before,
-.fc-site .hiw::after,
-.fc-site .home-testimonials::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 130px;
-  height: 238px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 220' fill='none' stroke='%23AECC9F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M60 215C58 150 62 80 60 10'/><path d='M60 180C30 172 16 150 14 128C42 134 58 154 60 180Z'/><path d='M60 150C90 142 104 120 106 98C78 104 62 124 60 150Z'/><path d='M60 112C32 104 20 84 18 62C44 68 58 88 60 112Z'/><path d='M60 80C86 72 98 54 100 34C76 40 62 58 60 80Z'/><path d='M60 46C44 40 36 26 34 12C50 16 58 30 60 46Z'/></svg>") center / contain no-repeat;
-  pointer-events: none;
-  transform-origin: 50% 100%;
-  animation: fc-sway 7s ease-in-out infinite alternate;
-}
-.fc-site .hiw::before {
-  --r: 24deg;
-  top: 24px;
-  right: 3%;
-}
-.fc-site .hiw::after {
-  --r: -28deg;
-  bottom: -30px;
-  left: 2%;
-  animation-delay: -3s;
-}
-.fc-site .home-testimonials::after {
-  --r: 20deg;
-  top: 30px;
-  right: 4%;
-  animation-delay: -2s;
-}
-@keyframes fc-sway {
-  from {
-    transform: rotate(calc(var(--r, 0deg) - 3deg));
-  }
-  to {
-    transform: rotate(calc(var(--r, 0deg) + 3deg));
-  }
-}
 .fc-site .page-heading {
   position: relative;
   isolation: isolate;
@@ -4495,12 +4441,6 @@ body .tm-sc-section-title .subtitle::before {
   .fc-site .home-testimonials {
     border-radius: 28px;
   }
-  .fc-site .hiw::before,
-  .fc-site .hiw::after,
-  .fc-site .home-testimonials::after {
-    width: 80px;
-    height: 146px;
-  }
   .fc-site .page-heading::before,
   .fc-site .page-heading::after {
     width: 190px;
@@ -4513,18 +4453,9 @@ body .tm-sc-section-title .subtitle::before {
     right: -60px;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .fc-site .hiw::before,
-  .fc-site .hiw::after,
-  .fc-site .home-testimonials::after,
-  .fc-site .page-heading::before,
-  .fc-site .page-heading::after {
+@media (prefers-reduced-motion: reduce) {.fc-site .page-heading::before,
+.fc-site .page-heading::after {
     animation: none;
-  }
-  .fc-site .hiw::before,
-  .fc-site .hiw::after,
-  .fc-site .home-testimonials::after {
-    transform: rotate(var(--r, 0deg));
   }
 }
 .fc-site .page-heading::before,
@@ -4657,4 +4588,404 @@ body .tm-sc-section-title .subtitle::before {
 }
 .fc-site .loc-card:hover .loc-pin::after {
   animation: fc-pulse 1.8s ease-out infinite;
+}
+
+/* Home hero buttons: a light "Schedule Your Session" pill with an arrow, and an outlined "Explore Our Treatments". */
+.fc-site.home-hero-wrap .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+.fc-site .hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 56px;
+  padding: 0 30px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 400ms var(--fc-ease), background 400ms var(--fc-ease), border-color 400ms var(--fc-ease), box-shadow 400ms var(--fc-ease);
+}
+.fc-site .hero-btn:hover {
+  transform: translateY(-4px);
+}
+.fc-site .hero-btn-primary {
+  border: 0;
+  background: #f1f3ee;
+  color: #0b2622;
+  font-weight: 500;
+}
+.fc-site .hero-btn-primary:hover {
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+.fc-site .hero-btn-arrow {
+  display: inline-block;
+  font-size: 18px;
+  transition: transform 400ms var(--fc-ease);
+}
+.fc-site .hero-btn-primary:hover .hero-btn-arrow {
+  transform: translateX(5px);
+}
+.fc-site .hero-btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-weight: 600;
+}
+.fc-site .hero-btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.18);
+}
+@media (max-width: 520px) {
+  .fc-site .hero-btn {
+    height: 50px;
+    padding: 0 22px;
+    font-size: 15px;
+  }
+  .fc-site.home-hero-wrap .hero-actions {
+    gap: 10px;
+  }
+}
+@media (max-width: 880px) {
+  .fc-site.home-hero-wrap .hero-actions {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 880px) {
+  .fc-site.home-hero-wrap .hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: none;
+  }
+}.fc-site .site-header:not(.is-scrolled):not(.is-menu-open) .header-inner {
+  background: transparent;
+  box-shadow: none;
+}
+.fc-site .site-header.is-menu-open .header-inner {
+  background: #ffffff;
+}
+.fc-site .site-header:not(.is-scrolled).is-on-dark:not(.is-menu-open) .brand-wordmark,
+.fc-site .site-header:not(.is-scrolled).is-on-dark:not(.is-menu-open) .nav-link,
+.fc-site .site-header:not(.is-scrolled).is-on-dark:not(.is-menu-open) .nav-dropdown summary {
+  color: #ffffff;
+}
+.fc-site .site-header:not(.is-scrolled).is-on-dark:not(.is-menu-open) .nav-link:hover,
+.fc-site .site-header:not(.is-scrolled).is-on-dark:not(.is-menu-open) .nav-dropdown summary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.fc-site .site-header:not(.is-scrolled).is-on-dark:not(.is-menu-open) .nav-link[aria-current="page"],
+.fc-site .site-header:not(.is-scrolled).is-on-dark:not(.is-menu-open) .nav-dropdown.is-active summary {
+  background: rgba(174, 204, 159, 0.3);
+}
+.fc-site .brand-wordmark {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* Logo: the foot-and-leaf mark sits beside the FOOT CARE wordmark in the header and footer. */
+.fc-site .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.fc-site .brand-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+/* Footer brand: the same mark beside the name, sized to the footer (the footer's own image rules made it too large). */
+body .site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+body .site-brand .brand-logo {
+  width: 56px !important;
+  height: 56px !important;
+  max-width: none;
+}
+
+/* The header button label stays on one line at every desktop width. */
+.fc-site .header-cta-arrow .theme-btn {
+  white-space: nowrap;
+}
+
+/* The "25+ Years of Work Experience" tag on the home photo: hidden at every width (the theme's mobile rules were showing it). */
+html body .elementor-element.elementor-element-ada6da7,
+html body .elementor-element.elementor-element-ada6da7.elementor-hidden-mobile {
+  display: none !important;
+}
+
+
+/* Home services: accordion. The active card is large; the others are thin. Every photo has a brand-green tint. */
+.fc-site .svc2-grid {
+  display: flex;
+  gap: 16px;
+  height: 540px;
+}
+.fc-site .svc2-item {
+  flex: 1 1 0;
+  min-width: 0;
+  transition: flex-grow 900ms var(--fc-ease);
+}
+.fc-site .svc2-item.is-active {
+  flex-grow: 2.6;
+}
+.fc-site .svc2-card {
+  position: relative;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #0b2622;
+  color: #ffffff;
+  text-align: left;
+  text-decoration: none;
+  isolation: isolate;
+}
+.fc-site .svc2-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1400ms var(--fc-ease);
+}
+.fc-site .svc2-item.is-active .svc2-card img {
+  transform: scale(1.04);
+}
+/* Green filter over every photo: a brand-green tint, darker toward the bottom so the text reads. */
+.fc-site .svc2-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #0b2622;
+  mix-blend-mode: normal;
+  opacity: 0.35;
+  pointer-events: none;
+  transition: opacity 700ms var(--fc-ease);
+}
+.fc-site .svc2-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(11, 38, 34, 0) 35%, rgba(11, 38, 34, 0.8) 100%);
+  pointer-events: none;
+}
+.fc-site .svc2-copy,
+.fc-site .svc2-vertical,
+.fc-site .svc2-arrow {
+  z-index: 2;
+}
+.fc-site .svc2-copy {
+  position: absolute;
+  top: 34px;
+  left: 34px;
+  width: 460px;
+  max-width: calc(100% - 68px);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 500ms var(--fc-ease), transform 700ms var(--fc-ease);
+}
+.fc-site .svc2-item.is-active .svc2-copy {
+  opacity: 1;
+  transform: none;
+  transition-delay: 300ms;
+}
+.fc-site .svc2-copy h3 {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 0 1px 14px rgba(11, 38, 34, 0.45);
+}
+.fc-site .svc2-copy p {
+  max-width: 34ch;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 12px rgba(11, 38, 34, 0.5);
+}
+/* Thin cards show their name running up the card; the large card shows it horizontally instead. */
+.fc-site .svc2-vertical {
+  position: absolute;
+  top: 50%;
+  right: 26px;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-shadow: 0 1px 14px rgba(11, 38, 34, 0.45);
+  transition: opacity 400ms var(--fc-ease);
+}
+.fc-site .svc2-item.is-active .svc2-vertical {
+  opacity: 0;
+}
+.fc-site .svc2-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f1f3ee;
+  color: #0b2622;
+  font-size: 15px;
+  transform: translateX(-50%);
+  transition: transform 500ms var(--fc-ease), background 500ms var(--fc-ease), right 900ms var(--fc-ease), left 900ms var(--fc-ease);
+}
+.fc-site .svc2-arrow i {
+  transform: rotate(-45deg);
+  transition: transform 500ms var(--fc-ease);
+}
+.fc-site .svc2-item.is-active .svc2-arrow {
+  left: auto;
+  right: 26px;
+  transform: none;
+}
+.fc-site .svc2-card:hover .svc2-arrow {
+  background: #aecc9f;
+}
+.fc-site .svc2-card:hover .svc2-arrow i {
+  transform: rotate(0deg);
+}
+/* Phones and tablets: the cards stack; the active card is tall and the others are short bars. */
+@media (max-width: 900px) {
+  .fc-site .svc2-grid {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+  }
+  .fc-site .svc2-item {
+    flex: none;
+    height: 104px;
+    transition: height 700ms var(--fc-ease);
+  }
+  .fc-site .svc2-item.is-active {
+    height: 340px;
+  }
+  .fc-site .svc2-vertical {
+    top: 50%;
+    left: 22px;
+    right: auto;
+    transform: translateY(-50%);
+    writing-mode: horizontal-tb;
+    font-size: 18px;
+  }
+  .fc-site .svc2-item:not(.is-active) .svc2-arrow {
+    opacity: 0;
+  }
+  .fc-site .svc2-item.is-active .svc2-vertical {
+    opacity: 0;
+  }
+  .fc-site .svc2-copy {
+    top: 22px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+  }
+  .fc-site .svc2-copy h3 {
+    font-size: 24px;
+  }
+  .fc-site .svc2-copy p {
+    font-size: 14px;
+  }
+  .fc-site .svc2-arrow {
+    width: 40px;
+    height: 40px;
+    bottom: 18px;
+  }
+  .fc-site .svc2-item.is-active .svc2-arrow {
+    right: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .svc2-item,
+  .fc-site .svc2-copy,
+  .fc-site .svc2-card img {
+    transition: none;
+  }
+}
+
+/* Home page: more space between sections (desktop 96px above and below each, phones 64px). */
+.elementor-17 .elementor-element.elementor-element-461f745 {
+  --padding-top: 96px !important;
+  --padding-bottom: 80px !important;
+}
+.elementor-17 .elementor-element.elementor-element-0721ce4 {
+  --padding-top: 96px !important;
+  --padding-bottom: 96px !important;
+}
+.fc-site .svc-section {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
+}
+.fc-site .home-hydrogen,
+.fc-site .hiw,
+.fc-site .home-packages,
+.fc-site .home-testimonials {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media (max-width: 880px) {
+  .elementor-17 .elementor-element.elementor-element-461f745 {
+    --padding-top: 64px !important;
+    --padding-bottom: 56px !important;
+  }
+  .elementor-17 .elementor-element.elementor-element-0721ce4 {
+    --padding-top: 64px !important;
+    --padding-bottom: 64px !important;
+  }
+  .fc-site .svc-section {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  .fc-site .home-hydrogen,
+  .fc-site .hiw,
+  .fc-site .home-packages,
+  .fc-site .home-testimonials {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+/* Home page: a visible gap between the tinted and white section blocks (Our services, Hydrogen, How It Works, Testimonials). */
+.fc-site .svc-section,
+.fc-site .home-hydrogen,
+.fc-site .hiw,
+.fc-site .home-testimonials {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+@media (max-width: 880px) {
+  .fc-site .svc-section,
+  .fc-site .home-hydrogen,
+  .fc-site .hiw,
+  .fc-site .home-testimonials {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }

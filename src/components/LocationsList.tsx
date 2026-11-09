@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { COUNTRY_CODES, STATES_BY_COUNTRY } from "../data/places";
 import { ArrowButton } from "./ArrowButton";
 
 const SOCIAL_ICONS = {
@@ -57,15 +58,33 @@ const directionsUrl = (branch: Branch) =>
   branch.mapUrl ||
   `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${branch.name} ${branch.address}`)}`;
 
-const unique = (values: string[]) => [...new Set(values)].sort((a, b) => a.localeCompare(b));
-const COUNTRIES = unique(BRANCHES.map((branch) => branch.country));
+
+// Every country, with its name (in English) and its list of states where we have one.
+// Built in the browser after load, so the server and browser never disagree about the names.
+type Country = { name: string; states: string[] };
+function buildCountries(): Country[] {
+  const names = new Intl.DisplayNames(["en"], { type: "region" });
+  const list = COUNTRY_CODES.map((code) => ({ name: names.of(code) ?? code, states: STATES_BY_COUNTRY[code] ?? [] }));
+  // A branch in a place that is not in the lists is still shown, so no branch can be filtered out of sight.
+  for (const branch of BRANCHES) {
+    let entry = list.find((item) => item.name === branch.country);
+    if (!entry) {
+      entry = { name: branch.country, states: [] };
+      list.push(entry);
+    }
+    if (!entry.states.includes(branch.state)) entry.states = [...entry.states, branch.state];
+  }
+  return list.sort((a, b) => a.name.localeCompare(b.name));
+}
 
 export function LocationsList() {
   const [country, setCountry] = useState("");
   const [state, setState] = useState("");
+  const [countries, setCountries] = useState<Country[]>([]);
+  useEffect(() => setCountries(buildCountries()), []);
 
   // States are only those that have a branch in the chosen country.
-  const states = country ? unique(BRANCHES.filter((branch) => branch.country === country).map((branch) => branch.state)) : [];
+  const states = [...(countries.find((item) => item.name === country)?.states ?? [])].sort((a, b) => a.localeCompare(b));
   const visible = BRANCHES.filter((branch) => (!country || branch.country === country) && (!state || branch.state === state));
 
   return (
@@ -82,17 +101,17 @@ export function LocationsList() {
           }}
         >
           <option value="">All countries</option>
-          {COUNTRIES.map((name) => (
-            <option key={name} value={name}>
-              {name}
+          {countries.map((item) => (
+            <option key={item.name} value={item.name}>
+              {item.name}
             </option>
           ))}
         </select>
       </div>
       <div className="loc-filter-field">
         <label htmlFor="loc-state">State</label>
-        <select id="loc-state" value={state} onChange={(event) => setState(event.target.value)} disabled={!country}>
-          <option value="">{country ? "All states" : "Select country"}</option>
+        <select id="loc-state" value={state} onChange={(event) => setState(event.target.value)} disabled={!country || states.length === 0}>
+          <option value="">{!country ? "Select country" : states.length ? "All states" : "No states listed"}</option>
           {states.map((name) => (
             <option key={name} value={name}>
               {name}
@@ -105,7 +124,12 @@ export function LocationsList() {
         {country ? ` in ${state ? `${state}, ` : ""}${country}` : ""}
       </p>
     </div>
-    {visible.length === 0 && <p className="loc-empty">No branches found for this selection.</p>}
+    {visible.length === 0 && (
+      <p className="loc-empty">
+        We do not have a branch {state ? `in ${state}, ` : "in "}
+        {country} yet. Try another location.
+      </p>
+    )}
     <div className="loc-grid">
       {visible.map((branch) => (
         <article className="loc-card" key={branch.name}>

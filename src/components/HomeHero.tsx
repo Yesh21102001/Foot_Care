@@ -1,4 +1,5 @@
-import { ArrowButton } from "./ArrowButton";
+import Link from "next/link";
+import { BookingButton } from "./BookingButton";
 
 // Same hero as the inner pages, used at the top of the homepage.
 const HERO_IMAGE = "/images/home-hero.png";
@@ -24,7 +25,15 @@ export function HomeHero() {
           </h1>
           <p>Discover thoughtful massage therapy, the art of reflexology and modern wellness experiences at FOOT CARE.</p>
           <div className="hero-actions">
-            <ArrowButton label="Our services" href="/our-services" />
+            <BookingButton className="hero-btn hero-btn-primary">
+              <span>Schedule Your Session</span>
+              <span className="hero-btn-arrow" aria-hidden="true">
+                →
+              </span>
+            </BookingButton>
+            <Link href="/our-services" className="hero-btn hero-btn-ghost">
+              Explore Our Treatments
+            </Link>
           </div>
         </div>
       </section>

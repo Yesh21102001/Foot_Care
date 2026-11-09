@@ -9,6 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <link rel="icon" href="/images/foot-care-logo.png" type="image/png" />
         {stylesheets.map((sheet) => (
           <link key={sheet.href} rel="stylesheet" href={sheet.href} media={sheet.media} />
         ))}

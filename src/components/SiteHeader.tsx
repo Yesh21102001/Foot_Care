@@ -10,17 +10,19 @@ type Group = { label: string; items: Item[] };
 type NavEntry = Item | Group;
 
 const treatments: Item[] = [
-  { href: "/reflexology", label: "Reflexology" },
+  { href: "/pricing", label: "Treatment Menu & Pricing" },
+  { href: "/reflexology", label: "Foot Reflexology" },
+  { href: "/intelligent-wellness", label: "Intelligent Wellness Experience" },
   { href: "/hydrogen-therapy", label: "Molecular Hydrogen Therapy" },
-  { href: "/intelligent-wellness", label: "Intelligent Wellness" },
 ];
 
 const nav: NavEntry[] = [
-  { href: "/about-us", label: "About Us" },
-  { label: "Services", items: treatments },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/about-us", label: "About" },
+  { label: "Treatments", items: treatments },
   { href: "/locations", label: "Locations" },
-  { href: "/faq", label: "FAQ" },
+  { href: "/franchise", label: "Franchise" },
+  { href: "/faq", label: "FAQs" },
+  { href: "/guest-guidelines", label: "Guidelines" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -45,6 +47,8 @@ export function SiteHeader() {
     closeTimer.current = window.setTimeout(() => setDropdownOpen(false), 150);
   };
   const [hidden, setHidden] = useState(false);
+  // The header is transparent until the page scrolls. The home page has a dark photo behind it, so its text is light there.
+  const onDarkHero = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
 
   // Smart header: hide on scroll down, show on scroll up, compact once the page has scrolled.
@@ -102,10 +106,11 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`site-header${scrolled ? " is-scrolled" : ""}${hidden && !open ? " is-hidden" : ""}${open ? " is-menu-open" : ""}`}
+      className={`site-header${scrolled ? " is-scrolled" : ""}${onDarkHero ? " is-on-dark" : ""}${hidden && !open ? " is-hidden" : ""}${open ? " is-menu-open" : ""}`}
     >
       <div className="container header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
+          <img className="brand-logo" src="/images/foot-care-logo.png" alt="" width={44} height={44} />
           <span className="brand-wordmark">Foot Care</span>
         </Link>
 
@@ -151,11 +156,11 @@ export function SiteHeader() {
             })}
           </ul>
           <div className="drawer-cta">
-            <ArrowButton label="Book a session" />
+            <ArrowButton label="Schedule Your Session" />
           </div>
         </nav>
 
-        <ArrowButton label="Book a session" className="header-cta-arrow" />
+        <ArrowButton label="Schedule Your Session" className="header-cta-arrow" />
 
         <button
           type="button"
