@@ -6501,3 +6501,41 @@ body .fc-site .tp-ring-unit {
     display: none;
   }
 }
+
+/* Testimonials ("Trusted by our Foot Care"): dark brand green background with a light heading. Cards keep their colours. */
+body .fc-site .home-testimonials {
+  background: #0b2622 !important;
+}
+body .fc-site .home-testimonials h2 {
+  color: #f1f3ee !important;
+}
+body .fc-site .home-testimonials .ht-quote,
+body .fc-site .home-testimonials p.ht-quote {
+  color: inherit;
+}
+
+/* Testimonials: inset from the left and right edges and a clear gap above and below, like the banner under it. */
+body .fc-site .home-testimonials {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+@media (max-width: 880px) {
+  body .fc-site .home-testimonials {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Testimonial client profile: aligned with the quote text (the card's 28px padding), inside the card's rounded corners. */
+.fc-site .ht-card .ht-person {
+  left: 28px;
+  right: 28px;
+  bottom: 24px;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
