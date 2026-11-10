@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { SelectDropdown } from "./SelectDropdown";
-import { COUNTRY_CODES, STATES_BY_COUNTRY } from "../data/places";
 import { ArrowButton } from "./ArrowButton";
 
 const SOCIAL_ICONS = {
@@ -63,10 +62,9 @@ const directionsUrl = (branch: Branch) =>
 // Every country, with its name (in English) and its list of states where we have one.
 // Built in the browser after load, so the server and browser never disagree about the names.
 type Country = { name: string; states: string[] };
+// Only the countries and states where FOOT CARE has a branch are offered in the filter.
 function buildCountries(): Country[] {
-  const names = new Intl.DisplayNames(["en"], { type: "region" });
-  const list = COUNTRY_CODES.map((code) => ({ name: names.of(code) ?? code, states: STATES_BY_COUNTRY[code] ?? [] }));
-  // A branch in a place that is not in the lists is still shown, so no branch can be filtered out of sight.
+  const list: Country[] = [];
   for (const branch of BRANCHES) {
     let entry = list.find((item) => item.name === branch.country);
     if (!entry) {
@@ -75,7 +73,7 @@ function buildCountries(): Country[] {
     }
     if (!entry.states.includes(branch.state)) entry.states = [...entry.states, branch.state];
   }
-  return list.sort((a, b) => a.name.localeCompare(b.name));
+  return list.sort((x, y) => x.name.localeCompare(y.name));
 }
 
 export function LocationsList() {
