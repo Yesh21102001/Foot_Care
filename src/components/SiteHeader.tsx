@@ -17,7 +17,7 @@ const treatments: Item[] = [
 ];
 
 const nav: NavEntry[] = [
-  { href: "/about-us", label: "About" },
+  { href: "/about-us", label: "About Us" },
   { label: "Treatments", items: treatments },
   { href: "/locations", label: "Locations" },
   { href: "/franchise", label: "Franchise" },

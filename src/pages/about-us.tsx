@@ -60,7 +60,7 @@ export default function AboutUs() {
         image="/images/who-reception-2.png"
         alt="Two guests relaxing during a massage"
         kicker="Our philosophy"
-        heading="Our Philosophy and Approach to Relaxation"
+        heading="The Art of Feeling Better"
       >
         <p>
           <strong>Wellness, Thoughtfully Experienced.</strong> FOOT CARE brings together the art of massage therapy, traditional reflexology and carefully selected wellness

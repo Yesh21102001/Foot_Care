@@ -7101,3 +7101,18 @@ body .fc-site .tp-section {
     border-radius: 24px;
   }
 }
+
+/* Header menu labels stay on one line (for example "About Us"). */
+.fc-site .nav-link,
+.fc-site .nav-dropdown summary {
+  white-space: nowrap;
+}
+
+/* The FOOT CARE name in the header and footer uses the heading font (the serif used for headings). */
+body .brand-wordmark {
+  font-family: var(--brand-serif, "EB Garamond", Georgia, serif) !important;
+}
+/* The serif name needs much less letter spacing than the sans version did. */
+body .brand-wordmark {
+  letter-spacing: 0.12em !important;
+}
