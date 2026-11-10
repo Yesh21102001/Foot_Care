@@ -6282,3 +6282,264 @@ body .fc-site .tp-ring-unit {
     font-size: 14px;
   }
 }
+
+/* Locations filter: custom dropdowns that open directly below their field, over the branch cards. */
+.fc-site .loc-filter .ddl {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  flex: 0 1 260px;
+}
+.fc-site .loc-filter .ddl-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0b2622;
+  opacity: 0.65;
+}
+.fc-site .loc-filter .ddl-wrap {
+  position: relative;
+}
+.fc-site .loc-filter .ddl-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #d5dcd7;
+  border-radius: 12px;
+  background: #f1f3ee;
+  color: #0b2622;
+  font: inherit;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 300ms ease, box-shadow 300ms ease;
+}
+.fc-site .loc-filter .ddl-button:hover:not(:disabled),
+.fc-site .loc-filter .ddl-button.is-open {
+  border-color: #0b2622;
+}
+.fc-site .loc-filter .ddl-button:focus-visible {
+  outline: 3px solid #aecc9f;
+  outline-offset: 2px;
+}
+.fc-site .loc-filter .ddl-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.fc-site .loc-filter .ddl-value {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.fc-site .loc-filter .ddl-caret {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #0b2622;
+  border-bottom: 2px solid #0b2622;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .loc-filter .ddl-button.is-open .ddl-caret {
+  transform: translateY(2px) rotate(225deg);
+}
+.fc-site .loc-filter .ddl-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 40;
+  max-height: 300px;
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+  list-style: none;
+  border: 1px solid rgba(11, 38, 34, 0.12);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(11, 38, 34, 0.16);
+  -webkit-overflow-scrolling: touch;
+  animation: ddl-in 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes ddl-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -6px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fc-site .loc-filter .ddl-option {
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #0b2622;
+  font: inherit;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 250ms ease;
+}
+.fc-site .loc-filter .ddl-option:hover,
+.fc-site .loc-filter .ddl-option:focus-visible {
+  background: #f1f3ee;
+  outline: none;
+}
+.fc-site .loc-filter .ddl-option.is-selected {
+  background: #dfe9d7;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  .fc-site .loc-filter .ddl-button {
+    height: 44px;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .fc-site .loc-filter .ddl-option {
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .loc-filter .ddl-list {
+    animation: none;
+  }
+}
+
+/* Terms and Privacy pages: a short "coming soon" block with a contact button. */
+.fc-site .legal-section {
+  padding: 64px 0 96px;
+}
+.fc-site .legal-inner {
+  max-width: 640px;
+}
+.fc-site .legal-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0b2622;
+  opacity: 0.6;
+}
+.fc-site .legal-inner h2 {
+  margin: 0 0 16px;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.15;
+  color: #0b2622;
+}
+.fc-site .legal-inner p {
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #0b2622;
+  opacity: 0.85;
+}
+@media (max-width: 640px) {
+  .fc-site .legal-section {
+    padding: 40px 0 64px;
+  }
+  .fc-site .legal-inner p {
+    font-size: 15px;
+  }
+}
+
+/* Motion: glowing foot-outline network on the Intelligent Wellness card. */
+.fc-site .svc2-network {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.85;
+}
+.fc-site .svc2-link {
+  stroke: #aecc9f;
+  stroke-width: 0.9;
+  stroke-dasharray: 3 5;
+  opacity: 0.55;
+  animation: svc2-flow 7s linear infinite;
+}
+.fc-site .svc2-dot {
+  fill: #f1f3ee;
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 0 4px rgba(174, 204, 159, 0.9));
+  animation: svc2-glow 3.6s ease-in-out infinite;
+}
+@keyframes svc2-flow {
+  to {
+    stroke-dashoffset: -64;
+  }
+}
+@keyframes svc2-glow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+/* Motion: bubbles floating up over the hydrogen photo. */
+.fc-site .home-hydrogen-media {
+  position: relative;
+}
+.fc-site .hy-photo-bubbles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 28px;
+  pointer-events: none;
+}
+.fc-site .hy-photo-bubbles span {
+  position: absolute;
+  bottom: -30px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.85), rgba(174, 204, 159, 0.22) 70%);
+  opacity: 0;
+  animation: hy-photo-rise linear infinite;
+}
+@keyframes hy-photo-rise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.8);
+  }
+  12% {
+    opacity: 0.9;
+  }
+  60% {
+    transform: translate3d(14px, -260px, 0) scale(1);
+  }
+  88% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-10px, -420px, 0) scale(1.05);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .svc2-link,
+  .fc-site .svc2-dot,
+  .fc-site .hy-photo-bubbles span {
+    animation: none;
+  }
+  .fc-site .hy-photo-bubbles {
+    display: none;
+  }
+}

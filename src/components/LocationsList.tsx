@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { SelectDropdown } from "./SelectDropdown";
 import { COUNTRY_CODES, STATES_BY_COUNTRY } from "../data/places";
 import { ArrowButton } from "./ArrowButton";
 
@@ -90,35 +91,29 @@ export function LocationsList() {
   return (
     <>
     <div className="loc-filter">
-      <div className="loc-filter-field">
-        <label htmlFor="loc-country">Country</label>
-        <select
-          id="loc-country"
-          value={country}
-          onChange={(event) => {
-            setCountry(event.target.value);
-            setState("");
-          }}
-        >
-          <option value="">All countries</option>
-          {countries.map((item) => (
-            <option key={item.name} value={item.name}>
-              {item.name}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="loc-filter-field">
-        <label htmlFor="loc-state">State</label>
-        <select id="loc-state" value={state} onChange={(event) => setState(event.target.value)} disabled={!country || states.length === 0}>
-          <option value="">{!country ? "Select country" : states.length ? "All states" : "No states listed"}</option>
-          {states.map((name) => (
-            <option key={name} value={name}>
-              {name}
-            </option>
-          ))}
-        </select>
-      </div>
+      <SelectDropdown
+        id="loc-country"
+        label="Country"
+        value={country}
+        placeholder="All countries"
+        options={[{ value: "", label: "All countries" }, ...countries.map((item) => ({ value: item.name, label: item.name }))]}
+        onChange={(next) => {
+          setCountry(next);
+          setState("");
+        }}
+      />
+      <SelectDropdown
+        id="loc-state"
+        label="State"
+        value={state}
+        placeholder={!country ? "Select country" : states.length ? "All states" : "No states listed"}
+        disabled={!country || states.length === 0}
+        options={[
+          { value: "", label: !country ? "Select country" : states.length ? "All states" : "No states listed" },
+          ...states.map((name) => ({ value: name, label: name })),
+        ]}
+        onChange={setState}
+      />
       <p className="loc-count" aria-live="polite">
         {visible.length} {visible.length === 1 ? "branch" : "branches"}
         {country ? ` in ${state ? `${state}, ` : ""}${country}` : ""}

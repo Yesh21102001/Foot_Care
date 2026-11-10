@@ -27,6 +27,16 @@ const BUBBLES = [
   { left: 92, size: 22, duration: 19, delay: -12 },
 ];
 
+// Bubbles that float up over the photo (fixed values, so the server and browser render the same thing).
+const PHOTO_BUBBLES = [
+  { left: 10, size: 14, duration: 11, delay: 0 },
+  { left: 26, size: 22, duration: 14, delay: -5 },
+  { left: 44, size: 10, duration: 9, delay: -2 },
+  { left: 60, size: 18, duration: 13, delay: -8 },
+  { left: 76, size: 12, duration: 10, delay: -4 },
+  { left: 88, size: 24, duration: 16, delay: -10 },
+];
+
 const step = (n: number) => ({ "--i": n }) as CSSProperties;
 
 export function HomeHydrogen() {
@@ -92,6 +102,14 @@ export function HomeHydrogen() {
         </div>
 
         <div className="home-hydrogen-media">
+          <div className="hy-photo-bubbles" aria-hidden="true">
+            {PHOTO_BUBBLES.map((bubble, index) => (
+              <span
+                key={index}
+                style={{ left: `${bubble.left}%`, width: bubble.size, height: bubble.size, animationDuration: `${bubble.duration}s`, animationDelay: `${bubble.delay}s` }}
+              />
+            ))}
+          </div>
           <img
             className="home-hydrogen-photo"
             src="/images/hydrogen-therapy.jpg"

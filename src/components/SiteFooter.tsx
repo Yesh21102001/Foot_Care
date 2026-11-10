@@ -169,8 +169,8 @@ title={
 				</div>
 				<div className={"elementor-element elementor-element-43cf70b elementor-invisible elementor-widget elementor-widget-tm-ele-navigation-menu"} data-id={"43cf70b"} data-element_type={"widget"} data-e-type={"widget"} data-settings={"{\"_animation\":\"fadeInUp\",\"_animation_delay\":1500}"} data-widget_type={"tm-ele-navigation-menu.default"}>
 				<div className={"elementor-widget-container"}>
-					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links3"} className={""}><li id={"menu-item-3432"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3432"}><a href={"/"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Terms &#038; Condition</a></li>
-<li id={"menu-item-3431"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3431"}><a href={"/faq"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Privacy Policy</a></li>
+					<div className={"tm-sc-simple-nav-menu"}><ul id={"menu-footer-links3"} className={""}><li id={"menu-item-3432"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3432"}><a href={"/terms"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Terms &#038; Conditions</a></li>
+<li id={"menu-item-3431"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3431"}><a href={"/privacy"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Privacy Policy</a></li>
 <li id={"menu-item-3430"} className={"menu-item menu-item-type-post_type menu-item-object-page menu-item-3430"}><a href={"/contact"}><i className={"tm-nav-arrow-icon fas fa-arrow-right"}></i>Contact Us</a></li>
 </ul></div>				</div>
 				</div>
