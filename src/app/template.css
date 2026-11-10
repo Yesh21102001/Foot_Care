@@ -136,7 +136,7 @@ img.wp-smiley, img.emoji {
 }
 /* Footer CTA ("Book a free 15-minute session"): foot soak photo instead of the stock image. */
 .elementor-930 .elementor-element.elementor-element-625c57d:not(.elementor-motion-effects-element-type-background), .elementor-930 .elementor-element.elementor-element-625c57d > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-  background-image: url("/images/footer-foot-soak-2.jpg") !important;
+  background-image: url("/images/footer-spa-session.png") !important;
 }
 /* Footer CTA wrapper: lighter green fade so the photo stays visible down to the "Get more information" row. */
 .elementor-930 .elementor-element.elementor-element-5f2c155 {
