@@ -112,7 +112,7 @@ export function HomeHydrogen() {
           </div>
           <img
             className="home-hydrogen-photo"
-            src="/images/hydrogen-therapy.jpg"
+            src="/images/hydrogen-new.png"
             alt="Guest relaxing during a molecular hydrogen session beside a hydrogen water machine"
           />
         </div>

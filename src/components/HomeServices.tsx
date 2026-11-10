@@ -14,7 +14,7 @@ const SERVICES = [
   {
     title: "Molecular Hydrogen Therapy",
     href: "/hydrogen-therapy",
-    image: "/images/services/hydrogen-therapy.jpg",
+    image: "/images/hydrogen-new.png",
     text: "",
   },
   {
