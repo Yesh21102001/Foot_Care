@@ -6649,3 +6649,11 @@ body .fc-site .hiw-card::before {
 .fc-site .hiw-number {
   display: none;
 }
+
+/* Home hero on phones and small tablets: the portrait foot-cream photo. */
+@media (max-width: 880px) {
+  .fc-site.home-hero-wrap .hero-photo {
+    background-image: url("/images/home-hero-mobile.png") !important;
+    background-position: 62% 50%;
+  }
+}

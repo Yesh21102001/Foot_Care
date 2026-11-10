@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BookingButton } from "./BookingButton";
 
 // Same hero as the inner pages, used at the top of the homepage.
-const HERO_IMAGE = "/images/home-hero.png";
+const HERO_IMAGE = "/images/home-hero-almond.png";
 
 export function HomeHero() {
   return (

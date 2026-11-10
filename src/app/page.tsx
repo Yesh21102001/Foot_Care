@@ -73,7 +73,7 @@ export default function Home() {
 <div className={"layer-image-wrapper layer-image layer-image-fullwidth elementor-repeater-item-2bf0134"} style={{} as CSSProperties}>
 	<div className={"layer-inner layer-image"}>
 		<div className={"layer-image-inner-wrapper image-hover-effect-shine"}>
-					<img fetchPriority={"high"} decoding={"async"} className={""} src={"/images/who-spa-room.png"} width={"1254"} height={"1254"} alt={""} />
+					<img fetchPriority={"high"} decoding={"async"} className={""} src={"/images/who-reception.png"} width={"1086"} height={"1448"} alt={""} />
 		</div>
 	</div>
 </div>
