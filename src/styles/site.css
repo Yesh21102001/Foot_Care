@@ -6586,3 +6586,66 @@ body .fc-site .home-testimonials {
     filter: none;
   }
 }
+
+/* Header "Schedule Your Session": hover changes only the colour. It does not lift, slide or change size. */
+.fc-site .header-cta-arrow,
+.fc-site .header-cta-arrow:hover {
+  transform: none !important;
+  padding: 1px 10px 1px 30px !important;
+  gap: 14px !important;
+  transition: background-color 400ms ease !important;
+}
+.fc-site .header-cta-arrow:hover .theme-btn-arrow-left {
+  display: none !important;
+}
+.fc-site .header-cta-arrow .theme-btn,
+.fc-site .header-cta-arrow:hover .theme-btn,
+.fc-site .header-cta-arrow .theme-btn-arrow-right,
+.fc-site .header-cta-arrow:hover .theme-btn-arrow-right,
+.fc-site .header-cta-arrow:hover .theme-btn-arrow-right i {
+  transform: none !important;
+}
+.fc-site .header-cta-arrow:hover {
+  background-color: #173d36 !important;
+}
+
+/* Header button hover: only the arrow inside its circle moves (a short slide to the right), and the circle turns light green.
+   The button, its label and its size stay still. */
+.fc-site .header-cta-arrow .theme-btn-arrow-right i {
+  display: inline-block;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .header-cta-arrow:hover .theme-btn-arrow-right i {
+  transform: translateX(3px) !important;
+}
+.fc-site .header-cta-arrow:hover .theme-btn-arrow-right {
+  background: #aecc9f !important;
+}
+/* The theme shrinks the visible arrow circle on hover; keep it at full size so the circle never disappears. */
+.fc-site .header-cta-arrow:hover .theme-btn-arrow-right {
+  width: 40px !important;
+  min-width: 40px !important;
+  flex: 0 0 40px !important;
+}
+/* Header button on hover: the spacing is a fixed margin after the label, so the arrow circle keeps its full width. */
+.fc-site .header-cta-arrow:hover {
+  gap: 0 !important;
+}
+.fc-site .header-cta-arrow:hover .theme-btn {
+  margin-right: 14px !important;
+}
+/* The theme shrinks the arrow circle with the CSS scale property on hover; keep it at full size. */
+.fc-site .header-cta-arrow .theme-btn-arrow-right,
+.fc-site .header-cta-arrow:hover .theme-btn-arrow-right {
+  scale: 1 !important;
+}
+
+/* How It Works cards: a lighter green overlay so the photos show; the bottom stays darker for the text. */
+body .fc-site .hiw-card::before {
+  background: linear-gradient(180deg, rgba(11, 38, 34, 0) 0%, rgba(11, 38, 34, 0.3) 40%, rgba(11, 38, 34, 0.72) 100%) !important;
+}
+
+/* How It Works: the step numbers (01, 02, 03) on the cards are removed. */
+.fc-site .hiw-number {
+  display: none;
+}

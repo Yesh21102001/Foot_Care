@@ -8,7 +8,7 @@ const SERVICES = [
   {
     title: "Foot Reflexology",
     href: "/reflexology",
-    image: "/images/services/reflexology.jpg",
+    image: "/images/services/foot-reflexology-close.png",
     text: "Traditional reflexology for relaxation and balance.",
   },
   {

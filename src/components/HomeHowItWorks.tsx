@@ -7,21 +7,21 @@ const STEPS = [
     icon: "fas fa-spa",
     title: "Discover Our Services",
     text: "Explore our massage, reflexology and wellness treatments.",
-    image: "/images/services/reflexology.jpg",
+    image: "/images/hiw-foot-massage.png",
   },
   {
     number: "02",
     icon: "fas fa-calendar-alt",
     title: "Schedule Your Appointment",
     text: "Choose a time that suits you and book your session.",
-    image: "/images/services/intelligent-wellness.jpg",
+    image: "/images/hiw-recliners.png",
   },
   {
     number: "03",
     icon: "fas fa-leaf",
     title: "Begin Your Journey",
     text: "Arrive, unwind and enjoy a session shaped around you.",
-    image: "/images/services/hydrogen-therapy.jpg",
+    image: "/images/hiw-spa-bottle.png",
   },
 ];
 
