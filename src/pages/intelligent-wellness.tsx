@@ -63,23 +63,21 @@ export default function IntelligentWellness() {
         </div>
       </section>
 
-      <section className="br-section br-section-alt">
-        <div className="br-inner">
-          <div className="br-head">
-            <span className="br-kicker">Feature points</span>
+      <section className="sq-section">
+        <div className="sq-inner">
+          <div className="sq-head">
+            <span className="sq-kicker">Feature points</span>
             <h2>Feature points</h2>
           </div>
-          <ol className="br-list">
+          <ul className="sq-grid">
             {FEATURES.map((item, index) => (
-              <li className="br-row" key={item.title}>
-                <span className="br-num">{String(index + 1).padStart(2, "0")}</span>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
+              <li className="sq-card" key={item.title}>
+                <span className="sq-num">{String(index + 1).padStart(2, "0")}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
               </li>
             ))}
-          </ol>
+          </ul>
         </div>
       </section>
 

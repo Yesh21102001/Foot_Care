@@ -25,17 +25,22 @@ export default function Reflexology() {
       {/* 02 — Map (dark section) */}
       <section className="rx-section rx-dark">
         <div className="container rx-map-split">
-          <figure className="rx-map-card">
-            <img src="/images/reflexology-chart.png" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
-          </figure>
           <div className="rx-map-text">
-            <span className="rx-kicker rx-kicker-light">01 — The Map</span>
             <h2 className="rx-h2">Traditional reflexology <em>map</em></h2>
             <p className="rx-lead rx-lead-light">
               The map shows the zones of the sole of the foot as they are described in traditional reflexology. These are
               traditional associations, not proven anatomical connections.
             </p>
+            <p className="rx-zones-label">Zones shown on the chart</p>
+            <ul className="rx-zones">
+              {["Head & brain", "Eyes", "Ears", "Lungs", "Heart", "Liver", "Stomach", "Kidneys", "Digestive system", "Lower back"].map((z) => (
+                <li key={z}>{z}</li>
+              ))}
+            </ul>
           </div>
+          <figure className="rx-map-card">
+            <img src="/images/reflexology-chart-transparent.png" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
+          </figure>
         </div>
       </section>
 
