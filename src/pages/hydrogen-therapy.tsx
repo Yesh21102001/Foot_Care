@@ -165,7 +165,7 @@ export default function HydrogenTherapy() {
       />
 
       {/* 1. Photo left, text right */}
-      <ServiceOverview title="Molecular Hydrogen Therapy" image="/images/services/hydrogen-therapy.jpg" heading="Discover the Science of Molecular Hydrogen (H₂)">
+      <ServiceOverview title="Molecular Hydrogen Therapy" image="/images/hydrogen-page-h2.png" heading="Discover the Science of Molecular Hydrogen (H₂)">
         <p>
           Molecular Hydrogen Therapy is an emerging wellness technology that explores the potential applications of
           molecular hydrogen (H₂) in supporting the body&apos;s natural biological processes.

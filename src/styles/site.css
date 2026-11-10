@@ -7089,3 +7089,15 @@ body .fc-site .hiw-card::before {
     line-height: 1.45;
   }
 }
+
+/* Pricing: the dark Treatments block is inset from the sides and has a gap below it, like the testimonials section. */
+body .fc-site .tp-section {
+  margin: 0 20px 32px;
+  border-radius: 32px;
+}
+@media (max-width: 880px) {
+  body .fc-site .tp-section {
+    margin: 0 12px 20px;
+    border-radius: 24px;
+  }
+}
