@@ -10,7 +10,7 @@ export default function Reflexology() {
         crumbs={[{ label: "Home", href: "/" }, { label: "Our Services", href: "/our-services" }, { label: "Reflexology" }]}
       />
 
-      <ServiceOverview title="Foot Reflexology" image="/images/services/reflexology.jpg" heading="What is foot reflexology?">
+      <ServiceOverview title="Foot Reflexology" image="/images/reflexology-room.png" heading="What is foot reflexology?">
         <p>
           Foot reflexology is a complementary wellness practice in which a practitioner applies pressure to specific
           areas of the feet.
@@ -26,7 +26,7 @@ export default function Reflexology() {
       <section className="rx-section rx-dark">
         <div className="container rx-map-split">
           <figure className="rx-map-card">
-            <img src="/images/reflexology-map.jpg" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
+            <img src="/images/reflexology-chart.png" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
           </figure>
           <div className="rx-map-text">
             <span className="rx-kicker rx-kicker-light">01 — The Map</span>
