@@ -201,7 +201,7 @@ export default function HydrogenTherapy() {
 
       {/* 3. Text left, photo right */}
       <PhotoSection
-        image="/images/hydrogen/molecule-tall.jpg"
+        image="/images/hydrogen/second-photo.png"
         alt="Illustration of a molecular hydrogen (H2) molecule above a relaxing guest"
         kicker="Background"
         heading="Understanding Oxidative Stress"
@@ -243,7 +243,7 @@ export default function HydrogenTherapy() {
 
       {/* 5. Photo left, text right */}
       <PhotoSection
-        image="/images/hydrogen/machine-tall.jpg"
+        image="/images/hydrogen/third-photo.png"
         alt="Hydrogen water generator beside a glass of hydrogen-rich water"
         kicker="Delivery"
         heading="Methods of Molecular Hydrogen Administration"
