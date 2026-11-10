@@ -20,7 +20,7 @@ const SERVICES = [
   {
     title: "Intelligent Wellness",
     href: "/intelligent-wellness",
-    image: "/images/services/intelligent-wellness.jpg",
+    image: "/images/intelligent-wellness-new.png",
     text: "",
   },
 ];

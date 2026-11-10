@@ -6657,3 +6657,204 @@ body .fc-site .hiw-card::before {
     background-position: 62% 50%;
   }
 }
+
+/* Intelligent Wellness benefits: circle badges with the number inside, the title and text beneath. */
+.fc-site .bc-section {
+  padding: 88px 0;
+  background: #f1f3ee;
+}
+.fc-site .bc-inner {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+  text-align: center;
+}
+.fc-site .bc-inner h2 {
+  margin: 0 0 56px;
+  font-size: clamp(32px, 3.6vw, 46px);
+  line-height: 1.15;
+  color: #0b2622;
+}
+.fc-site .bc-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fc-site .bc-item {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fc-site .bc-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #dfe9d7;
+  box-shadow: 0 0 0 1px rgba(11, 38, 34, 0.08);
+  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1), background 800ms ease, box-shadow 800ms ease;
+}
+.fc-site .bc-item:hover .bc-circle {
+  transform: translateY(-6px);
+  background: #aecc9f;
+  box-shadow: 0 0 0 1px rgba(11, 38, 34, 0.12), 0 22px 40px rgba(11, 38, 34, 0.14);
+}
+.fc-site .bc-num {
+  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-size: 40px;
+  line-height: 1;
+  color: #0b2622;
+}
+.fc-site .bc-item h3 {
+  margin: 22px 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #0b2622;
+}
+.fc-site .bc-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(11, 38, 34, 0.75);
+}
+@media (max-width: 640px) {
+  .fc-site .bc-section {
+    padding: 64px 0;
+  }
+  .fc-site .bc-inner h2 {
+    margin-bottom: 40px;
+  }
+  .fc-site .bc-grid {
+    gap: 40px 16px;
+  }
+  .fc-site .bc-item {
+    width: 46%;
+  }
+  .fc-site .bc-circle {
+    width: 140px;
+    height: 140px;
+  }
+  .fc-site .bc-num {
+    font-size: 32px;
+  }
+  .fc-site .bc-item h3 {
+    font-size: 17px;
+  }
+  .fc-site .bc-item p {
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .bc-circle {
+    transition: none;
+  }
+}
+
+/* Intelligent Wellness benefits: numbered rows. The heading sits on the left; each benefit is a row with a large number and a divider. */
+.fc-site .br-section {
+  padding: 96px 0;
+  background: #f1f3ee;
+}
+.fc-site .br-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 64px;
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+  align-items: start;
+}
+.fc-site .br-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0b2622;
+  opacity: 0.6;
+}
+.fc-site .br-head h2 {
+  margin: 0;
+  font-size: clamp(32px, 3.4vw, 46px);
+  line-height: 1.15;
+  color: #0b2622;
+}
+.fc-site .br-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(11, 38, 34, 0.12);
+}
+.fc-site .br-row {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(11, 38, 34, 0.12);
+  transition: padding 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .br-row:hover {
+  padding-left: 14px;
+}
+.fc-site .br-num {
+  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-size: 40px;
+  line-height: 1;
+  color: #aecc9f;
+}
+.fc-site .br-row h3 {
+  margin: 4px 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #0b2622;
+}
+.fc-site .br-row p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(11, 38, 34, 0.75);
+}
+@media (max-width: 880px) {
+  .fc-site .br-section {
+    padding: 64px 0;
+  }
+  .fc-site .br-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .br-row {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 14px;
+    padding: 22px 0;
+  }
+  .fc-site .br-num {
+    font-size: 30px;
+  }
+  .fc-site .br-row h3 {
+    font-size: 18px;
+  }
+  .fc-site .br-row p {
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .br-row {
+    transition: none;
+  }
+  .fc-site .br-row:hover {
+    padding-left: 0;
+  }
+}
+
+/* Feature points use the same numbered rows; the second block sits on the page's light background. */
+.fc-site .br-section-alt {
+  padding-top: 24px;
+}

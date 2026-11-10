@@ -57,7 +57,7 @@ export default function AboutUs() {
 
       {/* 1. Photo left, text right */}
       <PhotoBlock
-        image="/images/about/block-philosophy.jpg"
+        image="/images/who-reception-2.png"
         alt="Two guests relaxing during a massage"
         kicker="Our philosophy"
         heading="Our Philosophy and Approach to Relaxation"
@@ -83,7 +83,7 @@ export default function AboutUs() {
 
       {/* 3. Text left, photo right */}
       <PhotoBlock
-        image="/images/about/block-treatment.jpg"
+        image="/images/about-recliners.png"
         alt="Massage oil and a candle beside a foot massage"
         kicker="Our treatments"
         heading="Our Treatment Approach and Use of Almond Massage Cream"
