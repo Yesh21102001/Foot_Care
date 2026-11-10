@@ -39,35 +39,6 @@ const canHover = () => typeof window !== "undefined" && window.matchMedia("(hove
 const reducedMotion = () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 
-// Glowing dots joined by flowing lines, traced along an abstract foot outline (sage green and cream on the dark photo).
-const NETWORK_DOTS: [number, number][] = [
-  [100, 22], [72, 44], [128, 48], [58, 96], [142, 100], [84, 150], [118, 158],
-  [96, 214], [112, 252], [76, 276], [132, 232],
-];
-const NETWORK_LINKS: [number, number][] = [
-  [0, 1], [0, 2], [1, 3], [2, 4], [3, 5], [4, 6], [5, 6], [5, 7], [6, 10], [7, 8], [8, 9], [7, 10], [10, 8],
-];
-function NetworkArt() {
-  return (
-    <svg className="svc2-network" viewBox="0 0 200 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      {NETWORK_LINKS.map(([a, b], index) => (
-        <line
-          key={`l${index}`}
-          className="svc2-link"
-          style={{ animationDelay: `${index * -0.45}s` }}
-          x1={NETWORK_DOTS[a][0]}
-          y1={NETWORK_DOTS[a][1]}
-          x2={NETWORK_DOTS[b][0]}
-          y2={NETWORK_DOTS[b][1]}
-        />
-      ))}
-      {NETWORK_DOTS.map(([x, y], index) => (
-        <circle key={`d${index}`} className="svc2-dot" cx={x} cy={y} r={3.2} style={{ animationDelay: `${index * -0.36}s` }} />
-      ))}
-    </svg>
-  );
-}
-
 export function HomeServices({ showLabel = true }: { showLabel?: boolean }) {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -213,7 +184,6 @@ export function HomeServices({ showLabel = true }: { showLabel?: boolean }) {
                   }}
                 >
                   <img src={service.image} alt="" loading="lazy" />
-                {service.title === "Intelligent Wellness" && <NetworkArt />}
                   <div className="svc2-copy">
                     <h3>{service.title}</h3>
                     {service.text && <p>{service.text}</p>}

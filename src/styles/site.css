@@ -6453,46 +6453,6 @@ body .fc-site .tp-ring-unit {
   }
 }
 
-/* Motion: glowing foot-outline network on the Intelligent Wellness card. */
-.fc-site .svc2-network {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0.85;
-}
-.fc-site .svc2-link {
-  stroke: #aecc9f;
-  stroke-width: 0.9;
-  stroke-dasharray: 3 5;
-  opacity: 0.55;
-  animation: svc2-flow 7s linear infinite;
-}
-.fc-site .svc2-dot {
-  fill: #f1f3ee;
-  transform-box: fill-box;
-  transform-origin: center;
-  filter: drop-shadow(0 0 4px rgba(174, 204, 159, 0.9));
-  animation: svc2-glow 3.6s ease-in-out infinite;
-}
-@keyframes svc2-flow {
-  to {
-    stroke-dashoffset: -64;
-  }
-}
-@keyframes svc2-glow {
-  0%, 100% {
-    opacity: 0.35;
-    transform: scale(0.85);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.35);
-  }
-}
-
 /* Motion: bubbles floating up over the hydrogen photo. */
 .fc-site .home-hydrogen-media {
   position: relative;
@@ -6534,8 +6494,6 @@ body .fc-site .tp-ring-unit {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .fc-site .svc2-link,
-  .fc-site .svc2-dot,
   .fc-site .hy-photo-bubbles span {
     animation: none;
   }
