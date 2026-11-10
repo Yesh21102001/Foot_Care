@@ -6,7 +6,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 // On touch screens (no hover) the cards open by themselves in turn, and a tap opens a card. A second tap follows its link.
 const SERVICES = [
   {
-    title: "Reflexology Massage",
+    title: "Foot Reflexology",
     href: "/reflexology",
     image: "/images/services/reflexology.jpg",
     text: "Traditional reflexology for relaxation and balance.",

@@ -5,7 +5,7 @@ import { useEffect, useState, type FormEvent } from "react";
 // PLACEHOLDER DATA: replace with your real branches, treatments, and time slots.
 const BRANCHES = ["Main branch", "Second branch"];
 const TREATMENTS = [
-  "Reflexology Massage — 60 min — $49",
+  "Foot Reflexology — 60 min — $49",
   "Molecular Hydrogen Therapy — 45 min — $69",
   "Healthpod Session — 30 min — $39",
 ];

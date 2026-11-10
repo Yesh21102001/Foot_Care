@@ -6539,3 +6539,50 @@ body .fc-site .home-testimonials {
   border-radius: 0;
   background: none;
 }
+
+/* Services card: the name and description sit at the bottom-left of the photo (the arrow stays bottom-right). */
+.fc-site .svc2-copy {
+  top: auto;
+  bottom: 34px;
+  left: 34px;
+  right: auto;
+  width: calc(100% - 130px);
+}
+@media (max-width: 640px) {
+  .fc-site .svc2-copy {
+    top: auto;
+    bottom: 22px;
+    left: 20px;
+    right: auto;
+    width: calc(100% - 90px);
+  }
+}
+
+/* Services card name: fixed width so the text never re-wraps while the card grows, clipped by the card's edge,
+   and a soft fade, rise and blur-in as the card opens (fades out again as it closes). */
+.fc-site .svc2-copy {
+  width: 460px;
+  max-width: none;
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  filter: blur(6px);
+  transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1), transform 1100ms cubic-bezier(0.22, 1, 0.36, 1), filter 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform, filter;
+}
+.fc-site .svc2-item.is-active .svc2-copy {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  transition-delay: 280ms;
+}
+@media (max-width: 640px) {
+  .fc-site .svc2-copy {
+    width: 260px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .svc2-copy {
+    transition: none;
+    filter: none;
+  }
+}

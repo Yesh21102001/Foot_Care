@@ -15,6 +15,22 @@ const REVIEWS = [
     role: "Healthpod guest",
     text: "Clean, calm and professional. The Healthpod session became part of my weekly routine.",
   },
+  // DUMMY REVIEWS (placeholder text for layout only). Replace with real client feedback before launch.
+  {
+    name: "Client D",
+    role: "Reflexology guest",
+    text: "Lovely, quiet space and a very gentle touch. I left feeling lighter than when I came in.",
+  },
+  {
+    name: "Client E",
+    role: "Hydrogen therapy guest",
+    text: "The team explained everything clearly before my session, which made me feel at ease from the start.",
+  },
+  {
+    name: "Client F",
+    role: "Massage guest",
+    text: "Booking was simple, the therapist was attentive, and my neck tension has eased noticeably.",
+  },
 ];
 
 export function HomeTestimonials() {
