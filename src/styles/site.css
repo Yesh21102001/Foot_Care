@@ -7746,3 +7746,25 @@ footer#footer.footer {
     transform: none;
   }
 }
+
+/* Package slider (phones and tablets): smooth swiping.
+   The card size and fade follow the finger every frame, so they must not also ease (that made them lag and shake). */
+@media (max-width: 880px) {
+  .fc-site .pkg-grid {
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+  }
+  .fc-site .pkg-card {
+    scroll-snap-stop: normal;
+    transition: box-shadow 600ms var(--fc-ease);
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform-style: flat;
+  }
+  .fc-site .pkg-card.fc-anim,
+  .fc-site .pkg-card.fc-anim.is-visible {
+    animation: none;
+  }
+}
