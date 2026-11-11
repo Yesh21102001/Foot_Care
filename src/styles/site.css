@@ -7531,3 +7531,11 @@ footer#footer.footer {
     max-width: 640px;
   }
 }
+
+/* Booking pop-up: scrolling inside it never carries through to the page behind. */
+.fc-site .booking-modal {
+  overscroll-behavior: contain;
+}
+.fc-site .booking-overlay {
+  overscroll-behavior: contain;
+}

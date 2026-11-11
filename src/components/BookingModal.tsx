@@ -39,10 +39,17 @@ export function BookingModal() {
     };
   }, []);
 
+  // While the pop-up is open the page behind it stays still. The page scrolls on <html> here, so both <html> and <body> are locked.
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (!open) return;
+    const root = document.documentElement;
+    const previousRoot = root.style.overflow;
+    const previousBody = document.body.style.overflow;
+    root.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "";
+      root.style.overflow = previousRoot;
+      document.body.style.overflow = previousBody;
     };
   }, [open]);
 
