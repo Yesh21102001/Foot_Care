@@ -8034,3 +8034,16 @@ body .fc-site .who2-label {
 .fc-site .who2-icon {
   isolation: isolate;
 }
+
+/* Inline SVG icons: sized by the font size, like the icon fonts they replace. */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-style: normal;
+}
+.svg-icon {
+  display: block;
+  overflow: visible;
+}
