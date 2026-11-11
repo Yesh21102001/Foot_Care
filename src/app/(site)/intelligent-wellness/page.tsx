@@ -41,7 +41,7 @@ export default function IntelligentWellness() {
         </PageHero>
       </div>
 
-      <ServiceOverview title="Intelligent Wellness" image="/images/intelligent-wellness-new.png" heading="A Smarter Way to Experience Wellness">
+      <ServiceOverview title="Intelligent Wellness" image="/images/intelligent-wellness-overview.png" heading="A Smarter Way to Experience Wellness">
         <p>
           <strong>Where advanced technology meets personal wellbeing.</strong>
         </p>
