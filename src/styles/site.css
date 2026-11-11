@@ -7690,3 +7690,59 @@ footer#footer.footer {
 #disable-preloader {
   display: none !important;
 }
+
+/* Package cards on touch screens (phones and tablets): a tap must not trigger the hover look
+   (lift, outline and dark badge). The slider's own centre-card scaling stays. */
+@media (hover: none) {
+  .fc-site .pkg-card:hover {
+    box-shadow: 0 0 0 1px rgba(11, 38, 34, 0.06);
+  }
+  .fc-site .pkg-card.pkg-card-featured:hover {
+    box-shadow: 0 0 0 1px rgba(174, 204, 159, 0.35), 0 30px 60px rgba(11, 38, 34, 0.35);
+  }
+  .fc-site .pkg-card:hover .pkg-extra {
+    background: #aecc9f;
+    color: #0b2622;
+  }
+}
+@media (hover: none) and (min-width: 881px) {
+  .fc-site .pkg-card:hover {
+    transform: none;
+  }
+  .fc-site .pkg-card.pkg-card-featured:hover {
+    transform: translateY(-14px);
+  }
+}
+/* The Platinum (dark) card's badge keeps its light-green pill on hover, so it never disappears against the dark card. */
+.fc-site .pkg-card.pkg-card-featured:hover .pkg-extra,
+.fc-site .pkg-card.pkg-card-featured .pkg-extra {
+  background: #aecc9f;
+  color: #0b2622;
+}
+/* Same reset for the phone slider layout, for phones that do not report (hover: none). */
+@media (max-width: 880px) {
+  .fc-site .pkg-card:hover .pkg-extra {
+    background: #aecc9f;
+    color: #0b2622;
+  }
+}
+
+/* Pricing treatments on touch screens and phone widths: a tap must not trigger the hover look
+   (tile border and shift, button lift and colour change). The selected tile keeps its own style. */
+@media (hover: none), (max-width: 880px) {
+  .fc-site .tp-tile:hover {
+    border-color: rgba(241, 243, 238, 0.14);
+    transform: none;
+  }
+  .fc-site .tp-tile.is-selected:hover {
+    border-color: #f1f3ee;
+  }
+  .fc-site .tp-cta:hover {
+    background: #aecc9f;
+    transform: none;
+    box-shadow: none;
+  }
+  .fc-site .tp-cta:hover .tp-cta-arrow {
+    transform: none;
+  }
+}
