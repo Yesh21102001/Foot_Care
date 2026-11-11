@@ -1,58 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SelectDropdown } from "./SelectDropdown";
 import { ArrowButton } from "./ArrowButton";
-
-const SOCIAL_ICONS = {
-  facebook: { label: "Facebook", icon: "fab fa-facebook-f" },
-  instagram: { label: "Instagram", icon: "fab fa-instagram" },
-  youtube: { label: "YouTube", icon: "fab fa-youtube" },
-  twitter: { label: "X (Twitter)", icon: "fab fa-twitter" },
-  linkedin: { label: "LinkedIn", icon: "fab fa-linkedin-in" },
-  whatsapp: { label: "WhatsApp", icon: "fab fa-whatsapp" },
-} as const;
-
-type SocialKey = keyof typeof SOCIAL_ICONS;
-
-type Branch = {
-  name: string;
-  country: string;
-  state: string;
-  address: string;
-  phone: string;
-  email: string;
-  // Optional: a Google Maps link for the branch. If empty, directions are built from the address.
-  mapUrl?: string;
-  // Optional: the branch's own social pages. Only the links you give are shown.
-  social?: Partial<Record<SocialKey, string>>;
-};
-
-// PLACEHOLDER social links: these go to each site's home page. Replace with each branch's own pages.
-const PLACEHOLDER_SOCIAL: Branch["social"] = {
-  facebook: "https://www.facebook.com/",
-  instagram: "https://www.instagram.com/",
-  youtube: "https://www.youtube.com/",
-};
-
-// PLACEHOLDER DATA: replace with your real branches (name, country, state, address, phone, email, optional mapUrl and social).
-// The Country and State dropdowns on the Locations page are built from the country and state of each branch below.
-export const BRANCHES: Branch[] = [
-  {
-    name: "Main branch",
-    country: "United States",
-    state: "Hawaii",
-    address: "1901 Thornridge Cir. Shiloh, Hawaii 81063",
-    phone: "+629 555-0129",
-    email: "main@example.com",
-    social: PLACEHOLDER_SOCIAL,
-  },
-  { name: "Branch 2", country: "India", state: "Telangana", address: "Add address here", phone: "Add phone here", email: "branch2@example.com", social: PLACEHOLDER_SOCIAL },
-  { name: "Branch 3", country: "India", state: "Telangana", address: "Add address here", phone: "Add phone here", email: "branch3@example.com", social: PLACEHOLDER_SOCIAL },
-  { name: "Branch 4", country: "India", state: "Karnataka", address: "Add address here", phone: "Add phone here", email: "branch4@example.com", social: PLACEHOLDER_SOCIAL },
-  { name: "Branch 5", country: "United Arab Emirates", state: "Dubai", address: "Add address here", phone: "Add phone here", email: "branch5@example.com", social: PLACEHOLDER_SOCIAL },
-  { name: "Branch 6", country: "United States", state: "Hawaii", address: "Add address here", phone: "Add phone here", email: "branch6@example.com", social: PLACEHOLDER_SOCIAL },
-];
+import { BRANCHES, SOCIAL_ICONS, type Branch, type SocialKey } from "../data/branches";
 
 const directionsUrl = (branch: Branch) =>
   branch.mapUrl ||
@@ -76,14 +27,14 @@ function buildCountries(): Country[] {
   return list.sort((x, y) => x.name.localeCompare(y.name));
 }
 
+const COUNTRIES = buildCountries();
+
 export function LocationsList() {
   const [country, setCountry] = useState("");
   const [state, setState] = useState("");
-  const [countries, setCountries] = useState<Country[]>([]);
-  useEffect(() => setCountries(buildCountries()), []);
 
   // States are only those that have a branch in the chosen country.
-  const states = [...(countries.find((item) => item.name === country)?.states ?? [])].sort((a, b) => a.localeCompare(b));
+  const states = [...(COUNTRIES.find((item) => item.name === country)?.states ?? [])].sort((a, b) => a.localeCompare(b));
   const visible = BRANCHES.filter((branch) => (!country || branch.country === country) && (!state || branch.state === state));
 
   return (
@@ -94,7 +45,7 @@ export function LocationsList() {
         label="Country"
         value={country}
         placeholder="All countries"
-        options={[{ value: "", label: "All countries" }, ...countries.map((item) => ({ value: item.name, label: item.name }))]}
+        options={[{ value: "", label: "All countries" }, ...COUNTRIES.map((item) => ({ value: item.name, label: item.name }))]}
         onChange={(next) => {
           setCountry(next);
           setState("");

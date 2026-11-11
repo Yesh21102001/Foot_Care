@@ -9,7 +9,7 @@ type Item = { href: string; label: string };
 type Group = { label: string; items: Item[] };
 type NavEntry = Item | Group;
 
-const treatments: Item[] = [
+const services: Item[] = [
   { href: "/pricing", label: "Treatment Menu & Pricing" },
   { href: "/reflexology", label: "Foot Reflexology" },
   { href: "/intelligent-wellness", label: "Intelligent Wellness Experience" },
@@ -18,9 +18,8 @@ const treatments: Item[] = [
 
 const nav: NavEntry[] = [
   { href: "/about-us", label: "About Us" },
-  { label: "Treatments", items: treatments },
+  { label: "Our Services", items: services },
   { href: "/locations", label: "Locations" },
-  { href: "/franchise", label: "Franchise" },
   { href: "/faq", label: "FAQs" },
   { href: "/guest-guidelines", label: "Guidelines" },
   { href: "/contact", label: "Contact" },
@@ -48,7 +47,7 @@ export function SiteHeader() {
   };
   const [hidden, setHidden] = useState(false);
   // The header is transparent until the page scrolls. The home page has a dark photo behind it, so its text is light there.
-  const onDarkHero = pathname === "/";
+  const onDarkHero = pathname === "/" || pathname === "/hydrogen-therapy";
   const [scrolled, setScrolled] = useState(false);
 
   // Smart header: hide on scroll down, show on scroll up, compact once the page has scrolled.

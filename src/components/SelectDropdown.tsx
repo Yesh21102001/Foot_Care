@@ -22,7 +22,9 @@ export function SelectDropdown({
   disabled?: boolean;
   placeholder: string;
 }) {
-  const [open, setOpen] = useState(false);
+  const [openState, setOpen] = useState(false);
+  // A disabled field can never be open.
+  const open = openState && !disabled;
   const rootRef = useRef<HTMLDivElement>(null);
   const current = options.find((option) => option.value === value);
 
@@ -45,10 +47,6 @@ export function SelectDropdown({
     };
   }, [open]);
 
-  // A disabled field can never stay open.
-  useEffect(() => {
-    if (disabled) setOpen(false);
-  }, [disabled]);
 
   return (
     <div className="ddl" ref={rootRef}>
@@ -64,7 +62,7 @@ export function SelectDropdown({
           aria-expanded={open}
           aria-labelledby={`${id}-label ${id}-button`}
           disabled={disabled}
-          onClick={() => setOpen((current) => !current)}
+          onClick={() => setOpen(!open)}
         >
           <span className="ddl-value">{current ? current.label : placeholder}</span>
           <i className="ddl-caret" aria-hidden="true" />

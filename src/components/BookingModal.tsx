@@ -18,15 +18,12 @@ export function BookingModal() {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
-  // Set in an effect so the page can be prerendered; blocks dates before today.
+  // Set when the pop-up opens (not during render), so the prerendered page and the browser agree. Blocks dates before today.
   const [today, setToday] = useState("");
 
   useEffect(() => {
-    setToday(new Date().toISOString().slice(0, 10));
-  }, []);
-
-  useEffect(() => {
     const show = () => {
+      setToday(new Date().toISOString().slice(0, 10));
       setSubmitted(false);
       setErrors({});
       setOpen(true);

@@ -4,6 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   experimental: {
     agentFeedback: true,
+    // Needed for a 404 page when the app has more than one root layout (home and the other pages).
+    globalNotFound: true,
   },
   cacheComponents: true,
   partialPrefetching: true,

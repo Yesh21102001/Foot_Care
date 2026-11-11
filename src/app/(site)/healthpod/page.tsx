@@ -1,4 +1,10 @@
-import { ServicePage } from "../components/ServicePage";
+import type { Metadata } from "next";
+import { ServicePage } from "../../../components/ServicePage";
+
+export const metadata: Metadata = {
+  title: "Healthpod",
+  description: "The Foot Care Healthpod: a private, calming space for focused wellness sessions.",
+};
 
 export default function Healthpod() {
   return (

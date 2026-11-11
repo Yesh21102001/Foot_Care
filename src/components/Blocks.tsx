@@ -14,10 +14,12 @@ type PageHeroProps = {
   imagePosition?: string;
   imageFit?: "cover" | "contain";
   arrowButtons?: boolean;
+  /** Replaces the default buttons, for example a single booking button. */
+  actions?: ReactNode;
   children?: ReactNode;
 };
 
-export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosition = "center center", imageFit = "cover", arrowButtons = false, children }: PageHeroProps) {
+export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosition = "center center", imageFit = "cover", arrowButtons = false, actions, children }: PageHeroProps) {
   return (
     <section
       className="hero hero-photo"
@@ -43,7 +45,7 @@ export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosi
         </h1>
         {children && <p>{children}</p>}
         <div className="hero-actions">
-          {arrowButtons ? (
+          {actions ?? (arrowButtons ? (
             <ArrowButton label="Our services" href="/our-services" />
           ) : (
             <>
@@ -52,7 +54,7 @@ export function PageHero({ eyebrow, title, accent, image = HERO_IMAGE, imagePosi
                 Our services
               </Link>
             </>
-          )}
+          ))}
         </div>
       </div>
     </section>

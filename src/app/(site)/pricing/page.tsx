@@ -1,7 +1,8 @@
-import { PageHeading } from "../components/Blocks";
-import { Layout } from "../components/Layout";
-import { PackageCards } from "../components/PackageCards";
-import { TreatmentPicker } from "../components/TreatmentPicker";
+import type { Metadata } from "next";
+import { PageHeading } from "../../../components/Blocks";
+import { Layout } from "../../../components/Layout";
+import { PackageCards } from "../../../components/PackageCards";
+import { TreatmentPicker } from "../../../components/TreatmentPicker";
 
 // Reference prices: confirm with the client before launch.
 const treatments = [
@@ -16,9 +17,14 @@ const treatments = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "Pricing",
+  description: "Foot Care treatments, durations and prices, plus prepaid packages with extra value.",
+};
+
 export default function Pricing() {
   return (
-    <Layout title="Pricing" description="Foot Care treatments, durations and prices, plus prepaid packages with extra value.">
+    <Layout>
       <PageHeading
         title="Prepaid packages"
         crumbs={[{ label: "Home", href: "/" }, { label: "Pricing" }]}

@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowButton } from "../components/ArrowButton";
-import { PageHeading } from "../components/Blocks";
-import { Layout } from "../components/Layout";
-import { BRANCHES } from "../components/LocationsList";
+import { ArrowButton } from "../../../components/ArrowButton";
+import { PageHeading } from "../../../components/Blocks";
+import { Layout } from "../../../components/Layout";
+import { StaticForm } from "../../../components/StaticForm";
+import { BRANCHES } from "../../../data/branches";
 
 // PLACEHOLDER head-office details: replace with the real phone, email and hours.
 const PHONE = "+00 000 000 000";
@@ -11,9 +13,14 @@ const HOURS = "Mon–Fri 9:00–20:00, Sat 10:00–20:00";
 
 const ENQUIRY_TYPES = ["General question", "Book a session", "Franchise enquiry", "Feedback"];
 
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contact Foot Care: find your nearest branch, call or email our team, or send us a message.",
+};
+
 export default function Contact() {
   return (
-    <Layout title="Contact" description="Contact Foot Care: find your nearest branch, call or email our team, or send us a message.">
+    <Layout>
       <PageHeading
         title="Contact us"
         crumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
@@ -57,7 +64,7 @@ export default function Contact() {
             </article>
           </div>
 
-          <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+          <StaticForm className="contact-form">
             <h3>Send us a message</h3>
             <p>Tell us what you need and which branch you have in mind. We will get back to you.</p>
 
@@ -99,7 +106,7 @@ export default function Contact() {
 
             <ArrowButton label="Send message" submit />
             {/* TODO: connect this form to your backend or email service. It does not send anything yet. */}
-          </form>
+          </StaticForm>
         </div>
       </section>
     </Layout>

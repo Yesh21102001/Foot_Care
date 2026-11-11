@@ -1,4 +1,3 @@
-import Head from "next/head";
 import type { ReactNode } from "react";
 import { RevealOnScroll } from "../app/reveal-on-scroll";
 import { ScrollAnimations } from "./ScrollAnimations";
@@ -8,21 +7,10 @@ import { SiteFooter } from "./SiteFooter";
 import { MobileBottomNav } from "./MobileBottomNav";
 import { SiteHeader } from "./SiteHeader";
 
-type LayoutProps = {
-  title: string;
-  description: string;
-  children: ReactNode;
-};
-
-export function Layout({ title, description, children }: LayoutProps) {
+// Page frame: header, main content, footer and the site-wide helpers. Titles come from each page's `metadata`.
+export function Layout({ children }: { children: ReactNode }) {
   return (
     <>
-      <Head>
-        <title>{`${title} | Foot Care`}</title>
-        <meta name="description" content={description} />
-        <link rel="icon" href="/images/foot-care-logo.png" type="image/png" />
-      </Head>
-
       <div className="fc-site">
         <SiteHeader />
         <main>{children}</main>

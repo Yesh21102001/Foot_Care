@@ -35,6 +35,7 @@ export function ServiceOverview({
 
 export type ServicePageProps = {
   title: string;
+  /** Used by the page's `metadata`; kept here so each service page's details stay together. */
   description: string;
   intro: string;
   image?: string;
@@ -45,9 +46,9 @@ export type ServicePageProps = {
 };
 
 // Shared layout for the service pages (hydrogen therapy, intelligent wellness).
-export function ServicePage({ title, description, intro, image, benefitsTitle = "Benefits", benefits, steps, note }: ServicePageProps) {
+export function ServicePage({ title, intro, image, benefitsTitle = "Benefits", benefits, steps, note }: ServicePageProps) {
   return (
-    <Layout title={title} description={description}>
+    <Layout>
       <PageHeading
         title={title}
         crumbs={[{ label: "Home", href: "/" }, { label: "Our Services", href: "/our-services" }, { label: title }]}

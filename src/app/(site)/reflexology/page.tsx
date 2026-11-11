@@ -1,10 +1,16 @@
-import { PageHeading } from "../components/Blocks";
-import { ServiceOverview } from "../components/ServicePage";
-import { Layout } from "../components/Layout";
+import type { Metadata } from "next";
+import { PageHeading } from "../../../components/Blocks";
+import { ServiceOverview } from "../../../components/ServicePage";
+import { Layout } from "../../../components/Layout";
+
+export const metadata: Metadata = {
+  title: "Foot Reflexology",
+  description: "Foot reflexology at Foot Care: what it is, how a session works, what research says, and answers to common questions.",
+};
 
 export default function Reflexology() {
   return (
-    <Layout title="Foot Reflexology" description="Foot reflexology at Foot Care: what it is, how a session works, what research says, and answers to common questions.">
+    <Layout>
       <PageHeading
         title="Foot Reflexology"
         crumbs={[{ label: "Home", href: "/" }, { label: "Our Services", href: "/our-services" }, { label: "Reflexology" }]}

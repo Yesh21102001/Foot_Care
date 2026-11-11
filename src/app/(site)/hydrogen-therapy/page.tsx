@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { ArrowButton } from "../components/ArrowButton";
-import { PageHeading } from "../components/Blocks";
-import { Layout } from "../components/Layout";
-import { ServiceOverview } from "../components/ServicePage";
+import { ArrowButton } from "../../../components/ArrowButton";
+import { PageHero } from "../../../components/Blocks";
+import { Layout } from "../../../components/Layout";
+import { ServiceOverview } from "../../../components/ServicePage";
+
+const WHY_HYDROGEN = [
+  { title: "Oxidative Stress", text: "Being studied for its potential antioxidant properties." },
+  { title: "Inflammation", text: "Research is exploring its possible effects on inflammatory responses." },
+  { title: "Recovery & Wellbeing", text: "Investigated for its potential role in physical recovery." },
+  { title: "Cellular Wellness", text: "Early studies are examining how molecular hydrogen interacts with cellular processes." },
+];
 
 const MECHANISMS = [
   {
@@ -153,16 +161,26 @@ function PhotoSection({
   );
 }
 
+export const metadata: Metadata = {
+  title: "Molecular Hydrogen Therapy",
+  description: "Molecular Hydrogen Therapy is an emerging wellness technology exploring the potential applications of molecular hydrogen (H₂) in supporting the body's natural biological processes.",
+};
+
 export default function HydrogenTherapy() {
   return (
-    <Layout
-      title="Molecular Hydrogen Therapy"
-      description="Molecular Hydrogen Therapy is an emerging wellness technology exploring the potential applications of molecular hydrogen (H₂) in supporting the body's natural biological processes."
-    >
-      <PageHeading
-        title="Molecular Hydrogen Therapy"
-        crumbs={[{ label: "Home", href: "/" }, { label: "Our Services", href: "/our-services" }, { label: "Molecular Hydrogen Therapy" }]}
-      />
+    <Layout>
+      {/* Hero: same styling as the home hero (text on the left over a dark green fade). */}
+      <div className="fc-site home-hero-wrap hy-hero">
+        <PageHero
+          eyebrow="Wellness research"
+          title="Molecular Hydrogen Therapy"
+          image="/images/hydrogen/hero.png"
+          imagePosition="center center"
+          actions={<ArrowButton label="Book a session" />}
+        >
+          A new dimension of wellness, designed around relaxation and modern scientific exploration.
+        </PageHero>
+      </div>
 
       {/* 1. Photo left, text right */}
       <ServiceOverview title="Molecular Hydrogen Therapy" image="/images/hydrogen-page-h2.png" heading="Discover the Science of Molecular Hydrogen (H₂)">
@@ -179,6 +197,33 @@ export default function HydrogenTherapy() {
           sports recovery, and medical research.
         </p>
       </ServiceOverview>
+
+      {/* New dimension of wellness: why molecular hydrogen */}
+      <section className="sv-benefits nd-section">
+        <div className="sv-benefits-inner">
+          <h2>A New Dimension of Wellness</h2>
+          <p className="nd-lead">
+            Discover an innovative wellness experience designed around relaxation and modern scientific exploration.
+          </p>
+          <h3 className="nd-sub">Why Molecular Hydrogen?</h3>
+          <div className="sv-cards">
+            {WHY_HYDROGEN.map((item) => (
+              <article className="sv-card" key={item.title}>
+                <span className="sv-check" aria-hidden="true">
+                  <i className="fas fa-check"></i>
+                </span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="nd-closing">
+            <p className="nd-closing-title">Breathe. Unwind. Rediscover Wellness.</p>
+            <p>Experience modern wellness at FOOT CARE.</p>
+            <ArrowButton label="Book a session" />
+          </div>
+        </div>
+      </section>
 
       {/* 2. Plain text */}
       <section className="hy-block">

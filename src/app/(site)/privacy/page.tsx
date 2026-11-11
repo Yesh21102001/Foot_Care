@@ -1,11 +1,17 @@
-import { ArrowButton } from "../components/ArrowButton";
-import { PageHeading } from "../components/Blocks";
-import { Layout } from "../components/Layout";
+import type { Metadata } from "next";
+import { ArrowButton } from "../../../components/ArrowButton";
+import { PageHeading } from "../../../components/Blocks";
+import { Layout } from "../../../components/Layout";
 
 // Placeholder until the approved privacy policy is supplied. No legal wording is written here on purpose.
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "FOOT CARE privacy policy.",
+};
+
 export default function Privacy() {
   return (
-    <Layout title="Privacy Policy" description="FOOT CARE privacy policy.">
+    <Layout>
       <PageHeading title="Privacy Policy" crumbs={[{ label: "Home", href: "/" }, { label: "Privacy Policy" }]} />
       <section className="section legal-section">
         <div className="container legal-inner">

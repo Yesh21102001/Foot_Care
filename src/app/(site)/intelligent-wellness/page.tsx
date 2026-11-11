@@ -1,7 +1,8 @@
-import { ArrowButton } from "../components/ArrowButton";
-import { PageHeading } from "../components/Blocks";
-import { Layout } from "../components/Layout";
-import { ServiceOverview } from "../components/ServicePage";
+import type { Metadata } from "next";
+import { ArrowButton } from "../../../components/ArrowButton";
+import { PageHeading } from "../../../components/Blocks";
+import { Layout } from "../../../components/Layout";
+import { ServiceOverview } from "../../../components/ServicePage";
 
 // Customer-facing copy only. Internal supplier and compliance notes are deliberately not shown on the page.
 const FEATURES = [
@@ -20,12 +21,14 @@ const BENEFITS = [
   { title: "Quick & Convenient", text: "Enjoy a simple, comfortable assessment experience." },
 ];
 
+export const metadata: Metadata = {
+  title: "Intelligent Wellness Experience",
+  description: "Discover a new dimension of wellness at FOOT CARE with a technology-assisted wellness assessment.",
+};
+
 export default function IntelligentWellness() {
   return (
-    <Layout
-      title="Intelligent Wellness Experience"
-      description="Discover a new dimension of wellness at FOOT CARE with a technology-assisted wellness assessment."
-    >
+    <Layout>
       <PageHeading
         title="Intelligent Wellness Experience"
         crumbs={[{ label: "Home", href: "/" }, { label: "Our Services", href: "/our-services" }, { label: "Intelligent Wellness" }]}

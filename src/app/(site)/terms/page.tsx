@@ -1,11 +1,17 @@
-import { ArrowButton } from "../components/ArrowButton";
-import { PageHeading } from "../components/Blocks";
-import { Layout } from "../components/Layout";
+import type { Metadata } from "next";
+import { ArrowButton } from "../../../components/ArrowButton";
+import { PageHeading } from "../../../components/Blocks";
+import { Layout } from "../../../components/Layout";
 
 // Placeholder until the approved terms are supplied. No legal wording is written here on purpose.
+export const metadata: Metadata = {
+  title: "Terms & Conditions",
+  description: "FOOT CARE terms and conditions.",
+};
+
 export default function Terms() {
   return (
-    <Layout title="Terms & Conditions" description="FOOT CARE terms and conditions.">
+    <Layout>
       <PageHeading
         title="Terms & Conditions"
         crumbs={[{ label: "Home", href: "/" }, { label: "Terms & Conditions" }]}

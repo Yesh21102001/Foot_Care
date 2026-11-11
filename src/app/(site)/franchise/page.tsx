@@ -1,14 +1,18 @@
-import { ArrowButton } from "../components/ArrowButton";
-import { PageHeading } from "../components/Blocks";
-import { Layout } from "../components/Layout";
+import type { Metadata } from "next";
+import { ArrowButton } from "../../../components/ArrowButton";
+import { PageHeading } from "../../../components/Blocks";
+import { StaticForm } from "../../../components/StaticForm";
+import { Layout } from "../../../components/Layout";
 
 // PLACEHOLDER copy: replace with the approved franchise facts (model, support, requirements). No figures are stated here on purpose.
+export const metadata: Metadata = {
+  title: "Franchise",
+  description: "Interested in opening a FOOT CARE branch? Read the franchise overview and send us your enquiry.",
+};
+
 export default function Franchise() {
   return (
-    <Layout
-      title="Franchise"
-      description="Interested in opening a FOOT CARE branch? Read the franchise overview and send us your enquiry."
-    >
+    <Layout>
       <PageHeading
         title="Franchise"
         crumbs={[{ label: "Home", href: "/" }, { label: "Franchise" }]}
@@ -45,7 +49,7 @@ export default function Franchise() {
             </article>
           </div>
 
-          <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+          <StaticForm className="contact-form">
             <h3>Franchise enquiry</h3>
             <p>Share a few details and we will contact you.</p>
 
@@ -74,7 +78,7 @@ export default function Franchise() {
 
             <ArrowButton label="Send enquiry" submit />
             {/* TODO: connect this form to your backend or email service. It does not send anything yet. */}
-          </form>
+          </StaticForm>
         </div>
       </section>
     </Layout>

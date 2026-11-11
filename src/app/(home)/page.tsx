@@ -1,19 +1,19 @@
 import type { CSSProperties } from "react";
-import { HidePreloader } from "./hide-preloader";
-import { RevealOnScroll } from "./reveal-on-scroll";
-import { ScrollAnimations } from "../components/ScrollAnimations";
-import { SwiperCarousels } from "./swiper-carousels";
-import { SiteHeader } from "../components/SiteHeader";
-import { MobileBottomNav } from "../components/MobileBottomNav";
-import { SiteFooter } from "../components/SiteFooter";
-import { HomeHero } from "../components/HomeHero";
-import { WhoWeAre } from "../components/WhoWeAre";
-import { BookingModal } from "../components/BookingModal";
-import { HomeTestimonials } from "../components/HomeTestimonials";
-import { HomeHowItWorks } from "../components/HomeHowItWorks";
-import { HomeHydrogen } from "../components/HomeHydrogen";
-import { HomePackages } from "../components/HomePackages";
-import { HomeServices } from "../components/HomeServices";
+import { HidePreloader } from "../hide-preloader";
+import { RevealOnScroll } from "../reveal-on-scroll";
+import { ScrollAnimations } from "../../components/ScrollAnimations";
+import { SwiperCarousels } from "../swiper-carousels";
+import { SiteHeader } from "../../components/SiteHeader";
+import { MobileBottomNav } from "../../components/MobileBottomNav";
+import { SiteFooter } from "../../components/SiteFooter";
+import { HomeHero } from "../../components/HomeHero";
+import { WhoWeAre } from "../../components/WhoWeAre";
+import { BookingModal } from "../../components/BookingModal";
+import { HomeTestimonials } from "../../components/HomeTestimonials";
+import { HomeHowItWorks } from "../../components/HomeHowItWorks";
+import { HomeHydrogen } from "../../components/HomeHydrogen";
+import { HomePackages } from "../../components/HomePackages";
+import { HomeServices } from "../../components/HomeServices";
 
 // Converted from template.txt. Markup is kept as-is; styles live in ./template.css.
 // Interactive WordPress/Elementor JavaScript (sliders, mobile menu, animations) is not included.
@@ -423,7 +423,7 @@ export default function Home() {
 						
 				<h4 className={"icon-box-title"}>
 							Better Rest					</h4>
-					<div className={"content"}>Many guests feel more settled and ready for a good night's rest.</div>
+					<div className={"content"}>Many guests feel more settled and ready for a good night&apos;s rest.</div>
 			
 			
 	

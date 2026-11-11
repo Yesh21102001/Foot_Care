@@ -1,5 +1,6 @@
-import { PageHeading } from "../components/Blocks";
-import { Layout } from "../components/Layout";
+import type { Metadata } from "next";
+import { PageHeading } from "../../../components/Blocks";
+import { Layout } from "../../../components/Layout";
 
 const questions = [
   {
@@ -68,9 +69,14 @@ const questions = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "FAQ",
+  description: "Answers to common questions about booking, treatments and what to expect at Foot Care.",
+};
+
 export default function Faq() {
   return (
-    <Layout title="FAQ" description="Answers to common questions about booking, treatments and what to expect at Foot Care.">
+    <Layout>
       <PageHeading title="Frequently asked questions" crumbs={[{ label: "Home", href: "/" }, { label: "FAQ" }]} maxWidth={820} />
 
       <section className="section">

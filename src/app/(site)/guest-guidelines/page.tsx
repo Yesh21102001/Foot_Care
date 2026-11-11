@@ -1,4 +1,5 @@
-import { Layout } from "../components/Layout";
+import type { Metadata } from "next";
+import { Layout } from "../../../components/Layout";
 
 // Guest guidelines: a numbered index on the left (sticky on desktop) and the policy cards on the right.
 const SECTIONS: { title: string; paragraphs: string[]; highlight?: boolean }[] = [
@@ -77,12 +78,14 @@ const SECTIONS: { title: string; paragraphs: string[]; highlight?: boolean }[] =
   },
 ];
 
+export const metadata: Metadata = {
+  title: "Guest Guidelines & Policies",
+  description: "FOOT CARE guest guidelines: almond cream, clothing, therapists, reflexology, gender-matched therapists, consent, conduct, hygiene and privacy.",
+};
+
 export default function GuestGuidelines() {
   return (
-    <Layout
-      title="Guest Guidelines & Policies"
-      description="FOOT CARE guest guidelines: almond cream, clothing, therapists, reflexology, gender-matched therapists, consent, conduct, hygiene and privacy."
-    >
+    <Layout>
       <section className="gg-hero">
         <div className="gg-inner">
           <p className="gg-crumbs">FOOT CARE / GUEST GUIDELINES &amp; POLICIES</p>
