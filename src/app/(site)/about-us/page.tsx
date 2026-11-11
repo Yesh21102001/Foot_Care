@@ -79,15 +79,21 @@ export default function AboutUs() {
         </p>
       </PhotoBlock>
 
-      {/* 2. Plain text */}
-      <TextBlock heading="Our Commitment to Professional, Respectful Service" tinted className="about-commitment">
+      {/* 2. Photo left, text right, on the grey background */}
+      <PhotoBlock
+        image="/images/about/welcome.png"
+        alt="A FOOT CARE team member welcoming a guest at the reception"
+        kicker="Our commitment"
+        heading="Our Commitment to Professional, Respectful Service"
+        tinted
+      >
         <p>Attentive service and a commitment to guest comfort, from the moment you arrive to the moment you leave.</p>
         <p>
           We explain what to expect, respect your preferences, and adjust to how you feel, so every session is
           comfortable from start to finish.
         </p>
-              <p>Fresh, separate treatment clothing is available for guests who need it.</p>
-      </TextBlock>
+        <p>Fresh, separate treatment clothing is available for guests who need it.</p>
+      </PhotoBlock>
 
       {/* 3. Text left, photo right */}
       <PhotoBlock
@@ -108,11 +114,17 @@ export default function AboutUs() {
       </PhotoBlock>
 
       {/* 4. Plain text */}
-      <TextBlock heading="Our Therapists" tinted>
+      <PhotoBlock
+        image="/images/about/therapists.png"
+        alt="The FOOT CARE team of therapists in uniform"
+        kicker="Our team"
+        heading="Our Therapists"
+        tinted
+      >
         <p>Our therapists take the time to understand how you feel before every session begins.</p>
         <p>Pressure is adjusted to your comfort throughout, and you can ask for lighter or firmer work at any time.</p>
         <p>Female guests are attended to by female therapists, and male guests by male therapists.</p>
-      </TextBlock>
+      </PhotoBlock>
 
       <TextBlock heading="The FOOT CARE Difference">
         <p>

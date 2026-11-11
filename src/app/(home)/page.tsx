@@ -33,9 +33,7 @@ export default function Home() {
 	<div id={"preloader"} className={"three-layer-loaderbg"}>
 				<div id={"spinner"}>
 			
-<div className={"preloader-dot-loading"}>
-  <div className={"cssload-loading"}><i></i><i></i><i></i><i></i></div>
-</div>			<div className={"txt-loading"}><span className={"letters-loading"}>Foot Care</span></div>
+<img className={"fc-preloader-logo"} src={"/images/foot-care-logo.png"} alt={""} width={96} height={96} />			<div className={"txt-loading"}><span className={"letters-loading"}>Foot Care</span></div>
 		</div>
 
 

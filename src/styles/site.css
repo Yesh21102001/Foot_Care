@@ -7635,3 +7635,58 @@ footer#footer.footer {
   line-height: 1.25;
   opacity: 1;
 }
+
+/* About Us philosophy: inset from the edges with rounded corners, like the home "Our services" section. */
+.fc-site .about-philosophy {
+  margin: 20px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .fc-site .about-philosophy {
+    margin: 12px;
+    border-radius: 28px;
+  }
+}
+
+/* Reflexology map (dark section): inset from the edges with rounded corners, like the home "Our services" section. */
+.fc-site .rx-section.rx-dark {
+  margin: 20px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .fc-site .rx-section.rx-dark {
+    margin: 12px;
+    border-radius: 28px;
+  }
+}
+
+/* Preloader: the FOOT CARE logo with a gentle pulse, above the name. */
+#preloader .fc-preloader-logo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 18px;
+  object-fit: contain;
+  animation: fc-logo-pulse 1400ms ease-in-out infinite;
+}
+@keyframes fc-logo-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #preloader .fc-preloader-logo {
+    animation: none;
+  }
+}
+/* The theme's "Disable Preloader" demo button is not part of the site. */
+#disable-preloader {
+  display: none !important;
+}
