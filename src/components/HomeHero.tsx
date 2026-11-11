@@ -20,10 +20,11 @@ export function HomeHero() {
         <div className="hero-inner" style={{ position: "relative", width: "min(1200px, calc(100% - 40px))", margin: "0 auto" }}>
           <span className="eyebrow-pill">Foot Care</span>
           <h1>
-            <span className="hero-line">A Moment to Unwind.</span>
-            <span className="hero-line">A World of Wellness.</span>
+            <span className="hero-line">The Future</span>
+            <span className="hero-line">of Relaxation</span>
           </h1>
-          <p>Discover thoughtful massage therapy, the art of reflexology and modern wellness experiences at FOOT CARE.</p>
+          <p className="hero-sub">AI-Enhanced Massage Therapy</p>
+          <p>Where intelligent technology meets the art of human touch.</p>
           <div className="hero-actions">
             <BookingButton className="hero-btn hero-btn-primary">
               <span>Schedule Your Session</span>

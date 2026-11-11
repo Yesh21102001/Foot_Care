@@ -7539,3 +7539,99 @@ footer#footer.footer {
 .fc-site .booking-overlay {
   overscroll-behavior: contain;
 }
+/* Intelligent Wellness hero on very large screens: text further right, clear of the therapist. */
+@media (min-width: 1600px) {
+  .fc-site.home-hero-wrap.iw-hero .hero-photo .container {
+    width: min(1440px, calc(100% - 80px));
+  }
+  .fc-site.home-hero-wrap.iw-hero .hero-photo .container > * {
+    margin-left: 58%;
+  }
+}
+
+/* Beyond Foot Care: slow, staged entrance (only once scripts mark the section .bf-ready). */
+@media (prefers-reduced-motion: no-preference) {
+  .fc-site .bf-media {
+    overflow: hidden;
+    border-radius: 28px;
+  }
+  .fc-site .bf-ready .bf-media {
+    clip-path: inset(100% 0 0 0 round 28px);
+    transition: clip-path 1600ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .fc-site .bf-ready.bf-in .bf-media {
+    clip-path: inset(0 0 0 0 round 28px);
+  }
+  .fc-site .bf-ready .bf-photo {
+    transform: scale(1.15);
+    transition: transform 2200ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .fc-site .bf-ready.bf-in .bf-photo {
+    transform: scale(1);
+  }
+  .fc-site .bf-ready .bf-step {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    transition: opacity 1000ms cubic-bezier(0.22, 1, 0.36, 1), transform 1200ms cubic-bezier(0.22, 1, 0.36, 1),
+      background 500ms cubic-bezier(0.22, 1, 0.36, 1), color 500ms ease, border-color 500ms ease;
+    transition-delay: calc(var(--i, 0) * 120ms + 400ms), calc(var(--i, 0) * 120ms + 400ms), 0ms, 0ms, 0ms;
+  }
+  .fc-site .bf-ready .bf-tag {
+    transform: translate3d(0, 18px, 0) scale(0.92);
+  }
+  .fc-site .bf-ready.bf-in .bf-step {
+    opacity: 1;
+    transform: none;
+  }
+  .fc-site .bf-ready.bf-in .bf-tag:hover {
+    transform: translateY(-3px);
+    transition-delay: 0ms;
+  }
+}
+
+/* Beyond Foot Care: softer, slower entrance. Long ease-out curve, small movements, and a light blur that clears. */
+@media (prefers-reduced-motion: no-preference) {
+  .fc-site .bf-ready .bf-media {
+    clip-path: inset(100% 0 0 0 round 28px);
+    transition: clip-path 2400ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fc-site .bf-ready .bf-photo {
+    transform: scale(1.08);
+    filter: blur(6px);
+    transition: transform 3000ms cubic-bezier(0.16, 1, 0.3, 1), filter 1800ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fc-site .bf-ready.bf-in .bf-photo {
+    transform: scale(1);
+    filter: blur(0);
+  }
+  .fc-site .bf-ready .bf-step {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+    filter: blur(4px);
+    transition: opacity 1600ms cubic-bezier(0.16, 1, 0.3, 1), transform 1800ms cubic-bezier(0.16, 1, 0.3, 1),
+      filter 1400ms cubic-bezier(0.16, 1, 0.3, 1), background 500ms cubic-bezier(0.22, 1, 0.36, 1), color 500ms ease,
+      border-color 500ms ease;
+    transition-delay: calc(var(--i, 0) * 160ms + 600ms), calc(var(--i, 0) * 160ms + 600ms),
+      calc(var(--i, 0) * 160ms + 600ms), 0ms, 0ms, 0ms;
+  }
+  .fc-site .bf-ready .bf-tag {
+    transform: translate3d(0, 12px, 0) scale(0.96);
+  }
+  .fc-site .bf-ready.bf-in .bf-step {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+  .fc-site .bf-ready.bf-in .bf-tag:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* Home hero: the subheading line under the main heading. */
+.fc-site.home-hero-wrap .hero-photo p.hero-sub {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 600;
+  line-height: 1.25;
+  opacity: 1;
+}
