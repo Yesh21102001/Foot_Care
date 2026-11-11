@@ -30,9 +30,6 @@ const WORDS = HEADING.split(" ");
 const ROTATE_MS = 4500; // how long each card stays open on phones before the next one opens
 const RESUME_MS = 8000; // after someone touches the cards, the automatic rotation waits this long before it starts again
 
-// Same entrance as the "Benefits of Foot Massage" points: a short fade-up, one card after another.
-// RevealOnScroll reads data-settings (animation name and delay) and plays it when the element scrolls into view.
-const entrance = (delay: number) => JSON.stringify({ _animation: "fadeInUp", _animation_delay: delay });
 
 // True on devices that have a mouse or trackpad. Touch screens return false.
 const canHover = () => typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
@@ -141,7 +138,7 @@ export function HomeServices({ showLabel = true }: { showLabel?: boolean }) {
     <section className="svc-section sp-section" ref={sectionRef}>
       <div className="svc-inner">
         {showLabel && (
-          <span className="svc-label elementor-invisible" data-settings={entrance(0)}>
+          <span className="svc-label">
             Our Services
           </span>
         )}

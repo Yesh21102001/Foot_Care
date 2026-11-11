@@ -7,7 +7,7 @@ import { useEffect } from "react";
 const GROUPS: { variant: "zoom" | "fade" | "slide" | "rise"; selectors: string[] }[] = [
   {
     variant: "zoom",
-    selectors: [".about-photo", ".sv-photo", ".rx-banner img", ".rx-photo-pair img"],
+    selectors: [".about-photo", ".sv-photo", ".who2-photo", ".fb-media", ".rx-banner img", ".rx-photo-pair img"],
   },
   {
     variant: "fade",
@@ -20,6 +20,10 @@ const GROUPS: { variant: "zoom" | "fade" | "slide" | "rise"; selectors: string[]
       ".hy-plain > *",
       ".hy-split > *",
       ".home-packages h2",
+      ".svc-label",
+      ".who2-text > *",
+      ".fb-inner > h2",
+      ".fb-kicker",
       ".hiw-text > *",
       ".home-packages-lead",
       ".home-testimonials h2",
@@ -45,6 +49,7 @@ const GROUPS: { variant: "zoom" | "fade" | "slide" | "rise"; selectors: string[]
       ".contact-form",
       ".home-packages-action",
       ".ht-card",
+      ".fb-item",
       ".svc2-item",
       ".hiw-card",
     ],
@@ -59,7 +64,7 @@ export function ScrollAnimations() {
     const nodes: HTMLElement[] = [];
     const taken = new Set<Element>();
     for (const group of GROUPS) {
-      const query = group.selectors.map((selector) => `.fc-site ${selector}`).join(", ") + (group.variant === "zoom" ? ", .benefits-photo" : "");
+      const query = group.selectors.map((selector) => `.fc-site ${selector}`).join(", ");
       document.querySelectorAll<HTMLElement>(query).forEach((node) => {
         // The visually hidden page title is for screen readers only, so it is never animated.
         if (taken.has(node) || node.classList.contains("sr-only")) return;

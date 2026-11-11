@@ -4137,27 +4137,6 @@ body .tm-sc-section-title .subtitle::before {
 /* No glow behind the testimonials section. */
 
 /* The big photo in "Benefits of Foot Massage" sits outside .fc-site, so it gets the same zoom-in entrance here. */
-.benefits-photo.fc-anim {
-  opacity: 0;
-}
-.benefits-photo.fc-anim.is-visible {
-  opacity: 1;
-  animation: fc-zoom 1200ms var(--fc-ease) backwards;
-}
-@media (prefers-reduced-motion: reduce) {
-  .benefits-photo.fc-anim {
-    opacity: 1;
-  }
-  .benefits-photo.fc-anim.is-visible {
-    animation: none;
-  }
-}
-
-/* The "25+ Years of Work Experience" tag on the home page photo is removed. */
-.elementor-element-ada6da7 {
-  display: none !important;
-}
-
 /* Home "How it works": heading on the left, three photo cards on the right. */
 .fc-site .hiw {
   padding: 96px 0;
@@ -4324,16 +4303,6 @@ body .tm-sc-section-title .subtitle::before {
 .fc-site .hiw {
   background: #dfe9d7;
 }
-
-/* Home page: tighter space above and below each section (they were too tall). */
-.elementor-17 .elementor-element.elementor-element-461f745 {
-  --padding-top: 56px !important;
-  --padding-bottom: 40px !important;
-}
-.elementor-17 .elementor-element.elementor-element-0721ce4 {
-  --padding-top: 56px !important;
-  --padding-bottom: 56px !important;
-}
 .fc-site .svc-section {
   padding-top: 56px !important;
   padding-bottom: 56px !important;
@@ -4345,16 +4314,7 @@ body .tm-sc-section-title .subtitle::before {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-@media (max-width: 880px) {
-  .elementor-17 .elementor-element.elementor-element-461f745 {
-    --padding-top: 36px !important;
-    --padding-bottom: 28px !important;
-  }
-  .elementor-17 .elementor-element.elementor-element-0721ce4 {
-    --padding-top: 40px !important;
-    --padding-bottom: 40px !important;
-  }
-  .fc-site .svc-section {
+@media (max-width: 880px) {  .fc-site .svc-section {
     padding-top: 40px !important;
     padding-bottom: 40px !important;
   }
@@ -4724,12 +4684,6 @@ body .site-brand .brand-logo {
   white-space: nowrap;
 }
 
-/* The "25+ Years of Work Experience" tag on the home photo: hidden at every width (the theme's mobile rules were showing it). */
-html body .elementor-element.elementor-element-ada6da7,
-html body .elementor-element.elementor-element-ada6da7.elementor-hidden-mobile {
-  display: none !important;
-}
-
 
 /* Home services: accordion. The active card is large; the others are thin. Every photo has a brand-green tint. */
 .fc-site .svc2-grid {
@@ -4932,14 +4886,6 @@ html body .elementor-element.elementor-element-ada6da7.elementor-hidden-mobile {
 }
 
 /* Home page: more space between sections (desktop 96px above and below each, phones 64px). */
-.elementor-17 .elementor-element.elementor-element-461f745 {
-  --padding-top: 96px !important;
-  --padding-bottom: 80px !important;
-}
-.elementor-17 .elementor-element.elementor-element-0721ce4 {
-  --padding-top: 96px !important;
-  --padding-bottom: 96px !important;
-}
 .fc-site .svc-section {
   padding-top: 96px !important;
   padding-bottom: 96px !important;
@@ -4951,16 +4897,7 @@ html body .elementor-element.elementor-element-ada6da7.elementor-hidden-mobile {
   padding-top: 96px;
   padding-bottom: 96px;
 }
-@media (max-width: 880px) {
-  .elementor-17 .elementor-element.elementor-element-461f745 {
-    --padding-top: 64px !important;
-    --padding-bottom: 56px !important;
-  }
-  .elementor-17 .elementor-element.elementor-element-0721ce4 {
-    --padding-top: 64px !important;
-    --padding-bottom: 64px !important;
-  }
-  .fc-site .svc-section {
+@media (max-width: 880px) {  .fc-site .svc-section {
     padding-top: 64px !important;
     padding-bottom: 64px !important;
   }
@@ -7848,4 +7785,252 @@ footer#footer.footer {
   .fc-site .ht-viewport {
     max-width: calc(100% - 24px);
   }
+}
+
+/* ===== Home "Who We Are" (React rebuild of the theme section). ===== */
+.fc-site .who2 {
+  padding: 96px 0 80px;
+  background: #f1f3ee;
+}
+.fc-site .who2-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 56px;
+  align-items: center;
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.fc-site .who2-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 546 / 595;
+  object-fit: cover;
+  border-radius: 28px;
+}
+.fc-site .who2-kicker,
+.fc-site .fb-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #0b2622;
+}
+.fc-site .who2-text h2 {
+  margin: 0 0 20px;
+  font-size: clamp(36px, 3.5vw, 50px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #0b2622;
+}
+.fc-site .who2-text p {
+  margin: 0 0 32px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #6d827c;
+}
+.fc-site .who2-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0 0 36px;
+  padding: 0;
+  list-style: none;
+}
+.fc-site .who2-highlights li {
+  margin: 0;
+}
+.fc-site .who2-icon {
+  position: relative;
+  display: inline-flex;
+  font-size: 50px;
+  line-height: 1;
+  color: #0b2622;
+}
+.fc-site .who2-icon::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: -8px;
+  z-index: -1;
+  width: 36px;
+  height: 36px;
+  background: url("/images/home/icon-shape.png") center / contain no-repeat;
+}
+.fc-site .who2-icon i {
+  position: relative;
+  z-index: 1;
+}
+.fc-site .who2-label {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #0c2f25;
+}
+
+/* ===== Home "Benefits of Foot Massage" (React rebuild of the theme section). ===== */
+.fc-site .fb-section {
+  padding: 96px 0;
+  background: #f1f3ee;
+}
+.fc-site .fb-inner {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+  text-align: center;
+}
+.fc-site .fb-inner > h2 {
+  margin: 0 0 56px;
+  font-size: clamp(34px, 3.5vw, 50px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #0c2f25;
+}
+.fc-site .fb-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+.fc-site .fb-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fc-site .fb-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(11, 38, 34, 0.1);
+}
+.fc-site .fb-item:last-child {
+  border-bottom: 0;
+}
+.fc-site .fb-item-left {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.fc-site .fb-item-right {
+  text-align: left;
+}
+.fc-site .fb-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 60px;
+  line-height: 1;
+  color: #0b2622;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .fb-item:hover .fb-icon {
+  transform: rotateY(180deg);
+}
+.fc-site .fb-copy h3 {
+  margin: 0 0 5px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #0c2f25;
+}
+.fc-site .fb-copy p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #6d827c;
+}
+.fc-site .fb-media {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 520px;
+}
+.fc-site .fb-arch {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 78%;
+  height: auto;
+  transform: translateX(-50%);
+}
+.fc-site .fb-photo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+}
+
+/* Tablets and phones: one column. The photo is hidden there, as it was before. */
+@media (max-width: 1024px) {
+  .fc-site .fb-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .fc-site .fb-media {
+    display: none;
+  }
+  .fc-site .fb-list + .fb-media + .fb-list .fb-item:first-child,
+  .fc-site .fb-list:first-child .fb-item:last-child {
+    border-bottom: 1px solid rgba(11, 38, 34, 0.1);
+  }
+}
+@media (max-width: 880px) {
+  .fc-site .who2 {
+    padding: 64px 0 56px;
+  }
+  .fc-site .who2-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+  .fc-site .who2-photo {
+    aspect-ratio: 3 / 4;
+  }
+  .fc-site .fb-section {
+    padding: 64px 0;
+  }
+  .fc-site .fb-inner > h2 {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .who2-text p {
+    font-size: 15px;
+  }
+  .fc-site .who2-label {
+    font-size: 16px;
+  }
+  .fc-site .fb-item {
+    gap: 16px;
+    padding: 26px 0;
+  }
+  .fc-site .fb-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
+  .fc-site .fb-copy h3 {
+    font-size: 22px;
+  }
+  .fc-site .fb-copy p {
+    font-size: 15px;
+  }
+}
+/* Who We Are: highlight labels use the heading serif (the site forces Inter on spans); the soft shape sits behind each icon. */
+body .fc-site .who2-label {
+  font-family: var(--brand-serif, "EB Garamond", Georgia, serif) !important;
+}
+.fc-site .who2-icon {
+  isolation: isolate;
 }
