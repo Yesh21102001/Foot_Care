@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowButton } from "../../../components/ArrowButton";
-import { PageHeading } from "../../../components/Blocks";
+import { PageHero } from "../../../components/Blocks";
 import { Layout } from "../../../components/Layout";
 import { ServiceOverview } from "../../../components/ServicePage";
 
@@ -29,10 +29,17 @@ export const metadata: Metadata = {
 export default function IntelligentWellness() {
   return (
     <Layout>
-      <PageHeading
-        title="Intelligent Wellness Experience"
-        crumbs={[{ label: "Home", href: "/" }, { label: "Our Services", href: "/our-services" }, { label: "Intelligent Wellness" }]}
-      />
+      {/* Hero: text on the right over a fade from that side, so the guest on the left stays in view. */}
+      <div className="fc-site home-hero-wrap iw-hero">
+        <PageHero
+          eyebrow="Intelligent Wellness"
+          title="A Smarter Way to Experience Wellness"
+          image="/images/intelligent-wellness-hero.png"
+          actions={<ArrowButton label="Book a session" />}
+        >
+          Where advanced technology meets personal wellbeing.
+        </PageHero>
+      </div>
 
       <ServiceOverview title="Intelligent Wellness" image="/images/intelligent-wellness-new.png" heading="A Smarter Way to Experience Wellness">
         <p>

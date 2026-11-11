@@ -7301,3 +7301,156 @@ footer#footer.footer {
     background-position: 28% center !important;
   }
 }
+
+/* Home "Beyond Foot Care": photo on the left; heading, line and display-only area tags on the right. */
+.fc-site .bf-section {
+  padding: 96px 0;
+  background: #f1f3ee;
+}
+.fc-site .bf-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.fc-site .bf-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 60% center;
+  border-radius: 28px;
+}
+.fc-site .bf-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0b2622;
+  opacity: 0.6;
+}
+.fc-site .bf-text h2 {
+  margin: 0 0 18px;
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.1;
+  color: #0b2622;
+}
+.fc-site .bf-text p {
+  max-width: 44ch;
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(11, 38, 34, 0.8);
+}
+.fc-site .bf-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fc-site .bf-area {
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(11, 38, 34, 0.18);
+  background: #ffffff;
+  color: #0b2622;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: default;
+  transition: background 500ms cubic-bezier(0.22, 1, 0.36, 1), color 500ms ease, border-color 500ms ease, transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fc-site .bf-area:hover {
+  background: #0b2622;
+  border-color: #0b2622;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+@media (max-width: 880px) {
+  .fc-site .bf-section {
+    padding: 64px 0;
+  }
+  .fc-site .bf-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .bf-photo {
+    border-radius: 22px;
+  }
+  .fc-site .bf-areas {
+    gap: 10px;
+  }
+  .fc-site .bf-area {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  .fc-site .bf-text p {
+    font-size: 15px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .bf-area {
+    transition: none;
+  }
+  .fc-site .bf-area:hover {
+    transform: none;
+  }
+}
+/* The theme adds a bottom margin to list items; the area tags all stay the same size. */
+.fc-site .bf-areas {
+  align-items: flex-start;
+}
+.fc-site .bf-areas .bf-area {
+  margin: 0 !important;
+}
+
+/* Intelligent Wellness hero: text on the right half over a fade from the right (desktop); bottom fade on phones. */
+@media (min-width: 881px) {
+  .fc-site.home-hero-wrap.iw-hero .hero-photo::before {
+    background: linear-gradient(
+      270deg,
+      rgba(11, 38, 34, 0.97) 0%,
+      rgba(11, 38, 34, 0.9) 22%,
+      rgba(11, 38, 34, 0.55) 42%,
+      rgba(11, 38, 34, 0.12) 62%,
+      rgba(11, 38, 34, 0) 78%
+    );
+  }
+  .fc-site.home-hero-wrap.iw-hero .hero-photo .container {
+    padding-left: 52%;
+  }
+}
+@media (max-width: 880px) {
+  .fc-site.home-hero-wrap.iw-hero .hero-photo {
+    background-image: url("/images/intelligent-wellness-hero.png") !important;
+    background-position: 18% center !important;
+  }
+}
+@media (min-width: 881px) {
+  /* A soft dark band along the top keeps the header readable over the bright lights in the photo. */
+  .fc-site.home-hero-wrap.iw-hero .hero-photo::before {
+    background:
+      linear-gradient(180deg, rgba(11, 38, 34, 0.7) 0%, rgba(11, 38, 34, 0) 24%),
+      linear-gradient(
+        270deg,
+        rgba(11, 38, 34, 0.97) 0%,
+        rgba(11, 38, 34, 0.9) 24%,
+        rgba(11, 38, 34, 0.55) 44%,
+        rgba(11, 38, 34, 0.12) 62%,
+        rgba(11, 38, 34, 0) 78%
+      );
+  }
+  .fc-site.home-hero-wrap.iw-hero .hero-photo .container {
+    padding-left: 48%;
+  }
+  .fc-site.home-hero-wrap.iw-hero .hero-photo h1 {
+    font-size: clamp(34px, 3.8vw, 56px);
+  }
+}

@@ -10,6 +10,7 @@ import { HomeHero } from "../../components/HomeHero";
 import { WhoWeAre } from "../../components/WhoWeAre";
 import { BookingModal } from "../../components/BookingModal";
 import { HomeTestimonials } from "../../components/HomeTestimonials";
+import { HomeBeyond } from "../../components/HomeBeyond";
 import { HomeHowItWorks } from "../../components/HomeHowItWorks";
 import { HomeHydrogen } from "../../components/HomeHydrogen";
 import { HomePackages } from "../../components/HomePackages";
@@ -234,6 +235,7 @@ export default function Home() {
 					</div>
 				</div>
 		<div className={"fc-site"}><HomeServices /></div>
+		<div className={"fc-site"}><HomeBeyond /></div>
 		<div className={"fc-site"}><HomeHydrogen /></div>
 		<div className={"elementor-element elementor-element-0721ce4 e-flex e-con-boxed tm-col-stretched-none tm-bg-color-over-image e-con e-parent"} data-id={"0721ce4"} data-element_type={"container"} data-e-type={"container"}>
 					<div className={"e-con-inner"}>

@@ -47,7 +47,7 @@ export function SiteHeader() {
   };
   const [hidden, setHidden] = useState(false);
   // The header is transparent until the page scrolls. The home page has a dark photo behind it, so its text is light there.
-  const onDarkHero = pathname === "/" || pathname === "/hydrogen-therapy";
+  const onDarkHero = pathname === "/" || pathname === "/hydrogen-therapy" || pathname === "/intelligent-wellness";
   const [scrolled, setScrolled] = useState(false);
 
   // Smart header: hide on scroll down, show on scroll up, compact once the page has scrolled.

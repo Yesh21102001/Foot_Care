@@ -7,7 +7,7 @@ import { useEffect } from "react";
 const GROUPS: { variant: "zoom" | "fade" | "slide" | "rise"; selectors: string[] }[] = [
   {
     variant: "zoom",
-    selectors: [".about-photo", ".sv-photo", ".rx-banner img", ".rx-photo-pair img"],
+    selectors: [".about-photo", ".sv-photo", ".bf-photo", ".rx-banner img", ".rx-photo-pair img"],
   },
   {
     variant: "fade",
@@ -20,6 +20,7 @@ const GROUPS: { variant: "zoom" | "fade" | "slide" | "rise"; selectors: string[]
       ".hy-plain > *",
       ".hy-split > *",
       ".home-packages h2",
+      ".bf-text > *",
       ".hiw-text > *",
       ".home-packages-lead",
       ".home-testimonials h2",
