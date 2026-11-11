@@ -7768,3 +7768,84 @@ footer#footer.footer {
     animation: none;
   }
 }
+
+/* Testimonials slider (all screen sizes): a sliding track, 3 cards per view on desktop, 2 on tablets, 1 on phones. */
+.fc-site .ht-viewport {
+  overflow: hidden;
+  margin: 0 -12px;
+  padding: 12px 0 8px;
+}
+.fc-site .ht-track {
+  --gap: 24px;
+  display: flex;
+  transform: translate3d(calc(var(--index, 0) * -100% / var(--per, 3)), 0, 0);
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.fc-site .ht-track .ht-card {
+  flex: 0 0 calc(100% / var(--per, 3));
+  box-sizing: border-box;
+  margin: 0 !important;
+  border: 12px solid transparent;
+  border-width: 0 12px;
+  background-clip: padding-box;
+  opacity: 1 !important;
+  animation: none !important;
+  transform: none !important;
+}
+.fc-site .ht-track .ht-card .ht-person {
+  left: 40px;
+  right: 40px;
+}
+.fc-site .ht-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+.fc-site .ht-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(241, 243, 238, 0.35);
+  cursor: pointer;
+  transition: width 500ms cubic-bezier(0.22, 1, 0.36, 1), background 500ms ease;
+}
+.fc-site .ht-dot.is-active {
+  width: 26px;
+  background: #aecc9f;
+}
+@media (max-width: 640px) {
+  .fc-site .ht-viewport {
+    margin: 0 -8px;
+  }
+  .fc-site .ht-track .ht-card {
+    border-width: 0 8px;
+  }
+  .fc-site .ht-track .ht-card .ht-person {
+    left: 36px;
+    right: 36px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fc-site .ht-track {
+    transition: none;
+  }
+}
+/* Slider width: inside the section's padding (the theme container is wider here). */
+.fc-site .ht-viewport {
+  max-width: 1104px;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .fc-site .ht-viewport {
+    max-width: calc(100% - 40px);
+  }
+}
+@media (max-width: 640px) {
+  .fc-site .ht-viewport {
+    max-width: calc(100% - 24px);
+  }
+}
