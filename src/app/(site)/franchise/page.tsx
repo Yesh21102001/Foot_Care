@@ -3,6 +3,7 @@ import { ArrowButton } from "../../../components/ArrowButton";
 import { PageHeading } from "../../../components/Blocks";
 import { StaticForm } from "../../../components/StaticForm";
 import { Layout } from "../../../components/Layout";
+import { Icon } from "../../../components/icons/Icon";
 
 // PLACEHOLDER copy: replace with the approved franchise facts (model, support, requirements). No figures are stated here on purpose.
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export default function Franchise() {
           <div className="contact-cards">
             <article className="contact-card">
               <span className="contact-icon" aria-hidden="true">
-                <i className="fas fa-spa"></i>
+                <Icon name="spa" />
               </span>
               <h3>The brand</h3>
               <p>
@@ -34,7 +35,7 @@ export default function Franchise() {
             </article>
             <article className="contact-card">
               <span className="contact-icon" aria-hidden="true">
-                <i className="fas fa-map-marker-alt"></i>
+                <Icon name="map-marker-alt" />
               </span>
               <h3>Our locations</h3>
               <p>See where FOOT CARE branches are already open.</p>
@@ -42,7 +43,7 @@ export default function Franchise() {
             </article>
             <article className="contact-card">
               <span className="contact-icon" aria-hidden="true">
-                <i className="fas fa-envelope"></i>
+                <Icon name="envelope" />
               </span>
               <h3>Next step</h3>
               <p>Send the enquiry form below and our team will get in touch with you.</p>

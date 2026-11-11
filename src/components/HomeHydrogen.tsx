@@ -112,7 +112,9 @@ export function HomeHydrogen() {
           </div>
           <img
             className="home-hydrogen-photo"
-            src="/images/hydrogen-new.png"
+            src="/images/hydrogen-new.webp"
+            loading="lazy"
+            decoding="async"
             alt="Guest relaxing during a molecular hydrogen session beside a hydrogen water machine"
           />
         </div>

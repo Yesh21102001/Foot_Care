@@ -16,7 +16,7 @@ export default function Reflexology() {
         crumbs={[{ label: "Home", href: "/" }, { label: "Our Services", href: "/our-services" }, { label: "Reflexology" }]}
       />
 
-      <ServiceOverview title="Foot Reflexology" image="/images/reflexology-room.png" heading="What is foot reflexology?">
+      <ServiceOverview title="Foot Reflexology" image="/images/reflexology-room.webp" heading="What is foot reflexology?">
         <p>
           Foot reflexology is a complementary wellness practice in which a practitioner applies pressure to specific
           areas of the feet.
@@ -45,7 +45,7 @@ export default function Reflexology() {
             </ul>
           </div>
           <figure className="rx-map-card">
-            <img src="/images/reflexology-chart-transparent.png" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
+            <img loading="lazy" decoding="async" src="/images/reflexology-chart-transparent.webp" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
           </figure>
         </div>
       </section>

@@ -109,7 +109,7 @@ export function SiteHeader() {
     >
       <div className="container header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <img className="brand-logo" src="/images/foot-care-logo.png" alt="" width={44} height={44} />
+          <img className="brand-logo" src="/images/foot-care-logo.webp" alt="" width={44} height={44} />
           <span className="brand-wordmark">Foot Care</span>
         </Link>
 

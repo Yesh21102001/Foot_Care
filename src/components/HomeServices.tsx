@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, useEffect, useRef, useState } from "react";
+import { Icon } from "./icons/Icon";
 
 // Home page services: an accordion. The first card is large by default; hovering (or focusing) a card makes it large.
 // On touch screens (no hover) the cards open by themselves in turn, and a tap opens a card. A second tap follows its link.
@@ -8,19 +9,19 @@ const SERVICES = [
   {
     title: "Foot Reflexology",
     href: "/reflexology",
-    image: "/images/services/foot-reflexology-close.png",
+    image: "/images/services/foot-reflexology-close.webp",
     text: "Traditional reflexology for relaxation and balance.",
   },
   {
     title: "Molecular Hydrogen Therapy",
     href: "/hydrogen-therapy",
-    image: "/images/hydrogen-new.png",
+    image: "/images/hydrogen-new.webp",
     text: "",
   },
   {
     title: "Intelligent Wellness",
     href: "/intelligent-wellness",
-    image: "/images/intelligent-wellness-new.png",
+    image: "/images/intelligent-wellness-new.webp",
     text: "",
   },
 ];
@@ -187,7 +188,7 @@ export function HomeServices({ showLabel = true }: { showLabel?: boolean }) {
                   </div>
                   <span className="svc2-vertical">{service.title}</span>
                   <span className="svc2-arrow" aria-hidden="true">
-                    <i className="fas fa-arrow-right"></i>
+                    <Icon name="arrow-right" />
                   </span>
                   <span className="sr-only">View details</span>
                 </a>

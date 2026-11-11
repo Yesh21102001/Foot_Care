@@ -38,7 +38,7 @@ export function HomeBeyond() {
         <div className="bf-media">
           <img
             className="bf-photo"
-            src="/images/beyond-foot-care.png"
+            src="/images/beyond-foot-care.webp"
             alt="Therapist giving a guest a relaxing back and shoulder massage"
             loading="lazy"
           />

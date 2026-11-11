@@ -34,14 +34,14 @@ export default function IntelligentWellness() {
         <PageHero
           eyebrow="Intelligent Wellness"
           title="A Smarter Way to Experience Wellness"
-          image="/images/intelligent-wellness-hero.png"
+          image="/images/intelligent-wellness-hero.webp"
           actions={<ArrowButton label="Book a session" />}
         >
           Where advanced technology meets personal wellbeing.
         </PageHero>
       </div>
 
-      <ServiceOverview title="Intelligent Wellness" image="/images/intelligent-wellness-overview.png" heading="A Smarter Way to Experience Wellness">
+      <ServiceOverview title="Intelligent Wellness" image="/images/intelligent-wellness-overview.webp" heading="A Smarter Way to Experience Wellness">
         <p>
           <strong>Where advanced technology meets personal wellbeing.</strong>
         </p>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BookingButton } from "./BookingButton";
+import { Icon } from "./icons/Icon";
 
 // The homepage button (theme "btn-style2": label with a white arrow circle) in Foot Care dark green.
 // With `href` it is a link; with `submit` it is a form submit button; otherwise it opens the booking pop-up.
@@ -20,11 +21,11 @@ export function ArrowButton({
   const content = (
     <>
       <span className="theme-btn-arrow-left">
-        <i className="fas fa-arrow-right"></i>
+        <Icon name="arrow-right" />
       </span>
       <span className="theme-btn">{label}</span>
       <span className="theme-btn-arrow-right">
-        <i className="fas fa-arrow-right"></i>
+        <Icon name="arrow-right" />
       </span>
     </>
   );

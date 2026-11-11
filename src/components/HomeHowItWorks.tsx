@@ -1,4 +1,5 @@
 import { ArrowButton } from "./ArrowButton";
+import { Icon } from "./icons/Icon";
 
 // Three steps. The descriptions are plain wording for you to edit; the photos are from the services folder.
 const STEPS = [
@@ -7,21 +8,21 @@ const STEPS = [
     icon: "fas fa-spa",
     title: "Discover Our Services",
     text: "Explore our massage, reflexology and wellness treatments.",
-    image: "/images/hiw-foot-massage.png",
+    image: "/images/hiw-foot-massage.webp",
   },
   {
     number: "02",
     icon: "fas fa-calendar-alt",
     title: "Schedule Your Appointment",
     text: "Choose a time that suits you and book your session.",
-    image: "/images/hiw-recliners.png",
+    image: "/images/hiw-recliners.webp",
   },
   {
     number: "03",
     icon: "fas fa-leaf",
     title: "Begin Your Journey",
     text: "Arrive, unwind and enjoy a session shaped around you.",
-    image: "/images/hiw-spa-bottle.png",
+    image: "/images/hiw-spa-bottle.webp",
   },
 ];
 
@@ -43,7 +44,7 @@ export function HomeHowItWorks() {
               <div className="hiw-card-inner">
                 <span className="hiw-number">{step.number}</span>
                 <span className="hiw-icon" aria-hidden="true">
-                  <i className={step.icon}></i>
+                  <Icon name={step.icon} />
                 </span>
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>

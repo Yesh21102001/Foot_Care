@@ -4,6 +4,7 @@ import { ArrowButton } from "../../../components/ArrowButton";
 import { PageHero } from "../../../components/Blocks";
 import { Layout } from "../../../components/Layout";
 import { ServiceOverview } from "../../../components/ServicePage";
+import { Icon } from "../../../components/icons/Icon";
 
 const WHY_HYDROGEN = [
   { title: "Oxidative Stress", text: "Being studied for its potential antioxidant properties." },
@@ -174,7 +175,7 @@ export default function HydrogenTherapy() {
         <PageHero
           eyebrow="Wellness research"
           title="Molecular Hydrogen Therapy"
-          image="/images/hydrogen/hero.png"
+          image="/images/hydrogen/hero.webp"
           imagePosition="center center"
           actions={<ArrowButton label="Book a session" />}
         >
@@ -183,7 +184,7 @@ export default function HydrogenTherapy() {
       </div>
 
       {/* 1. Photo left, text right */}
-      <ServiceOverview title="Molecular Hydrogen Therapy" image="/images/hydrogen/overview.png" heading="Discover the Science of Molecular Hydrogen (H₂)">
+      <ServiceOverview title="Molecular Hydrogen Therapy" image="/images/hydrogen/overview.webp" heading="Discover the Science of Molecular Hydrogen (H₂)">
         <p>
           Molecular Hydrogen Therapy is an emerging wellness technology that explores the potential applications of
           molecular hydrogen (H₂) in supporting the body&apos;s natural biological processes.
@@ -210,7 +211,7 @@ export default function HydrogenTherapy() {
             {WHY_HYDROGEN.map((item) => (
               <article className="sv-card" key={item.title}>
                 <span className="sv-check" aria-hidden="true">
-                  <i className="fas fa-check"></i>
+                  <Icon name="check" />
                 </span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
@@ -246,7 +247,7 @@ export default function HydrogenTherapy() {
 
       {/* 3. Text left, photo right */}
       <PhotoSection
-        image="/images/hydrogen/second-photo.png"
+        image="/images/hydrogen/second-photo.webp"
         alt="Illustration of a molecular hydrogen (H2) molecule above a relaxing guest"
         kicker="Background"
         heading="Understanding Oxidative Stress"
@@ -288,7 +289,7 @@ export default function HydrogenTherapy() {
 
       {/* 5. Photo left, text right */}
       <PhotoSection
-        image="/images/hydrogen/third-photo.png"
+        image="/images/hydrogen/third-photo.webp"
         alt="Hydrogen water generator beside a glass of hydrogen-rich water"
         kicker="Delivery"
         heading="Methods of Molecular Hydrogen Administration"
@@ -319,7 +320,7 @@ export default function HydrogenTherapy() {
             {BENEFITS.map((item) => (
               <article className="sv-card" key={item.title}>
                 <span className="sv-check" aria-hidden="true">
-                  <i className="fas fa-check"></i>
+                  <Icon name="check" />
                 </span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Icon } from "./icons/Icon";
 
 // Pages that belong under "Services", so the tab stays highlighted on them.
 const SERVICE_PAGES = [
@@ -30,7 +31,7 @@ export function MobileBottomNav() {
         const active = tab.match.includes(pathname);
         return (
           <Link key={tab.href} href={tab.href} className={`mobile-nav-item${active ? " is-active" : ""}`} aria-current={active ? "page" : undefined}>
-            <i className={tab.icon} aria-hidden="true"></i>
+            <Icon name={tab.icon} />
             <span>{tab.label}</span>
           </Link>
         );

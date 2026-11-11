@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { RevealOnScroll } from "../app/reveal-on-scroll";
 import { ScrollAnimations } from "./ScrollAnimations";
 import { SmoothDetails } from "./SmoothDetails";
 import { BookingModal } from "./BookingModal";
@@ -18,7 +17,6 @@ export function Layout({ children }: { children: ReactNode }) {
       </div>
 
       <SiteFooter />
-      <RevealOnScroll />
       <ScrollAnimations />
       <SmoothDetails />
       <div className="fc-site">

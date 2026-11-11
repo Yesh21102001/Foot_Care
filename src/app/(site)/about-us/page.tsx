@@ -63,7 +63,7 @@ export default function AboutUs() {
 
       {/* 1. Photo left, text right */}
       <PhotoBlock
-        image="/images/who-reception-2.png"
+        image="/images/who-reception-2.webp"
         alt="Two guests relaxing during a massage"
         kicker="Our philosophy"
         heading="The Art of Feeling Better"
@@ -81,7 +81,7 @@ export default function AboutUs() {
 
       {/* 2. Photo left, text right, on the grey background */}
       <PhotoBlock
-        image="/images/about/welcome.png"
+        image="/images/about/welcome.webp"
         alt="A FOOT CARE team member welcoming a guest at the reception"
         kicker="Our commitment"
         heading="Our Commitment to Professional, Respectful Service"
@@ -97,7 +97,7 @@ export default function AboutUs() {
 
       {/* 3. Text left, photo right */}
       <PhotoBlock
-        image="/images/about-recliners.png"
+        image="/images/about-recliners.webp"
         alt="Massage oil and a candle beside a foot massage"
         kicker="Our treatments"
         heading="Our Treatment Approach and Use of Almond Massage Cream"
@@ -115,7 +115,7 @@ export default function AboutUs() {
 
       {/* 4. Plain text */}
       <PhotoBlock
-        image="/images/about/therapists.png"
+        image="/images/about/therapists.webp"
         alt="The FOOT CARE team of therapists in uniform"
         kicker="Our team"
         heading="Our Therapists"

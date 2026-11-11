@@ -1,4 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap");
+/* Kept from the old theme template stylesheet: brand colour variables, the wordmark and the arrow button colours. */
+:root {
+  --theme-color1: #AECC9F !important; 
+  --theme-color2: #0B2622 !important; 
+  --theme-color3: #0B2622 !important; 
+  --theme-color4: #000000 !important; 
+}
+.brand-wordmark {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #0b2622;
+  text-decoration: none;
+}
+.brand-wordmark-light {
+  color: #ffffff;
+}
+:where(body) { margin: 0; }
+body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}
+.fc-btn2 {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  background-color: #0b2622 !important;
+  color: #ffffff !important;
+}
+.fc-btn2 .theme-btn {
+  color: #ffffff !important;
+}
+.fc-btn2 .theme-btn-arrow-right {
+  background-color: #ffffff !important;
+  color: #0b2622 !important;
+}
+.fc-btn2 .theme-btn-arrow-right i {
+  color: #0b2622 !important;
+}
+.hero .fc-btn2 {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
 
 :root {
   --color-black: #000000;
@@ -689,7 +729,7 @@
 
 .fc-site {
   position: relative;
-  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   color: var(--color-black);
   line-height: 1.6;
 }
@@ -3374,8 +3414,8 @@ footer#footer .fc-acc-chevron {
 /* Brand look and feel (from the Brand Strategy & Marketing Blueprint):
    serif headlines, calm Inter text, warm ivory, jade labels and thin hairlines. */
 :root {
-  --brand-serif: "EB Garamond", Georgia, "Times New Roman", serif;
-  --brand-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --brand-serif: var(--font-garamond), Georgia, "Times New Roman", serif;
+  --brand-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 body {
   font-family: var(--brand-sans) !important;
@@ -3387,7 +3427,7 @@ body :where(p, a, li, span, div, summary, label, button, input, select, textarea
 }
 /* The Foot Care wordmark keeps its own typeface. */
 body .brand-wordmark {
-  font-family: "Bricolage Grotesque", system-ui, sans-serif !important;
+  font-family: var(--font-inter), system-ui, sans-serif !important;
 }
 
 /* Headlines: refined serif (EB Garamond has a small x-height, so it is nudged up to match). */
@@ -3743,7 +3783,7 @@ body .tm-sc-section-title .subtitle::before {
 }
 
 /* Home page preloader: fades out on its own about a second after it first paints, without waiting for scripts to load. */
-#preloader {
+.fc-preloader {
   animation: fc-preloader-out 300ms ease 800ms forwards;
 }
 @keyframes fc-preloader-out {
@@ -5347,7 +5387,7 @@ body .site-brand .brand-logo {
   background: #aecc9f;
 }
 .fc-site .tp-section h2 {
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
   font-size: clamp(40px, 4.6vw, 64px);
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -5364,7 +5404,7 @@ body .site-brand .brand-logo {
   border-color: rgba(241, 243, 238, 0.14);
 }
 .fc-site .tp-tile-name {
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.25;
@@ -5426,7 +5466,7 @@ body .site-brand .brand-logo {
 }
 .fc-site .tp-title {
   margin: 14px 0 0;
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
   font-style: italic;
   font-size: clamp(34px, 3.4vw, 46px);
   font-weight: 400;
@@ -5578,7 +5618,7 @@ body .fc-site .tp-ring-unit {
 }
 body .fc-site .tp-tile-name,
 body .fc-site .tp-title {
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif) !important;
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif) !important;
 }
 .fc-site .tp-title {
   font-size: clamp(28px, 2.7vw, 40px);
@@ -5766,7 +5806,7 @@ body .fc-site .tp-title {
 /* Treatments: all text in Inter (the site's sans-serif). Headings use a semibold weight so they keep their weight in Inter. */
 body .fc-site .tp-section,
 body .fc-site .tp-section * {
-  font-family: var(--brand-sans, "Inter", system-ui, sans-serif) !important;
+  font-family: var(--brand-sans, var(--font-inter), system-ui, sans-serif) !important;
 }
 .fc-site .tp-section h2,
 .fc-site .tp-title {
@@ -5788,7 +5828,7 @@ body .fc-site .tp-tile-time,
 body .fc-site .tp-tile-price,
 body .fc-site .tp-ring-value,
 body .fc-site .tp-ring-unit {
-  font-family: var(--brand-sans, "Inter", system-ui, sans-serif) !important;
+  font-family: var(--brand-sans, var(--font-inter), system-ui, sans-serif) !important;
 }
 
 /* Treatments: no short dash in front of the labels. */
@@ -6122,7 +6162,7 @@ body .fc-site .tp-ring-unit {
   margin-bottom: 14px;
 }
 .fc-site .gg-card-num {
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
   font-size: 22px;
   color: rgba(11, 38, 34, 0.45);
 }
@@ -6590,7 +6630,7 @@ body .fc-site .hiw-card::before {
 /* Home hero on phones and small tablets: the portrait foot-cream photo. */
 @media (max-width: 880px) {
   .fc-site.home-hero-wrap .hero-photo {
-    background-image: url("/images/home-hero-mobile.png") !important;
+    background-image: url("/images/home-hero-mobile.webp") !important;
     background-position: 62% 50%;
   }
 }
@@ -6643,7 +6683,7 @@ body .fc-site .hiw-card::before {
   box-shadow: 0 0 0 1px rgba(11, 38, 34, 0.12), 0 22px 40px rgba(11, 38, 34, 0.14);
 }
 .fc-site .bc-num {
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
   font-size: 40px;
   line-height: 1;
   color: #0b2622;
@@ -6740,7 +6780,7 @@ body .fc-site .hiw-card::before {
   padding-left: 14px;
 }
 .fc-site .br-num {
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
   font-size: 40px;
   line-height: 1;
   color: #aecc9f;
@@ -6930,7 +6970,7 @@ body .fc-site .hiw-card::before {
 .fc-site .sq-num {
   top: 26px;
   left: 28px;
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
   font-size: 34px;
   line-height: 1;
   color: #aecc9f;
@@ -7047,7 +7087,7 @@ body .fc-site .tp-section {
 
 /* The FOOT CARE name in the header and footer uses the heading font (the serif used for headings). */
 body .brand-wordmark {
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif) !important;
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif) !important;
 }
 /* The serif name needs much less letter spacing than the sans version did. */
 body .brand-wordmark {
@@ -7217,7 +7257,7 @@ footer#footer.footer {
   color: rgba(11, 38, 34, 0.8);
 }
 .fc-site .nd-closing .nd-closing-title {
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
   font-size: clamp(24px, 2.6vw, 32px);
   color: #0b2622;
 }
@@ -7234,7 +7274,7 @@ footer#footer.footer {
 /* The home hero's phone photo must not replace the hydrogen hero image. */
 @media (max-width: 880px) {
   .fc-site.home-hero-wrap.hy-hero .hero-photo {
-    background-image: url("/images/hydrogen/hero.png") !important;
+    background-image: url("/images/hydrogen/hero.webp") !important;
     background-position: 28% center !important;
   }
 }
@@ -7366,7 +7406,7 @@ footer#footer.footer {
 }
 @media (max-width: 880px) {
   .fc-site.home-hero-wrap.iw-hero .hero-photo {
-    background-image: url("/images/intelligent-wellness-hero.png") !important;
+    background-image: url("/images/intelligent-wellness-hero.webp") !important;
     background-position: 18% center !important;
   }
 }
@@ -7600,7 +7640,7 @@ footer#footer.footer {
 }
 
 /* Preloader: the FOOT CARE logo with a gentle pulse, above the name. */
-#preloader .fc-preloader-logo {
+.fc-preloader .fc-preloader-logo {
   display: block;
   width: 96px;
   height: 96px;
@@ -7619,13 +7659,9 @@ footer#footer.footer {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  #preloader .fc-preloader-logo {
+  .fc-preloader .fc-preloader-logo {
     animation: none;
   }
-}
-/* The theme's "Disable Preloader" demo button is not part of the site. */
-#disable-preloader {
-  display: none !important;
 }
 
 /* Package cards on touch screens (phones and tablets): a tap must not trigger the hover look
@@ -7856,7 +7892,7 @@ footer#footer.footer {
   z-index: -1;
   width: 36px;
   height: 36px;
-  background: url("/images/home/icon-shape.png") center / contain no-repeat;
+  background: url("/images/home/icon-shape.webp") center / contain no-repeat;
 }
 .fc-site .who2-icon i {
   position: relative;
@@ -7865,7 +7901,7 @@ footer#footer.footer {
 .fc-site .who2-label {
   display: block;
   margin-top: 12px;
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif);
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
@@ -8029,7 +8065,7 @@ footer#footer.footer {
 }
 /* Who We Are: highlight labels use the heading serif (the site forces Inter on spans); the soft shape sits behind each icon. */
 body .fc-site .who2-label {
-  font-family: var(--brand-serif, "EB Garamond", Georgia, serif) !important;
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif) !important;
 }
 .fc-site .who2-icon {
   isolation: isolate;
@@ -8046,4 +8082,254 @@ body .fc-site .who2-label {
 .svg-icon {
   display: block;
   overflow: visible;
+}
+
+/* ===== Site footer (React rebuild of the theme footer). ===== */
+.sf {
+  padding: 0 20px 20px;
+  color: #cccccc;
+  font-size: 16px;
+  line-height: 1.9;
+}
+.sf-panel {
+  overflow: hidden;
+  border-radius: 30px;
+  background: #0b2622 url("/images/footer-recliner-room.webp") center / cover no-repeat;
+}
+.sf-shade {
+  padding: 150px 10px 0;
+  background: linear-gradient(180deg, rgba(11, 38, 34, 0) 0%, rgba(11, 38, 34, 0.2) 35%, rgba(11, 38, 34, 0.45) 60%, #0b2622 80%);
+}
+.sf-cta {
+  margin: 0 auto;
+  padding-bottom: 110px;
+  text-align: center;
+}
+.sf-cta h2 {
+  margin: 0 0 40px;
+  font-size: clamp(36px, 3.5vw, 50px);
+  line-height: 1.2;
+  color: #ffffff;
+}
+.sf-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+.sf-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.sf-logo img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+.sf-logo .brand-wordmark {
+  font-size: 26px;
+  color: #ffffff;
+}
+.sf-brand > p {
+  max-width: 320px;
+  margin: 0 0 40px;
+  color: #cccccc;
+}
+.sf-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: #cccccc;
+  text-decoration: none;
+}
+.sf-phone-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #aecc9f;
+  color: #0b2622;
+  font-size: 16px;
+}
+.sf-phone strong {
+  display: block;
+  font-family: var(--brand-serif, var(--font-garamond), Georgia, serif);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+}
+.sf-heading {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #ffffff;
+}
+.sf-heading-gap {
+  margin-top: 24px;
+}
+.sf-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sf-links a,
+.sf-legal a {
+  color: #cccccc;
+  text-decoration: none;
+  line-height: 2.5;
+  transition: color 300ms ease;
+}
+.sf-links a:hover,
+.sf-legal a:hover {
+  color: #aecc9f;
+}
+.sf-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 120px 0 30px;
+}
+.sf-bottom p {
+  margin: 0;
+}
+.sf-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Footer columns as accordions on phones (FooterAccordion). */
+.sf .fc-acc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.sf .fc-acc-chevron {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .sf-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 880px) {
+  .sf {
+    padding: 0;
+  }
+  .sf-panel {
+    border-radius: 0;
+  }
+  .sf-shade {
+    padding: 56px 20px 0;
+  }
+  .sf-cta {
+    display: none;
+  }
+  .sf-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .sf-brand {
+    margin-bottom: 40px;
+  }
+  .sf .fc-acc {
+    gap: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .sf .fc-acc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .sf .fc-acc-head > * {
+    flex: 1;
+    min-width: 0;
+  }
+  .sf .fc-acc-head > .fc-acc-chevron {
+    flex: 0 0 auto;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px 5px 0;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(45deg);
+    transition: transform 500ms var(--fc-ease), margin 500ms var(--fc-ease);
+  }
+  .sf .fc-acc.is-open .fc-acc-chevron {
+    margin: 5px 6px 0 0;
+    transform: rotate(-135deg);
+  }
+  .sf .fc-acc-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms var(--fc-ease);
+  }
+  .sf .fc-acc.is-open .fc-acc-body {
+    grid-template-rows: 1fr;
+  }
+  .sf .fc-acc-inner {
+    min-height: 0;
+    overflow: hidden;
+  }
+  .sf .fc-acc.is-open .fc-acc-inner {
+    padding-bottom: 16px;
+  }
+  .sf-col {
+    padding-top: 24px;
+  }
+  .sf-bottom {
+    display: block;
+    padding: 60px 0 calc(104px + env(safe-area-inset-bottom, 0px));
+  }
+  .sf-legal {
+    margin-top: 12px;
+  }
+}
+
+/* Home page preloader (see Preloader.tsx): full screen, dark green, logo above the name. */
+.fc-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0b2622;
+}
+.fc-preloader-name {
+  font-family: var(--brand-sans);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Home page lists keep the 10px gap the old page wrapper gave them (Hydrogen checklist, package feature lists). */
+.fc-site .home-hydrogen-list > li,
+.fc-site .home-packages .pkg-list > li {
+  margin-bottom: 10px;
+}
+body .sf-phone strong {
+  font-family: var(--brand-serif) !important;
 }

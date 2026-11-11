@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SelectDropdown } from "./SelectDropdown";
 import { ArrowButton } from "./ArrowButton";
 import { BRANCHES, SOCIAL_ICONS, type Branch, type SocialKey } from "../data/branches";
+import { Icon } from "./icons/Icon";
 
 const directionsUrl = (branch: Branch) =>
   branch.mapUrl ||
@@ -79,7 +80,7 @@ export function LocationsList() {
         <article className="loc-card" key={branch.name}>
           <header className="loc-card-head">
             <span className="loc-pin" aria-hidden="true">
-              <i className="fas fa-map-marker-alt"></i>
+              <Icon name="map-marker-alt" />
             </span>
             <div>
               <h3>{branch.name}</h3>
@@ -91,14 +92,14 @@ export function LocationsList() {
           <div className="loc-card-body">
           <dl>
             <div>
-              <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <Icon name="map-marker-alt" />
               <span>
               <dt>Address</dt>
               <dd>{branch.address}</dd>
               </span>
             </div>
             <div>
-              <i className="fas fa-phone-alt" aria-hidden="true"></i>
+              <Icon name="phone-alt" />
               <span>
               <dt>Phone</dt>
               <dd>
@@ -107,7 +108,7 @@ export function LocationsList() {
               </span>
             </div>
             <div>
-              <i className="fas fa-envelope" aria-hidden="true"></i>
+              <Icon name="envelope" />
               <span>
               <dt>Email</dt>
               <dd>
@@ -125,7 +126,7 @@ export function LocationsList() {
                 return (
                   <li key={key}>
                     <a href={url} target="_blank" rel="noopener noreferrer" aria-label={`${branch.name} on ${SOCIAL_ICONS[key].label}`}>
-                      <i className={SOCIAL_ICONS[key].icon} aria-hidden="true"></i>
+                      <Icon name={SOCIAL_ICONS[key].icon} />
                     </a>
                   </li>
                 );

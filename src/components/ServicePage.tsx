@@ -1,6 +1,7 @@
 import { ArrowButton } from "./ArrowButton";
 import { PageHeading } from "./Blocks";
 import { Layout } from "./Layout";
+import { Icon } from "./icons/Icon";
 
 type Item = { title: string; text: string };
 
@@ -19,7 +20,7 @@ export function ServiceOverview({
   return (
     <section className="sv-overview">
       <div className={`sv-overview-inner${image ? "" : " sv-no-photo"}`}>
-        {image && <img className="sv-photo" src={image} alt={title} />}
+        {image && <img className="sv-photo" src={image} alt={title} loading="lazy" decoding="async" />}
         <div className="sv-overview-text">
           <span className="sv-kicker">Our Service</span>
           <h2>{heading ?? `About ${title}`}</h2>
@@ -65,7 +66,7 @@ export function ServicePage({ title, intro, image, benefitsTitle = "Benefits", b
             {benefits.map((item) => (
               <article className="sv-card" key={item.title}>
                 <span className="sv-check" aria-hidden="true">
-                  <i className="fas fa-check"></i>
+                  <Icon name="check" />
                 </span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>

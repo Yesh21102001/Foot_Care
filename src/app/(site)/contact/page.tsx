@@ -5,6 +5,7 @@ import { PageHeading } from "../../../components/Blocks";
 import { Layout } from "../../../components/Layout";
 import { StaticForm } from "../../../components/StaticForm";
 import { BRANCHES } from "../../../data/branches";
+import { Icon } from "../../../components/icons/Icon";
 
 // PLACEHOLDER head-office details: replace with the real phone, email and hours.
 const PHONE = "+00 000 000 000";
@@ -32,34 +33,34 @@ export default function Contact() {
           <div className="contact-cards">
             <article className="contact-card">
               <span className="contact-icon" aria-hidden="true">
-                <i className="fas fa-map-marker-alt"></i>
+                <Icon name="map-marker-alt" />
               </span>
               <h3>Visit a branch</h3>
               <p>Find the branch nearest you, with its address, phone number and directions.</p>
               <Link href="/locations" className="contact-link">
-                View all branches <i className="fas fa-arrow-right" aria-hidden="true"></i>
+                View all branches <Icon name="arrow-right" />
               </Link>
             </article>
 
             <article className="contact-card">
               <span className="contact-icon" aria-hidden="true">
-                <i className="fas fa-phone-alt"></i>
+                <Icon name="phone-alt" />
               </span>
               <h3>Call us</h3>
               <p>{HOURS}</p>
               <a href={`tel:${PHONE.replace(/[^+\d]/g, "")}`} className="contact-link">
-                {PHONE} <i className="fas fa-arrow-right" aria-hidden="true"></i>
+                {PHONE} <Icon name="arrow-right" />
               </a>
             </article>
 
             <article className="contact-card">
               <span className="contact-icon" aria-hidden="true">
-                <i className="fas fa-envelope"></i>
+                <Icon name="envelope" />
               </span>
               <h3>Email us</h3>
               <p>Send us a note and the team will reply within one working day.</p>
               <a href={`mailto:${EMAIL}`} className="contact-link">
-                {EMAIL} <i className="fas fa-arrow-right" aria-hidden="true"></i>
+                {EMAIL} <Icon name="arrow-right" />
               </a>
             </article>
           </div>
