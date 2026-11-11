@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
+import { BRANCHES } from "../data/branches";
 
 // PLACEHOLDER DATA: replace with your real branches, treatments, and time slots.
-const BRANCHES = ["Main branch", "Second branch"];
+// Branch names come from the shared branch data, so the pop-up matches the Locations page.
+const BRANCH_NAMES = BRANCHES.map((branch) => branch.name);
 const TREATMENTS = [
   "Foot Reflexology — 60 min — $49",
   "Molecular Hydrogen Therapy — 45 min — $69",
@@ -151,7 +153,7 @@ export function BookingModal() {
                   <option value="" disabled>
                     Choose a branch
                   </option>
-                  {BRANCHES.map((b) => (
+                  {BRANCH_NAMES.map((b) => (
                     <option key={b}>{b}</option>
                   ))}
                 </select>
