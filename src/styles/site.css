@@ -7454,3 +7454,80 @@ footer#footer.footer {
     font-size: clamp(34px, 3.8vw, 56px);
   }
 }
+@media (min-width: 881px) {
+  /* Text column: the right half of the 1200px container at every screen width
+     (a percentage padding was measured against the full-width hero, which squeezed it on wide screens). */
+  .fc-site.home-hero-wrap.iw-hero .hero-photo .container {
+    padding-left: 0;
+  }
+  .fc-site.home-hero-wrap.iw-hero .hero-photo .container > * {
+    margin-left: 50%;
+  }
+  .fc-site.home-hero-wrap.iw-hero .hero-photo h1 {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+}
+
+/* Header on small laptops (961–1280px): tighter menu spacing and a smaller button so everything fits. */
+@media (min-width: 961px) and (max-width: 1280px) {
+  .fc-site .header-inner {
+    gap: 12px;
+    padding-left: 18px;
+  }
+  .fc-site .nav-list {
+    gap: 0;
+  }
+  .fc-site .nav-link,
+  .fc-site .nav-dropdown summary {
+    padding: 8px 9px;
+    font-size: 14px;
+  }
+  .fc-site .header-cta-arrow {
+    padding: 1px 8px 1px 20px !important;
+    font-size: 14px;
+  }
+  .fc-site .header-cta-arrow .theme-btn {
+    font-size: 14px;
+  }
+  .fc-site .brand-logo {
+    width: 38px;
+    height: 38px;
+  }
+}
+/* The FOOT CARE name always stays on one line; slightly smaller on the narrowest phones. */
+.fc-site .brand-wordmark {
+  white-space: nowrap;
+}
+@media (max-width: 360px) {
+  .fc-site .brand-wordmark {
+    font-size: 13px;
+  }
+  .fc-site .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+}
+/* The theme fixes .container at 720px/960px on mid-size screens; the header uses the full page width instead. */
+@media (min-width: 961px) {
+  .fc-site .site-header .header-inner {
+    width: min(1200px, calc(100% - 40px));
+    max-width: none;
+  }
+}
+@media (min-width: 961px) and (max-width: 1023px) {
+  .fc-site .nav-link,
+  .fc-site .nav-dropdown summary {
+    padding: 8px 7px;
+    font-size: 13.5px;
+  }
+  .fc-site .header-inner {
+    gap: 8px;
+  }
+}
+/* Molecular Hydrogen hero: the heading wraps over the dark side instead of running across the image. */
+@media (min-width: 881px) {
+  .fc-site.home-hero-wrap.hy-hero .hero-photo h1 {
+    max-width: 640px;
+  }
+}
