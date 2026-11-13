@@ -1,4 +1,5 @@
 import { WellnessIcon } from "./icons/WellnessIcon";
+import { Photo } from "./Photo";
 // Home page: "Benefits of Foot Massage". Three benefits on each side of a foot photo set in an arch.
 type Benefit = { icon: string; title: string; text: string };
 
@@ -41,8 +42,8 @@ export function HomeBenefits() {
             ))}
           </ul>
           <div className="fb-media" aria-hidden="true">
-            <img loading="lazy" decoding="async" className="fb-arch" src="/images/home/benefits-arch.webp" alt="" width={320} height={529} />
-            <img loading="lazy" decoding="async" className="fb-photo" src="/images/foot-reflexology-center-cutout.webp" alt="" width={1089} height={1445} />
+            <Photo className="fb-arch" src="/images/home/benefits-arch.webp" alt="" sizes="(max-width: 768px) 60vw, 25vw" />
+            <Photo className="fb-photo" src="/images/foot-reflexology-center-cutout.webp" alt="" sizes="(max-width: 768px) 80vw, 33vw" />
           </div>
           <ul className="fb-list">
             {RIGHT.map((item) => (

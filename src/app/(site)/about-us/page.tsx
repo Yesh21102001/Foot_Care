@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { ArrowButton } from "../../../components/ArrowButton";
 import { PageHeading } from "../../../components/Blocks";
 import { Layout } from "../../../components/Layout";
+import { Photo } from "../../../components/Photo";
 
 // A content block with a photo on one side and the text on the other. `textFirst` puts the text on the left on large screens.
 function PhotoBlock({
@@ -28,7 +29,7 @@ function PhotoBlock({
   return (
     <section className={`hy-block${tinted ? " hy-block-alt" : ""}${className ? " " + className : ""}`}>
       <div className={`sv-overview-inner${textFirst ? " sv-flip" : ""}`}>
-        <img className="sv-photo" src={image} alt={alt} loading="lazy" />
+        <Photo className="sv-photo" src={image} alt={alt} sizes="(max-width: 900px) 100vw, 50vw" />
         <div className="sv-overview-text">
           <span className="sv-kicker">{kicker}</span>
           <h2>{heading}</h2>

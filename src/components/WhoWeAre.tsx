@@ -1,5 +1,6 @@
 import { ArrowButton } from "./ArrowButton";
 import { WellnessIcon } from "./icons/WellnessIcon";
+import { Photo } from "./Photo";
 
 // Home page: "Who We Are". Photo on the left; label, heading, text, two highlights and an About Us button on the right.
 const HIGHLIGHTS = [
@@ -12,14 +13,11 @@ export function WhoWeAre() {
     <section className="who2">
       <div className="who2-inner">
         <div className="who2-media">
-          <img
+          <Photo
             className="who2-photo"
             src="/images/who-reception-2.webp"
-            loading="lazy"
-            decoding="async"
             alt="The FOOT CARE reception with the illuminated logo"
-            width={1086}
-            height={1448}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
         <div className="who2-text">

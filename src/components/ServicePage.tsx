@@ -2,6 +2,7 @@ import { ArrowButton } from "./ArrowButton";
 import { PageHeading } from "./Blocks";
 import { Layout } from "./Layout";
 import { Icon } from "./icons/Icon";
+import { Photo } from "./Photo";
 
 type Item = { title: string; text: string };
 
@@ -20,7 +21,7 @@ export function ServiceOverview({
   return (
     <section className="sv-overview">
       <div className={`sv-overview-inner${image ? "" : " sv-no-photo"}`}>
-        {image && <img className="sv-photo" src={image} alt={title} loading="lazy" decoding="async" />}
+        {image && <Photo className="sv-photo" src={image} alt={title} sizes="(max-width: 900px) 100vw, 50vw" />}
         <div className="sv-overview-text">
           <span className="sv-kicker">Our Service</span>
           <h2>{heading ?? `About ${title}`}</h2>

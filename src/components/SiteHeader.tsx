@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowButton } from "./ArrowButton";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
+import Image from "next/image";
 
 type Item = { href: string; label: string };
 type Group = { label: string; items: Item[] };
@@ -109,7 +110,7 @@ export function SiteHeader() {
     >
       <div className="container header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <img className="brand-logo" src="/images/foot-care-logo.webp" alt="" width={44} height={44} />
+          <Image className="brand-logo" src="/images/foot-care-logo.webp" alt="" width={44} height={44} loading="eager" />
           <span className="brand-wordmark">Foot Care</span>
         </Link>
 

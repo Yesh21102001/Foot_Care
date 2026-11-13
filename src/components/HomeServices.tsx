@@ -2,6 +2,7 @@
 
 import { Fragment, useEffect, useRef, useState } from "react";
 import { Icon } from "./icons/Icon";
+import { Photo } from "./Photo";
 
 // Home page services: an accordion. The first card is large by default; hovering (or focusing) a card makes it large.
 // On touch screens (no hover) the cards open by themselves in turn, and a tap opens a card. A second tap follows its link.
@@ -181,7 +182,7 @@ export function HomeServices({ showLabel = true }: { showLabel?: boolean }) {
                     }
                   }}
                 >
-                  <img src={service.image} alt="" loading="lazy" />
+                  <Photo src={service.image} alt="" sizes="(max-width: 768px) 100vw, 60vw" />
                   <div className="svc2-copy">
                     <h3>{service.title}</h3>
                     {service.text && <p>{service.text}</p>}

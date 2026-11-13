@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeading } from "../../../components/Blocks";
 import { ServiceOverview } from "../../../components/ServicePage";
 import { Layout } from "../../../components/Layout";
+import { Photo } from "../../../components/Photo";
 
 export const metadata: Metadata = {
   title: "Foot Reflexology",
@@ -45,7 +46,7 @@ export default function Reflexology() {
             </ul>
           </div>
           <figure className="rx-map-card">
-            <img loading="lazy" decoding="async" src="/images/reflexology-chart-transparent.webp" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
+            <Photo sizes="(max-width: 900px) 100vw, 50vw" src="/images/reflexology-chart-transparent.webp" alt="Sole of the foot with numbered reflexology zones and their traditional associations" />
           </figure>
         </div>
       </section>

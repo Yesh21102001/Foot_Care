@@ -5,6 +5,7 @@ import { PageHero } from "../../../components/Blocks";
 import { Layout } from "../../../components/Layout";
 import { ServiceOverview } from "../../../components/ServicePage";
 import { Icon } from "../../../components/icons/Icon";
+import { Photo } from "../../../components/Photo";
 
 const WHY_HYDROGEN = [
   { title: "Oxidative Stress", text: "Being studied for its potential antioxidant properties." },
@@ -151,7 +152,7 @@ function PhotoSection({
   return (
     <section className={`hy-block${tinted ? " hy-block-alt" : ""}`}>
       <div className={`sv-overview-inner${textFirst ? " sv-flip" : ""}`}>
-        <img className="sv-photo" src={image} alt={alt} loading="lazy" />
+        <Photo className="sv-photo" src={image} alt={alt} sizes="(max-width: 900px) 100vw, 50vw" />
         <div className="sv-overview-text">
           <span className="sv-kicker">{kicker}</span>
           <h2>{heading}</h2>

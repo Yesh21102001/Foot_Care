@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowButton } from "./ArrowButton";
 import { FooterAccordion } from "./FooterAccordion";
 import { Icon } from "./icons/Icon";
+import Image from "next/image";
 
 // PLACEHOLDER phone number: replace with the real head-office number.
 const PHONE = "+92 3800 8060";
@@ -55,7 +56,7 @@ export function SiteFooter() {
           <div className="sf-grid">
             <div className="sf-brand">
               <Link href="/" className="sf-logo">
-                <img loading="lazy" decoding="async" src="/images/foot-care-logo.webp" alt="" width={56} height={56} />
+                <Image src="/images/foot-care-logo.webp" alt="" width={56} height={56} />
                 <span className="brand-wordmark brand-wordmark-light">Foot Care</span>
               </Link>
               <p>

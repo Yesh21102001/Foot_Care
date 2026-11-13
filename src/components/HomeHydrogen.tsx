@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import type { CSSProperties } from "react";
 import { ArrowButton } from "./ArrowButton";
+import { Photo } from "./Photo";
 
 const RESEARCH_AREAS = [
   "Oxidative stress regulation.",
@@ -110,11 +111,10 @@ export function HomeHydrogen() {
               />
             ))}
           </div>
-          <img
+          <Photo
             className="home-hydrogen-photo"
             src="/images/hydrogen-new.webp"
-            loading="lazy"
-            decoding="async"
+            sizes="(max-width: 900px) 100vw, 50vw"
             alt="Guest relaxing during a molecular hydrogen session beside a hydrogen water machine"
           />
         </div>

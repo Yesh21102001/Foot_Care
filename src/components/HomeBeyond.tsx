@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, type CSSProperties } from "react";
+import { Photo } from "./Photo";
 
 // Home page: "Beyond Foot Care". Foot reflexology can be combined with work on other areas (see the treatment menu).
 // The area tags are labels only: they look like buttons but do not link anywhere.
@@ -36,11 +37,11 @@ export function HomeBeyond() {
     <section className="bf-section" ref={ref}>
       <div className="bf-inner">
         <div className="bf-media">
-          <img
+          <Photo
             className="bf-photo"
             src="/images/beyond-foot-care.webp"
             alt="Therapist giving a guest a relaxing back and shoulder massage"
-            loading="lazy"
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
         <div className="bf-text">
